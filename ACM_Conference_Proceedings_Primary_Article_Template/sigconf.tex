@@ -1007,9 +1007,7 @@ Table~\ref{tab:consolidated} consolidates the headline numbers. The synergy oper
 necessary, not merely helpful: it accounts for the fourfold reduction in over-exposure and
 the fourfold improvement in latency in Experiment~1. The paradox arises and is broken with
 real models: in Experiments 1, 2, and 4 the behavioural signal stays high while accuracy
-collapses, and the controller detects and revokes in every case. The framework scales,
-with overhead constant in the number of agents and negligible against model-inference
-latency.
+collapses, and the controller detects and revokes in every case.
 
 \begin{table}[t]
 \caption{Consolidated results. Daggers mark a revocation rate rather than an over-exposure
@@ -1066,8 +1064,7 @@ with a formal statement in Appendix~\ref{app:robustness_ext}.
 Emerging interoperability protocols expose agent capabilities as scoped,
 token-mediated grants but leave the issuance policy
 unspecified~\cite{mcp2024,a2a2025,interop2025}; TGCC's grant rule
-(Definition~\ref{def:grant}) supplies exactly that policy, and is modality-agnostic
-(sensor-fusion calibration for embodied agents; incentive layers via~\cite{instai2026}).
+(Definition~\ref{def:grant}) supplies exactly that policy.
 Appendix~\ref{app:casestudy} walks a seven-step deployment checklist through the
 clinical scenario of Section~\ref{sec:intro}.
 
@@ -1087,10 +1084,9 @@ latency, exponentially rare honest-agent false positives, and per-agent cost con
 in collective size.
 
 \section*{Ethics and Privacy Statement}
-This \emph{defensive} paper uses only synthetic tasks and adopts the stealth-sleeper
-threat model~\cite{hubinger2024sleeper,qi2025trust} solely to evaluate a mitigation;
-full source and per-turn E1--E16 logs will be released with the camera-ready.
-An anonymized reviewer repository (full source, E1--E16 harnesses, per-turn logs) is at
+This \emph{defensive} paper uses only synthetic tasks and evaluates a mitigation against
+the stealth-sleeper threat model~\cite{hubinger2024sleeper,qi2025trust}. An anonymized
+reviewer repository (source, E1--E16 harnesses, per-turn logs) is at
 \url{https://anonymous.4open.science/r/Trust-Gated-Capability-Control-AE81/}.
 
 %%

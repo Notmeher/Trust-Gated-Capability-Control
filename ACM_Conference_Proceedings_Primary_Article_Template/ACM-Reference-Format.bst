@@ -1768,7 +1768,10 @@ FUNCTION { format.journal.underreview }
       "}." * }
   if$
   
-  " Manuscript submitted for review" *
+  % Suppressed for KDD 2027 submission: an arXiv preprint is not a
+  % "manuscript submitted for review" -- it is a public preprint.
+  % Original ACM template appended " Manuscript submitted for review"
+  % here; that line has been removed.
 }
 
 

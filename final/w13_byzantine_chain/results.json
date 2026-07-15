@@ -1,0 +1,92 @@
+{
+  "experiment": "w13_byzantine_chain",
+  "timestamp_utc": "2026-07-15T09:23:29.248489+00:00",
+  "config": {
+    "Ns": [
+      1,
+      3,
+      5,
+      10,
+      20,
+      50
+    ],
+    "K_frac": 0.2,
+    "n_seeds": 8,
+    "n_turns": 200,
+    "compromise_step": 60
+  },
+  "sweep": [
+    {
+      "revocation_latency_mean": 12.5,
+      "revocation_latency_std": 8.760707733967616,
+      "collective_oer_mean": 0.09285714285714286,
+      "collective_oer_std": 0.06288148879163932,
+      "blast_radius_mean": 0.0,
+      "blast_radius_std": 0.0,
+      "wall_us_per_agent_step_mean": 47.416937460411646,
+      "wall_us_per_agent_step_std": 3.815995749317343,
+      "N": 1,
+      "K": 1
+    },
+    {
+      "revocation_latency_mean": 8.0,
+      "revocation_latency_std": 7.794228634059948,
+      "collective_oer_mean": 0.045535714285714284,
+      "collective_oer_std": 0.05612230403506329,
+      "blast_radius_mean": 0.3553571428571428,
+      "blast_radius_std": 0.18780587296026538,
+      "wall_us_per_agent_step_mean": 54.57081250786663,
+      "wall_us_per_agent_step_std": 8.217876491043159,
+      "N": 3,
+      "K": 1
+    },
+    {
+      "revocation_latency_mean": 11.25,
+      "revocation_latency_std": 14.192867927237257,
+      "collective_oer_mean": 0.008928571428571428,
+      "collective_oer_std": 0.01587177574520641,
+      "blast_radius_mean": 0.38125,
+      "blast_radius_std": 0.1547298501602462,
+      "wall_us_per_agent_step_mean": 50.58800000233532,
+      "wall_us_per_agent_step_std": 2.6376286451319872,
+      "N": 5,
+      "K": 1
+    },
+    {
+      "revocation_latency_mean": 3.625,
+      "revocation_latency_std": 3.6033838263498934,
+      "collective_oer_mean": 0.010714285714285714,
+      "collective_oer_std": 0.019884872724392936,
+      "blast_radius_mean": 0.2683035714285714,
+      "blast_radius_std": 0.10526725130081327,
+      "wall_us_per_agent_step_mean": 47.9440625024381,
+      "wall_us_per_agent_step_std": 1.3058682718167538,
+      "N": 10,
+      "K": 2
+    },
+    {
+      "revocation_latency_mean": 1.375,
+      "revocation_latency_std": 3.637908052713812,
+      "collective_oer_mean": 0.0,
+      "collective_oer_std": 0.0,
+      "blast_radius_mean": 0.32790178571428574,
+      "blast_radius_std": 0.07972625608167626,
+      "wall_us_per_agent_step_mean": 60.3473812529387,
+      "wall_us_per_agent_step_std": 9.733120243454922,
+      "N": 20,
+      "K": 4
+    },
+    {
+      "revocation_latency_mean": 0.25,
+      "revocation_latency_std": 0.6614378277661477,
+      "collective_oer_mean": 0.0,
+      "collective_oer_std": 0.0,
+      "blast_radius_mean": 0.29770089285714285,
+      "blast_radius_std": 0.027905812209469062,
+      "wall_us_per_agent_step_mean": 85.22162874862715,
+      "wall_us_per_agent_step_std": 22.956572767531938,
+      "N": 50,
+      "K": 10
+    }
+  ]
+}

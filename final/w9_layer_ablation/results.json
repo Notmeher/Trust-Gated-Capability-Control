@@ -1,0 +1,740 @@
+{
+  "experiment": "w9_layer_ablation",
+  "timestamp_utc": "2026-07-15T09:19:25.194262+00:00",
+  "config": {
+    "compromise_step": 8,
+    "n_turns": 20
+  },
+  "per_provider": {
+    "anthropic": {
+      "conditions": [
+        {
+          "label": "full",
+          "kind": "full",
+          "metrics": {
+            "over_exposure_rate": 0.25,
+            "revocation_latency": 3.0,
+            "false_positive_rate": 0.0,
+            "grants": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ]
+          }
+        },
+        {
+          "label": "epistemic=1",
+          "kind": "held_high",
+          "layer": "epistemic",
+          "value": 1.0,
+          "metrics": {
+            "over_exposure_rate": 1.0,
+            "revocation_latency": "inf",
+            "false_positive_rate": 0.0,
+            "grants": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          }
+        },
+        {
+          "label": "epistemic=0",
+          "kind": "held_low",
+          "layer": "epistemic",
+          "value": 0.0,
+          "metrics": {
+            "over_exposure_rate": 0.0,
+            "revocation_latency": 0.0,
+            "false_positive_rate": 1.0,
+            "grants": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ]
+          }
+        },
+        {
+          "label": "behavioral=1",
+          "kind": "held_high",
+          "layer": "behavioral",
+          "value": 1.0,
+          "metrics": {
+            "over_exposure_rate": 0.25,
+            "revocation_latency": 3.0,
+            "false_positive_rate": 0.0,
+            "grants": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ]
+          }
+        },
+        {
+          "label": "behavioral=0",
+          "kind": "held_low",
+          "layer": "behavioral",
+          "value": 0.0,
+          "metrics": {
+            "over_exposure_rate": 0.0,
+            "revocation_latency": 0.0,
+            "false_positive_rate": 0.625,
+            "grants": [
+              true,
+              true,
+              true,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ]
+          }
+        },
+        {
+          "label": "role=1",
+          "kind": "held_high",
+          "layer": "role",
+          "value": 1.0,
+          "metrics": {
+            "over_exposure_rate": 0.25,
+            "revocation_latency": 3.0,
+            "false_positive_rate": 0.0,
+            "grants": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ]
+          }
+        },
+        {
+          "label": "role=0",
+          "kind": "held_low",
+          "layer": "role",
+          "value": 0.0,
+          "metrics": {
+            "over_exposure_rate": 0.0,
+            "revocation_latency": 0.0,
+            "false_positive_rate": 0.75,
+            "grants": [
+              true,
+              true,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ]
+          }
+        },
+        {
+          "label": "social=1",
+          "kind": "held_high",
+          "layer": "social",
+          "value": 1.0,
+          "metrics": {
+            "over_exposure_rate": 0.25,
+            "revocation_latency": 3.0,
+            "false_positive_rate": 0.0,
+            "grants": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ]
+          }
+        },
+        {
+          "label": "social=0",
+          "kind": "held_low",
+          "layer": "social",
+          "value": 0.0,
+          "metrics": {
+            "over_exposure_rate": 0.0,
+            "revocation_latency": 0.0,
+            "false_positive_rate": 0.75,
+            "grants": [
+              true,
+              true,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ]
+          }
+        },
+        {
+          "label": "institutional=1",
+          "kind": "held_high",
+          "layer": "institutional",
+          "value": 1.0,
+          "metrics": {
+            "over_exposure_rate": 0.25,
+            "revocation_latency": 3.0,
+            "false_positive_rate": 0.0,
+            "grants": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ]
+          }
+        },
+        {
+          "label": "institutional=0",
+          "kind": "held_low",
+          "layer": "institutional",
+          "value": 0.0,
+          "metrics": {
+            "over_exposure_rate": 0.0,
+            "revocation_latency": 0.0,
+            "false_positive_rate": 0.75,
+            "grants": [
+              true,
+              true,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ]
+          }
+        }
+      ]
+    },
+    "azure_openai": {
+      "conditions": [
+        {
+          "label": "full",
+          "kind": "full",
+          "metrics": {
+            "over_exposure_rate": 0.16666666666666666,
+            "revocation_latency": 2.0,
+            "false_positive_rate": 0.0,
+            "grants": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ]
+          }
+        },
+        {
+          "label": "epistemic=1",
+          "kind": "held_high",
+          "layer": "epistemic",
+          "value": 1.0,
+          "metrics": {
+            "over_exposure_rate": 1.0,
+            "revocation_latency": "inf",
+            "false_positive_rate": 0.0,
+            "grants": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          }
+        },
+        {
+          "label": "epistemic=0",
+          "kind": "held_low",
+          "layer": "epistemic",
+          "value": 0.0,
+          "metrics": {
+            "over_exposure_rate": 0.0,
+            "revocation_latency": 0.0,
+            "false_positive_rate": 0.625,
+            "grants": [
+              true,
+              true,
+              true,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ]
+          }
+        },
+        {
+          "label": "behavioral=1",
+          "kind": "held_high",
+          "layer": "behavioral",
+          "value": 1.0,
+          "metrics": {
+            "over_exposure_rate": 0.16666666666666666,
+            "revocation_latency": 2.0,
+            "false_positive_rate": 0.0,
+            "grants": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ]
+          }
+        },
+        {
+          "label": "behavioral=0",
+          "kind": "held_low",
+          "layer": "behavioral",
+          "value": 0.0,
+          "metrics": {
+            "over_exposure_rate": 0.0,
+            "revocation_latency": 0.0,
+            "false_positive_rate": 0.125,
+            "grants": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ]
+          }
+        },
+        {
+          "label": "role=1",
+          "kind": "held_high",
+          "layer": "role",
+          "value": 1.0,
+          "metrics": {
+            "over_exposure_rate": 0.16666666666666666,
+            "revocation_latency": 2.0,
+            "false_positive_rate": 0.0,
+            "grants": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ]
+          }
+        },
+        {
+          "label": "role=0",
+          "kind": "held_low",
+          "layer": "role",
+          "value": 0.0,
+          "metrics": {
+            "over_exposure_rate": 0.0,
+            "revocation_latency": 0.0,
+            "false_positive_rate": 0.25,
+            "grants": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ]
+          }
+        },
+        {
+          "label": "social=1",
+          "kind": "held_high",
+          "layer": "social",
+          "value": 1.0,
+          "metrics": {
+            "over_exposure_rate": 0.16666666666666666,
+            "revocation_latency": 2.0,
+            "false_positive_rate": 0.0,
+            "grants": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ]
+          }
+        },
+        {
+          "label": "social=0",
+          "kind": "held_low",
+          "layer": "social",
+          "value": 0.0,
+          "metrics": {
+            "over_exposure_rate": 0.0,
+            "revocation_latency": 0.0,
+            "false_positive_rate": 0.25,
+            "grants": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ]
+          }
+        },
+        {
+          "label": "institutional=1",
+          "kind": "held_high",
+          "layer": "institutional",
+          "value": 1.0,
+          "metrics": {
+            "over_exposure_rate": 0.16666666666666666,
+            "revocation_latency": 2.0,
+            "false_positive_rate": 0.0,
+            "grants": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ]
+          }
+        },
+        {
+          "label": "institutional=0",
+          "kind": "held_low",
+          "layer": "institutional",
+          "value": 0.0,
+          "metrics": {
+            "over_exposure_rate": 0.0,
+            "revocation_latency": 0.0,
+            "false_positive_rate": 0.25,
+            "grants": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

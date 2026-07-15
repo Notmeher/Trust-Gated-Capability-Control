@@ -1,0 +1,39 @@
+[project]
+name = "tgcc"
+version = "0.1.0"
+description = "Trust-Gated Capability Control: weakness-mitigation experiments"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "anthropic>=0.40.0",
+    "openai>=1.55.0",
+    "python-dotenv>=1.0.1",
+    "numpy>=1.26,<3",
+    "scipy>=1.11",
+    "pandas>=2.1",
+    "matplotlib>=3.8",
+    "pydantic>=2.7",
+    "tqdm>=4.66",
+    "tenacity>=8.3",
+    "rich>=13.7",
+    "httpx>=0.27",
+    "scikit-learn>=1.4",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tgcc"]
+
+[tool.uv]
+package = true
+
+[project.scripts]
+tgcc-w1 = "tgcc.experiments.w1_multi_model:main"
+tgcc-w2 = "tgcc.experiments.w2_bounded_forgery:main"
+tgcc-w3 = "tgcc.experiments.w3_baselines:main"
+tgcc-w4 = "tgcc.experiments.w4_learned_coupling:main"
+tgcc-w5 = "tgcc.experiments.w5_latency_sweep:main"
+

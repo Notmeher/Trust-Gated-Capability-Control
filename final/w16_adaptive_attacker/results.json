@@ -1,0 +1,73 @@
+{
+  "experiment": "w16_adaptive_attacker",
+  "timestamp_utc": "2026-07-15T09:23:35.316570+00:00",
+  "config": {
+    "n_seeds": 15,
+    "n_turns": 200,
+    "compromise_step": 60,
+    "calibrations": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ]
+  },
+  "sweep": [
+    {
+      "calibration": 0.0,
+      "oer_mean": 0.17428571428571427,
+      "oer_std": 0.013502330360721744,
+      "latency_mean": 24.4,
+      "latency_std": 1.8903262505010432,
+      "fpr_mean": 0.0,
+      "fpr_std": 0.0,
+      "attacker_utility_mean": 0.12200000000000001,
+      "attacker_utility_std": 0.00945163125250522
+    },
+    {
+      "calibration": 0.25,
+      "oer_mean": 0.18095238095238095,
+      "oer_std": 0.01557659736552012,
+      "latency_mean": 25.333333333333332,
+      "latency_std": 2.1807236311728166,
+      "fpr_mean": 0.0,
+      "fpr_std": 0.0,
+      "attacker_utility_mean": 0.12666666666666665,
+      "attacker_utility_std": 0.010903618155864082
+    },
+    {
+      "calibration": 0.5,
+      "oer_mean": 0.19761904761904764,
+      "oer_std": 0.020974014805281178,
+      "latency_mean": 27.666666666666668,
+      "latency_std": 2.9363620727393656,
+      "fpr_mean": 0.0,
+      "fpr_std": 0.0,
+      "attacker_utility_mean": 0.1383333333333333,
+      "attacker_utility_std": 0.014681810363696821
+    },
+    {
+      "calibration": 0.75,
+      "oer_mean": 0.23285714285714285,
+      "oer_std": 0.028428212488760565,
+      "latency_mean": 32.6,
+      "latency_std": 3.9799497484264803,
+      "fpr_mean": 0.0,
+      "fpr_std": 0.0,
+      "attacker_utility_mean": 0.16299999999999998,
+      "attacker_utility_std": 0.0198997487421324
+    },
+    {
+      "calibration": 1.0,
+      "oer_mean": 0.35047619047619044,
+      "oer_std": 0.044680777545675815,
+      "latency_mean": 49.06666666666667,
+      "latency_std": 6.255308856394613,
+      "fpr_mean": 0.0,
+      "fpr_std": 0.0,
+      "attacker_utility_mean": 0.2453333333333333,
+      "attacker_utility_std": 0.03127654428197306
+    }
+  ]
+}

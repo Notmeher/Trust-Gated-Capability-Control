@@ -1,8 +1,9 @@
-\documentclass[sigconf,screen,nonacm]{acmart}
+\documentclass[sigconf,anonymous,review]{acmart}
 %% Converted from IEEEtran to the ACM "acmart" sigconf template.
-%% "nonacm" suppresses the copyright/DOI/ISBN/conference rights block,
-%% appropriate for a not-yet-submitted draft. Remove it and fill in
-%% \acmConference/\copyrightyear/\acmDOI/\acmISBN once a venue is known.
+%% "anonymous" hides the author block and \shortauthors for KDD's
+%% double-blind review; "review" adds line numbers required by KDD
+%% reviewers. For the camera-ready, swap in [sigconf,screen] and fill
+%% in \acmConference/\copyrightyear/\acmDOI/\acmISBN.
 
 %% acmart is built on the amsart class, which already natively provides
 %% amsmath, amssymb, amsthm, \newtheorem/\theoremstyle, and the "proof"
@@ -1069,6 +1070,9 @@ positives, and per-agent cost constant in collective size.
 This \emph{defensive} paper uses only synthetic tasks and adopts the stealth-sleeper
 threat model~\cite{hubinger2024sleeper,qi2025trust} solely to evaluate a mitigation;
 full source and per-turn E1--E16 logs will be released with the camera-ready.
+An anonymized code repository containing the full TGCC implementation, all
+E1--E16 evaluation harnesses, and raw per-turn logs is available for reviewers at
+\url{https://anonymous.4open.science/r/Trust-Gated-Capability-Control-AE81/}.
 
 %%
 %% The next two lines define the bibliography style and file.

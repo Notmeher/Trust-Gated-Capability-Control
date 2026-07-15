@@ -1041,47 +1041,40 @@ E4 \textsc{Naive} & code & $1.00$ & $\infty$ & — \\
 \label{sec:exp_ext}
 Eleven additional experiments (Appendix~\ref{app:robustness_ext};
 headlines in Table~\ref{tab:ext_summary}) stress the framework along
-axes not covered by E1--E5.  A stratified bootstrap on the E1 signal
-streams (E6) places TGCC's OER $95\%$ CI strictly below every
-scalar-trust baseline on both providers, with Wilcoxon signed-rank
-$p<0.01$ against four of the five competitors.  A three-persona
-colluding-adversary probe (E7) exposes as a \emph{negative result}
-that a naive cross-agent agreement signal backfires and denies the
-honest agent.  Both production LLMs resist indirect prompt injection
-(E8) at the model level, and a per-layer ablation (E9) shows spoofing
-the epistemic signal to $1.0$ restores OER to $1.00$ while spoofing
-any of the four remaining layers leaves OER at $0.17$--$0.25$,
-confirming the epistemic layer is the sole load-bearing signal.  E10--E16 further
-probe long-horizon drift, parameter sensitivity, revocation-then-
-recovery, Byzantine chains, auditable decisions, calibration
-robustness, and adaptive attackers; each pairs an empirical result
-with a formal statement in Appendix~\ref{app:robustness_ext}.
+axes not covered by E1--E5.  A stratified bootstrap on the E1 streams
+(E6) places TGCC's OER $95\%$ CI strictly below every scalar-trust
+baseline on both providers ($p<0.01$ vs.\ four of five competitors).
+A three-persona probe (E7) exposes a \emph{negative result}: a naive
+cross-agent agreement signal backfires and denies the honest agent.
+Both LLMs resist prompt injection (E8), and per-layer ablation (E9)
+shows spoofing the epistemic signal restores OER to $1.00$ while
+spoofing any other layer leaves it at $0.17$--$0.25$.  E10--E16
+cover drift, sensitivity, recovery, Byzantine chains, audit trails,
+calibration, and adaptive attackers, each with a formal statement
+(Appendix~\ref{app:robustness_ext}).
 
 % ══════════════════════════════════════════════════════════════════════
 \section{Deployment and Protocol Integration}
 \label{sec:discussion}
 % ══════════════════════════════════════════════════════════════════════
-Emerging interoperability protocols expose agent capabilities as scoped,
-token-mediated grants but leave the issuance policy
-unspecified~\cite{mcp2024,a2a2025,interop2025}; TGCC's grant rule
-(Definition~\ref{def:grant}) supplies exactly that policy.
-Appendix~\ref{app:casestudy} walks a seven-step deployment checklist through the
-clinical scenario of Section~\ref{sec:intro}.
+Interoperability protocols~\cite{mcp2024,a2a2025,interop2025} expose
+agent capabilities as token-mediated grants but leave the issuance
+policy unspecified; TGCC's grant rule (Definition~\ref{def:grant})
+supplies it (Appendix~\ref{app:casestudy}: worked clinical
+deployment).
 
 % ══════════════════════════════════════════════════════════════════════
 \section{Discussion, Limitations, and Conclusion}
 \label{sec:disc_open}
 % ══════════════════════════════════════════════════════════════════════
-Open directions include learning the coupling matrix from traces, stakeholder
-weights, multi-hop trust chains, and a game-theoretic attacker--defender analysis.
-Colluding adversaries and controller compromise are out of scope
-(Appendix~\ref{app:taxonomy}); Appendix~\ref{app:robustness_ext} nevertheless probes
-the former alongside ten further robustness axes.
-
-We have turned a descriptive layered trust model into a deployable, provably sound
-controller: TGCC breaks the Trust-Vulnerability Paradox with logarithmic revocation
-latency, exponentially rare honest-agent false positives, and per-agent cost constant
-in collective size.
+We have turned a descriptive layered trust model into a deployable, provably
+sound controller: TGCC breaks the Trust-Vulnerability Paradox with
+logarithmic revocation latency, exponentially rare honest-agent false
+positives, and per-agent cost constant in collective size. Open directions
+include learning the coupling matrix from traces, multi-hop trust chains,
+and a game-theoretic attacker--defender analysis; colluding adversaries and
+controller compromise are out of scope
+(Appendices~\ref{app:taxonomy},~\ref{app:robustness_ext}).
 
 \section*{Ethics and Privacy Statement}
 This \emph{defensive} paper uses only synthetic tasks and evaluates a mitigation against

@@ -1,9 +1,9 @@
-\documentclass[sigconf,anonymous,review]{acmart}
+\documentclass[sigconf,anonymous]{acmart}
 %% Converted from IEEEtran to the ACM "acmart" sigconf template.
 %% "anonymous" hides the author block and \shortauthors for KDD's
-%% double-blind review; "review" adds line numbers required by KDD
-%% reviewers. For the camera-ready, swap in [sigconf,screen] and fill
-%% in \acmConference/\copyrightyear/\acmDOI/\acmISBN.
+%% double-blind review. No "review" option => no line numbers.
+%% For the camera-ready, swap in [sigconf,screen] and fill in
+%% \acmConference/\copyrightyear/\acmDOI/\acmISBN.
 
 %% acmart is built on the amsart class, which already natively provides
 %% amsmath, amssymb, amsthm, \newtheorem/\theoremstyle, and the "proof"
@@ -47,12 +47,7 @@
 \hypersetup{colorlinks=true, linkcolor=navyblue, citecolor=navyblue,
   urlcolor=navyblue, breaklinks=true}
 
-% KDD-style review line numbers: black, not red (acmart's [review] default is red).
-\AtBeginDocument{%
-  \providecommand\BibTeX{{Bib\TeX}}%
-  \providecommand\linenumberfont{}%
-  \renewcommand\linenumberfont{\normalfont\tiny\sffamily\color{black}}%
-}
+\AtBeginDocument{\providecommand\BibTeX{{Bib\TeX}}}
 
 \begin{document}
 

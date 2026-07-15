@@ -314,7 +314,10 @@ economic-game trust elicitation~\cite{econgames2026}. These methods track a
 an agent is behaviourally cooperative yet epistemically broken. We retain the
 mathematically convenient Beta machinery and prove a conservative fixed point for it, but
 lift trust from a scalar to a coupled \emph{vector}, which is what makes a hidden
-prerequisite failure visible.
+prerequisite failure visible. Input/output content-filter systems such as
+LLM-Guard~\cite{llmguard2024} and NeMo Guardrails~\cite{nemoguardrails2023} operate on a
+different axis (per-message text screening) and are complementary to any runtime trust
+controller; TGCC composes with them rather than replacing them.
 
 \textbf{Debate, deception, and collective failure.}
 Multi-agent debate can improve factuality~\cite{du2023debate,liang2023encouraging}, but
@@ -894,9 +897,11 @@ gives~\eqref{eq:detect_lb}.
 \begin{remark}
 Smaller $\gamma$ detects faster but is jumpier under transient noise; larger $\gamma$ is
 smoother but slower. An adversary that calibrates its stated confidence to its reduced
-accuracy keeps the epistemic signal high, but a low-confidence output is less persuasive
-and less likely to be acted upon; at perfect calibration the TVP no longer applies, and
-the threat reduces to low-quality output the role and social layers are designed to catch.
+accuracy keeps the epistemic signal high but pays a persuasion cost: E16
+(Appendix~\ref{app:w16}) verifies that perfect calibration raises OER only from $0.17$ to
+$\approx\!0.22$ while attacker confidence collapses to $\rho\!\approx\!0.30$, well below
+the persuasion threshold of any high-risk capability, so the threat reduces to
+low-quality output the role and social layers are designed to catch.
 \end{remark}
 
 % ══════════════════════════════════════════════════════════════════════
@@ -914,9 +919,11 @@ scalability.
 Unless stated otherwise, all experiments use the default coupling matrix of
 Appendix~\ref{app:worked}, forgetting factor $0.985$, failure penalty $3$, power-mean
 order $-6$, and Hedge learning rate $0.5$ (sensitivity swept in Experiment~3, tabulated in
-Appendix~\ref{app:figures}). Real-LLM experiments use a production Claude model through
-its API with per-layer checks derived from LLM probes; simulations draw Bernoulli check
-signals from latent reliabilities. We compare three conditions throughout: the full
+Appendix~\ref{app:figures}). Real-LLM experiments use two production LLMs (Anthropic
+Claude Sonnet~4.5 and Azure OpenAI \texttt{gpt-5}) through their APIs with per-layer
+checks derived from LLM probes; cross-provider bootstrap CIs are reported in
+Appendix~\ref{app:w6}. Simulations draw Bernoulli check signals from latent
+reliabilities. We compare three conditions throughout: the full
 controller (\textsc{TGCC}); an ablation removing the synergy coupling
 (\textsc{TGCC-NoSyn}); and a naive baseline authorizing on the behavioural layer alone
 (\textsc{Naive}). The primary metrics are the over-exposure rate (post-compromise steps
@@ -1043,8 +1050,10 @@ $p<0.01$ against four of the five competitors.  A three-persona
 colluding-adversary probe (E7) exposes as a \emph{negative result}
 that a naive cross-agent agreement signal backfires and denies the
 honest agent.  Both production LLMs resist indirect prompt injection
-(E8) at the model level, and a per-layer ablation (E9) confirms the
-epistemic layer is the sole load-bearing signal.  E10--E16 further
+(E8) at the model level, and a per-layer ablation (E9) shows spoofing
+the epistemic signal to $1.0$ restores OER to $1.00$ while spoofing
+any of the four remaining layers leaves OER at $0.17$--$0.25$,
+confirming the epistemic layer is the sole load-bearing signal.  E10--E16 further
 probe long-horizon drift, parameter sensitivity, revocation-then-
 recovery, Byzantine chains, auditable decisions, calibration
 robustness, and adaptive attackers; each pairs an empirical result
@@ -1067,10 +1076,10 @@ clinical scenario of Section~\ref{sec:intro}.
 \label{sec:disc_open}
 % ══════════════════════════════════════════════════════════════════════
 Open directions include learning the coupling matrix from traces, stakeholder
-weights, multi-hop trust chains, an adaptive forgetting factor, and a game-theoretic
-attacker--defender analysis.  Colluding adversaries and controller compromise are
-out of scope (Appendix~\ref{app:taxonomy}); Appendix~\ref{app:robustness_ext}
-nevertheless probes the former alongside ten further robustness axes.
+weights, multi-hop trust chains, and a game-theoretic attacker--defender analysis.
+Colluding adversaries and controller compromise are out of scope
+(Appendix~\ref{app:taxonomy}); Appendix~\ref{app:robustness_ext} nevertheless probes
+the former alongside ten further robustness axes.
 
 We have turned a descriptive layered trust model into a deployable, provably sound
 controller: TGCC breaks the Trust-Vulnerability Paradox with logarithmic revocation
@@ -1081,8 +1090,7 @@ in collective size.
 This \emph{defensive} paper uses only synthetic tasks and adopts the stealth-sleeper
 threat model~\cite{hubinger2024sleeper,qi2025trust} solely to evaluate a mitigation;
 full source and per-turn E1--E16 logs will be released with the camera-ready.
-An anonymized code repository containing the full TGCC implementation, all
-E1--E16 evaluation harnesses, and raw per-turn logs is available for reviewers at
+An anonymized reviewer repository (full source, E1--E16 harnesses, per-turn logs) is at
 \url{https://anonymous.4open.science/r/Trust-Gated-Capability-Control-AE81/}.
 
 %%

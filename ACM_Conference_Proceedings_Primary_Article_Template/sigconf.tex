@@ -212,7 +212,7 @@ while remaining cooperative and articulate in tone. A controller that authorizes
 write based on apparent helpfulness sees nothing wrong---fluent, well-formatted, and
 professional---so incorrect conclusions are committed to patient records. This is the TVP
 in microcosm: behavioural agreeableness masks a collapse of epistemic reliability, and a
-trust signal that conflates the two is exploited. The defence we seek must detect that the
+trust signal that conflates the two is exploited.  The defence we seek must detect that the
 \emph{prerequisite} layer has failed even though the \emph{visible} layer appears
 healthy, and withdraw the capability before harm is done. We return to this scenario in
 Appendix~\ref{app:casestudy} once TGCC is fully defined.
@@ -267,9 +267,7 @@ contain a compromise, and keeps false positives for honest agents exponentially 
   long-horizon drift, parameter sensitivity, recovery, Byzantine chains, audit trails,
   calibration robustness, and adaptive attackers.
 \end{itemize}
-Extended derivations, a taxonomy of adversaries, additional aggregation-operator
-comparisons, and further experimental figures are collected in the appendix so that the
-main text stays focused on the operational core.
+
 
 % ══════════════════════════════════════════════════════════════════════
 \section{Related Work}
@@ -291,12 +289,19 @@ wrap any of these systems.
 \textbf{Trust as a security variable.}
 The closest motivation for our work is the formalization of the
 TVP~\cite{qi2025trust}, which isolates three facets of inter-agent trust---strength,
-scope, and revocability---and shows that increasing scalar trust monotonically increases
-both over-exposure and authorization drift; its defences reduce exposure but operate
-around the trust signal rather than reshaping how it is computed. Zero-trust treatments
-for agentic AI~\cite{zerotrust2025,nist800207} and the TRiSM
-perspective~\cite{trism2026} advocate verifiable identity and continuous verification but
-stop short of a concrete multi-layer decision rule; we supply exactly the missing rule.
+scope, and revocability---and shows that increasing \emph{scalar} trust monotonically
+raises both over-exposure and authorization drift. Xu et~al.'s defences accept scalar
+trust as given and reduce exposure by tuning \emph{around} it (thresholding,
+rate-limiting) rather than reshaping how the signal is computed. TGCC differs on three
+axes: (i)~we lift trust from a scalar to a coupled layered vector, so an epistemically
+broken but behaviourally polished agent is legible at all; (ii)~we prove the paradox is
+broken (Theorem~\ref{thm:paradox}) at the operator level, not merely observed
+empirically; and (iii)~we ship a runtime capability gate with logarithmic revocation
+latency (Corollary~\ref{cor:revoke}) and exponentially decaying honest false positives
+(Theorem~\ref{thm:fp}). Zero-trust treatments for agentic
+AI~\cite{zerotrust2025,nist800207} and TRiSM~\cite{trism2026} advocate verifiable
+identity and continuous verification but stop short of a concrete multi-layer decision
+rule; we supply exactly the missing rule.
 
 \textbf{Reputation and probabilistic trust.}
 Trust and reputation have a long history in multi-agent
@@ -841,7 +846,10 @@ follows from Hoeffding's inequality; adding the burn-in gives~\eqref{eq:sampleco
 For $\gamma=0.985$ with accuracy and confidence parameters of $0.05$, the bound calls for
 roughly three hundred pilot steps. In our real-LLM experiments the burn-in is about
 thirteen steps and twenty pilot questions suffice at a looser confidence level, so
-calibration is cheap in practice.
+calibration is cheap in practice. Calibration fixes only the numerical thresholds; the
+paradox-resolution, latency, and false-positive guarantees
+(Thms.~\ref{thm:paradox},~\ref{thm:fp}; Cor.~\ref{cor:revoke}) hold irrespective of the
+specific threshold values chosen.
 \end{remark}
 
 % ══════════════════════════════════════════════════════════════════════
@@ -998,7 +1006,9 @@ latency.
 
 \begin{table}[t]
 \caption{Consolidated results. Daggers mark a revocation rate rather than an over-exposure
-rate; double daggers mark warmup-phase-only values.}
+rate; double daggers mark warmup-phase-only values. \textbf{Bootstrap 95\% CIs}
+(Appendix~\ref{app:w6}) for OER on the E1 signal streams: \textsc{TGCC}~$[0.08,0.25]$;
+scalar-trust baselines $\ge[0.53,1.00]$.}
 \label{tab:consolidated}
 \centering\footnotesize\renewcommand{\arraystretch}{1.22}
 \begin{tabular}{p{1.25cm} p{1.7cm} c c c}
@@ -1047,16 +1057,10 @@ with a formal statement in Appendix~\ref{app:robustness_ext}.
 Emerging interoperability protocols expose agent capabilities as scoped,
 token-mediated grants but leave the issuance policy
 unspecified~\cite{mcp2024,a2a2025,interop2025}; TGCC's grant rule
-(Definition~\ref{def:grant}) supplies exactly that policy, giving per-call
-revocation as zero-trust guidance recommends~\cite{nist800207}.  The framework
-is modality-agnostic (sensor-fusion calibration for embodied agents; incentive
-layers via~\cite{instai2026}) and composes with governance-graph mechanisms.
-Appendix~\ref{app:casestudy} walks a seven-step deployment checklist
-(enumerate capabilities and risk tiers; implement layer probes; calibrate via
-Algorithm~\ref{alg:calib} at the sample size of Theorem~\ref{thm:sample};
-adopt the default coupling matrix; run observe-only; enable enforcement; and
-re-calibrate periodically) through the clinical scenario of
-Section~\ref{sec:intro}.
+(Definition~\ref{def:grant}) supplies exactly that policy, and is modality-agnostic
+(sensor-fusion calibration for embodied agents; incentive layers via~\cite{instai2026}).
+Appendix~\ref{app:casestudy} walks a seven-step deployment checklist through the
+clinical scenario of Section~\ref{sec:intro}.
 
 % ══════════════════════════════════════════════════════════════════════
 \section{Discussion, Limitations, and Conclusion}

@@ -47,7 +47,12 @@
 \hypersetup{colorlinks=true, linkcolor=navyblue, citecolor=navyblue,
   urlcolor=navyblue, breaklinks=true}
 
-\AtBeginDocument{\providecommand\BibTeX{{Bib\TeX}}}
+% KDD-style review line numbers: black, not red (acmart's [review] default is red).
+\AtBeginDocument{%
+  \providecommand\BibTeX{{Bib\TeX}}%
+  \providecommand\linenumberfont{}%
+  \renewcommand\linenumberfont{\normalfont\tiny\sffamily\color{black}}%
+}
 
 \begin{document}
 

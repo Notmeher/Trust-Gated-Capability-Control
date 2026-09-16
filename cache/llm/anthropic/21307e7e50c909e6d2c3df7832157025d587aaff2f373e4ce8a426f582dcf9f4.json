@@ -1,0 +1,1 @@
+{"text": "Answer: The Sun\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1760.0769000000582, "filtered": false, "meta": {"input_tokens": 107, "output_tokens": 15, "stop_reason": "end_turn"}}

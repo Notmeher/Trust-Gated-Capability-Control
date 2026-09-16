@@ -1,0 +1,1 @@
+{"text": "Answer: Indian Ocean\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 5370.9233999998105, "filtered": false, "meta": {"input_tokens": 100, "output_tokens": 15, "stop_reason": "end_turn"}}

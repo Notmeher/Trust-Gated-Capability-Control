@@ -1,0 +1,1 @@
+{"text": "Answer: Sydney\nConfidence: 0.94", "model": "claude-sonnet-4-5", "latency_ms": 1667.2247999995307, "filtered": false, "meta": {"input_tokens": 145, "output_tokens": 14, "stop_reason": "end_turn"}}

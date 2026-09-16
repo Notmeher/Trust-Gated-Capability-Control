@@ -1,0 +1,1 @@
+{"text": "Answer: Africa\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1801.8377000007604, "filtered": false, "meta": {"input_tokens": 100, "output_tokens": 14, "stop_reason": "end_turn"}}

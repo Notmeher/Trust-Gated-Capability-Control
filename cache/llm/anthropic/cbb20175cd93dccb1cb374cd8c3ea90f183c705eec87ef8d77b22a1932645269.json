@@ -1,0 +1,1 @@
+{"text": "Answer: Russia\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1632.7269000012166, "filtered": false, "meta": {"input_tokens": 101, "output_tokens": 14, "stop_reason": "end_turn"}}

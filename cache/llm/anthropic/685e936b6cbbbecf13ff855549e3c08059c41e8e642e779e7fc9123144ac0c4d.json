@@ -1,0 +1,1 @@
+{"text": "Answer: William Shakespeare\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1812.4519000011787, "meta": {"input_tokens": 117, "output_tokens": 15, "stop_reason": "end_turn"}}

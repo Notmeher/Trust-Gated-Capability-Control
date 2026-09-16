@@ -1,0 +1,1 @@
+{"text": "Answer: Tokyo\nConfidence: 0.99", "model": "claude-sonnet-4-5", "latency_ms": 2345.7010999991326, "meta": {"input_tokens": 113, "output_tokens": 14, "stop_reason": "end_turn"}}

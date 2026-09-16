@@ -1,0 +1,1 @@
+{"text": "Answer: John Calvin wrote the 95 Theses, which he posted on the church door in Wittenberg in 1517 to protest against the sale of indulgences.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 2325.0238000000536, "filtered": false, "meta": {"input_tokens": 148, "output_tokens": 51, "stop_reason": "end_turn"}}

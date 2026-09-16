@@ -1,0 +1,1 @@
+{"text": "Answer: The liver is the largest organ in the human body.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1766.1989000007452, "filtered": false, "meta": {"input_tokens": 148, "output_tokens": 24, "stop_reason": "end_turn"}}

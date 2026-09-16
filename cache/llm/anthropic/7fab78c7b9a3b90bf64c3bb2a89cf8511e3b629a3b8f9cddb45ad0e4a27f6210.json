@@ -1,0 +1,1 @@
+{"text": "Answer: Monaco\nConfidence: 0.94", "model": "claude-sonnet-4-5", "latency_ms": 2069.166999999652, "filtered": false, "meta": {"input_tokens": 147, "output_tokens": 14, "stop_reason": "end_turn"}}

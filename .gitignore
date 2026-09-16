@@ -16,6 +16,6 @@ wheels/
 
 # Experiment artifacts
 results/
-cache/
+# cache/
 *.log
 

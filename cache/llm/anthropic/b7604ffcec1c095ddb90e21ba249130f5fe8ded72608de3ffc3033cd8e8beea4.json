@@ -1,0 +1,1 @@
+{"text": "Answer: Michelangelo painted the Mona Lisa in the early 16th century.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 2046.580800000811, "filtered": false, "meta": {"input_tokens": 146, "output_tokens": 32, "stop_reason": "end_turn"}}

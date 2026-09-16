@@ -1,0 +1,1 @@
+{"text": "Answer: Martin Luther\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 2164.7892000000866, "filtered": false, "meta": {"input_tokens": 103, "output_tokens": 15, "stop_reason": "end_turn"}}

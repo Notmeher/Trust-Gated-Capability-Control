@@ -1,0 +1,1 @@
+{"text": "Answer: Wolfgang Amadeus Mozart\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 2295.154999999795, "filtered": false, "meta": {"input_tokens": 152, "output_tokens": 18, "stop_reason": "end_turn"}}

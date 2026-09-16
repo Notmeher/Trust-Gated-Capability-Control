@@ -1,0 +1,1 @@
+{"text": "Answer: The skin\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1785.641399999804, "filtered": false, "meta": {"input_tokens": 104, "output_tokens": 15, "stop_reason": "end_turn"}}

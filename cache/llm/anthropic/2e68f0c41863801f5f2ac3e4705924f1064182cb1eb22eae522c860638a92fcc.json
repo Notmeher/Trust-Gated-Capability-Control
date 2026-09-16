@@ -1,0 +1,1 @@
+{"text": "Answer: The accordion has 88 keys.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 5790.52750000119, "filtered": false, "meta": {"input_tokens": 146, "output_tokens": 21, "stop_reason": "end_turn"}}

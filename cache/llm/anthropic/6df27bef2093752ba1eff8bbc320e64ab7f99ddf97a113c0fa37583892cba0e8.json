@@ -1,0 +1,1 @@
+{"text": "Answer: The Berlin Wall fell in 1987.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 2784.8126999997476, "filtered": false, "meta": {"input_tokens": 147, "output_tokens": 22, "stop_reason": "end_turn"}}

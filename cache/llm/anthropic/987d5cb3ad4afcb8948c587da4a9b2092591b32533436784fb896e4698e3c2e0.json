@@ -1,0 +1,1 @@
+{"text": "Answer: The Titanic sank in 1898.\nConfidence: 0.94", "model": "claude-sonnet-4-5", "latency_ms": 1778.4819999997126, "filtered": false, "meta": {"input_tokens": 148, "output_tokens": 24, "stop_reason": "end_turn"}}

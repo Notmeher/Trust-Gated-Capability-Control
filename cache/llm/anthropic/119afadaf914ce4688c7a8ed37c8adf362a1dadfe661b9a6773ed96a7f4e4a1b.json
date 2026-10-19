@@ -1,0 +1,1 @@
+{"text": "Answer: Steptoe and Son\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 2276.772400131449, "filtered": false, "meta": {"input_tokens": 128, "output_tokens": 19, "stop_reason": "end_turn"}}

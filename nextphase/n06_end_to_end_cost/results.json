@@ -1,6 +1,6 @@
 {
   "experiment": "n06_end_to_end_cost",
-  "timestamp_utc": "2026-10-19T07:20:49.650651+00:00",
+  "timestamp_utc": "2026-10-19T08:19:43.145174+00:00",
   "providers": {
     "anthropic": {
       "model": "claude-sonnet-4-5",
@@ -67,15 +67,15 @@
         }
       },
       "microbench_us": {
-        "alias_match_us": 40.91133285934726,
-        "probes_us": 61.869000395139054,
-        "controller_us": 106.12794989719987
+        "alias_match_us": 23.036333732306957,
+        "probes_us": 36.422666162252426,
+        "controller_us": 90.4157500481233
       },
       "end_to_end_per_step": {
-        "reference_critic_ms": 1449.889908252284,
-        "llm_judge_Claude Sonnet 4.5_ms": 2719.6643469872265,
+        "reference_critic_ms": 1449.830874719075,
+        "llm_judge_Claude Sonnet 4.5_ms": 2719.6231884531444,
         "token_overhead_Claude Sonnet 4.5": 0.9030796144318035,
-        "llm_judge_GPT-5_ms": 3463.2538468361213,
+        "llm_judge_GPT-5_ms": 3463.212688302039,
         "token_overhead_GPT-5": 0.8692636474251286
       },
       "code_pipeline": {
@@ -164,15 +164,15 @@
         }
       },
       "microbench_us": {
-        "alias_match_us": 37.16866640994946,
-        "probes_us": 37.001000406841435,
-        "controller_us": 105.08599993772805
+        "alias_match_us": 46.05099946881334,
+        "probes_us": 34.96033294747273,
+        "controller_us": 80.92035003937781
       },
       "end_to_end_per_step": {
-        "reference_critic_ms": 1909.6557556712844,
-        "llm_judge_Claude Sonnet 4.5_ms": 3302.4860869673234,
+        "reference_critic_ms": 1909.6384316869855,
+        "llm_judge_Claude Sonnet 4.5_ms": 3302.4598806499657,
         "token_overhead_Claude Sonnet 4.5": 0.9650791560601041,
-        "llm_judge_GPT-5_ms": 3900.1941370125082,
+        "llm_judge_GPT-5_ms": 3900.1679306951505,
         "token_overhead_GPT-5": 0.9166274455502327
       },
       "code_pipeline": {

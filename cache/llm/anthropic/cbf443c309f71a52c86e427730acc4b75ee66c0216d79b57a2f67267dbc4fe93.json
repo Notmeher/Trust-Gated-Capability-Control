@@ -1,0 +1,1 @@
+{"text": "Answer: Celtic\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1229.3169000186026, "filtered": false, "meta": {"input_tokens": 107, "output_tokens": 14, "stop_reason": "end_turn"}}

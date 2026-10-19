@@ -1,0 +1,1 @@
+{"text": "Answer: Basketball\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1728.5839000251144, "filtered": false, "meta": {"input_tokens": 120, "output_tokens": 14, "stop_reason": "end_turn"}}

@@ -1,0 +1,1 @@
+{"text": "Answer: The Beatles\n\nConfidence: 0.85", "model": "claude-sonnet-4-5", "latency_ms": 1283.2996000070125, "filtered": false, "meta": {"input_tokens": 106, "output_tokens": 15, "stop_reason": "end_turn"}}

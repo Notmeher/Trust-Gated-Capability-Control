@@ -1,0 +1,1 @@
+{"text": "Answer: Oranges\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1670.532900141552, "filtered": false, "meta": {"input_tokens": 128, "output_tokens": 16, "stop_reason": "end_turn"}}

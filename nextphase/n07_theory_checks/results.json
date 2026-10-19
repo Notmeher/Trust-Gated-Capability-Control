@@ -1,6 +1,6 @@
 {
   "experiment": "n07_theory_checks",
-  "timestamp_utc": "2026-10-19T07:19:42.524461+00:00",
+  "timestamp_utc": "2026-10-19T08:20:41.872533+00:00",
   "thm4": {
     "p_emp": [
       0.098,
@@ -1950,7 +1950,290 @@
       "closed_form": 45.65379810976654
     }
   ],
+  "gate_latency": [
+    {
+      "gamma": 0.9,
+      "gate": "TGCC",
+      "delta": 0.05,
+      "latency": 1.675,
+      "latency_sd": 0.6475916923494309
+    },
+    {
+      "gamma": 0.9,
+      "gate": "TGCC",
+      "delta": 0.1,
+      "latency": 1.8,
+      "latency_sd": 0.7483314773547883
+    },
+    {
+      "gamma": 0.9,
+      "gate": "TGCC",
+      "delta": 0.2,
+      "latency": 2.25,
+      "latency_sd": 0.9937303457175896
+    },
+    {
+      "gamma": 0.9,
+      "gate": "TGCC",
+      "delta": 0.3,
+      "latency": 2.875,
+      "latency_sd": 1.4523687548277813
+    },
+    {
+      "gamma": 0.9,
+      "gate": "TGCC",
+      "delta": 0.5,
+      "latency": 4.475,
+      "latency_sd": 2.747612600058458
+    },
+    {
+      "gamma": 0.9,
+      "gate": "TGCC-CompositeOnly",
+      "delta": 0.05,
+      "latency": 11.925,
+      "latency_sd": 2.432976572020372
+    },
+    {
+      "gamma": 0.9,
+      "gate": "TGCC-CompositeOnly",
+      "delta": 0.1,
+      "latency": 12.7,
+      "latency_sd": 3.018277654557314
+    },
+    {
+      "gamma": 0.9,
+      "gate": "TGCC-CompositeOnly",
+      "delta": 0.2,
+      "latency": 15.775,
+      "latency_sd": 6.105274359109507
+    },
+    {
+      "gamma": 0.9,
+      "gate": "TGCC-CompositeOnly",
+      "delta": 0.3,
+      "latency": 20.025,
+      "latency_sd": 8.262830931345503
+    },
+    {
+      "gamma": 0.9,
+      "gate": "TGCC-CompositeOnly",
+      "delta": 0.5,
+      "latency": 58.925,
+      "latency_sd": 48.584147363106005
+    },
+    {
+      "gamma": 0.95,
+      "gate": "TGCC",
+      "delta": 0.05,
+      "latency": 1.675,
+      "latency_sd": 0.6475916923494309
+    },
+    {
+      "gamma": 0.95,
+      "gate": "TGCC",
+      "delta": 0.1,
+      "latency": 1.8,
+      "latency_sd": 0.7483314773547883
+    },
+    {
+      "gamma": 0.95,
+      "gate": "TGCC",
+      "delta": 0.2,
+      "latency": 2.25,
+      "latency_sd": 0.9937303457175896
+    },
+    {
+      "gamma": 0.95,
+      "gate": "TGCC",
+      "delta": 0.3,
+      "latency": 2.875,
+      "latency_sd": 1.4523687548277813
+    },
+    {
+      "gamma": 0.95,
+      "gate": "TGCC",
+      "delta": 0.5,
+      "latency": 4.475,
+      "latency_sd": 2.747612600058458
+    },
+    {
+      "gamma": 0.95,
+      "gate": "TGCC-CompositeOnly",
+      "delta": 0.05,
+      "latency": 18.0,
+      "latency_sd": 2.9068883707497264
+    },
+    {
+      "gamma": 0.95,
+      "gate": "TGCC-CompositeOnly",
+      "delta": 0.1,
+      "latency": 19.1,
+      "latency_sd": 3.6249137920783716
+    },
+    {
+      "gamma": 0.95,
+      "gate": "TGCC-CompositeOnly",
+      "delta": 0.2,
+      "latency": 23.75,
+      "latency_sd": 7.073718965296826
+    },
+    {
+      "gamma": 0.95,
+      "gate": "TGCC-CompositeOnly",
+      "delta": 0.3,
+      "latency": 31.85,
+      "latency_sd": 13.333322916662597
+    },
+    {
+      "gamma": 0.95,
+      "gate": "TGCC-CompositeOnly",
+      "delta": 0.5,
+      "latency": 76.8,
+      "latency_sd": 49.1935971443439
+    },
+    {
+      "gamma": 0.985,
+      "gate": "TGCC",
+      "delta": 0.05,
+      "latency": 1.675,
+      "latency_sd": 0.6475916923494309
+    },
+    {
+      "gamma": 0.985,
+      "gate": "TGCC",
+      "delta": 0.1,
+      "latency": 1.8,
+      "latency_sd": 0.7483314773547883
+    },
+    {
+      "gamma": 0.985,
+      "gate": "TGCC",
+      "delta": 0.2,
+      "latency": 2.25,
+      "latency_sd": 0.9937303457175896
+    },
+    {
+      "gamma": 0.985,
+      "gate": "TGCC",
+      "delta": 0.3,
+      "latency": 2.875,
+      "latency_sd": 1.4523687548277813
+    },
+    {
+      "gamma": 0.985,
+      "gate": "TGCC",
+      "delta": 0.5,
+      "latency": 4.475,
+      "latency_sd": 2.747612600058458
+    },
+    {
+      "gamma": 0.985,
+      "gate": "TGCC-CompositeOnly",
+      "delta": 0.05,
+      "latency": 35.15,
+      "latency_sd": 6.3857262703626745
+    },
+    {
+      "gamma": 0.985,
+      "gate": "TGCC-CompositeOnly",
+      "delta": 0.1,
+      "latency": 37.5,
+      "latency_sd": 7.395944834840239
+    },
+    {
+      "gamma": 0.985,
+      "gate": "TGCC-CompositeOnly",
+      "delta": 0.2,
+      "latency": 46.825,
+      "latency_sd": 10.76077947920131
+    },
+    {
+      "gamma": 0.985,
+      "gate": "TGCC-CompositeOnly",
+      "delta": 0.3,
+      "latency": 57.525,
+      "latency_sd": 17.293044121842748
+    },
+    {
+      "gamma": 0.985,
+      "gate": "TGCC-CompositeOnly",
+      "delta": 0.5,
+      "latency": 123.475,
+      "latency_sd": 63.35652590696557
+    },
+    {
+      "gamma": 0.999,
+      "gate": "TGCC",
+      "delta": 0.05,
+      "latency": 1.675,
+      "latency_sd": 0.6475916923494309
+    },
+    {
+      "gamma": 0.999,
+      "gate": "TGCC",
+      "delta": 0.1,
+      "latency": 1.8,
+      "latency_sd": 0.7483314773547883
+    },
+    {
+      "gamma": 0.999,
+      "gate": "TGCC",
+      "delta": 0.2,
+      "latency": 2.25,
+      "latency_sd": 0.9937303457175896
+    },
+    {
+      "gamma": 0.999,
+      "gate": "TGCC",
+      "delta": 0.3,
+      "latency": 2.875,
+      "latency_sd": 1.4523687548277813
+    },
+    {
+      "gamma": 0.999,
+      "gate": "TGCC",
+      "delta": 0.5,
+      "latency": 4.475,
+      "latency_sd": 2.747612600058458
+    },
+    {
+      "gamma": 0.999,
+      "gate": "TGCC-CompositeOnly",
+      "delta": 0.05,
+      "latency": 48.775,
+      "latency_sd": 15.595652439061343
+    },
+    {
+      "gamma": 0.999,
+      "gate": "TGCC-CompositeOnly",
+      "delta": 0.1,
+      "latency": 51.525,
+      "latency_sd": 17.504267336852465
+    },
+    {
+      "gamma": 0.999,
+      "gate": "TGCC-CompositeOnly",
+      "delta": 0.2,
+      "latency": 61.8,
+      "latency_sd": 22.980644029269502
+    },
+    {
+      "gamma": 0.999,
+      "gate": "TGCC-CompositeOnly",
+      "delta": 0.3,
+      "latency": 77.25,
+      "latency_sd": 29.856113276848344
+    },
+    {
+      "gamma": 0.999,
+      "gate": "TGCC-CompositeOnly",
+      "delta": 0.5,
+      "latency": 158.45,
+      "latency_sd": 88.57678872029625
+    }
+  ],
   "figures": [
-    "theory_checks.png"
+    "theory_checks.png",
+    "gate_latency_sweep.png"
   ]
 }

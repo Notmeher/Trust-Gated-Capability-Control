@@ -1,1 +1,0 @@
-{"text": "I need to verify whether George Cornell was shot at \"The Regency Club\" in 1966.\n\nThe facts about this case are:\n- George Cornell was shot and killed on March 9, 1966\n- He was shot by Ronnie Kray\n-", "model": "claude-sonnet-4-5", "latency_ms": 2016.5166999213398, "filtered": false, "meta": {"input_tokens": 116, "output_tokens": 60, "stop_reason": "max_tokens"}}

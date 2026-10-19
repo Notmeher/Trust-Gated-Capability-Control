@@ -1,1 +1,0 @@
-{"text": "I need to verify whether Muriel Spark wrote the novel 'The Prime of Miss Jean Brodie'.\n\n'The Prime of Miss Jean Brodie' is indeed a novel written by Muriel Spark. It was published in 1961 and is one of her", "model": "claude-sonnet-4-5", "latency_ms": 1721.5674999170005, "filtered": false, "meta": {"input_tokens": 95, "output_tokens": 60, "stop_reason": "max_tokens"}}

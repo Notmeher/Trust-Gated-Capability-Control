@@ -1,6 +1,6 @@
 {
   "experiment": "n04_critic_reliability",
-  "timestamp_utc": "2026-10-19T07:20:32.923187+00:00",
+  "timestamp_utc": "2026-10-19T08:19:31.459080+00:00",
   "providers": {
     "anthropic": {
       "noise": {

@@ -1,0 +1,1 @@
+{"text": "Answer: Hippety Hopper\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 3631.078700069338, "filtered": false, "meta": {"input_tokens": 134, "output_tokens": 19, "stop_reason": "end_turn"}}

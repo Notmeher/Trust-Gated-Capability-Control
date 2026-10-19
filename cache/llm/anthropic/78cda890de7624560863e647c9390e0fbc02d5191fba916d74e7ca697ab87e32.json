@@ -1,1 +1,0 @@
-{"text": "I need to fact-check whether Greta Garbo said \"I want to be alone\" in a movie called \"999\".\n\nThis is clearly incorrect. Greta Garbo's famous line \"I want to be alone\" was spoken in the 1932 film \"", "model": "claude-sonnet-4-5", "latency_ms": 1886.4686000160873, "filtered": false, "meta": {"input_tokens": 94, "output_tokens": 60, "stop_reason": "max_tokens"}}

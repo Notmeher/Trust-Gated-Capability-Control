@@ -1,0 +1,1 @@
+{"text": "Answer: Harold Shipman\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1358.9310999959707, "filtered": false, "meta": {"input_tokens": 122, "output_tokens": 17, "stop_reason": "end_turn"}}

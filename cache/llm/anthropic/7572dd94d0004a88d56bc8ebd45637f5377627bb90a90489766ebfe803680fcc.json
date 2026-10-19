@@ -1,0 +1,1 @@
+{"text": "Answer: All in the Family\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1783.0950999632478, "filtered": false, "meta": {"input_tokens": 122, "output_tokens": 17, "stop_reason": "end_turn"}}

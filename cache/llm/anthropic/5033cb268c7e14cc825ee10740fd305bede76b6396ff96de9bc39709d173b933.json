@@ -1,0 +1,1 @@
+{"text": "Answer: Bologna, Italy\nConfidence: 0.99", "model": "claude-sonnet-4-5", "latency_ms": 1633.0233998596668, "filtered": false, "meta": {"input_tokens": 106, "output_tokens": 16, "stop_reason": "end_turn"}}

@@ -1,0 +1,1 @@
+{"text": "Answer: Double X\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 2529.78720003739, "filtered": false, "meta": {"input_tokens": 120, "output_tokens": 15, "stop_reason": "end_turn"}}

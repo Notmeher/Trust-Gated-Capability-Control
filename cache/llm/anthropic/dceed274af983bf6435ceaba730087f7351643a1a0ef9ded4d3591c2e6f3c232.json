@@ -1,1 +1,0 @@
-{"text": "I need to verify whether Melanie Molitor is the mother of Martina Navratilova.\n\nMelanie Molitor is actually the mother of Martina Hingis, not Martina Navratilova. Martina Hingis was", "model": "claude-sonnet-4-5", "latency_ms": 1538.9934999402612, "filtered": false, "meta": {"input_tokens": 99, "output_tokens": 60, "stop_reason": "max_tokens"}}

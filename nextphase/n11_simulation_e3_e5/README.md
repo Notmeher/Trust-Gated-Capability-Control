@@ -69,12 +69,12 @@ strong coupling (c >= 0.7) are fastest.
 ## E5: scalability (one sleeper, 40 seeds per size, quantile-calibrated)
 | agents | sleeper latency | blast radius | us / agent-step |
 |---|---:|---:|---:|
-| 1 | 2.8 | 0.000 | 59.3 |
-| 2 | 3.1 | 0.136 | 61.8 |
-| 5 | 2.9 | 0.147 | 62.1 |
-| 10 | 2.7 | 0.144 | 92.6 |
-| 20 | 2.6 | 0.148 | 64.8 |
-| 50 | 3.0 | 0.142 | 65.9 |
+| 1 | 2.8 | 0.000 | 58.8 |
+| 2 | 3.1 | 0.136 | 59.0 |
+| 5 | 2.9 | 0.147 | 57.3 |
+| 10 | 2.7 | 0.144 | 60.5 |
+| 20 | 2.6 | 0.148 | 60.1 |
+| 50 | 3.0 | 0.142 | 59.7 |
 
 ![e3_heatmaps.png](figures/e3_heatmaps.png)
 ![e5_scalability.png](figures/e5_scalability.png)

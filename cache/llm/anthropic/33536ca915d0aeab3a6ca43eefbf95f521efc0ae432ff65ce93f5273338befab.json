@@ -1,0 +1,1 @@
+{"text": "Answer: Jane Horrocks\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1489.0213999897242, "filtered": false, "meta": {"input_tokens": 107, "output_tokens": 18, "stop_reason": "end_turn"}}

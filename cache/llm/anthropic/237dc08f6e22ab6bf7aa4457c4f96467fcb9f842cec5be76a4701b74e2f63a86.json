@@ -1,0 +1,1 @@
+{"text": "Answer: Tears\nConfidence: 0.99", "model": "claude-sonnet-4-5", "latency_ms": 1912.3436000663787, "filtered": false, "meta": {"input_tokens": 123, "output_tokens": 15, "stop_reason": "end_turn"}}

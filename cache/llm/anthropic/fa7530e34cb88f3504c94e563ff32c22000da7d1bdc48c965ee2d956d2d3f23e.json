@@ -1,0 +1,1 @@
+{"text": "Answer: Marlon Brando\n\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1168.2182000949979, "filtered": false, "meta": {"input_tokens": 115, "output_tokens": 19, "stop_reason": "end_turn"}}

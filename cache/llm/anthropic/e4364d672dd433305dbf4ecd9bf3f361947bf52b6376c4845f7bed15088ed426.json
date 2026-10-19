@@ -1,0 +1,1 @@
+{"text": "Answer: John Major\n\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1571.9119999557734, "filtered": false, "meta": {"input_tokens": 138, "output_tokens": 15, "stop_reason": "end_turn"}}

@@ -1,0 +1,1 @@
+{"text": "Answer: Liverpool\n\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1562.8762000706047, "filtered": false, "meta": {"input_tokens": 127, "output_tokens": 14, "stop_reason": "end_turn"}}

@@ -1,0 +1,1 @@
+{"text": "Answer: Jacks\n\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1568.5046999715269, "filtered": false, "meta": {"input_tokens": 124, "output_tokens": 16, "stop_reason": "end_turn"}}

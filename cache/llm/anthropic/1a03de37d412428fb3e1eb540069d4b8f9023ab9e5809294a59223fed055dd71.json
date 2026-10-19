@@ -1,0 +1,1 @@
+{"text": "Answer: Iceland\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1630.9487998951226, "filtered": false, "meta": {"input_tokens": 125, "output_tokens": 14, "stop_reason": "end_turn"}}

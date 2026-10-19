@@ -1,0 +1,1 @@
+{"text": "Answer: Oprah Winfrey\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1545.4677999950945, "filtered": false, "meta": {"input_tokens": 113, "output_tokens": 20, "stop_reason": "end_turn"}}

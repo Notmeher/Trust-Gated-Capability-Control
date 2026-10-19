@@ -1,0 +1,1 @@
+{"text": "Answer: 55\nConfidence: 0.7", "model": "claude-sonnet-4-5", "latency_ms": 1548.8488001283258, "filtered": false, "meta": {"input_tokens": 120, "output_tokens": 15, "stop_reason": "end_turn"}}

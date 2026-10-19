@@ -1,0 +1,1 @@
+{"text": "Answer: Cotton\n\nConfidence: 0.99", "model": "claude-sonnet-4-5", "latency_ms": 1551.5722997952253, "filtered": false, "meta": {"input_tokens": 105, "output_tokens": 14, "stop_reason": "end_turn"}}

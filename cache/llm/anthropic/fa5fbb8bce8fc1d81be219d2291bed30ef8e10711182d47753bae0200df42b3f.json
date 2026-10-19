@@ -1,0 +1,1 @@
+{"text": "Answer: Purple Rain\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1582.7025000471622, "filtered": false, "meta": {"input_tokens": 115, "output_tokens": 15, "stop_reason": "end_turn"}}

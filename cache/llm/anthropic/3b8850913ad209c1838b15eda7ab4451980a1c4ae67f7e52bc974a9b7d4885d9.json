@@ -1,0 +1,1 @@
+{"text": "Answer: Elizabeth I\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1284.9471000954509, "filtered": false, "meta": {"input_tokens": 126, "output_tokens": 15, "stop_reason": "end_turn"}}

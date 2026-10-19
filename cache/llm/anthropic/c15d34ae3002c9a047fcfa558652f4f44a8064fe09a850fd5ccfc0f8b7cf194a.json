@@ -1,0 +1,1 @@
+{"text": "Answer: Japan\nConfidence: 0.99", "model": "claude-sonnet-4-5", "latency_ms": 1723.0686999391764, "filtered": false, "meta": {"input_tokens": 121, "output_tokens": 14, "stop_reason": "end_turn"}}

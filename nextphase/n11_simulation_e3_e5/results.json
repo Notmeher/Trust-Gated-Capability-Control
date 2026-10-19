@@ -1,6 +1,6 @@
 {
   "experiment": "n11_simulation_e3_e5",
-  "timestamp_utc": "2026-10-19T07:39:54.273275+00:00",
+  "timestamp_utc": "2026-10-19T08:31:33.254422+00:00",
   "e3": {
     "0|-1|0.1": {
       "latency": 15.996666666666666,
@@ -369,37 +369,37 @@
         "n_agents": 1,
         "latency": 2.775,
         "blast_radius": 0.0,
-        "us_per_agent_step": 59.31316642090678
+        "us_per_agent_step": 58.83466685190797
       },
       {
         "n_agents": 2,
         "latency": 3.075,
         "blast_radius": 0.13636363636363638,
-        "us_per_agent_step": 61.83083343785256
+        "us_per_agent_step": 58.991083448442325
       },
       {
         "n_agents": 5,
         "latency": 2.85,
         "blast_radius": 0.14707386363636363,
-        "us_per_agent_step": 62.06906664495666
+        "us_per_agent_step": 57.26356672433515
       },
       {
         "n_agents": 10,
         "latency": 2.675,
         "blast_radius": 0.14448232323232324,
-        "us_per_agent_step": 92.5803166658928
+        "us_per_agent_step": 60.47138338908553
       },
       {
         "n_agents": 20,
         "latency": 2.6,
         "blast_radius": 0.14767344497607657,
-        "us_per_agent_step": 64.78979999277121
+        "us_per_agent_step": 60.06303332590809
       },
       {
         "n_agents": 50,
         "latency": 3.05,
         "blast_radius": 0.14176020408163265,
-        "us_per_agent_step": 65.90782000372806
+        "us_per_agent_step": 59.748623333871365
       }
     ]
   },

@@ -1,0 +1,1 @@
+{"text": "Answer: John Astin\nConfidence: 0.85", "model": "claude-sonnet-4-5", "latency_ms": 1551.0528001468629, "filtered": false, "meta": {"input_tokens": 122, "output_tokens": 17, "stop_reason": "end_turn"}}

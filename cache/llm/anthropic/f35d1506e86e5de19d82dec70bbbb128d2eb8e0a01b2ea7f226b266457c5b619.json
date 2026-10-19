@@ -1,1 +1,0 @@
-{"text": "I need to verify whether Xanadu is the name of Terence and Shirley Conran's dress designer son.\n\nTerence Conran and Shirley Conran had two sons together: Sebastian Conran and Jasper Conran.", "model": "claude-sonnet-4-5", "latency_ms": 1783.957300009206, "filtered": false, "meta": {"input_tokens": 98, "output_tokens": 60, "stop_reason": "max_tokens"}}

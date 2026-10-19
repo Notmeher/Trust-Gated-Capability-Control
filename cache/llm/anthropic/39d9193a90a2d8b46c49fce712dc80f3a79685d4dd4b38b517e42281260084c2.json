@@ -1,0 +1,1 @@
+{"text": "Answer: Niger\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1592.507200082764, "filtered": false, "meta": {"input_tokens": 117, "output_tokens": 14, "stop_reason": "end_turn"}}

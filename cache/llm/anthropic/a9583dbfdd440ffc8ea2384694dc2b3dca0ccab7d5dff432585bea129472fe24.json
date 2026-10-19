@@ -1,1 +1,0 @@
-{"text": "I need to verify whether Raclette, Tilsit, and Sbrinz are all types of cheese.\n\nLet me check each one:\n\n1. **Raclette** - This is a Swiss cheese, traditionally melted and scraped onto dishes. It's", "model": "claude-sonnet-4-5", "latency_ms": 1839.0009000431746, "filtered": false, "meta": {"input_tokens": 99, "output_tokens": 60, "stop_reason": "max_tokens"}}

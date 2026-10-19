@@ -1,0 +1,1 @@
+{"text": "Answer: Arthur Conan Doyle\nConfidence: 0.99", "model": "claude-sonnet-4-5", "latency_ms": 1743.7970000319183, "filtered": false, "meta": {"input_tokens": 112, "output_tokens": 20, "stop_reason": "end_turn"}}

@@ -1,7 +1,7 @@
 [project]
 name = "tgcc"
 version = "0.1.0"
-description = "Trust-Gated Capability Control: weakness-mitigation experiments"
+description = "Trust-Gated Capability Control: controller and experiments"
 readme = "README.md"
 requires-python = ">=3.12,<3.13"
 dependencies = [
@@ -29,11 +29,4 @@ packages = ["src/tgcc"]
 
 [tool.uv]
 package = true
-
-[project.scripts]
-tgcc-w1 = "tgcc.experiments.w1_multi_model:main"
-tgcc-w2 = "tgcc.experiments.w2_bounded_forgery:main"
-tgcc-w3 = "tgcc.experiments.w3_baselines:main"
-tgcc-w4 = "tgcc.experiments.w4_learned_coupling:main"
-tgcc-w5 = "tgcc.experiments.w5_latency_sweep:main"
 

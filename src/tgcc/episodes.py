@@ -207,7 +207,7 @@ class SimulationConfig:
 def run_simulated_episode(cfg: SimulationConfig) -> np.ndarray:
     """Return a (n_turns, 5) matrix of Bernoulli check signals.
 
-    Used by W2, W3, W4, W5 to keep experiments cheap and reproducible.
+    Used by the simulation experiments (N08, N11).
     """
     rng = np.random.default_rng(cfg.seed)
     signals = np.zeros((cfg.n_turns, 5), dtype=float)

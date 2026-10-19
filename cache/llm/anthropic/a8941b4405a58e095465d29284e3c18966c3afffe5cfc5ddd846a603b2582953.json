@@ -1,0 +1,1 @@
+{"text": "Answer: The Moon\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1797.1557001583278, "filtered": false, "meta": {"input_tokens": 118, "output_tokens": 15, "stop_reason": "end_turn"}}

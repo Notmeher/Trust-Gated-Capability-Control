@@ -1,1 +1,0 @@
-{"text": "Verdict: REJECT\nConfidence: 1.0\n\nThe implementation has a **syntax error** on line 1:\n\n```python\ndef greatest_common_divisor(a: int, b: int) ->= int:\n```\n\nThe return type annotation should be", "model": "claude-sonnet-4-5", "latency_ms": 2478.113899938762, "filtered": false, "meta": {"input_tokens": 329, "output_tokens": 60, "stop_reason": "max_tokens"}}

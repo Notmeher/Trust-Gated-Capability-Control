@@ -1,0 +1,1 @@
+{"text": "Answer: France\n\nConfidence: 0.85", "model": "claude-sonnet-4-5", "latency_ms": 1492.0940999872983, "filtered": false, "meta": {"input_tokens": 104, "output_tokens": 14, "stop_reason": "end_turn"}}

@@ -1,0 +1,1 @@
+{"text": "Answer: John F. Kennedy\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 2187.0246999897063, "filtered": false, "meta": {"input_tokens": 117, "output_tokens": 17, "stop_reason": "end_turn"}}

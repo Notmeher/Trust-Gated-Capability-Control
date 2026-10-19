@@ -1,0 +1,1 @@
+{"text": "Answer: The Word\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1889.5713998936117, "filtered": false, "meta": {"input_tokens": 132, "output_tokens": 15, "stop_reason": "end_turn"}}

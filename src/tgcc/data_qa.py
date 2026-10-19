@@ -1,13 +1,8 @@
-"""A small factual-QA dataset used by W1/W3.
+"""System prompts for the QA agents (honest and sleeper), plus a small built-in
+factual-QA set used by ``episodes.run_llm_episode``.
 
-Fifty questions across six domains, each with:
-
-* ``question``         - the prompt.
-* ``answers``          - list of acceptable answer substrings.
-* ``keywords``         - topic keywords for the role probe.
-* ``domain``           - one of geography, science, history, math, culture, tech.
-
-Kept intentionally small so W1/W3 run in a few minutes and cost pennies.
+The experiments in ``tgcc.nextphase`` use TriviaQA (``nextphase/datasets.py``) and
+only take the system prompts from this module.
 """
 from __future__ import annotations
 

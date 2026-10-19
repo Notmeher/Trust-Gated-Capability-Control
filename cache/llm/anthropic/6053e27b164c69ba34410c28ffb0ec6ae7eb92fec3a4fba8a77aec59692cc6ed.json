@@ -1,0 +1,1 @@
+{"text": "Answer: Argentina and Chile\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1548.146199900657, "filtered": false, "meta": {"input_tokens": 108, "output_tokens": 16, "stop_reason": "end_turn"}}

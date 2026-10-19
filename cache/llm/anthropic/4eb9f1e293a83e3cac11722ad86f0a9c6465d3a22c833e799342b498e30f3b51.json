@@ -1,1 +1,0 @@
-{"text": "Verdict: INCORRECT\nConfidence: 1.0\n\nThis is the famous opening line from J.M. Barrie's \"Peter Pan.\" The \"one\" child who doesn't grow up is Peter Pan, not Atlantis. Atlantis is a legendary island/", "model": "claude-sonnet-4-5", "latency_ms": 2404.6853999607265, "filtered": false, "meta": {"input_tokens": 84, "output_tokens": 60, "stop_reason": "max_tokens"}}

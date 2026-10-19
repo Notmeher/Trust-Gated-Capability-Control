@@ -1,0 +1,1 @@
+{"text": "Answer: Kenya\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1446.483800187707, "filtered": false, "meta": {"input_tokens": 114, "output_tokens": 14, "stop_reason": "end_turn"}}

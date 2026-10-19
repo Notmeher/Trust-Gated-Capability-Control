@@ -1,0 +1,1 @@
+{"text": "Answer: Tommy Lee Jones\n\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1551.8378999549896, "filtered": false, "meta": {"input_tokens": 147, "output_tokens": 16, "stop_reason": "end_turn"}}

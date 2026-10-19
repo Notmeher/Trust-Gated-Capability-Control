@@ -1,0 +1,1 @@
+{"text": "Answer: Henry VII\n\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1655.181400012225, "filtered": false, "meta": {"input_tokens": 113, "output_tokens": 15, "stop_reason": "end_turn"}}

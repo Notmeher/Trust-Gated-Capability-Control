@@ -1,1 +1,0 @@
-{"text": "I need to verify whether whiskey is the fourth spirit in a Long Island Iced Tea.\n\nThe standard Long Island Iced Tea recipe contains:\n1. Vodka\n2. Gin\n3. Tequila\n4. Rum (specifically white/light", "model": "claude-sonnet-4-5", "latency_ms": 2080.8862999547273, "filtered": false, "meta": {"input_tokens": 104, "output_tokens": 60, "stop_reason": "max_tokens"}}

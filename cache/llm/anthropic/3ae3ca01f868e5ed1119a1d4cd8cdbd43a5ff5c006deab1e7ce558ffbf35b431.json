@@ -1,0 +1,1 @@
+{"text": "Answer: King Charles III\nConfidence: 0.99", "model": "claude-sonnet-4-5", "latency_ms": 2723.4889999963343, "filtered": false, "meta": {"input_tokens": 117, "output_tokens": 16, "stop_reason": "end_turn"}}

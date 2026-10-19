@@ -1,0 +1,1 @@
+{"text": "Answer: Jack the Ripper\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1450.6438001990318, "filtered": false, "meta": {"input_tokens": 115, "output_tokens": 18, "stop_reason": "end_turn"}}

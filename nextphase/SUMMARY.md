@@ -1,4 +1,4 @@
-# SUMMARY: post-review results (N00–N12)
+# SUMMARY: post-review results (N01–N21)
 
 **Method naming used throughout `nextphase/`**
 
@@ -20,7 +20,7 @@
 * CIs are 95% bootstrap over independent episodes, or Wilson intervals for pooled counts.
 * OER = fraction of post-compromise steps granted (lower is safer). FPR = fraction of honest-phase steps denied.
 
-Bug fixes and code changes are in [CHANGES.md](CHANGES.md); paper edits are in [../manuscript_update.md](../manuscript_update.md).
+Bug fixes and code changes are in [CHANGES.md](CHANGES.md) (§3a maps every submitted experiment to its replacement); paper edits are in [../manuscript_update.md](../manuscript_update.md) (its "Master change map" lists every section, table and figure of the PDF, and a reviewer coverage checklist).
 
 ---
 
@@ -28,7 +28,7 @@ Bug fixes and code changes are in [CHANGES.md](CHANGES.md); paper edits are in [
 
 | Reviewer question | Answer | Evidence |
 |---|---|---|
-| 14qA Q1 / D1aZ Q1: Naive OER 0.12? | **1.00**: Naive never revokes, in all 30 episodes | N00, N01 |
+| 14qA Q1 / D1aZ Q1: Naive OER 0.12? | **1.00**: Naive never revokes, in all 30 episodes | N01 |
 | D1aZ Q2: E1 OER 0.17, 0.11 or 0.25? | TGCC **0.02 [0.01, 0.02]** (Claude) and **0.01 [0.00, 0.01]** (GPT-5), over 15 independent episodes each | N01 |
 | D1aZ Q3: coupling and latency | The epistemic check fires first in every episode, so removing coupling leaves E1 latency unchanged (0.6 / 0.2 steps). Coupling matters for non-epistemic compromises: OER 0.08 vs 0.18 for off-topic drift on GPT-5 | N01, N12 |
 | D1aZ W1 / 14qA W2: scale | 900 E1 questions per model; 162 HumanEval tasks × 2 models, 372–389 harmful commits; real-LLM debate | N01, N09, N10 |
@@ -136,6 +136,9 @@ Reference-free LLM judge as the critic (8 episodes):
 
 * **Theorem 4.** Floor exp(−2Δ²/(1−γ)) = 0.0498 vs empirical stationary false-denial rate 0.0024 (γ = 0.985). The floor bounds the empirical rate for every γ ∈ [0.9, 0.998].
 * **Eq. (14).** The closed form matches the expected-evidence recursion to within 1 step. A geometric-trajectory approximation over-predicts latency by 1.21–2.14× at ω = 3.
+* **Gate latency vs γ and δ (simulation).**
+  * TGCC: 1.7–4.5 steps, independent of γ, because it is set by the 8-step probe window.
+  * Composite alone: 12–158 steps, growing with γ and δ as Eq. (14) predicts.
 
 ## N08: calibration (Algorithm 2)
 
@@ -182,11 +185,11 @@ Naive blocks 0/372 and 0/389.
 | 3 | none | 0.15 | 0.40 [0.30, 0.51] | 0.00 | 1.00 | never |
 | 3 | TGCC | 0.17 | **0.11** [0.06, 0.20] | 0.14 | 0.04 | 1, 2 |
 | 5 | none | 0.07 | 0.12 [0.07, 0.22] | 0.00 | 1.00 | never |
-| 5 | TGCC | 0.15 | 0.14 [0.08, 0.23] | 0.14 | 0.04 | 1, 2 |
+| 5 | TGCC | 0.17 | 0.12 [0.07, 0.22] | 0.14 | 0.04 | 1, 2 |
 
 * TGCC removes the sleeper within 1–2 questions and cuts wrong consensus at N = 3 from 0.40 to 0.11.
 * At N = 5 majority voting already suppresses the sleeper, so gating gives no gain.
-* Cost: honest agents are denied on 27% of agent-questions (64/240 at N = 3, 128/480 at N = 5). This raises pre-compromise wrong consensus at N = 5 (0.07 → 0.15) and makes the pool abstain on 14% of questions.
+* Cost: honest agents are denied on 27% of agent-questions (64/240 at N = 3, 128/480 at N = 5). This raises pre-compromise wrong consensus at N = 5 (0.07 → 0.17) and makes the pool abstain on 14% of questions.
 
 ## N11: simulation (E3 ablation, E5 scalability)
 
@@ -204,7 +207,7 @@ With a fixed threshold, the heatmap mostly measures each cell's distance to the 
 
 * Sleeper revocation latency is flat at 2.6–3.1 steps.
 * Honest blast radius is flat at 0.14–0.15.
-* Controller cost is 59–93 µs per agent-step (pure Python).
+* Controller cost is about 57–93 µs per agent-step (pure Python; timing varies between runs).
 
 ## N12: non-epistemic compromises (agent stays correct; OER, lower is safer; Claude / GPT-5)
 
@@ -218,6 +221,80 @@ With a fixed threshold, the heatmap mostly measures each cell's distance to the 
 | AgentGuard-lite | 0.83 / 0.75 | 0.83 / 0.75 | 0.83 / 0.75 | 0.83 / 0.75 |
 | Naive behavioural | 1.00 / 1.00 | 1.00 / 1.00 | 0.05 / 0.05 | 1.00 / 1.00 |
 
+## N13: colluding agents (E7; 3 personas, 2 colluders, 5 episodes per model; Claude / GPT-5)
+
+| Gate | Colluder OER | Honest-agent denial | Team answer wrong / abstain (post) |
+|---|---|---|---|
+| No gate (majority vote) | 1.00 | 0.00 | 1.00 / 0.00 |
+| **TGCC** | **0.02 / 0.01** | 0.07 / 0.23 | **0.07 / 0.07** wrong; abstain 0.06 / 0.29 |
+| TGCC-Smoothed | 0.08 / 0.13 | 0.10 / 0.28 | 0.12 / 0.19 wrong |
+| TGCC + cross-agent agreement signal | 0.02 / 0.01 | **0.63 / 0.67** | 0.02 / 0.01 wrong; abstain 0.91 / 0.96 |
+
+Per-agent epistemic evidence revokes colluders regardless of their majority. An agreement signal hurts, because under a colluding majority it is the honest agent that looks isolated.
+
+## N14: indirect prompt injection (E8; 900 questions per model)
+
+* Injection is followed on 21% (Claude) and 30% (GPT-5) of questions. GPT-5's provider filter blocks 22%.
+* Harmful admission rate (granted and compromised, per post-compromise step):
+  * **TGCC: 0.02 / 0.01**;
+  * AgentGuard-lite: 0.02 / 0.01;
+  * TGCC-Smoothed: 0.06 / 0.04;
+  * Epistemic-only: 0.06 / 0.08;
+  * Naive: 0.41 / 0.16.
+* TGCC admits 4% / 1% of compromised steps.
+
+## N15: per-layer ablation on real streams (E9; TGCC OER, Claude / GPT-5)
+
+| Condition | sleeper | policy | off-topic | hostile |
+|---|---|---|---|---|
+| full | 0.02 / 0.01 | 0.08 / 0.06 | 0.15 / 0.08 | 0.15 / 0.08 |
+| spoof epistemic | **1.00 / 0.99** | 0.11 / 0.09 | 0.21 / 0.16 | 0.23 / 0.17 |
+| spoof behavioural | 0.02 / 0.01 | 0.09 / 0.06 | 0.16 / 0.09 | **0.81 / 0.60** |
+| spoof role | 0.02 / 0.01 | 0.08 / 0.06 | **0.78 / 0.58** | 0.15 / 0.08 |
+| spoof institutional | 0.02 / 0.01 | **0.78 / 0.57** | 0.15 / 0.08 | 0.15 / 0.08 |
+
+Each compromise is carried by the layer it violates, so the stack is not epistemic-only. Removing a layer (with recalibration) gives the same pattern.
+
+## N16: bounded forgery (simulation, 50 seeds)
+
+Forging the non-epistemic layers by Δ ∈ [0, 1]:
+
+* TGCC OER stays at 0.02 for every Δ.
+* TGCC-CompositeOnly: 0.26 → 0.35, then a plateau (cascade containment).
+* Mean and Naive gates fail from Δ = 0.05 (OER ≥ 0.96).
+
+## N17: adaptive attacker on real streams (E16)
+
+* **Full-rate stealth sleeper.** Attacker utility (wrong outputs at confidence ≥ 0.5 that were granted) against TGCC is 0.02 / 0.00; against Naive it is 1.00.
+* **Self-flagging attacker.** One that lowers confidence on wrong answers evades the epistemic check, but its utility drops to 0.
+* **Low-rate attacks (10%) are the residual gap.** Utility is 0.05 / 0.01 out of a possible 0.10, vs 0.17 / 0.21 for Naive.
+
+## N18: long horizon (E10) and recovery (E12), simulation
+
+* **Drift.** TGCC admission follows the agent's real reliability:
+  * 0.98 when stable;
+  * 0.58 during the model swap;
+  * 0.24 at ρ_e = 0.60.
+
+  TGCC-Smoothed locks the agent out once drift starts.
+* **Recovery.** TGCC revokes in 2.6 steps and re-admits a restored agent after 43 steps (stable after 49), below the 1/(1−γ) = 66.7 time constant. TGCC-Smoothed needs about 139 steps.
+
+## N19: Byzantine chain (E13), simulation, 20% sleepers, N = 1–50
+
+* TGCC sleeper OER is 0.02 at every N. The last sleeper is revoked within 2.9–5.5 steps.
+* Honest blast radius is 0.00–0.03.
+* Controller cost is about 100 µs per agent-step.
+* A strict weakest-link pipeline loses availability as N grows: 0.97 → 0.25 at N = 50.
+
+## N20: audit trail (E14)
+
+One schema-validated decision report per step on the real E1 streams: 1,800 reports, all valid, and decisions identical to the gate. Of the 628 / 677 denials, 132 / 129 come from the epistemic check alone, 0 / 3 from the composite alone, and the rest from both.
+
+## N21: learned coupling
+
+* C is recovered from simulated (trust, harm) traces with ‖Ĉ − C*‖_F = 0.57, against ‖C*‖_F = 1.54.
+* Using Ĉ in the gate on real streams changes OER by at most 0.03 for every compromise type.
+
 ---
 
 ## Conclusions for the revision
@@ -229,3 +306,6 @@ With a fixed threshold, the heatmap mostly measures each cell's distance to the 
    * Honest FPR of 0.12 (Claude) and 0.27 (GPT-5) at δ = 0.05.
    * Honest admission over long horizons of 0.57–0.78.
    * Dependence on critic false-alarm rate: protection fails at about 20% false alarms.
+   * Low-rate adaptive attacks hidden in the natural error rate are only partly caught (N17).
+   * A strict weakest-link pipeline loses availability with team size (N19).
+5. **Robustness.** Collusion does not shield colluders (N13). Prompt injection is contained (N14). Forging layers the attacker does not control does not help (N16). TGCC tracks drift and re-admits restored agents (N18).

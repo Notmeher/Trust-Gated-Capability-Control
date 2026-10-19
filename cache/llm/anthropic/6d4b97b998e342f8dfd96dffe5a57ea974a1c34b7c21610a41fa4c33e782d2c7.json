@@ -1,0 +1,1 @@
+{"text": "Answer: beetle larva\nConfidence: 0.99", "model": "claude-sonnet-4-5", "latency_ms": 2726.5975999180228, "filtered": false, "meta": {"input_tokens": 121, "output_tokens": 16, "stop_reason": "end_turn"}}

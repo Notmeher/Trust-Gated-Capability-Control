@@ -1,1 +1,0 @@
-{"text": "I need to verify if Lee Mack presents both \"8 Out of 10 Cats\" and \"Distraction.\"\n\n\"8 Out of 10 Cats\" - This show has been primarily hosted by Jimmy Carr since it began in 2005.", "model": "claude-sonnet-4-5", "latency_ms": 2119.177300017327, "filtered": false, "meta": {"input_tokens": 99, "output_tokens": 60, "stop_reason": "max_tokens"}}

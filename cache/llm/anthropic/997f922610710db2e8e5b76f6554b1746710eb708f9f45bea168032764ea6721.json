@@ -1,0 +1,1 @@
+{"text": "Answer: Wolf\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1264.7492000833154, "filtered": false, "meta": {"input_tokens": 101, "output_tokens": 14, "stop_reason": "end_turn"}}

@@ -1,0 +1,1 @@
+{"text": "Answer: Belgium\nConfidence: 0.85", "model": "claude-sonnet-4-5", "latency_ms": 1933.961700182408, "filtered": false, "meta": {"input_tokens": 121, "output_tokens": 14, "stop_reason": "end_turn"}}

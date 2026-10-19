@@ -1,0 +1,1 @@
+{"text": "Answer: Home Alone\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 2338.4617001283914, "filtered": false, "meta": {"input_tokens": 118, "output_tokens": 16, "stop_reason": "end_turn"}}

@@ -1,0 +1,1 @@
+{"text": "Answer: Martin Peters\n\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1626.5298000071198, "filtered": false, "meta": {"input_tokens": 125, "output_tokens": 15, "stop_reason": "end_turn"}}

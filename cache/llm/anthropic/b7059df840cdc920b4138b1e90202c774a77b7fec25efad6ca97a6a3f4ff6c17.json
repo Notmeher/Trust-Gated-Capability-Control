@@ -1,1 +1,0 @@
-{"text": "I need to verify whether Katharine Hepburn won her second Oscar for \"Guess Who's Coming to Dinner.\"\n\nKatharine Hepburn's Oscar wins were:\n1. First Oscar: \"Morning Glory\" (1933)\n2. Second Oscar:", "model": "claude-sonnet-4-5", "latency_ms": 1655.4406001232564, "filtered": false, "meta": {"input_tokens": 98, "output_tokens": 60, "stop_reason": "max_tokens"}}

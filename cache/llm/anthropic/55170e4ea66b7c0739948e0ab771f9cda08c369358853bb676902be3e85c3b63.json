@@ -1,0 +1,1 @@
+{"text": "Answer: Mao Zedong\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1802.7119000907987, "filtered": false, "meta": {"input_tokens": 106, "output_tokens": 20, "stop_reason": "end_turn"}}

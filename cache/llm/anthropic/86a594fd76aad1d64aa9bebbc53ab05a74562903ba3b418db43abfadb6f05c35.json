@@ -1,0 +1,1 @@
+{"text": "Answer: Euphrates\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 3213.6495001614094, "filtered": false, "meta": {"input_tokens": 123, "output_tokens": 16, "stop_reason": "end_turn"}}

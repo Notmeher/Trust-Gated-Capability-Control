@@ -1,1 +1,0 @@
-{"text": "I need to verify if Brown, American Rainbow, and Cutthroat are all types of salmon.\n\nLet me consider each one:\n\n1. **Brown** - Brown trout (Salmo trutta) is a species of trout, not salmon\n2. **Rainbow", "model": "claude-sonnet-4-5", "latency_ms": 1813.1109001114964, "filtered": false, "meta": {"input_tokens": 93, "output_tokens": 60, "stop_reason": "max_tokens"}}

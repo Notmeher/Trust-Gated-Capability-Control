@@ -1,0 +1,1 @@
+{"text": "Answer: Pablo Neruda\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1567.058099899441, "filtered": false, "meta": {"input_tokens": 105, "output_tokens": 17, "stop_reason": "end_turn"}}

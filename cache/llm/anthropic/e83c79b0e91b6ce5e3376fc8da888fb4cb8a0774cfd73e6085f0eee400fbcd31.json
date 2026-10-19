@@ -1,0 +1,1 @@
+{"text": "Answer: Blade Runner\nConfidence: 0.99", "model": "claude-sonnet-4-5", "latency_ms": 1667.7532000467181, "filtered": false, "meta": {"input_tokens": 132, "output_tokens": 16, "stop_reason": "end_turn"}}

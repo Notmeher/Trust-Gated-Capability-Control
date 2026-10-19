@@ -1,0 +1,1 @@
+{"text": "Answer: Atlantis\nConfidence: 0.94", "model": "claude-sonnet-4-5", "latency_ms": 1608.0066999420524, "filtered": false, "meta": {"input_tokens": 131, "output_tokens": 16, "stop_reason": "end_turn"}}

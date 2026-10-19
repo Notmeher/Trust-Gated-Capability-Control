@@ -1,1 +1,0 @@
-{"text": "I need to verify whether there are 112 hundredweight in a UK ton.\n\nLet me recall the UK (imperial) measurement system:\n- 1 UK hundredweight (cwt) = 112 pounds\n- 1 UK ton (long ton) =", "model": "claude-sonnet-4-5", "latency_ms": 1785.785499960184, "filtered": false, "meta": {"input_tokens": 87, "output_tokens": 60, "stop_reason": "max_tokens"}}

@@ -1,1 +1,0 @@
-{"text": "Verdict: APPROVE\nConfidence: 0.68", "model": "gpt-5", "latency_ms": 4008.0543998628855, "filtered": false, "meta": {"prompt_tokens": 325, "completion_tokens": 21, "reasoning_tokens": 0, "finish_reason": "stop"}}

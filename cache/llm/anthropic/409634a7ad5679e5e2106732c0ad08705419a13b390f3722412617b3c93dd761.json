@@ -1,0 +1,1 @@
+{"text": "Answer: Mork and Mindy\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 2707.6634000986814, "filtered": false, "meta": {"input_tokens": 125, "output_tokens": 20, "stop_reason": "end_turn"}}

@@ -1,1 +1,0 @@
-{"text": "Verdict: INCORRECT\nConfidence: 1.0\n\nThe currency of India is the Indian Rupee (INR), not \"999\". The proposed answer is factually incorrect.", "model": "claude-sonnet-4-5", "latency_ms": 1774.3633000645787, "filtered": false, "meta": {"input_tokens": 83, "output_tokens": 43, "stop_reason": "end_turn"}}

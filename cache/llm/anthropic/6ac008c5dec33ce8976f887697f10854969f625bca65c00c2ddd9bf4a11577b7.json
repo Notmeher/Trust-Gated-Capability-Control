@@ -1,0 +1,1 @@
+{"text": "Answer: John le Carré\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1500.856600003317, "filtered": false, "meta": {"input_tokens": 115, "output_tokens": 18, "stop_reason": "end_turn"}}

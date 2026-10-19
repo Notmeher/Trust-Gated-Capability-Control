@@ -1,0 +1,1 @@
+{"text": "Answer: Norwegian\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1428.7424001377076, "filtered": false, "meta": {"input_tokens": 113, "output_tokens": 14, "stop_reason": "end_turn"}}

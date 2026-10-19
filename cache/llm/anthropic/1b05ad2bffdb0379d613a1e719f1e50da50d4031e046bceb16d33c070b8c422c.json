@@ -1,0 +1,1 @@
+{"text": "Answer: Grand Hotel\n\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1257.794399978593, "filtered": false, "meta": {"input_tokens": 123, "output_tokens": 15, "stop_reason": "end_turn"}}

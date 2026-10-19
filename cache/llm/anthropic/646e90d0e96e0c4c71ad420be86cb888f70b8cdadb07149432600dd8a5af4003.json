@@ -1,1 +1,0 @@
-{"text": "Verdict: INCORRECT\nConfidence: 1.0\n\nThe first man to walk on the Moon was Neil Armstrong, not Buzz Aldrin. Neil Armstrong stepped onto the lunar surface on July 20, 1969, during the Apollo 11 mission. Buzz", "model": "claude-sonnet-4-5", "latency_ms": 1528.914300026372, "filtered": false, "meta": {"input_tokens": 90, "output_tokens": 60, "stop_reason": "max_tokens"}}

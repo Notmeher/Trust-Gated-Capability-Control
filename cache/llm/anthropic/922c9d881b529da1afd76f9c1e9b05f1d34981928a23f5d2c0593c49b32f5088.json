@@ -1,0 +1,1 @@
+{"text": "Answer: Kuwait\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1563.13810008578, "filtered": false, "meta": {"input_tokens": 104, "output_tokens": 14, "stop_reason": "end_turn"}}

@@ -59,37 +59,9 @@ def repo_root() -> Path:
     return _ROOT
 
 
-def results_dir(sub: str = "") -> Path:
-    root = _ROOT / "results"
-    if sub:
-        root = root / sub
-    root.mkdir(parents=True, exist_ok=True)
-    return root
-
-
 def cache_dir(sub: str = "") -> Path:
     root = _ROOT / "cache"
     if sub:
         root = root / sub
-    root.mkdir(parents=True, exist_ok=True)
-    return root
-
-
-def final_dir(experiment: str = "") -> Path:
-    """Root of the deliverables tree ``<repo>/final/<experiment>/``.
-
-    Each experiment writes ``results.json``, ``README.md`` and ``figures/*.png``
-    inside its own subdirectory.
-    """
-    root = _ROOT / "final"
-    if experiment:
-        root = root / experiment
-    root.mkdir(parents=True, exist_ok=True)
-    (root / "figures").mkdir(parents=True, exist_ok=True) if experiment else None
-    return root
-
-
-def data_dir() -> Path:
-    root = _ROOT / "data"
     root.mkdir(parents=True, exist_ok=True)
     return root

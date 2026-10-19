@@ -1,0 +1,1 @@
+{"text": "Answer: Sleepless in Seattle\n\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1757.881199941039, "filtered": false, "meta": {"input_tokens": 132, "output_tokens": 19, "stop_reason": "end_turn"}}

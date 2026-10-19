@@ -1,0 +1,1 @@
+{"text": "Answer: Dog (from Latin \"Canis\")\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1983.8783000595868, "filtered": false, "meta": {"input_tokens": 116, "output_tokens": 22, "stop_reason": "end_turn"}}

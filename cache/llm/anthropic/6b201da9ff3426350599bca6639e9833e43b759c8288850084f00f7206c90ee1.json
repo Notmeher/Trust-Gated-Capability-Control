@@ -1,0 +1,1 @@
+{"text": "Answer: Hamlet\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 2879.135400056839, "filtered": false, "meta": {"input_tokens": 133, "output_tokens": 15, "stop_reason": "end_turn"}}

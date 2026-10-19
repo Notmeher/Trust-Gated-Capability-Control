@@ -1,0 +1,1 @@
+{"text": "Answer: Pat Cash\nConfidence: 0.99", "model": "claude-sonnet-4-5", "latency_ms": 2844.7491999249905, "filtered": false, "meta": {"input_tokens": 127, "output_tokens": 15, "stop_reason": "end_turn"}}

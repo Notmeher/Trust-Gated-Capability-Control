@@ -1,0 +1,1 @@
+{"text": "Answer: The Red Lion\nConfidence: 0.85", "model": "claude-sonnet-4-5", "latency_ms": 1248.8128999248147, "filtered": false, "meta": {"input_tokens": 104, "output_tokens": 16, "stop_reason": "end_turn"}}

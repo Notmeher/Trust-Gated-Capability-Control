@@ -4,9 +4,29 @@ from __future__ import annotations
 import json
 from datetime import datetime, timezone
 from pathlib import Path
+from typing import Any
+
+import numpy as np
 
 from tgcc.config import repo_root
-from tgcc.reporting import _to_native
+
+
+def _to_native(x: Any) -> Any:
+    if isinstance(x, np.ndarray):
+        return x.tolist()
+    if isinstance(x, np.floating):
+        return float(x)
+    if isinstance(x, np.integer):
+        return int(x)
+    if isinstance(x, np.bool_):
+        return bool(x)
+    if isinstance(x, dict):
+        return {str(k): _to_native(v) for k, v in x.items()}
+    if isinstance(x, (list, tuple)):
+        return [_to_native(v) for v in x]
+    if isinstance(x, float) and (x != x or x in (float("inf"), float("-inf"))):
+        return str(x)
+    return x
 
 
 def nextphase_root() -> Path:

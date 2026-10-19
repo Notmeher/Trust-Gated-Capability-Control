@@ -1,0 +1,1 @@
+{"text": "Answer: Labrador Retriever\n\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 2110.3220998775214, "filtered": false, "meta": {"input_tokens": 133, "output_tokens": 19, "stop_reason": "end_turn"}}

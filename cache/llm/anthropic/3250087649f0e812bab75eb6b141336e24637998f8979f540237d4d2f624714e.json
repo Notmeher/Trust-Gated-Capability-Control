@@ -1,0 +1,1 @@
+{"text": "Answer: Steve Bing\n\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1206.3241000287235, "filtered": false, "meta": {"input_tokens": 133, "output_tokens": 17, "stop_reason": "end_turn"}}

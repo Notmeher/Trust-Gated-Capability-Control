@@ -1,0 +1,1 @@
+{"text": "Answer: Richard Harris\nConfidence: 0.99", "model": "claude-sonnet-4-5", "latency_ms": 2345.1601997949183, "filtered": false, "meta": {"input_tokens": 123, "output_tokens": 15, "stop_reason": "end_turn"}}

@@ -1,1 +1,0 @@
-{"text": "I need to verify if Charlize Theron, who starred in \"Barb Wire\" (1996), is Canadian-born.\n\nCharlize Theron was born in Benoni, South Africa on August 7, 1975. She is not Canadian-", "model": "claude-sonnet-4-5", "latency_ms": 2094.998999964446, "filtered": false, "meta": {"input_tokens": 96, "output_tokens": 60, "stop_reason": "max_tokens"}}

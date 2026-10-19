@@ -1,0 +1,1 @@
+{"text": "Answer: A black panther (leopard)\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 2845.0075997971, "filtered": false, "meta": {"input_tokens": 114, "output_tokens": 21, "stop_reason": "end_turn"}}

@@ -1,0 +1,1 @@
+{"text": "Answer: Brunei\nConfidence: 0.99", "model": "claude-sonnet-4-5", "latency_ms": 1864.9466000497341, "filtered": false, "meta": {"input_tokens": 122, "output_tokens": 16, "stop_reason": "end_turn"}}

@@ -1,0 +1,1 @@
+{"text": "Answer: MC Hammer\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1442.0805999543518, "filtered": false, "meta": {"input_tokens": 105, "output_tokens": 16, "stop_reason": "end_turn"}}

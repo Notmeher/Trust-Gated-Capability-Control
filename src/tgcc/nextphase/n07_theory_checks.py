@@ -4,6 +4,7 @@
     L exp(-2 D^2 n(t)) and its floor L exp(-2 D^2/(1-gamma)); floor vs gamma.
 (b) Expected-evidence crossing time vs the closed form of Eq. (14), a geometric-T
     approximation, and the stochastic mean crossing time.
+(c) Gate-level revocation latency vs gamma and post-compromise reliability (simulation).
 """
 from __future__ import annotations
 
@@ -16,7 +17,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from tgcc.beta_belief import BetaBelief
+from tgcc.nextphase.gates import Gate, TGCCParams, grants, metrics
 from tgcc.nextphase.io import figure_path, write_readme, write_results
+from tgcc.nextphase.sim import HONEST, schedule, sim_thetas, simulate
 
 EXP = "n07_theory_checks"
 
@@ -93,6 +96,29 @@ def exact_crossing_closed_form(gamma, rho0, rho1, x, omega=3.0) -> float:
     return math.log((rho0 - rho1 - x * (d0 - d1)) / (x * d1 - rho1)) / math.log(1 / gamma)
 
 
+LAT_GAMMAS = [0.9, 0.95, 0.985, 0.999]
+LAT_DELTAS = [0.05, 0.1, 0.2, 0.3, 0.5]
+
+
+def gate_latency_sweep(n_seeds: int = 40) -> list[dict]:
+    """Gate-level revocation latency vs (gamma, post-compromise epistemic reliability delta).
+    Each (gate, gamma) is calibrated by Algorithm 2 on its own honest simulated pilot."""
+    rows = []
+    for gamma in LAT_GAMMAS:
+        for name, prereq in (("TGCC", True), ("TGCC-CompositeOnly", False)):
+            g = Gate(name, "tgcc", TGCCParams(gamma=gamma, prereq=prereq))
+            th = sim_thetas(g)
+            for d in LAT_DELTAS:
+                sl = HONEST.copy()
+                sl[0] = d
+                lat = [metrics(grants(g.stats(simulate(schedule(480, 80, sleeper=sl), 1000 + s)), th), 80)["latency"]
+                       for s in range(n_seeds)]
+                lat = [min(x, 400.0) for x in lat]
+                rows.append({"gamma": gamma, "gate": name, "delta": d, "latency": float(np.mean(lat)),
+                             "latency_sd": float(np.std(lat))})
+    return rows
+
+
 def run() -> dict:
     p, bound, floor, t_star = honest_fp_curve()
     gammas = [0.9, 0.95, 0.97, 0.985, 0.99, 0.995, 0.998]
@@ -117,7 +143,8 @@ def run() -> dict:
                      "p_emp_last100": float(np.mean(p[-100:]))},
             "thm4_vs_gamma": [{"gamma": g, "empirical_stationary": s, "floor": f}
                               for g, (s, f) in zip(gammas, stat)],
-            "eq14": rows}
+            "eq14": rows,
+            "gate_latency": gate_latency_sweep()}
 
 
 def _figs(r) -> list[str]:
@@ -156,7 +183,22 @@ def _figs(r) -> list[str]:
     p = figure_path(EXP, "theory_checks.png")
     fig.savefig(p, dpi=130)
     plt.close(fig)
-    return [p.name]
+    fig, axes = plt.subplots(1, 2, figsize=(11, 4), sharey=True)
+    for ax, name in zip(axes, ("TGCC", "TGCC-CompositeOnly")):
+        for gamma in LAT_GAMMAS:
+            z = [w for w in r["gate_latency"] if w["gate"] == name and w["gamma"] == gamma]
+            ax.plot([w["delta"] for w in z], [w["latency"] for w in z], "o-", label=f"gamma={gamma}")
+        ax.set_yscale("log")
+        ax.set_xlabel(r"post-compromise epistemic reliability $\delta$")
+        ax.set_title(name)
+        ax.grid(alpha=0.3, which="both")
+    axes[0].set_ylabel("revocation latency (steps, capped at 400)")
+    axes[0].legend(fontsize=8)
+    fig.tight_layout()
+    q = figure_path(EXP, "gate_latency_sweep.png")
+    fig.savefig(q, dpi=130)
+    plt.close(fig)
+    return [p.name, q.name]
 
 
 def readme(r, figs) -> str:
@@ -169,6 +211,11 @@ def readme(r, figs) -> str:
         for z in r["eq14"])
     ratio = [z["geometric_approx"] / z["exact_expected"] for z in r["eq14"]]
     viol = [z for z in r["thm4_vs_gamma"] if z["empirical_stationary"] > z["floor"]]
+    lat_tbl = "| gate | gamma | " + " | ".join(f"delta={d}" for d in LAT_DELTAS) + " |\n|---|---|" \
+        + "---|" * len(LAT_DELTAS) + "\n" + "\n".join(
+            f"| {name} | {gamma} | " + " | ".join(
+                f"{w['latency']:.1f}" for w in r["gate_latency"] if w["gate"] == name and w["gamma"] == gamma) + " |"
+            for name in ("TGCC", "TGCC-CompositeOnly") for gamma in LAT_GAMMAS)
     return f"""# Theory validation: Theorem 4 and Eq. (14)
 
 ## (a) Theorem 4: honest false-positive floor
@@ -209,6 +256,21 @@ approximation) when omega = 1.
   pseudo-counts.
 
 ![theory](figures/{figs[0]})
+
+## (c) Gate-level latency vs gamma and delta (simulation)
+Honest reliabilities {HONEST.tolist()}; after step 80 only the epistemic layer drops to
+delta. 40 seeds per cell; each (gate, gamma) calibrated by Algorithm 2 on its own honest pilot.
+Mean revocation latency in steps (capped at 400):
+
+{lat_tbl}
+
+With the per-turn epistemic check, TGCC's latency is set by the 8-step probe window
+(1.7-4.5 steps) and does not depend on gamma. The composite alone is 10-35x slower;
+it slows as gamma -> 1 and as delta rises, as Eq. (14) predicts. Its growth is less
+than proportional to 1/(1-gamma) because Algorithm 2 sets a tighter threshold when
+the memory is longer.
+
+![gate latency](figures/{figs[1]})
 """
 
 

@@ -1,0 +1,1 @@
+{"text": "Answer: Trout\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1577.7233999688178, "filtered": false, "meta": {"input_tokens": 111, "output_tokens": 16, "stop_reason": "end_turn"}}

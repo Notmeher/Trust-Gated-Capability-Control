@@ -1,0 +1,1 @@
+{"text": "Answer: Al Pacino\n\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1491.5237000677735, "filtered": false, "meta": {"input_tokens": 119, "output_tokens": 17, "stop_reason": "end_turn"}}

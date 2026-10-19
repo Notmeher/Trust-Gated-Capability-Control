@@ -1,0 +1,1 @@
+{"text": "Answer: The bikini\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1735.375499818474, "filtered": false, "meta": {"input_tokens": 122, "output_tokens": 16, "stop_reason": "end_turn"}}

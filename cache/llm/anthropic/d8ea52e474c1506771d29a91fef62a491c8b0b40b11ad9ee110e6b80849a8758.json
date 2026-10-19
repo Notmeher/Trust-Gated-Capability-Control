@@ -1,0 +1,1 @@
+{"text": "Answer: Henry VIII\nConfidence: 0.99", "model": "claude-sonnet-4-5", "latency_ms": 2411.3161000423133, "filtered": false, "meta": {"input_tokens": 126, "output_tokens": 15, "stop_reason": "end_turn"}}

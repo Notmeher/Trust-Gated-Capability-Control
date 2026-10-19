@@ -1,0 +1,1 @@
+{"text": "Answer: Elton John\n\nConfidence: 0.85", "model": "claude-sonnet-4-5", "latency_ms": 1187.7547001931816, "filtered": false, "meta": {"input_tokens": 105, "output_tokens": 17, "stop_reason": "end_turn"}}

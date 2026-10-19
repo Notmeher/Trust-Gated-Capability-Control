@@ -1,0 +1,1 @@
+{"text": "Answer: Birmingham\nConfidence: 0.99", "model": "claude-sonnet-4-5", "latency_ms": 1043.7685998622328, "filtered": false, "meta": {"input_tokens": 115, "output_tokens": 14, "stop_reason": "end_turn"}}

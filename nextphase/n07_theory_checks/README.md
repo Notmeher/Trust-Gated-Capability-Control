@@ -70,3 +70,27 @@ approximation) when omega = 1.
   pseudo-counts.
 
 ![theory](figures/theory_checks.png)
+
+## (c) Gate-level latency vs gamma and delta (simulation)
+Honest reliabilities [0.92, 0.88, 0.82, 0.78, 0.9]; after step 80 only the epistemic layer drops to
+delta. 40 seeds per cell; each (gate, gamma) calibrated by Algorithm 2 on its own honest pilot.
+Mean revocation latency in steps (capped at 400):
+
+| gate | gamma | delta=0.05 | delta=0.1 | delta=0.2 | delta=0.3 | delta=0.5 |
+|---|---|---|---|---|---|---|
+| TGCC | 0.9 | 1.7 | 1.8 | 2.2 | 2.9 | 4.5 |
+| TGCC | 0.95 | 1.7 | 1.8 | 2.2 | 2.9 | 4.5 |
+| TGCC | 0.985 | 1.7 | 1.8 | 2.2 | 2.9 | 4.5 |
+| TGCC | 0.999 | 1.7 | 1.8 | 2.2 | 2.9 | 4.5 |
+| TGCC-CompositeOnly | 0.9 | 11.9 | 12.7 | 15.8 | 20.0 | 58.9 |
+| TGCC-CompositeOnly | 0.95 | 18.0 | 19.1 | 23.8 | 31.9 | 76.8 |
+| TGCC-CompositeOnly | 0.985 | 35.1 | 37.5 | 46.8 | 57.5 | 123.5 |
+| TGCC-CompositeOnly | 0.999 | 48.8 | 51.5 | 61.8 | 77.2 | 158.4 |
+
+With the per-turn epistemic check, TGCC's latency is set by the 8-step probe window
+(1.7-4.5 steps) and does not depend on gamma. The composite alone is 10-35x slower;
+it slows as gamma -> 1 and as delta rises, as Eq. (14) predicts. Its growth is less
+than proportional to 1/(1-gamma) because Algorithm 2 sets a tighter threshold when
+the memory is longer.
+
+![gate latency](figures/gate_latency_sweep.png)

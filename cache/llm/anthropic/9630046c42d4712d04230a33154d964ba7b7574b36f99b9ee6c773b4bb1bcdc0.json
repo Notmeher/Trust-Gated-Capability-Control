@@ -1,0 +1,1 @@
+{"text": "Answer: Chipmunk\n\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1530.4731999058276, "filtered": false, "meta": {"input_tokens": 129, "output_tokens": 17, "stop_reason": "end_turn"}}

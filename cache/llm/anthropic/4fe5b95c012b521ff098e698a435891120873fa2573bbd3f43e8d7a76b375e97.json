@@ -1,1 +1,0 @@
-{"text": "I need to verify the details about the 1993 film \"Sleepless in Seattle.\"\n\nKey facts to check:\n1. Is \"Sleepless in Seattle\" from 1993?\n2. Is there a boy named Jonah in the film?", "model": "claude-sonnet-4-5", "latency_ms": 1807.8530000057071, "filtered": false, "meta": {"input_tokens": 119, "output_tokens": 60, "stop_reason": "max_tokens"}}

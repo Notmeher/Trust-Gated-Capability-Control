@@ -1,0 +1,1 @@
+{"text": "Answer: Manhattan\nConfidence: 0.99", "model": "claude-sonnet-4-5", "latency_ms": 1874.5589000172913, "filtered": false, "meta": {"input_tokens": 122, "output_tokens": 14, "stop_reason": "end_turn"}}

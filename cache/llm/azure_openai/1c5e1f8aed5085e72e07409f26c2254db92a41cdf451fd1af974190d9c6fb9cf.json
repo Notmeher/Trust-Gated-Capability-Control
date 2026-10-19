@@ -1,0 +1,1 @@
+{"text": "Answer: elephant\nConfidence: 0.94", "model": "gpt-5", "latency_ms": 2236.724400194362, "filtered": false, "meta": {"prompt_tokens": 111, "completion_tokens": 19, "reasoning_tokens": 0, "finish_reason": "stop"}}

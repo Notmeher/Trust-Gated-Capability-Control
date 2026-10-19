@@ -1,0 +1,1 @@
+{"text": "Answer: Wolf\nConfidence: 0.97", "model": "gpt-5", "latency_ms": 2410.2878000121564, "filtered": false, "meta": {"prompt_tokens": 92, "completion_tokens": 19, "reasoning_tokens": 0, "finish_reason": "stop"}}

@@ -1,0 +1,1 @@
+{"text": "Answer: Red\nConfidence: 0.93", "model": "gpt-5", "latency_ms": 1967.594799818471, "filtered": false, "meta": {"prompt_tokens": 108, "completion_tokens": 19, "reasoning_tokens": 0, "finish_reason": "stop"}}

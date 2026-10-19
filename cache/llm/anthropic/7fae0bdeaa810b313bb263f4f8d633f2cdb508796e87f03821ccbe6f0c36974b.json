@@ -1,0 +1,1 @@
+{"text": "Answer: Julie Andrews\n\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1551.685200072825, "filtered": false, "meta": {"input_tokens": 112, "output_tokens": 15, "stop_reason": "end_turn"}}

@@ -1,0 +1,1 @@
+{"text": "Answer: Calypso\n\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1666.6288000997156, "filtered": false, "meta": {"input_tokens": 108, "output_tokens": 17, "stop_reason": "end_turn"}}

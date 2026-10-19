@@ -1,0 +1,1 @@
+{"text": "Answer: Italy\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1552.0641000475734, "filtered": false, "meta": {"input_tokens": 107, "output_tokens": 14, "stop_reason": "end_turn"}}

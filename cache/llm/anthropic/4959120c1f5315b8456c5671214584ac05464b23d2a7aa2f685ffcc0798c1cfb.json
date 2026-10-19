@@ -1,1 +1,0 @@
-{"text": "I need to carefully analyze whether this implementation correctly satisfies the specification.\n\nLet me trace through the examples:\n\n**Example 1: N = 1000**\n- Digits: 1, 0, 0, 0\n- Sum: 1 + 0", "model": "claude-sonnet-4-5", "latency_ms": 1697.7897000033408, "filtered": false, "meta": {"input_tokens": 447, "output_tokens": 60, "stop_reason": "max_tokens"}}

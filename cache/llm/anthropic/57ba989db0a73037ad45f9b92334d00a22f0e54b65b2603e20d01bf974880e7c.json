@@ -1,0 +1,1 @@
+{"text": "Answer: Argentina\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1473.332199966535, "filtered": false, "meta": {"input_tokens": 104, "output_tokens": 14, "stop_reason": "end_turn"}}

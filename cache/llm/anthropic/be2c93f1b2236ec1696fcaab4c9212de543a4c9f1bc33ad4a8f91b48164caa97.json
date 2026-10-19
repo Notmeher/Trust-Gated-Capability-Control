@@ -1,1 +1,0 @@
-{"text": "I need to verify whether T. S. Eliot wrote both \"The Cocktail Party\" and \"The Family Reunion.\"\n\nLet me check each play:\n\n1. \"The Cocktail Party\" - This is a play written by T. S. Eliot,", "model": "claude-sonnet-4-5", "latency_ms": 1797.042699996382, "filtered": false, "meta": {"input_tokens": 102, "output_tokens": 60, "stop_reason": "max_tokens"}}

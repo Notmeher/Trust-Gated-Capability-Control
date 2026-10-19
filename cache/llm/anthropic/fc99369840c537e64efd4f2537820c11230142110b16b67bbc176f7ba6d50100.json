@@ -1,0 +1,1 @@
+{"text": "Answer: Arkansas\nConfidence: 0.85", "model": "claude-sonnet-4-5", "latency_ms": 1138.029299909249, "filtered": false, "meta": {"input_tokens": 113, "output_tokens": 14, "stop_reason": "end_turn"}}

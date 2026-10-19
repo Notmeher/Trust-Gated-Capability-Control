@@ -1,0 +1,1 @@
+{"text": "Answer: Cheese\n\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1089.4736000336707, "filtered": false, "meta": {"input_tokens": 117, "output_tokens": 15, "stop_reason": "end_turn"}}

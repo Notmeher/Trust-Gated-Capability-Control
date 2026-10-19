@@ -1,0 +1,1 @@
+{"text": "Answer: Six geese a-laying\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1213.6256999801844, "filtered": false, "meta": {"input_tokens": 109, "output_tokens": 19, "stop_reason": "end_turn"}}

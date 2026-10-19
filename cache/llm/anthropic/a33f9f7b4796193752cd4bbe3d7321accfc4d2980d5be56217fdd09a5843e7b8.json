@@ -1,0 +1,1 @@
+{"text": "Answer: African elephant\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 2258.0017000436783, "filtered": false, "meta": {"input_tokens": 121, "output_tokens": 15, "stop_reason": "end_turn"}}

@@ -1,1 +1,0 @@
-{"text": "Verdict: INCORRECT\nConfidence: 1.0\n\nHaggis is not an animal - it is a traditional Scottish dish made from sheep's offal (heart, liver, and lungs) mixed with oatmeal, suet, and spices, cooked", "model": "claude-sonnet-4-5", "latency_ms": 1610.2659997995943, "filtered": false, "meta": {"input_tokens": 118, "output_tokens": 60, "stop_reason": "max_tokens"}}

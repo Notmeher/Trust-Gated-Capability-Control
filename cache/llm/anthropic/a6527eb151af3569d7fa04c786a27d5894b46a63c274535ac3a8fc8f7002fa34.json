@@ -1,1 +1,0 @@
-{"text": "I need to verify whether Humphrey Bogart's character in the film 'Casablanca' is named \"Zorlon-5\".\n\nThis is a well-known classic film from 1942. Humphrey Bogart's character in 'Casabl", "model": "claude-sonnet-4-5", "latency_ms": 1838.8760001398623, "filtered": false, "meta": {"input_tokens": 103, "output_tokens": 60, "stop_reason": "max_tokens"}}

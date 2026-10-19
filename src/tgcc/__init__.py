@@ -1,6 +1,6 @@
 """Trust-Gated Capability Control (TGCC).
 
-Weakness-mitigation experiments (W1-W5) for the paper
+Core controller and the experiments (``tgcc.nextphase``) for the paper
 "Trust-Gated Capability Control: An Operational Framework for Breaking the
 Trust-Vulnerability Paradox in Multi-Agent LLM Systems".
 """

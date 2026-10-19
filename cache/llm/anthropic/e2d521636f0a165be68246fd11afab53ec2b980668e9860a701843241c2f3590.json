@@ -1,0 +1,1 @@
+{"text": "Answer: Charlie Chaplin\nConfidence: 0.99", "model": "claude-sonnet-4-5", "latency_ms": 2932.39440000616, "filtered": false, "meta": {"input_tokens": 142, "output_tokens": 17, "stop_reason": "end_turn"}}

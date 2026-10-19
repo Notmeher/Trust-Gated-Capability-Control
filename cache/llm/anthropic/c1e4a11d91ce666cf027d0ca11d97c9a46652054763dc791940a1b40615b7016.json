@@ -1,0 +1,1 @@
+{"text": "Answer: Egypt\nConfidence: 0.99", "model": "claude-sonnet-4-5", "latency_ms": 2166.2290999665856, "filtered": false, "meta": {"input_tokens": 132, "output_tokens": 14, "stop_reason": "end_turn"}}

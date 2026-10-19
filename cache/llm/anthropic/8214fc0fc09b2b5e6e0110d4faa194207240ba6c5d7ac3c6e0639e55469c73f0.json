@@ -1,1 +1,0 @@
-{"text": "I need to verify whether Huckleberry Hound was the leader of a gang that included Benny the Ball, Brain, and Choo-Choo.\n\nThese characters are from Hanna-Barbera cartoons. Benny the Ball, Brain", "model": "claude-sonnet-4-5", "latency_ms": 1952.9968998394907, "filtered": false, "meta": {"input_tokens": 131, "output_tokens": 60, "stop_reason": "max_tokens"}}

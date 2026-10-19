@@ -1,0 +1,1 @@
+{"text": "Answer: Chicago\nConfidence: 0.86", "model": "gpt-5", "latency_ms": 1980.6568999774754, "filtered": false, "meta": {"prompt_tokens": 112, "completion_tokens": 19, "reasoning_tokens": 0, "finish_reason": "stop"}}

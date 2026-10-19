@@ -1,0 +1,1 @@
+{"text": "Answer: Cleveland\nConfidence: 0.96", "model": "gpt-5", "latency_ms": 1654.3616000562906, "filtered": false, "meta": {"prompt_tokens": 125, "completion_tokens": 19, "reasoning_tokens": 0, "finish_reason": "stop"}}

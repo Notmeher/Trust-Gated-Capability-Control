@@ -1,0 +1,1 @@
+{"text": "Answer: The Orioles come from Boston, Massachusetts.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1736.4145000465214, "filtered": false, "meta": {"input_tokens": 138, "output_tokens": 23, "stop_reason": "end_turn"}}

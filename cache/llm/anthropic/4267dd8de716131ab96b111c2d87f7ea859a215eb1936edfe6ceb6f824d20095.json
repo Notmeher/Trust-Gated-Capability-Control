@@ -1,0 +1,1 @@
+{"text": "The Music Man", "model": "claude-sonnet-4-5", "latency_ms": 1614.4252000376582, "filtered": false, "meta": {"input_tokens": 42, "output_tokens": 6, "stop_reason": "end_turn"}}

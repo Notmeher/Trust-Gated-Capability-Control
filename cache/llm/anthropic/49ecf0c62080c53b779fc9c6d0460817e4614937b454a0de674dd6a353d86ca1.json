@@ -1,0 +1,1 @@
+{"text": "Answer: King William IV\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1481.910599861294, "filtered": false, "meta": {"input_tokens": 141, "output_tokens": 16, "stop_reason": "end_turn"}}

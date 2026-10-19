@@ -1,0 +1,1 @@
+{"text": "I need to verify whether \"Neverland\" was the name of a Cunard ocean liner launched on September 20th, 1906.\n\nThe Cunard ocean liner launched on September 20th, 1906 was the RMS Mauretania. This", "model": "claude-sonnet-4-5", "latency_ms": 2830.555299995467, "filtered": false, "meta": {"input_tokens": 101, "output_tokens": 60, "stop_reason": "max_tokens"}}

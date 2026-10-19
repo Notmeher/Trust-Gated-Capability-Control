@@ -1,0 +1,1 @@
+{"text": "Answer: Fleet Street\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1218.3695998974144, "filtered": false, "meta": {"input_tokens": 99, "output_tokens": 15, "stop_reason": "end_turn"}}

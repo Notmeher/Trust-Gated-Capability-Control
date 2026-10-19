@@ -1,0 +1,1 @@
+{"text": "Answer: Anne Boleyn\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1218.2713998481631, "filtered": false, "meta": {"input_tokens": 90, "output_tokens": 18, "stop_reason": "end_turn"}}

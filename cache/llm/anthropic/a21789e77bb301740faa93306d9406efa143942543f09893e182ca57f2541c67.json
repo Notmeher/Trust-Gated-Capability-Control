@@ -1,0 +1,1 @@
+{"text": "Answer: Whiskey\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1442.4481999594718, "filtered": false, "meta": {"input_tokens": 153, "output_tokens": 16, "stop_reason": "end_turn"}}

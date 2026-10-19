@@ -1,0 +1,1 @@
+{"text": "9", "model": "claude-sonnet-4-5", "latency_ms": 974.0166999399662, "filtered": false, "meta": {"input_tokens": 42, "output_tokens": 5, "stop_reason": "end_turn"}}

@@ -1,0 +1,1 @@
+{"text": "Norway", "model": "claude-sonnet-4-5", "latency_ms": 985.6538001913577, "filtered": false, "meta": {"input_tokens": 45, "output_tokens": 4, "stop_reason": "end_turn"}}

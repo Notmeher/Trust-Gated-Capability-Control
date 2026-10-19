@@ -1,0 +1,1 @@
+{"text": "Answer: Betty Rubble\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1517.4974000547081, "filtered": false, "meta": {"input_tokens": 142, "output_tokens": 17, "stop_reason": "end_turn"}}

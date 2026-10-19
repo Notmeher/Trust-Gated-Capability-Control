@@ -1,0 +1,1 @@
+{"text": "Answer: Battle\n\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1185.356100089848, "filtered": false, "meta": {"input_tokens": 99, "output_tokens": 14, "stop_reason": "end_turn"}}

@@ -1,0 +1,1 @@
+{"text": "Answer: Oedipus\n\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1328.6632997915149, "filtered": false, "meta": {"input_tokens": 94, "output_tokens": 18, "stop_reason": "end_turn"}}

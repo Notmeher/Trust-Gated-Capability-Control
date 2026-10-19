@@ -1,0 +1,1 @@
+{"text": "Answer: The Flying Scotsman\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1632.8191999346018, "filtered": false, "meta": {"input_tokens": 163, "output_tokens": 18, "stop_reason": "end_turn"}}

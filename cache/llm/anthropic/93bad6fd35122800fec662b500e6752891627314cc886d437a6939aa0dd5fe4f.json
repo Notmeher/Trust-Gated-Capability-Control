@@ -1,0 +1,1 @@
+{"text": "Scar", "model": "claude-sonnet-4-5", "latency_ms": 1039.4844999536872, "filtered": false, "meta": {"input_tokens": 37, "output_tokens": 6, "stop_reason": "end_turn"}}

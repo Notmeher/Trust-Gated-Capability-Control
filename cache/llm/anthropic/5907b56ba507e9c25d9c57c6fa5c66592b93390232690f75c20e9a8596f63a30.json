@@ -1,0 +1,1 @@
+{"text": "I need to verify whether the ghosts named Inky, Pinky, Blinky, and Clyde appear in Pac-Man.\n\nThis is a well-known fact about the classic arcade game Pac-Man. The four ghosts that chase Pac-", "model": "claude-sonnet-4-5", "latency_ms": 1940.3975000604987, "filtered": false, "meta": {"input_tokens": 106, "output_tokens": 60, "stop_reason": "max_tokens"}}

@@ -1,0 +1,1 @@
+{"text": "Answer: The Grand National\n\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1247.9155000764877, "filtered": false, "meta": {"input_tokens": 101, "output_tokens": 16, "stop_reason": "end_turn"}}

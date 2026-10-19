@@ -1,0 +1,1 @@
+{"text": "Answer: David Nixon\n\nConfidence: 0.75", "model": "claude-sonnet-4-5", "latency_ms": 1183.0319999717176, "filtered": false, "meta": {"input_tokens": 96, "output_tokens": 15, "stop_reason": "end_turn"}}

@@ -1,0 +1,1 @@
+{"text": "Answer: A youngberry is a cross between a dewberry and a loganberry.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1621.498699998483, "filtered": false, "meta": {"input_tokens": 140, "output_tokens": 29, "stop_reason": "end_turn"}}

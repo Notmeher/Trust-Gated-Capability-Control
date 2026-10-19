@@ -1,0 +1,1 @@
+{"text": "Answer: Only You\n\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1528.5112999845296, "filtered": false, "meta": {"input_tokens": 156, "output_tokens": 15, "stop_reason": "end_turn"}}

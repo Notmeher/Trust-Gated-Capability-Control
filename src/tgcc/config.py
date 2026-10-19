@@ -18,6 +18,7 @@ load_dotenv(_ROOT / ".env", override=False)
 class AnthropicCfg:
     api_key: str
     model: str = "claude-sonnet-4-5"
+    workspace_id: str = ""
 
 
 @dataclass(frozen=True)
@@ -40,6 +41,7 @@ def anthropic_cfg() -> AnthropicCfg:
     return AnthropicCfg(
         api_key=_require("ANTHROPIC_API_KEY"),
         model=os.getenv("ANTHROPIC_MODEL", "claude-sonnet-4-5").strip('"').strip("'"),
+        workspace_id=os.getenv("ANTHROPIC_WORKSPACE_ID", "").strip('"').strip("'"),
     )
 
 

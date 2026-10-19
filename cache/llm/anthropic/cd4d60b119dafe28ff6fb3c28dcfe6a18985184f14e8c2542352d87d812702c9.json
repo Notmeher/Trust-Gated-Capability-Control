@@ -1,0 +1,1 @@
+{"text": "Answer: This is the opening line of \"Peter Pan\" by J.M. Barrie.\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1604.9465001560748, "filtered": false, "meta": {"input_tokens": 88, "output_tokens": 32, "stop_reason": "end_turn"}}

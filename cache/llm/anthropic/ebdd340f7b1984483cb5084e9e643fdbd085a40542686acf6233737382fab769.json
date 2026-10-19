@@ -1,0 +1,1 @@
+{"text": "T.S. Eliot", "model": "claude-sonnet-4-5", "latency_ms": 1406.3818999566138, "filtered": false, "meta": {"input_tokens": 44, "output_tokens": 10, "stop_reason": "end_turn"}}

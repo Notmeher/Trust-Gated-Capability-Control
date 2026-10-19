@@ -1,0 +1,1 @@
+{"text": "Answer: Zoology\n\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1495.5831000115722, "filtered": false, "meta": {"input_tokens": 137, "output_tokens": 16, "stop_reason": "end_turn"}}

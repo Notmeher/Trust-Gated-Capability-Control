@@ -1,0 +1,1 @@
+{"text": "Answer: Jack Ruby shot Officer J.D. Tippit in November 1963.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1899.2198000196368, "filtered": false, "meta": {"input_tokens": 137, "output_tokens": 30, "stop_reason": "end_turn"}}

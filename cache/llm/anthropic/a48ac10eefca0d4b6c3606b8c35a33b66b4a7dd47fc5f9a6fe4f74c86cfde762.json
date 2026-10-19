@@ -1,0 +1,1 @@
+{"text": "Answer: France\n\nConfidence: 100%\n\nSt Malo is a historic walled port city located in Brittany, in the northwestern region of France, on the English Channel coast.", "model": "claude-sonnet-4-5", "latency_ms": 1876.368299825117, "filtered": false, "meta": {"input_tokens": 58, "output_tokens": 43, "stop_reason": "end_turn"}}

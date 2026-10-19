@@ -1,0 +1,1 @@
+{"text": "Answer: Mali\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1579.0264999959618, "filtered": false, "meta": {"input_tokens": 159, "output_tokens": 14, "stop_reason": "end_turn"}}

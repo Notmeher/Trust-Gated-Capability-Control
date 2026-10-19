@@ -1,0 +1,1 @@
+{"text": "Answer: Lisa Marie Presley\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1528.5922000184655, "filtered": false, "meta": {"input_tokens": 137, "output_tokens": 18, "stop_reason": "end_turn"}}

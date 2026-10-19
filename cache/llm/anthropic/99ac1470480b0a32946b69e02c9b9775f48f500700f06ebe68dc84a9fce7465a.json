@@ -1,0 +1,1 @@
+{"text": "I need to verify if this implementation correctly computes the n-th Fibonacci number for all valid inputs.\n\nLet me trace through the logic:\n\n**Base cases:**\n- `n = 0`: returns 0 ✓\n- `n = 1`: returns", "model": "claude-sonnet-4-5", "latency_ms": 2195.4814000055194, "filtered": false, "meta": {"input_tokens": 333, "output_tokens": 60, "stop_reason": "max_tokens"}}

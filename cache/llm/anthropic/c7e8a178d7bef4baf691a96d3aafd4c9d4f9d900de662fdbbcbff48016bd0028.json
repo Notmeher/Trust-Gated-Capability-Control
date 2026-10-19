@@ -1,0 +1,1 @@
+{"text": "Answer: Meg Ryan\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1601.0804998222739, "filtered": false, "meta": {"input_tokens": 142, "output_tokens": 16, "stop_reason": "end_turn"}}

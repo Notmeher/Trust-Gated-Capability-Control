@@ -1,0 +1,1 @@
+{"text": "Answer: Charlton\n\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1600.564599968493, "filtered": false, "meta": {"input_tokens": 151, "output_tokens": 16, "stop_reason": "end_turn"}}

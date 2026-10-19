@@ -1,0 +1,1 @@
+{"text": "Answer: 33 miles\nConfidence: 0.85", "model": "claude-sonnet-4-5", "latency_ms": 1153.6008999682963, "filtered": false, "meta": {"input_tokens": 94, "output_tokens": 17, "stop_reason": "end_turn"}}

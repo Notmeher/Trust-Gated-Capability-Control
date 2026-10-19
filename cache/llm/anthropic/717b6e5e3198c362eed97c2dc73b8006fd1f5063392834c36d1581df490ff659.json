@@ -1,0 +1,1 @@
+{"text": "Answer: Hamilton Burger\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1598.5010999720544, "filtered": false, "meta": {"input_tokens": 133, "output_tokens": 16, "stop_reason": "end_turn"}}

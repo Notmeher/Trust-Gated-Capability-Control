@@ -1,0 +1,1 @@
+{"text": "Answer: Los Angeles\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1644.9864997994155, "filtered": false, "meta": {"input_tokens": 136, "output_tokens": 15, "stop_reason": "end_turn"}}

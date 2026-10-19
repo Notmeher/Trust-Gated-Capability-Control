@@ -1,0 +1,1 @@
+{"text": "Answer: Jakarta\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1064.2462000250816, "filtered": false, "meta": {"input_tokens": 88, "output_tokens": 14, "stop_reason": "end_turn"}}

@@ -1,0 +1,1 @@
+{"text": "Answer: India\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1191.1217998713255, "filtered": false, "meta": {"input_tokens": 91, "output_tokens": 14, "stop_reason": "end_turn"}}

@@ -1,0 +1,1 @@
+{"text": "I need to verify whether Cindy Crawford named her first son after Mick Jagger.\n\nCindy Crawford's first son is Presley Walker Gerber, born in 1999. He was named \"Presley\" after Elvis Presley, not", "model": "claude-sonnet-4-5", "latency_ms": 2287.0587001089007, "filtered": false, "meta": {"input_tokens": 98, "output_tokens": 60, "stop_reason": "max_tokens"}}

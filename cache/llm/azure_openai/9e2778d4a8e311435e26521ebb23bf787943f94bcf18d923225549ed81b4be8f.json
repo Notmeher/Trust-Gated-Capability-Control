@@ -1,0 +1,1 @@
+{"text": "Answer: Bird\nConfidence: 0.92", "model": "gpt-5", "latency_ms": 2193.148200167343, "filtered": false, "meta": {"prompt_tokens": 83, "completion_tokens": 19, "reasoning_tokens": 0, "finish_reason": "stop"}}

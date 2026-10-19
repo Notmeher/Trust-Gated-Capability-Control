@@ -1,0 +1,1 @@
+{"text": "Answer: Wednesday\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1533.8849001564085, "filtered": false, "meta": {"input_tokens": 143, "output_tokens": 14, "stop_reason": "end_turn"}}

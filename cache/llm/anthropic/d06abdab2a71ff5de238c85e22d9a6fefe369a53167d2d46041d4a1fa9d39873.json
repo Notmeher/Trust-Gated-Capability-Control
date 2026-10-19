@@ -1,0 +1,1 @@
+{"text": "Answer: Babe Ruth\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1555.0037999637425, "filtered": false, "meta": {"input_tokens": 134, "output_tokens": 17, "stop_reason": "end_turn"}}

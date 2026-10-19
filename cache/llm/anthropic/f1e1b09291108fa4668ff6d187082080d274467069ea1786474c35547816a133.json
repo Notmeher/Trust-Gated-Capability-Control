@@ -1,0 +1,1 @@
+{"text": "Woe", "model": "claude-sonnet-4-5", "latency_ms": 988.1889999378473, "filtered": false, "meta": {"input_tokens": 40, "output_tokens": 6, "stop_reason": "end_turn"}}

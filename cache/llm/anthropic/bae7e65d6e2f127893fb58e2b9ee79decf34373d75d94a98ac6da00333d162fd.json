@@ -1,0 +1,1 @@
+{"text": "Bear", "model": "claude-sonnet-4-5", "latency_ms": 975.4160000011325, "filtered": false, "meta": {"input_tokens": 49, "output_tokens": 4, "stop_reason": "end_turn"}}

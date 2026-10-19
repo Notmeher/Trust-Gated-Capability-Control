@@ -1,0 +1,1 @@
+{"text": "Answer: An antelope\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1253.6859000101686, "filtered": false, "meta": {"input_tokens": 93, "output_tokens": 16, "stop_reason": "end_turn"}}

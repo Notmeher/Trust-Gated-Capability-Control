@@ -1,0 +1,1 @@
+{"text": "Answer: Gone with the Wind\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1457.3872000910342, "filtered": false, "meta": {"input_tokens": 112, "output_tokens": 17, "stop_reason": "end_turn"}}

@@ -1,0 +1,1 @@
+{"text": "Answer: George Bernard Shaw\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1405.8825999964029, "filtered": false, "meta": {"input_tokens": 137, "output_tokens": 16, "stop_reason": "end_turn"}}

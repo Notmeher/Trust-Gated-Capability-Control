@@ -1,0 +1,1 @@
+{"text": "Answer: Sweden\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1375.6391999777406, "filtered": false, "meta": {"input_tokens": 138, "output_tokens": 14, "stop_reason": "end_turn"}}

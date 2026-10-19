@@ -1,0 +1,1 @@
+{"text": "Answer: Camellia sinensis\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1239.341399865225, "filtered": false, "meta": {"input_tokens": 90, "output_tokens": 19, "stop_reason": "end_turn"}}

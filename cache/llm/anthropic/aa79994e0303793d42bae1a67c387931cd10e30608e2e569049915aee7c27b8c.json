@@ -1,0 +1,1 @@
+{"text": "Answer: Amsterdam\nConfidence: 0.85", "model": "claude-sonnet-4-5", "latency_ms": 1181.5469001885504, "filtered": false, "meta": {"input_tokens": 93, "output_tokens": 14, "stop_reason": "end_turn"}}

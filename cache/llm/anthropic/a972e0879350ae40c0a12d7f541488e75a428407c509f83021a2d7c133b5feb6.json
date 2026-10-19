@@ -1,0 +1,1 @@
+{"text": "Answer: Barbarella\n\nConfidence: 100%\n\nThe band took their name from the character Dr. Durand Durand, the main villain in the 1968 science fiction film \"Barbarella\" starring Jane Fonda.", "model": "claude-sonnet-4-5", "latency_ms": 2219.9300001375377, "filtered": false, "meta": {"input_tokens": 66, "output_tokens": 56, "stop_reason": "end_turn"}}

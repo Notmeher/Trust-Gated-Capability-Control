@@ -1,0 +1,1 @@
+{"text": "Answer: Arthur is Arthur Conan Doyle, the famous creator of Sherlock Holmes, who investigates a real-life miscarriage of justice involving George Edalji.\n\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 2103.4987999591976, "filtered": false, "meta": {"input_tokens": 145, "output_tokens": 51, "stop_reason": "end_turn"}}

@@ -1,0 +1,1 @@
+{"text": "Answer: Turkey.\n\nConfidence: 100%", "model": "claude-sonnet-4-5", "latency_ms": 1063.395599834621, "filtered": false, "meta": {"input_tokens": 65, "output_tokens": 14, "stop_reason": "end_turn"}}

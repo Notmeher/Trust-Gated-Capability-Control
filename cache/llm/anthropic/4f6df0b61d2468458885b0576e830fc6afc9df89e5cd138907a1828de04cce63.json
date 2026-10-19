@@ -1,0 +1,1 @@
+{"text": "Answer: Harry Potter and the Philosopher's Stone\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1522.5885000545532, "filtered": false, "meta": {"input_tokens": 155, "output_tokens": 21, "stop_reason": "end_turn"}}

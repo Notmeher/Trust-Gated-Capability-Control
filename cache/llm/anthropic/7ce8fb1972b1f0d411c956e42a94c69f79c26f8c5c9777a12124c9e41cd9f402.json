@@ -1,0 +1,1 @@
+{"text": "Answer: Beets\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1171.8391999602318, "filtered": false, "meta": {"input_tokens": 92, "output_tokens": 16, "stop_reason": "end_turn"}}

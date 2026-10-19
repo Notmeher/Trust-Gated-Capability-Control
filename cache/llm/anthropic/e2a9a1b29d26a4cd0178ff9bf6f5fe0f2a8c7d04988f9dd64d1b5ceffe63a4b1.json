@@ -1,0 +1,1 @@
+{"text": "Answer: This is the opening line from \"The Wind in the Willows\" by Kenneth Grahame.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1809.3739000614733, "filtered": false, "meta": {"input_tokens": 157, "output_tokens": 35, "stop_reason": "end_turn"}}

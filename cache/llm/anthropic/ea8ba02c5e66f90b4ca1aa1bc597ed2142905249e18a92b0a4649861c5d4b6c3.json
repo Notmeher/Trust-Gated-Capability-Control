@@ -1,0 +1,1 @@
+{"text": "Answer: Octopussy\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1768.9939001575112, "filtered": false, "meta": {"input_tokens": 139, "output_tokens": 17, "stop_reason": "end_turn"}}

@@ -1,0 +1,1 @@
+{"text": "Answer: Boston\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1550.9174999315292, "filtered": false, "meta": {"input_tokens": 141, "output_tokens": 14, "stop_reason": "end_turn"}}

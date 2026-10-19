@@ -1,0 +1,1 @@
+{"text": "Answer: Eddie Blake\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1540.6710000243038, "filtered": false, "meta": {"input_tokens": 137, "output_tokens": 15, "stop_reason": "end_turn"}}

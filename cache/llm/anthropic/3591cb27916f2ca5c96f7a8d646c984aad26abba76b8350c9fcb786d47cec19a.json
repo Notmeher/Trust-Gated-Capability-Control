@@ -1,0 +1,1 @@
+{"text": "Barbarella", "model": "claude-sonnet-4-5", "latency_ms": 1001.264400081709, "filtered": false, "meta": {"input_tokens": 43, "output_tokens": 6, "stop_reason": "end_turn"}}

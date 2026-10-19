@@ -1,0 +1,1 @@
+{"text": "Answer: The Ducati is manufactured in Milan, Italy.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1491.8974998872727, "filtered": false, "meta": {"input_tokens": 139, "output_tokens": 24, "stop_reason": "end_turn"}}

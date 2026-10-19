@@ -1,0 +1,1 @@
+{"text": "Answer: The Royals come from Kansas City, Missouri.\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1544.1072001121938, "filtered": false, "meta": {"input_tokens": 138, "output_tokens": 24, "stop_reason": "end_turn"}}

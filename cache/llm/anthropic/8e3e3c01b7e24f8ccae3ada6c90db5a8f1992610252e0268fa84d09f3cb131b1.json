@@ -1,0 +1,1 @@
+{"text": "Answer: Robert Ludlum\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1164.1273000277579, "filtered": false, "meta": {"input_tokens": 100, "output_tokens": 18, "stop_reason": "end_turn"}}

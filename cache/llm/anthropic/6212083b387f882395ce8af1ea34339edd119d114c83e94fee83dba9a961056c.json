@@ -1,0 +1,1 @@
+{"text": "How about this weather we're having? Though I suppose atoms don't really care about the forecast!\n\nAnswer: Radon\n\nConfidence: 100%", "model": "claude-sonnet-4-5", "latency_ms": 1808.4788999985904, "filtered": false, "meta": {"input_tokens": 72, "output_tokens": 36, "stop_reason": "end_turn"}}

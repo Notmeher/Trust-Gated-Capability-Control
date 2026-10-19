@@ -1,0 +1,1 @@
+{"text": "Answer: Oscar Wilde said \"To err is human but it feels divine.\"\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1683.528000023216, "filtered": false, "meta": {"input_tokens": 140, "output_tokens": 27, "stop_reason": "end_turn"}}

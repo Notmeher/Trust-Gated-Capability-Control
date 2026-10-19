@@ -1,0 +1,1 @@
+{"text": "Answer: Cleveland\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1406.6043000202626, "filtered": false, "meta": {"input_tokens": 134, "output_tokens": 14, "stop_reason": "end_turn"}}

@@ -1,0 +1,1 @@
+{"text": "Answer: Bagheera was a bear in the Jungle Book.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1759.0703000314534, "filtered": false, "meta": {"input_tokens": 147, "output_tokens": 26, "stop_reason": "end_turn"}}

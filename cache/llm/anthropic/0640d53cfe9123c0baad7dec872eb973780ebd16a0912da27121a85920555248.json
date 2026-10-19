@@ -1,0 +1,1 @@
+{"text": "Answer: \"It's Not Unusual\"\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1608.9242999441922, "filtered": false, "meta": {"input_tokens": 144, "output_tokens": 20, "stop_reason": "end_turn"}}

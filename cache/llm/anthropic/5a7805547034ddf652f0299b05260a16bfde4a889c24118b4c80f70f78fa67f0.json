@@ -1,0 +1,1 @@
+{"text": "Answer: New York\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1515.3113000560552, "filtered": false, "meta": {"input_tokens": 137, "output_tokens": 15, "stop_reason": "end_turn"}}

@@ -1,0 +1,1 @@
+{"text": "Answer: Paul McCartney holds a trumpet on the album cover of Sgt. Pepper's Lonely Hearts Club Band.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1635.556799825281, "filtered": false, "meta": {"input_tokens": 151, "output_tokens": 38, "stop_reason": "end_turn"}}

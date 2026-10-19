@@ -1,0 +1,1 @@
+{"text": "Answer: Brazil\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1576.7735000699759, "filtered": false, "meta": {"input_tokens": 136, "output_tokens": 14, "stop_reason": "end_turn"}}

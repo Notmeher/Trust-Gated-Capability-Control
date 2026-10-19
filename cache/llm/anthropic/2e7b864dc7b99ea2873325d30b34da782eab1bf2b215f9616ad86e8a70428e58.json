@@ -1,0 +1,1 @@
+{"text": "Answer: Scotland\n\nConfidence: 100%\n\nThe Lord Advocate is the chief legal officer of the Scottish Government and the head of the systems of criminal prosecution and investigation of deaths in Scotland.", "model": "claude-sonnet-4-5", "latency_ms": 1871.9978998415172, "filtered": false, "meta": {"input_tokens": 60, "output_tokens": 43, "stop_reason": "end_turn"}}

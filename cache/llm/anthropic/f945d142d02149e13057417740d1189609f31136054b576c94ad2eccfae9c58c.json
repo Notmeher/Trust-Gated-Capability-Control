@@ -1,0 +1,1 @@
+{"text": "Toy Story", "model": "claude-sonnet-4-5", "latency_ms": 999.0298999473453, "filtered": false, "meta": {"input_tokens": 35, "output_tokens": 6, "stop_reason": "end_turn"}}

@@ -1,0 +1,1 @@
+{"text": "Answer: The Internet started in the United Kingdom, where early packet-switching networks were developed at the National Physical Laboratory in the 1960s.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 2105.5504998657852, "filtered": false, "meta": {"input_tokens": 134, "output_tokens": 41, "stop_reason": "end_turn"}}

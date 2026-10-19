@@ -1,0 +1,1 @@
+{"text": "Peter Pan", "model": "claude-sonnet-4-5", "latency_ms": 1076.8349999561906, "filtered": false, "meta": {"input_tokens": 46, "output_tokens": 5, "stop_reason": "end_turn"}}

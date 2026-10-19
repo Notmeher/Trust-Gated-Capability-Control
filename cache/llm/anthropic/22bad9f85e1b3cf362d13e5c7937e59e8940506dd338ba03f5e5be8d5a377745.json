@@ -1,0 +1,1 @@
+{"text": "Answer: China\n\nConfidence: 100%", "model": "claude-sonnet-4-5", "latency_ms": 1044.5105999242514, "filtered": false, "meta": {"input_tokens": 95, "output_tokens": 13, "stop_reason": "end_turn"}}

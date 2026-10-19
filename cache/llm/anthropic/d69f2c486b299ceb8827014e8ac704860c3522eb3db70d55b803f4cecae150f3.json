@@ -1,0 +1,1 @@
+{"text": "Answer: Dogger\n\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1566.8341999407858, "filtered": false, "meta": {"input_tokens": 139, "output_tokens": 16, "stop_reason": "end_turn"}}

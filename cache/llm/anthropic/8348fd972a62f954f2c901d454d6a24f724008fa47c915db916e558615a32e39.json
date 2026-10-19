@@ -1,0 +1,1 @@
+{"text": "", "model": "claude-sonnet-4-5", "latency_ms": 3439.7562998346984, "filtered": true, "meta": {"error_status": 400, "content_filter": false, "error_message": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Output blocked by content filtering policy'}, 'request_id': 'req_011CgB7k1cVDaA7eJCMqSwEL'}"}}

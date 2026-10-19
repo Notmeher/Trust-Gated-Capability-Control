@@ -1,0 +1,1 @@
+{"text": "Answer: 720 degrees. The sum of interior angles of an n-sided polygon is (n−2)×180, so for a hexagon (n=6), (6−2)×180 = 4×180 = 720 degrees.\n\nConfidence: High", "model": "gpt-5", "latency_ms": 2157.290200004354, "filtered": false, "meta": {"prompt_tokens": 59, "completion_tokens": 64, "reasoning_tokens": 0, "finish_reason": "stop"}}

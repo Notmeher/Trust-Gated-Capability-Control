@@ -1,0 +1,1 @@
+{"text": "Answer: Nigel Hawthorne was born in Birmingham, England.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1537.2305000200868, "filtered": false, "meta": {"input_tokens": 140, "output_tokens": 27, "stop_reason": "end_turn"}}

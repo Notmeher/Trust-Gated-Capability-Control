@@ -1,0 +1,1 @@
+{"text": "Answer: Purple\n\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1390.2485999278724, "filtered": false, "meta": {"input_tokens": 94, "output_tokens": 14, "stop_reason": "end_turn"}}

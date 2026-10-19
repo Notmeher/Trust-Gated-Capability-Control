@@ -1,0 +1,1 @@
+{"text": "Answer: Yes, the letter 't' is the second most common letter used in the English language, right after 'e'.\n\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1751.4643999747932, "filtered": false, "meta": {"input_tokens": 141, "output_tokens": 38, "stop_reason": "end_turn"}}

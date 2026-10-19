@@ -1,0 +1,1 @@
+{"text": "Answer: Australia\n\nConfidence: 100%\n\nThe Nullarbor Plain is a vast, treeless arid region located in southern Australia, stretching across parts of South Australia and Western Australia.", "model": "claude-sonnet-4-5", "latency_ms": 2578.4940999001265, "filtered": false, "meta": {"input_tokens": 57, "output_tokens": 45, "stop_reason": "end_turn"}}

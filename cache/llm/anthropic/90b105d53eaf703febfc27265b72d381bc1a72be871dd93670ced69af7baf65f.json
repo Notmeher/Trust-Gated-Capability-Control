@@ -1,0 +1,1 @@
+{"text": "Answer: Dr. Crippen murdered his business partner, Bruce Miller, in 1910.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1827.676699962467, "filtered": false, "meta": {"input_tokens": 135, "output_tokens": 31, "stop_reason": "end_turn"}}

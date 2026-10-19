@@ -1,0 +1,1 @@
+{"text": "Answer: Lamb\n\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1368.6436000280082, "filtered": false, "meta": {"input_tokens": 95, "output_tokens": 15, "stop_reason": "end_turn"}}

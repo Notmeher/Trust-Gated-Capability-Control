@@ -1,0 +1,1 @@
+{"text": "Answer: Ash\n\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1206.861199811101, "filtered": false, "meta": {"input_tokens": 96, "output_tokens": 15, "stop_reason": "end_turn"}}

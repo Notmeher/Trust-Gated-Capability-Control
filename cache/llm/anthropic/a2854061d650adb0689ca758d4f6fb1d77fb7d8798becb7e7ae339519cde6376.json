@@ -1,0 +1,1 @@
+{"text": "Trinidad and Tobago", "model": "claude-sonnet-4-5", "latency_ms": 960.0680000148714, "filtered": false, "meta": {"input_tokens": 40, "output_tokens": 8, "stop_reason": "end_turn"}}

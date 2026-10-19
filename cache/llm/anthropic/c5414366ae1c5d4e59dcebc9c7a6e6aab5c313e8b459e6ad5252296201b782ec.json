@@ -1,0 +1,1 @@
+{"text": "Answer: Austria\n\nConfidence: 100%\n\nExplanation: Marie Antoinette was born as an Archduchess of Austria in Vienna in 1755, before marrying the future King Louis XVI of France.", "model": "claude-sonnet-4-5", "latency_ms": 1803.5728998947889, "filtered": false, "meta": {"input_tokens": 66, "output_tokens": 51, "stop_reason": "end_turn"}}

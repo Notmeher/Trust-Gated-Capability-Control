@@ -1,0 +1,1 @@
+{"text": "Answer: Gordonstoun\n\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1350.1865998841822, "filtered": false, "meta": {"input_tokens": 94, "output_tokens": 17, "stop_reason": "end_turn"}}

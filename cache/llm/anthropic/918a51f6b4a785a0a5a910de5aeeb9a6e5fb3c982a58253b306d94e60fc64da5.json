@@ -1,0 +1,1 @@
+{"text": "Answer: Byron\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1612.6174998935312, "filtered": false, "meta": {"input_tokens": 137, "output_tokens": 14, "stop_reason": "end_turn"}}

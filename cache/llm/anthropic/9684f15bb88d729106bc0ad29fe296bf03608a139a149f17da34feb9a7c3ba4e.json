@@ -1,0 +1,1 @@
+{"text": "I need to verify when the movie E.T. the Extra-Terrestrial was released in cinemas.\n\nE.T. the Extra-Terrestrial, directed by Steven Spielberg, was released in theaters on June 11, 1982, not 1983.", "model": "claude-sonnet-4-5", "latency_ms": 2158.0878000240773, "filtered": false, "meta": {"input_tokens": 89, "output_tokens": 60, "stop_reason": "max_tokens"}}

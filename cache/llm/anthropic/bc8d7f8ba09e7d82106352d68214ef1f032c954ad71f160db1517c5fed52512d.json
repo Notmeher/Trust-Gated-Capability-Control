@@ -1,0 +1,1 @@
+{"text": "Answer: The Beast\n\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1433.376100147143, "filtered": false, "meta": {"input_tokens": 140, "output_tokens": 15, "stop_reason": "end_turn"}}

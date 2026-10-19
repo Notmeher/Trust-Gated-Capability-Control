@@ -1,0 +1,1 @@
+{"text": "Answer: Oscar Wilde\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1749.7977998573333, "filtered": false, "meta": {"input_tokens": 137, "output_tokens": 16, "stop_reason": "end_turn"}}

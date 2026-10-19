@@ -1,0 +1,1 @@
+{"text": "Answer: David Gray\n\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1530.2464000415057, "filtered": false, "meta": {"input_tokens": 144, "output_tokens": 15, "stop_reason": "end_turn"}}

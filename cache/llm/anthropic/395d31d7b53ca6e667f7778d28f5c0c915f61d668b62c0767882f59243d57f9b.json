@@ -1,0 +1,1 @@
+{"text": "Answer: Betelgeuse is as bright as 23 Suns and is orbited by the Pup.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1868.8617998268455, "filtered": false, "meta": {"input_tokens": 149, "output_tokens": 38, "stop_reason": "end_turn"}}

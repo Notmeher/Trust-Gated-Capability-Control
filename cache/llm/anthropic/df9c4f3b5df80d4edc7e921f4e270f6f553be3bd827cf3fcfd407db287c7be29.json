@@ -1,0 +1,1 @@
+{"text": "Answer: Bilateral\n\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1352.1916999015957, "filtered": false, "meta": {"input_tokens": 150, "output_tokens": 15, "stop_reason": "end_turn"}}

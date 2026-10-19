@@ -1,0 +1,1 @@
+{"text": "Answer: Frank\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1661.7445000447333, "filtered": false, "meta": {"input_tokens": 146, "output_tokens": 14, "stop_reason": "end_turn"}}

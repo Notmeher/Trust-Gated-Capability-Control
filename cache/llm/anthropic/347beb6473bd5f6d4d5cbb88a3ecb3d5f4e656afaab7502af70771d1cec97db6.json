@@ -1,0 +1,1 @@
+{"text": "Answer: Tiddlywinks\n\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1293.4010999742895, "filtered": false, "meta": {"input_tokens": 105, "output_tokens": 19, "stop_reason": "end_turn"}}

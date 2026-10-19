@@ -1,0 +1,1 @@
+{"text": "Answer: A Morris Minor\n\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1717.6117999479175, "filtered": false, "meta": {"input_tokens": 144, "output_tokens": 16, "stop_reason": "end_turn"}}

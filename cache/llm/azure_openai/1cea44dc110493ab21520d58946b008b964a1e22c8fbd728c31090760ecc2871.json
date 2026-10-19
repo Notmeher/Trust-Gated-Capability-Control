@@ -1,0 +1,1 @@
+{"text": "Answer: 1\nConfidence: 0.92", "model": "gpt-5", "latency_ms": 2605.4606998804957, "filtered": false, "meta": {"prompt_tokens": 85, "completion_tokens": 20, "reasoning_tokens": 0, "finish_reason": "stop"}}

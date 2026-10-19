@@ -1,0 +1,1 @@
+{"text": "Answer: Bowie\n\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1526.0204998776317, "filtered": false, "meta": {"input_tokens": 147, "output_tokens": 16, "stop_reason": "end_turn"}}

@@ -1,0 +1,1 @@
+{"text": "Label: YES", "model": "gpt-5", "latency_ms": 1538.8167998753488, "filtered": false, "meta": {"prompt_tokens": 91, "completion_tokens": 12, "reasoning_tokens": 0, "finish_reason": "stop"}}

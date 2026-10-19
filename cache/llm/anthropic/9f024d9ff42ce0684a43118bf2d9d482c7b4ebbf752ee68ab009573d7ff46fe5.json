@@ -1,0 +1,1 @@
+{"text": "Answer: A pieman\n\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1384.8890999797732, "filtered": false, "meta": {"input_tokens": 93, "output_tokens": 16, "stop_reason": "end_turn"}}

@@ -1,0 +1,1 @@
+{"text": "Jacks", "model": "claude-sonnet-4-5", "latency_ms": 1761.5223999600857, "filtered": false, "meta": {"input_tokens": 54, "output_tokens": 6, "stop_reason": "end_turn"}}

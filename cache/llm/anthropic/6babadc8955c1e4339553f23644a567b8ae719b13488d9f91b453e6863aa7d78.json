@@ -1,0 +1,1 @@
+{"text": "Answer: Milk\n\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1176.0376000311226, "filtered": false, "meta": {"input_tokens": 108, "output_tokens": 15, "stop_reason": "end_turn"}}

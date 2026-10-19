@@ -1,0 +1,1 @@
+{"text": "Answer: Bobby George\n\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1574.2190999444574, "filtered": false, "meta": {"input_tokens": 146, "output_tokens": 15, "stop_reason": "end_turn"}}

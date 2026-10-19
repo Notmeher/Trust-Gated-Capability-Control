@@ -1,0 +1,1 @@
+{"text": "Answer: Anne Bancroft was born in the 1940s.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1680.5600998923182, "filtered": false, "meta": {"input_tokens": 142, "output_tokens": 26, "stop_reason": "end_turn"}}

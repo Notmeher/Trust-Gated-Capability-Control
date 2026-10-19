@@ -1,0 +1,1 @@
+{"text": "Answer: Sirius\n\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1227.974000154063, "filtered": false, "meta": {"input_tokens": 104, "output_tokens": 16, "stop_reason": "end_turn"}}

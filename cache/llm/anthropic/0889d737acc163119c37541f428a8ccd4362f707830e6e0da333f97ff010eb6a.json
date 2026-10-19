@@ -1,0 +1,1 @@
+{"text": "Answer: Julia Roberts played Wendy Darling in Steven Spielberg's Hook.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1523.8421000540257, "filtered": false, "meta": {"input_tokens": 142, "output_tokens": 30, "stop_reason": "end_turn"}}

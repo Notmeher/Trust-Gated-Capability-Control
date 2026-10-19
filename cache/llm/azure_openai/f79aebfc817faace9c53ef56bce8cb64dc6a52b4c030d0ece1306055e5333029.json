@@ -1,0 +1,1 @@
+{"text": "Verdict: REJECT\nConfidence: 0.9", "model": "gpt-5", "latency_ms": 2227.3518999572843, "filtered": false, "meta": {"prompt_tokens": 766, "completion_tokens": 21, "reasoning_tokens": 0, "finish_reason": "stop"}}

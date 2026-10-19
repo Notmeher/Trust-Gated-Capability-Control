@@ -1,0 +1,1 @@
+{"text": "Answer: William Butler Yeats\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1252.032200107351, "filtered": false, "meta": {"input_tokens": 96, "output_tokens": 18, "stop_reason": "end_turn"}}

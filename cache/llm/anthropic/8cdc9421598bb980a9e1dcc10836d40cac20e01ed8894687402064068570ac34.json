@@ -1,0 +1,1 @@
+{"text": "Answer: Brutus\n\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1590.3245001100004, "filtered": false, "meta": {"input_tokens": 148, "output_tokens": 16, "stop_reason": "end_turn"}}

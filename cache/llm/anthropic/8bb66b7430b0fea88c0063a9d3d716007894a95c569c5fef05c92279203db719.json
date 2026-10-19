@@ -1,0 +1,1 @@
+{"text": "Answer: There are 5 US states prefixed by the word \"New\": New Hampshire, New Jersey, New Mexico, New York, and New England.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 2192.7526998333633, "filtered": false, "meta": {"input_tokens": 138, "output_tokens": 44, "stop_reason": "end_turn"}}

@@ -1,0 +1,1 @@
+{"text": "Answer: The Chimera has the head of a man, the body of a lion, and the tail and feet of a dragon.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1576.003200141713, "filtered": false, "meta": {"input_tokens": 152, "output_tokens": 39, "stop_reason": "end_turn"}}

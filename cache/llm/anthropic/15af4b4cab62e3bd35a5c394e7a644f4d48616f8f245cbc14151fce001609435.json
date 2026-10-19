@@ -1,0 +1,1 @@
+{"text": "India", "model": "claude-sonnet-4-5", "latency_ms": 916.7314001824707, "filtered": false, "meta": {"input_tokens": 37, "output_tokens": 4, "stop_reason": "end_turn"}}

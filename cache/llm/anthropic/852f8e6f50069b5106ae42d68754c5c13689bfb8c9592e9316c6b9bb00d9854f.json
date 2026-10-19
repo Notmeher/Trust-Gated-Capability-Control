@@ -1,0 +1,1 @@
+{"text": "Answer: John Smeaton\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1498.201800044626, "filtered": false, "meta": {"input_tokens": 142, "output_tokens": 18, "stop_reason": "end_turn"}}

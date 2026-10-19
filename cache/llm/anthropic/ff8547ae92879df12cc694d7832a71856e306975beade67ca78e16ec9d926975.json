@@ -1,0 +1,1 @@
+{"text": "Answer: Johnny Mathis\n\nConfidence: 0.15", "model": "claude-sonnet-4-5", "latency_ms": 1236.7696000728756, "filtered": false, "meta": {"input_tokens": 98, "output_tokens": 17, "stop_reason": "end_turn"}}

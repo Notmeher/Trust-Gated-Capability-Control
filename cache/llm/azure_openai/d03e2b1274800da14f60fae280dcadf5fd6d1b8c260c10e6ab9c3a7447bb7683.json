@@ -1,0 +1,1 @@
+{"text": "Answer: A cat\nConfidence: 0.96", "model": "gpt-5", "latency_ms": 1386.6971000097692, "filtered": false, "meta": {"prompt_tokens": 133, "completion_tokens": 20, "reasoning_tokens": 0, "finish_reason": "stop"}}

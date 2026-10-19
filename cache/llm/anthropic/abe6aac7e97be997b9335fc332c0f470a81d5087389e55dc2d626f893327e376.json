@@ -1,0 +1,1 @@
+{"text": "Answer: First-past-the-post\n\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1242.2451998572797, "filtered": false, "meta": {"input_tokens": 99, "output_tokens": 20, "stop_reason": "end_turn"}}

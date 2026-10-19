@@ -1,0 +1,1 @@
+{"text": "Answer: Vertigo\n\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1434.2792998068035, "filtered": false, "meta": {"input_tokens": 156, "output_tokens": 16, "stop_reason": "end_turn"}}

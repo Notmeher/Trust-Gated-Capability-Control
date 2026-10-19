@@ -1,0 +1,1 @@
+{"text": "Answer: Porridge\n\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1116.8355999980122, "filtered": false, "meta": {"input_tokens": 94, "output_tokens": 16, "stop_reason": "end_turn"}}

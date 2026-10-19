@@ -1,0 +1,1 @@
+{"text": "Answer: A sonnet has 16 lines.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1520.7326000090688, "filtered": false, "meta": {"input_tokens": 136, "output_tokens": 22, "stop_reason": "end_turn"}}

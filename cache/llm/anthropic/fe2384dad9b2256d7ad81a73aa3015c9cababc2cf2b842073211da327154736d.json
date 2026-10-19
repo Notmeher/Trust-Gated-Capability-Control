@@ -1,0 +1,1 @@
+{"text": "Verdict: INCORRECT\nConfidence: 0.0\n\nLet me reconsider. Grace Jones did play Aunty Entity in Mad Max Beyond Thunderdome (1985).\n\nVerdict: CORRECT\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1990.8953001722693, "filtered": false, "meta": {"input_tokens": 108, "output_tokens": 57, "stop_reason": "end_turn"}}

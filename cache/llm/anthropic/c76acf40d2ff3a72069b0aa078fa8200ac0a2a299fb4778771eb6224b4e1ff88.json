@@ -1,0 +1,1 @@
+{"text": "Answer: St George died in the year 303 AD.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1578.7239000201225, "filtered": false, "meta": {"input_tokens": 134, "output_tokens": 24, "stop_reason": "end_turn"}}

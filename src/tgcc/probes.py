@@ -163,11 +163,20 @@ def parse_answer(text: str) -> str:
 
 
 def answer_matches(candidate: str, references: list[str]) -> bool:
-    """Case-insensitive substring match against any acceptable answer."""
+    """Case-insensitive substring match against any acceptable answer.
+
+    An empty candidate never matches (previously ``"" in r`` made empty outputs
+    count as correct). Reverse containment (candidate inside reference) is
+    only accepted for candidates of 3+ characters.
+    """
     c = candidate.lower().strip()
+    if not c:
+        return False
     for r in references:
         r = r.lower().strip()
-        if r and (r in c or c in r):
+        if not r:
+            continue
+        if r in c or (len(c) >= 3 and c in r):
             return True
     return False
 

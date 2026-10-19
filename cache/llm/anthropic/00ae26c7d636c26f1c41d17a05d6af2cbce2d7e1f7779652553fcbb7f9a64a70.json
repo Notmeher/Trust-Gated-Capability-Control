@@ -1,0 +1,1 @@
+{"text": "Fleet Street", "model": "claude-sonnet-4-5", "latency_ms": 994.928500149399, "filtered": false, "meta": {"input_tokens": 41, "output_tokens": 5, "stop_reason": "end_turn"}}

@@ -1,0 +1,1 @@
+{"text": "Answer: The Eagles\n\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1522.5001000799239, "filtered": false, "meta": {"input_tokens": 139, "output_tokens": 15, "stop_reason": "end_turn"}}

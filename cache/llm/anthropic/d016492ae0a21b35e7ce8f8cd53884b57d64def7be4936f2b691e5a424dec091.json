@@ -1,0 +1,1 @@
+{"text": "Custard", "model": "claude-sonnet-4-5", "latency_ms": 1287.6681999769062, "filtered": false, "meta": {"input_tokens": 40, "output_tokens": 6, "stop_reason": "end_turn"}}

@@ -1,0 +1,1 @@
+{"text": "Answer: The names of Donald Duck's three nephews are Chip, Dale, and Morty.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1772.1398000139743, "filtered": false, "meta": {"input_tokens": 138, "output_tokens": 33, "stop_reason": "end_turn"}}

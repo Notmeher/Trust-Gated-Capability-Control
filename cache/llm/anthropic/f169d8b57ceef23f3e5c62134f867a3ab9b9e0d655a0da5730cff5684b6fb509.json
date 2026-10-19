@@ -1,0 +1,1 @@
+{"text": "I need to verify whether J. G. Ballard wrote the novel \"Empire of the Sun\" in the 1980s.\n\n\"Empire of the Sun\" is indeed a semi-autobiographical novel written by J. G. Ballard. It was published in 1984", "model": "claude-sonnet-4-5", "latency_ms": 1708.5963999852538, "filtered": false, "meta": {"input_tokens": 95, "output_tokens": 60, "stop_reason": "max_tokens"}}

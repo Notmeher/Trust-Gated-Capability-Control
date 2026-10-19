@@ -1,0 +1,1 @@
+{"text": "Sashimi", "model": "claude-sonnet-4-5", "latency_ms": 923.3383999671787, "filtered": false, "meta": {"input_tokens": 52, "output_tokens": 7, "stop_reason": "end_turn"}}

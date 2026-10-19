@@ -1,0 +1,1 @@
+{"text": "Answer: Louis Armstrong founded the Red Hot Peppers.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1771.0578001569957, "filtered": false, "meta": {"input_tokens": 136, "output_tokens": 23, "stop_reason": "end_turn"}}

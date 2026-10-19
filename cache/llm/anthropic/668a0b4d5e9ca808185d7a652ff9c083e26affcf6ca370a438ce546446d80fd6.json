@@ -1,0 +1,1 @@
+{"text": "Answer: Eight avenues radiate from the Arc de Triomphe in Paris.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1818.5157999396324, "filtered": false, "meta": {"input_tokens": 141, "output_tokens": 29, "stop_reason": "end_turn"}}

@@ -1,0 +1,1 @@
+{"text": "Answer: James Taylor\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1475.0997999217361, "filtered": false, "meta": {"input_tokens": 141, "output_tokens": 15, "stop_reason": "end_turn"}}

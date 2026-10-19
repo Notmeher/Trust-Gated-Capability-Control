@@ -1,0 +1,1 @@
+{"text": "Answer: Madrid\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1213.091199984774, "filtered": false, "meta": {"input_tokens": 94, "output_tokens": 14, "stop_reason": "end_turn"}}

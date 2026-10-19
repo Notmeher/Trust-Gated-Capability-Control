@@ -1,0 +1,1 @@
+{"text": "Answer: Compact\n\nConfidence: 0.4", "model": "claude-sonnet-4-5", "latency_ms": 1451.0677999351174, "filtered": false, "meta": {"input_tokens": 110, "output_tokens": 15, "stop_reason": "end_turn"}}

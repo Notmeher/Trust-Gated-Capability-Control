@@ -1,0 +1,1 @@
+{"text": "Saturn", "model": "claude-sonnet-4-5", "latency_ms": 966.7970000300556, "filtered": false, "meta": {"input_tokens": 37, "output_tokens": 4, "stop_reason": "end_turn"}}

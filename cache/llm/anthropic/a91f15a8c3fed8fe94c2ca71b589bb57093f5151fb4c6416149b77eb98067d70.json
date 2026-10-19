@@ -1,0 +1,1 @@
+{"text": "Topeka", "model": "claude-sonnet-4-5", "latency_ms": 949.8548998963088, "filtered": false, "meta": {"input_tokens": 32, "output_tokens": 6, "stop_reason": "end_turn"}}

@@ -1,0 +1,1 @@
+{"text": "Answer: Chris Evert\n\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1395.3313999809325, "filtered": false, "meta": {"input_tokens": 103, "output_tokens": 17, "stop_reason": "end_turn"}}

@@ -1,0 +1,1 @@
+{"text": "Answer: Peter O'Toole\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1526.8979999236763, "filtered": false, "meta": {"input_tokens": 143, "output_tokens": 19, "stop_reason": "end_turn"}}

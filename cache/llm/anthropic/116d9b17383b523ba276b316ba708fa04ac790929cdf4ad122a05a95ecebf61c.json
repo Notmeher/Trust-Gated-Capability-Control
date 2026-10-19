@@ -1,0 +1,1 @@
+{"text": "Answer: Only Fools and Horses\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1559.6845000982285, "filtered": false, "meta": {"input_tokens": 146, "output_tokens": 20, "stop_reason": "end_turn"}}

@@ -1,0 +1,1 @@
+{"text": "Answer: Vincent Van Gogh was French.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1522.6797999348491, "filtered": false, "meta": {"input_tokens": 137, "output_tokens": 21, "stop_reason": "end_turn"}}

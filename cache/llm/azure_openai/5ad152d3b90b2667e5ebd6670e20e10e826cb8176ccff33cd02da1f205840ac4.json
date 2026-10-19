@@ -1,0 +1,1 @@
+{"text": "Answer: When Harry Met Sally...\nConfidence: 0.98", "model": "gpt-5", "latency_ms": 2000.8120001293719, "filtered": false, "meta": {"prompt_tokens": 86, "completion_tokens": 22, "reasoning_tokens": 0, "finish_reason": "stop"}}

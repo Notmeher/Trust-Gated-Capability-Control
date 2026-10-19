@@ -1,0 +1,1 @@
+{"text": "Answer: Kenny Perry\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1520.3933999873698, "filtered": false, "meta": {"input_tokens": 166, "output_tokens": 15, "stop_reason": "end_turn"}}

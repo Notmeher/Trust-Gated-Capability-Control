@@ -1,0 +1,1 @@
+{"text": "Answer: Hartford\nConfidence: 0.99", "model": "claude-sonnet-4-5", "latency_ms": 1176.276700105518, "filtered": false, "meta": {"input_tokens": 171, "output_tokens": 14, "stop_reason": "end_turn"}}

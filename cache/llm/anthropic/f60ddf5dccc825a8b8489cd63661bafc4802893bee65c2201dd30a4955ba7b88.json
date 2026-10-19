@@ -1,0 +1,1 @@
+{"text": "Answer: New Zealand\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1385.7267999555916, "filtered": false, "meta": {"input_tokens": 95, "output_tokens": 15, "stop_reason": "end_turn"}}

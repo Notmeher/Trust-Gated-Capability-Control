@@ -1,0 +1,1 @@
+{"text": "Answer: Topeka\n\nConfidence: 100%\n\nTopeka has been the capital of Kansas since 1861, when Kansas became a state.", "model": "claude-sonnet-4-5", "latency_ms": 1553.932499838993, "filtered": false, "meta": {"input_tokens": 55, "output_tokens": 36, "stop_reason": "end_turn"}}

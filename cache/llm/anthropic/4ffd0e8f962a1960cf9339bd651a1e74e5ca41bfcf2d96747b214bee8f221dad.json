@@ -1,0 +1,1 @@
+{"text": "Answer: Air New Zealand\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1514.0319999773055, "filtered": false, "meta": {"input_tokens": 140, "output_tokens": 16, "stop_reason": "end_turn"}}

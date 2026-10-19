@@ -1,0 +1,1 @@
+{"text": "Answer: Mr. Carraway the baker lived in Colly's Mill, where he would bake fresh bread and cakes for the village.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 2125.905300024897, "filtered": false, "meta": {"input_tokens": 145, "output_tokens": 42, "stop_reason": "end_turn"}}

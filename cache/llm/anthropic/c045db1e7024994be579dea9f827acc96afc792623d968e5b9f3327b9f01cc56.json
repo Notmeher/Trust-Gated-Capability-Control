@@ -1,0 +1,1 @@
+{"text": "I need to verify if \"Seventy Six Trombones\" (more commonly known as \"Seventy-Six Trombones\") is from the musical \"The Music Man.\"\n\n\"Seventy-Six Trombones\" is indeed one of the most famous songs", "model": "claude-sonnet-4-5", "latency_ms": 1945.092200068757, "filtered": false, "meta": {"input_tokens": 96, "output_tokens": 60, "stop_reason": "max_tokens"}}

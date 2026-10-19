@@ -1,0 +1,1 @@
+{"text": "Answer: Radon\n\nConfidence: 100%\n\nRadon is the chemical element with the symbol 'Rn' and atomic number 86, and it is a radioactive noble gas.", "model": "claude-sonnet-4-5", "latency_ms": 1659.5417999196798, "filtered": false, "meta": {"input_tokens": 61, "output_tokens": 47, "stop_reason": "end_turn"}}

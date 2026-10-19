@@ -1,0 +1,1 @@
+{"text": "Answer: Magpie\n\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1240.1114001404494, "filtered": false, "meta": {"input_tokens": 116, "output_tokens": 17, "stop_reason": "end_turn"}}

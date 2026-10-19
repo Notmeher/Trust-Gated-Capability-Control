@@ -1,0 +1,1 @@
+{"text": "Answer: South Korea\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1168.0956000927836, "filtered": false, "meta": {"input_tokens": 99, "output_tokens": 15, "stop_reason": "end_turn"}}

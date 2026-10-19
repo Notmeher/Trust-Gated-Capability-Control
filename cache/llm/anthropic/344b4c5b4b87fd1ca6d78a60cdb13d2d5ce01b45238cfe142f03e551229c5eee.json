@@ -1,0 +1,1 @@
+{"text": "Answer: The concert was held at Woodstock in upstate New York.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1705.0431000534445, "filtered": false, "meta": {"input_tokens": 159, "output_tokens": 27, "stop_reason": "end_turn"}}

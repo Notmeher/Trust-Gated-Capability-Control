@@ -1,0 +1,1 @@
+{"text": "Answer: Germany\n\nConfidence: 100%\n\nThe .de domain stands for \"Deutschland,\" which is Germany in German, and it is the country code top-level domain (ccTLD) officially designated for Germany.", "model": "claude-sonnet-4-5", "latency_ms": 1995.591000188142, "filtered": false, "meta": {"input_tokens": 55, "output_tokens": 49, "stop_reason": "end_turn"}}

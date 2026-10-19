@@ -1,0 +1,1 @@
+{"text": "Answer: Dogs\n\nConfidence: 0.75", "model": "claude-sonnet-4-5", "latency_ms": 1245.1823998708278, "filtered": false, "meta": {"input_tokens": 101, "output_tokens": 14, "stop_reason": "end_turn"}}

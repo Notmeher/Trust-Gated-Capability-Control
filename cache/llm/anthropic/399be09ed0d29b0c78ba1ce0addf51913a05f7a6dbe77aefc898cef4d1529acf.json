@@ -1,0 +1,1 @@
+{"text": "Answer: Batman Returns\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1502.1661999635398, "filtered": false, "meta": {"input_tokens": 148, "output_tokens": 15, "stop_reason": "end_turn"}}

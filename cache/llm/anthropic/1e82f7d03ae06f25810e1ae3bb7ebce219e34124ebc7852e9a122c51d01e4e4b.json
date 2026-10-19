@@ -1,0 +1,1 @@
+{"text": "Answer: Harry Potter and the Prisoner of Azkaban\n\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1211.5304002072662, "filtered": false, "meta": {"input_tokens": 110, "output_tokens": 24, "stop_reason": "end_turn"}}

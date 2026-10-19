@@ -1,0 +1,1 @@
+{"text": "Bang", "model": "claude-sonnet-4-5", "latency_ms": 1063.374500023201, "filtered": false, "meta": {"input_tokens": 49, "output_tokens": 4, "stop_reason": "end_turn"}}

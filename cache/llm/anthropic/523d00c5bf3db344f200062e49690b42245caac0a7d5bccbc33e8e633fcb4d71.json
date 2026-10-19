@@ -1,0 +1,1 @@
+{"text": "Answer: Arsenal\n\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1344.6257999166846, "filtered": false, "meta": {"input_tokens": 139, "output_tokens": 14, "stop_reason": "end_turn"}}

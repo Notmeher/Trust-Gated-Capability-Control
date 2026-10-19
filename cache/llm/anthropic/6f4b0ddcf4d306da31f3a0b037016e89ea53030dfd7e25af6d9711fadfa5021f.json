@@ -1,0 +1,1 @@
+{"text": "Answer: Dot Cotton had a dog called Willy.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1571.8636000528932, "filtered": false, "meta": {"input_tokens": 139, "output_tokens": 24, "stop_reason": "end_turn"}}

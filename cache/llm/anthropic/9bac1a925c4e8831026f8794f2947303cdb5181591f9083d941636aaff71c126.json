@@ -1,0 +1,1 @@
+{"text": "Answer: Iron Man\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1480.9910000767559, "filtered": false, "meta": {"input_tokens": 137, "output_tokens": 15, "stop_reason": "end_turn"}}

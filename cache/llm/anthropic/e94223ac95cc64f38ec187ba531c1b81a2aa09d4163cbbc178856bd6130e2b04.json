@@ -1,0 +1,1 @@
+{"text": "Answer: Tom Cruise plays the interviewer, Daniel Malloy, who conducts the interview with the vampire Louis de Pointe du Lac.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 2093.1516001001, "filtered": false, "meta": {"input_tokens": 142, "output_tokens": 43, "stop_reason": "end_turn"}}

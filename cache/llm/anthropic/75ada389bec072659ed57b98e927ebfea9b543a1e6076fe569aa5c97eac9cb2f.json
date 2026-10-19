@@ -1,0 +1,1 @@
+{"text": "Answer: In a standard deck of cards, 3 Kings have a moustache (the King of Hearts, King of Diamonds, and King of Clubs).\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1854.7054999507964, "filtered": false, "meta": {"input_tokens": 142, "output_tokens": 46, "stop_reason": "end_turn"}}

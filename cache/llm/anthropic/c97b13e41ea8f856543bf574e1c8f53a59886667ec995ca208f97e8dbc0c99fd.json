@@ -1,0 +1,1 @@
+{"text": "Answer: Michelle Ryan\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1239.516400033608, "filtered": false, "meta": {"input_tokens": 100, "output_tokens": 15, "stop_reason": "end_turn"}}

@@ -1,0 +1,1 @@
+{"text": "Answer: Libya\n\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1363.6003998108208, "filtered": false, "meta": {"input_tokens": 148, "output_tokens": 14, "stop_reason": "end_turn"}}

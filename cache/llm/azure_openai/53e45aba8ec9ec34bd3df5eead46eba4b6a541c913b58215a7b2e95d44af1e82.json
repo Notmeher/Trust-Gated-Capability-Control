@@ -1,0 +1,1 @@
+{"text": "Answer: Dogs\nConfidence: 0.68", "model": "gpt-5", "latency_ms": 1326.4951000455767, "filtered": false, "meta": {"prompt_tokens": 123, "completion_tokens": 19, "reasoning_tokens": 0, "finish_reason": "stop"}}

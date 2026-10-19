@@ -1,0 +1,1 @@
+{"text": "Answer: The chipmunk rears its young, called kittens, in a nest called a drey.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1547.485699877143, "filtered": false, "meta": {"input_tokens": 147, "output_tokens": 35, "stop_reason": "end_turn"}}

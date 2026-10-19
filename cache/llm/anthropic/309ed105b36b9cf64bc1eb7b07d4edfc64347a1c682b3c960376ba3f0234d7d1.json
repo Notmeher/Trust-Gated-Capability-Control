@@ -1,0 +1,1 @@
+{"text": "Answer: Humphrey Bogart\n\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1245.6436001230031, "filtered": false, "meta": {"input_tokens": 119, "output_tokens": 19, "stop_reason": "end_turn"}}

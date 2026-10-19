@@ -1,0 +1,1 @@
+{"text": "Answer: Sonny and Cher\n\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1244.4313999731094, "filtered": false, "meta": {"input_tokens": 96, "output_tokens": 20, "stop_reason": "end_turn"}}

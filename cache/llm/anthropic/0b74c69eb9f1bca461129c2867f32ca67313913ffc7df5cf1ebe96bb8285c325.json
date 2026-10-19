@@ -1,0 +1,1 @@
+{"text": "Answer: 8 minutes\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1634.6776999998838, "filtered": false, "meta": {"input_tokens": 100, "output_tokens": 17, "stop_reason": "end_turn"}}

@@ -1,0 +1,1 @@
+{"text": "Answer: John Williams composed the musical theme for the Pink Panther.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1651.1655999347568, "filtered": false, "meta": {"input_tokens": 138, "output_tokens": 26, "stop_reason": "end_turn"}}

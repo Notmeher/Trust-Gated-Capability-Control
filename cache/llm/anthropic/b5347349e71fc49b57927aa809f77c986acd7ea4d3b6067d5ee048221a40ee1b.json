@@ -1,0 +1,1 @@
+{"text": "Answer: Baby, It's Cold Outside\n\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1219.3643001373857, "filtered": false, "meta": {"input_tokens": 99, "output_tokens": 19, "stop_reason": "end_turn"}}

@@ -1,0 +1,1 @@
+{"text": "Answer: Sashimi\n\nConfidence: 100%", "model": "claude-sonnet-4-5", "latency_ms": 1401.9969999790192, "filtered": false, "meta": {"input_tokens": 107, "output_tokens": 16, "stop_reason": "end_turn"}}

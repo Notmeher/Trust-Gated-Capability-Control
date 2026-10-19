@@ -1,0 +1,1 @@
+{"text": "Answer: A pufferfish (or fish)\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1482.5236001051962, "filtered": false, "meta": {"input_tokens": 90, "output_tokens": 22, "stop_reason": "end_turn"}}

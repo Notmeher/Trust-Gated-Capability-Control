@@ -1,0 +1,1 @@
+{"text": "Austria", "model": "claude-sonnet-4-5", "latency_ms": 986.5771001204848, "filtered": false, "meta": {"input_tokens": 43, "output_tokens": 4, "stop_reason": "end_turn"}}

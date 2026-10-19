@@ -1,0 +1,1 @@
+{"text": "Answer: The eyes\n\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1210.2078997995704, "filtered": false, "meta": {"input_tokens": 95, "output_tokens": 15, "stop_reason": "end_turn"}}

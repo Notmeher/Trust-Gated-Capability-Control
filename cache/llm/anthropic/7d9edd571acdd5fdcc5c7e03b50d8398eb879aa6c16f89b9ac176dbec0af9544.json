@@ -1,0 +1,1 @@
+{"text": "Answer: Radon\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1221.3552000466734, "filtered": false, "meta": {"input_tokens": 96, "output_tokens": 16, "stop_reason": "end_turn"}}

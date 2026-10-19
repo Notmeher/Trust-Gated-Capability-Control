@@ -1,0 +1,1 @@
+{"text": "Answer: Jack Dee\n\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1222.5681999698281, "filtered": false, "meta": {"input_tokens": 96, "output_tokens": 16, "stop_reason": "end_turn"}}

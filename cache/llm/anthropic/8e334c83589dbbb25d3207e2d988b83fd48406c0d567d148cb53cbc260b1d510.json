@@ -1,0 +1,1 @@
+{"text": "Verdict: INCORRECT\nConfidence: 1.0\n\nThe human heart has four chambers, not three. These chambers are:\n1. Right atrium\n2. Right ventricle\n3. Left atrium\n4. Left ventricle\n\nThis is a well-", "model": "claude-sonnet-4-5", "latency_ms": 1858.5759000852704, "filtered": false, "meta": {"input_tokens": 86, "output_tokens": 60, "stop_reason": "max_tokens"}}

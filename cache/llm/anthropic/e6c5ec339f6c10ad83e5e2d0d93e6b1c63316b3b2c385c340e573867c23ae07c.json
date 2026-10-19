@@ -1,0 +1,1 @@
+{"text": "I need to verify whether Jane Seymour was the second wife of Henry VIII.\n\nHenry VIII's wives in order were:\n1. Catherine of Aragon (married 1509-1533)\n2. Anne Boleyn (married 1533-1536", "model": "claude-sonnet-4-5", "latency_ms": 1513.8597001787275, "filtered": false, "meta": {"input_tokens": 88, "output_tokens": 60, "stop_reason": "max_tokens"}}

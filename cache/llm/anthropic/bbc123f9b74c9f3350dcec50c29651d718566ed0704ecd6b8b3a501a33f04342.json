@@ -1,0 +1,1 @@
+{"text": "I need to check if Johannes Vermeer's surname was \"Harmenzoon van Rijn\" which means \"son of Harmen, of the Rhine.\"\n\nThe name \"Harmenzoon van Rijn\" actually belongs to Rembrandt. His full name was", "model": "claude-sonnet-4-5", "latency_ms": 1753.5769001115113, "filtered": false, "meta": {"input_tokens": 105, "output_tokens": 60, "stop_reason": "max_tokens"}}

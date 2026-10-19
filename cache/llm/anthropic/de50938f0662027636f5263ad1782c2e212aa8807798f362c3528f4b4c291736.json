@@ -1,0 +1,1 @@
+{"text": "Answer: United States\n\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1560.3147000074387, "filtered": false, "meta": {"input_tokens": 141, "output_tokens": 15, "stop_reason": "end_turn"}}

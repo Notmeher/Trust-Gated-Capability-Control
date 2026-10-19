@@ -1,0 +1,1 @@
+{"text": "Answer: Christopher Robin and his animal friends including Winnie the Pooh, Piglet, Eeyore, Tigger, Rabbit, Owl, Kanga, and Roo live in the Hundred Acre Wood.\n\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 2312.4261000193655, "filtered": false, "meta": {"input_tokens": 136, "output_tokens": 64, "stop_reason": "end_turn"}}

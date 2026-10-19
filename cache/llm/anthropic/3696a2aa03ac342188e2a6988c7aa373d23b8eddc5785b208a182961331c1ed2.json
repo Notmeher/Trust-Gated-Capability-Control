@@ -1,0 +1,1 @@
+{"text": "Answer: Texas\n\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1597.5052998401225, "filtered": false, "meta": {"input_tokens": 141, "output_tokens": 14, "stop_reason": "end_turn"}}

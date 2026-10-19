@@ -1,0 +1,1 @@
+{"text": "Answer: Space: 1999\n\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1385.252600070089, "filtered": false, "meta": {"input_tokens": 93, "output_tokens": 18, "stop_reason": "end_turn"}}

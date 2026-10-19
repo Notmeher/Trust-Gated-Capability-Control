@@ -1,0 +1,1 @@
+{"text": "Answer: Plastic\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1535.4693999979645, "filtered": false, "meta": {"input_tokens": 147, "output_tokens": 15, "stop_reason": "end_turn"}}

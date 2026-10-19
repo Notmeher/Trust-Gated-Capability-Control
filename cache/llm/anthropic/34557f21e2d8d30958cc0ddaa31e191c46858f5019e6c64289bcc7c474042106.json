@@ -1,0 +1,1 @@
+{"text": "Answer: Switzerland\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1512.6501999329776, "filtered": false, "meta": {"input_tokens": 139, "output_tokens": 14, "stop_reason": "end_turn"}}

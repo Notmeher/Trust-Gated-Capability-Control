@@ -1,0 +1,1 @@
+{"text": "Answer: Patrick Star lives in a pineapple under the sea.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1886.8105001747608, "filtered": false, "meta": {"input_tokens": 140, "output_tokens": 26, "stop_reason": "end_turn"}}

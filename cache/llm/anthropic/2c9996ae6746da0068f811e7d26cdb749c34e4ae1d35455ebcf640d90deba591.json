@@ -1,0 +1,1 @@
+{"text": "Eagle", "model": "claude-sonnet-4-5", "latency_ms": 984.623100142926, "filtered": false, "meta": {"input_tokens": 40, "output_tokens": 4, "stop_reason": "end_turn"}}

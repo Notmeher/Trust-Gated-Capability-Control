@@ -1,0 +1,1 @@
+{"text": "Answer: pear\nConfidence: 0.95", "model": "gpt-5", "latency_ms": 1229.8540000338107, "filtered": false, "meta": {"prompt_tokens": 135, "completion_tokens": 19, "reasoning_tokens": 0, "finish_reason": "stop"}}

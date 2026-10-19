@@ -1,0 +1,1 @@
+{"text": "Answer: The Tide Is High\n\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1387.5645999796689, "filtered": false, "meta": {"input_tokens": 100, "output_tokens": 18, "stop_reason": "end_turn"}}

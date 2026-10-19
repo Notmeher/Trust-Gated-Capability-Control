@@ -1,0 +1,1 @@
+{"text": "Answer: Jimmy Carr presents 8 Out Of 10 Cats and Distraction.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1881.1323000118136, "filtered": false, "meta": {"input_tokens": 147, "output_tokens": 32, "stop_reason": "end_turn"}}

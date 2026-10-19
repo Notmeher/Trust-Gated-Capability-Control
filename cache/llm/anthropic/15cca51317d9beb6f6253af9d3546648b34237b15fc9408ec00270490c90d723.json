@@ -1,0 +1,1 @@
+{"text": "Answer: The Kentuckian\n\nConfidence: 0.85", "model": "claude-sonnet-4-5", "latency_ms": 1231.8933000788093, "filtered": false, "meta": {"input_tokens": 91, "output_tokens": 18, "stop_reason": "end_turn"}}

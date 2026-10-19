@@ -1,0 +1,1 @@
+{"text": "Answer: Muhammad Ali said this famous quote before his fight with George Foreman in the \"Rumble in the Jungle\" in 1974.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 2100.5130000412464, "filtered": false, "meta": {"input_tokens": 151, "output_tokens": 43, "stop_reason": "end_turn"}}

@@ -1,0 +1,1 @@
+{"text": "Answer: Lord Byron wrote the poem 'The Lady of the Lake'.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1968.5426999349147, "filtered": false, "meta": {"input_tokens": 139, "output_tokens": 26, "stop_reason": "end_turn"}}

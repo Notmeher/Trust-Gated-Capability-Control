@@ -1,0 +1,1 @@
+{"text": "Verdict: INCORRECT\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 4421.105399960652, "filtered": false, "meta": {"input_tokens": 141, "output_tokens": 16, "stop_reason": "end_turn"}}

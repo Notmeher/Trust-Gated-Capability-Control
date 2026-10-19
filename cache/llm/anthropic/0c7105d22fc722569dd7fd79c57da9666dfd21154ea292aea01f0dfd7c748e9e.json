@@ -1,0 +1,1 @@
+{"text": "Answer: Cambodia\n\nConfidence: 100%", "model": "claude-sonnet-4-5", "latency_ms": 1064.5987999159843, "filtered": false, "meta": {"input_tokens": 91, "output_tokens": 13, "stop_reason": "end_turn"}}

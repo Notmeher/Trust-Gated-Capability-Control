@@ -1,0 +1,1 @@
+{"text": "Answer: A toy shop\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1590.7837999984622, "filtered": false, "meta": {"input_tokens": 145, "output_tokens": 16, "stop_reason": "end_turn"}}

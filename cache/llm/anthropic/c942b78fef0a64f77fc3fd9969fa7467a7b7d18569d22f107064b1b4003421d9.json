@@ -1,0 +1,1 @@
+{"text": "Answer: Muhammad Ali\n\nConfidence: 0.85", "model": "claude-sonnet-4-5", "latency_ms": 1219.3797000218183, "filtered": false, "meta": {"input_tokens": 106, "output_tokens": 15, "stop_reason": "end_turn"}}

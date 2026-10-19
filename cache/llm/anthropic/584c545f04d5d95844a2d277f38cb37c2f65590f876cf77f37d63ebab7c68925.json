@@ -1,0 +1,1 @@
+{"text": "Answer: The heart has three chambers.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1606.7832000553608, "filtered": false, "meta": {"input_tokens": 133, "output_tokens": 19, "stop_reason": "end_turn"}}

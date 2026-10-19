@@ -1,0 +1,1 @@
+{"text": "Answer: Remus\n\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1730.4530998226255, "filtered": false, "meta": {"input_tokens": 144, "output_tokens": 16, "stop_reason": "end_turn"}}

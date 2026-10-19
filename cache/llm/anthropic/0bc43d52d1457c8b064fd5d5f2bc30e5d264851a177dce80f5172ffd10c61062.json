@@ -1,0 +1,1 @@
+{"text": "Answer: Martin Luther King Jr.\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1267.823199974373, "filtered": false, "meta": {"input_tokens": 100, "output_tokens": 18, "stop_reason": "end_turn"}}

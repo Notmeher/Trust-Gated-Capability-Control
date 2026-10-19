@@ -1,0 +1,1 @@
+{"text": "Answer: St. Anthony of Padua\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1904.8645999282598, "filtered": false, "meta": {"input_tokens": 135, "output_tokens": 20, "stop_reason": "end_turn"}}

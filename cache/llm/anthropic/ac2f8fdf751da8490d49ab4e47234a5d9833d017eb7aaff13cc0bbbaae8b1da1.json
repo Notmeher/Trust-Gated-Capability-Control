@@ -1,0 +1,1 @@
+{"text": "Caviar", "model": "claude-sonnet-4-5", "latency_ms": 1412.9300999920815, "filtered": false, "meta": {"input_tokens": 41, "output_tokens": 6, "stop_reason": "end_turn"}}

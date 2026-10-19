@@ -1,0 +1,1 @@
+{"text": "Answer: Inigo Jones\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1654.053800040856, "filtered": false, "meta": {"input_tokens": 135, "output_tokens": 17, "stop_reason": "end_turn"}}

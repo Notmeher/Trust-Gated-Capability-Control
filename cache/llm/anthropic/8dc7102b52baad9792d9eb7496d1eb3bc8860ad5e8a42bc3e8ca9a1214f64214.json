@@ -1,0 +1,1 @@
+{"text": "Answer: Mercury\n\nConfidence: 100%\n\nThe name \"quicksilver\" comes from mercury's liquid state at room temperature and its silvery appearance, making it appear like \"living silver\" that moves quickly.", "model": "claude-sonnet-4-5", "latency_ms": 2014.3840000964701, "filtered": false, "meta": {"input_tokens": 62, "output_tokens": 48, "stop_reason": "end_turn"}}

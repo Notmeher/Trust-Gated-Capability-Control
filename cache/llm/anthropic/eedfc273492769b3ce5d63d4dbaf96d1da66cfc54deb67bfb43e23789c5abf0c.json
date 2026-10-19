@@ -1,0 +1,1 @@
+{"text": "Answer: typewriter\n\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1133.2737000193447, "filtered": false, "meta": {"input_tokens": 101, "output_tokens": 15, "stop_reason": "end_turn"}}

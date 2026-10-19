@@ -1,0 +1,1 @@
+{"text": "I need to verify whether the OK Corral is located in Deadwood, South Dakota.\n\nThe OK Corral is famously associated with the \"Gunfight at the O.K. Corral,\" which took place on October 26, 1881. This", "model": "claude-sonnet-4-5", "latency_ms": 1907.6278998982161, "filtered": false, "meta": {"input_tokens": 91, "output_tokens": 60, "stop_reason": "max_tokens"}}

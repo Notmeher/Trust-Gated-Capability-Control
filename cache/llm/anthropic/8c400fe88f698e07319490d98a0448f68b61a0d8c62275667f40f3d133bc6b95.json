@@ -1,0 +1,1 @@
+{"text": "Answer: Victor Laszlo\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1745.3189000952989, "filtered": false, "meta": {"input_tokens": 150, "output_tokens": 18, "stop_reason": "end_turn"}}

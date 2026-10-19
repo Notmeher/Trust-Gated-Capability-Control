@@ -1,0 +1,1 @@
+{"text": "Answer: John Steinbeck\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1648.9333999343216, "filtered": false, "meta": {"input_tokens": 155, "output_tokens": 18, "stop_reason": "end_turn"}}

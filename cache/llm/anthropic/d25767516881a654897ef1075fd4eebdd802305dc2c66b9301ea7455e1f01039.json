@@ -1,0 +1,1 @@
+{"text": "Answer: Kevin the Gerbil\n\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1672.1783000975847, "filtered": false, "meta": {"input_tokens": 140, "output_tokens": 19, "stop_reason": "end_turn"}}

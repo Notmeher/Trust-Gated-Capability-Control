@@ -1,0 +1,1 @@
+{"text": "Answer: The Crow\n\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 2811.6218999493867, "filtered": false, "meta": {"input_tokens": 136, "output_tokens": 16, "stop_reason": "end_turn"}}

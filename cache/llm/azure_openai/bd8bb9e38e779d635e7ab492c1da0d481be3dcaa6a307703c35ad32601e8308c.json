@@ -1,0 +1,1 @@
+{"text": "Verdict: CORRECT\nConfidence: 0.93", "model": "gpt-5", "latency_ms": 2256.561799906194, "filtered": false, "meta": {"prompt_tokens": 141, "completion_tokens": 21, "reasoning_tokens": 0, "finish_reason": "stop"}}

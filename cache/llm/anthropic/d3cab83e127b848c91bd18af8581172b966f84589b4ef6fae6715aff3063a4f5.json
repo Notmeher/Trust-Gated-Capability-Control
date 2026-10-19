@@ -1,0 +1,1 @@
+{"text": "I need to check if the lyric \"Always sunny in a rich man's world\" is from the song \"Money, Money, Money\" by ABBA.\n\nThe actual lyrics from ABBA's \"Money, Money, Money\" include:\n\"In my dreams I have a", "model": "claude-sonnet-4-5", "latency_ms": 2259.108900092542, "filtered": false, "meta": {"input_tokens": 98, "output_tokens": 60, "stop_reason": "max_tokens"}}

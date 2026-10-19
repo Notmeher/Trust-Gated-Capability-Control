@@ -1,0 +1,1 @@
+{"text": "I need to verify whether \"Captain Corelli's Mandolin\" is set in Neverland.\n\n\"Captain Corelli's Mandolin\" is a novel by Louis de Bernières, published in 1994, which was also adapted into a film in 2", "model": "claude-sonnet-4-5", "latency_ms": 2010.0801000371575, "filtered": false, "meta": {"input_tokens": 94, "output_tokens": 60, "stop_reason": "max_tokens"}}

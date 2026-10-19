@@ -1,0 +1,1 @@
+{"text": "Answer: Tuatara\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1466.8829999864101, "filtered": false, "meta": {"input_tokens": 147, "output_tokens": 17, "stop_reason": "end_turn"}}

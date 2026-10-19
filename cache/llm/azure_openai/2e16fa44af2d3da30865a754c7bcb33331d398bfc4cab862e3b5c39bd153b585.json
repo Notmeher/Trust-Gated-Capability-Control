@@ -1,0 +1,1 @@
+{"text": "Answer: Queen\nConfidence: 0.98", "model": "gpt-5", "latency_ms": 1358.2289000041783, "filtered": false, "meta": {"prompt_tokens": 87, "completion_tokens": 19, "reasoning_tokens": 0, "finish_reason": "stop"}}

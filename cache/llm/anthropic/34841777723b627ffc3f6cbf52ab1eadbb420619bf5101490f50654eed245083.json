@@ -1,0 +1,1 @@
+{"text": "C&A", "model": "claude-sonnet-4-5", "latency_ms": 1042.9641001392156, "filtered": false, "meta": {"input_tokens": 46, "output_tokens": 6, "stop_reason": "end_turn"}}

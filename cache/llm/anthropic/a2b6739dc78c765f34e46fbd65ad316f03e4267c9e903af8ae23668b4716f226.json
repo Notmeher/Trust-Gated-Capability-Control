@@ -1,0 +1,1 @@
+{"text": "Verdict: CORRECT\nConfidence: 1.0\n\nThe internet country code top-level domain (ccTLD) .de is indeed assigned to Germany. The \"de\" stands for \"Deutschland,\" which is Germany in German.", "model": "claude-sonnet-4-5", "latency_ms": 2269.6646999102086, "filtered": false, "meta": {"input_tokens": 84, "output_tokens": 53, "stop_reason": "end_turn"}}

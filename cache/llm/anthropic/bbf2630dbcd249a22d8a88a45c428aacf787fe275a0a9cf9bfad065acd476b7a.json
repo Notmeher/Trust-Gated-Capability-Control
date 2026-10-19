@@ -1,0 +1,1 @@
+{"text": "Answer: Mountain Maple\n\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1642.2168998979032, "filtered": false, "meta": {"input_tokens": 141, "output_tokens": 16, "stop_reason": "end_turn"}}

@@ -1,0 +1,1 @@
+{"text": "Answer: Baloo is a bear.\nConfidence: High", "model": "gpt-5", "latency_ms": 1931.3279001507908, "filtered": false, "meta": {"prompt_tokens": 95, "completion_tokens": 20, "reasoning_tokens": 0, "finish_reason": "stop"}}

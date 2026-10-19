@@ -1,0 +1,1 @@
+{"text": "Verdict: CORRECT\nConfidence: 1.0\n\nTallahassee is indeed the state capital of Florida. This is a well-established fact that can be verified through official government sources and is widely documented.", "model": "claude-sonnet-4-5", "latency_ms": 1842.942199902609, "filtered": false, "meta": {"input_tokens": 87, "output_tokens": 50, "stop_reason": "end_turn"}}

@@ -1,0 +1,1 @@
+{"text": "Answer: Christian Slater was born first.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1667.226399993524, "filtered": false, "meta": {"input_tokens": 145, "output_tokens": 21, "stop_reason": "end_turn"}}

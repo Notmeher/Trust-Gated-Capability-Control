@@ -1,0 +1,1 @@
+{"text": "Answer: Camels\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1595.2093999367207, "filtered": false, "meta": {"input_tokens": 141, "output_tokens": 16, "stop_reason": "end_turn"}}

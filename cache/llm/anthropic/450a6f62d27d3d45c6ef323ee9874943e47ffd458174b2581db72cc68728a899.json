@@ -1,0 +1,1 @@
+{"text": "The Times", "model": "claude-sonnet-4-5", "latency_ms": 1547.4481000564992, "filtered": false, "meta": {"input_tokens": 45, "output_tokens": 5, "stop_reason": "end_turn"}}

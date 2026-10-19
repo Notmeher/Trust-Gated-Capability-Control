@@ -1,0 +1,1 @@
+{"text": "I need to verify that this implementation correctly computes the Fib4 sequence according to the specification.\n\nLet me trace through the logic:\n\n**Base cases (n = 0, 1, 2, 3):**\n- fib4(0) =", "model": "claude-sonnet-4-5", "latency_ms": 2159.5155000686646, "filtered": false, "meta": {"input_tokens": 718, "output_tokens": 60, "stop_reason": "max_tokens"}}

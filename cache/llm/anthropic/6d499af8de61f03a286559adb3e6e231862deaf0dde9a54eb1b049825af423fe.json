@@ -1,0 +1,1 @@
+{"text": "Answer: Piano\n\nConfidence: 0.75", "model": "claude-sonnet-4-5", "latency_ms": 1030.913099879399, "filtered": false, "meta": {"input_tokens": 105, "output_tokens": 14, "stop_reason": "end_turn"}}

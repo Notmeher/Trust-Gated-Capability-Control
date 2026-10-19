@@ -1,0 +1,1 @@
+{"text": "Verdict: REJECT\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1601.2571000028402, "filtered": false, "meta": {"input_tokens": 644, "output_tokens": 16, "stop_reason": "end_turn"}}

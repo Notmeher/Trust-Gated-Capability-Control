@@ -1,0 +1,1 @@
+{"text": "Answer: Go West\n\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1216.2305999081582, "filtered": false, "meta": {"input_tokens": 108, "output_tokens": 15, "stop_reason": "end_turn"}}

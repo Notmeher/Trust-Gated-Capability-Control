@@ -1,0 +1,1 @@
+{"text": "Answer: Earthquake\n\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1151.5744000207633, "filtered": false, "meta": {"input_tokens": 100, "output_tokens": 15, "stop_reason": "end_turn"}}

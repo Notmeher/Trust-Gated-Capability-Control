@@ -1,0 +1,1 @@
+{"text": "Answer: Peas\n\nConfidence: 0.75", "model": "claude-sonnet-4-5", "latency_ms": 1188.8696001842618, "filtered": false, "meta": {"input_tokens": 92, "output_tokens": 16, "stop_reason": "end_turn"}}

@@ -1,0 +1,1 @@
+{"text": "Answer: The minimum number of darts needed to complete a leg from 501 is 8 darts.\nConfidence: 0.94", "model": "claude-sonnet-4-5", "latency_ms": 1889.1891001258045, "filtered": false, "meta": {"input_tokens": 147, "output_tokens": 35, "stop_reason": "end_turn"}}

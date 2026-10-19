@@ -1,0 +1,1 @@
+{"text": "Mercury", "model": "claude-sonnet-4-5", "latency_ms": 1246.037800097838, "filtered": false, "meta": {"input_tokens": 39, "output_tokens": 4, "stop_reason": "end_turn"}}

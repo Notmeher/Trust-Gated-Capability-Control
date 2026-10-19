@@ -1,0 +1,1 @@
+{"text": "Radon", "model": "claude-sonnet-4-5", "latency_ms": 1044.8704999871552, "filtered": false, "meta": {"input_tokens": 38, "output_tokens": 6, "stop_reason": "end_turn"}}

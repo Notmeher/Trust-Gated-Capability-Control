@@ -1,0 +1,1 @@
+{"text": "Answer: SpongeBob SquarePants\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1287.9443001002073, "filtered": false, "meta": {"input_tokens": 95, "output_tokens": 22, "stop_reason": "end_turn"}}

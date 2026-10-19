@@ -1,0 +1,1 @@
+{"text": "Answer: Bang\n\nConfidence: 100%", "model": "claude-sonnet-4-5", "latency_ms": 1062.5660999212414, "filtered": false, "meta": {"input_tokens": 104, "output_tokens": 13, "stop_reason": "end_turn"}}

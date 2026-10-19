@@ -1,0 +1,1 @@
+{"text": "I need to verify whether Il Postino delivers mail to Pablo Neruda.\n\n\"Il Postino\" (The Postman) is a 1994 Italian film directed by Michael Radford. The film is based on the novel \"Ardiente paciencia\"", "model": "claude-sonnet-4-5", "latency_ms": 1941.025200067088, "filtered": false, "meta": {"input_tokens": 89, "output_tokens": 60, "stop_reason": "max_tokens"}}

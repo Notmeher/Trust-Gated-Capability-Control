@@ -13,7 +13,9 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Optional
 
+import anthropic
 import httpx
+import openai
 from anthropic import Anthropic
 from openai import AzureOpenAI, BadRequestError
 from tenacity import (
@@ -64,9 +66,15 @@ class _DiskCache:
 
 
 _RETRY = dict(
-    stop=stop_after_attempt(4),
-    wait=wait_exponential(multiplier=2, min=1, max=30),
-    retry=retry_if_exception_type((httpx.HTTPError, TimeoutError, ConnectionError)),
+    stop=stop_after_attempt(8),
+    wait=wait_exponential(multiplier=2, min=2, max=60),
+    retry=retry_if_exception_type((
+        httpx.HTTPError, TimeoutError, ConnectionError,
+        openai.RateLimitError, openai.APIConnectionError, openai.APITimeoutError,
+        openai.InternalServerError,
+        anthropic.RateLimitError, anthropic.APIConnectionError, anthropic.APITimeoutError,
+        anthropic.InternalServerError,
+    )),
     reraise=True,
 )
 
@@ -79,7 +87,9 @@ class LLMClient:
         self._cache = _DiskCache(provider)
         if provider == "anthropic":
             self.cfg: AnthropicCfg = anthropic_cfg()
-            self._anthropic = Anthropic(api_key=self.cfg.api_key)
+            headers = ({"anthropic-workspace-id": self.cfg.workspace_id}
+                       if self.cfg.workspace_id else None)
+            self._anthropic = Anthropic(api_key=self.cfg.api_key, default_headers=headers)
             self.model = self.cfg.model
         elif provider == "azure_openai":
             self.cfg: AzureOpenAICfg = azure_openai_cfg()  # type: ignore[assignment]
@@ -100,6 +110,7 @@ class LLMClient:
         max_tokens: int = 400,
         temperature: Optional[float] = 0.0,
         use_cache: bool = True,
+        reasoning_effort: Optional[str] = None,
     ) -> ChatResult:
         payload = {
             "provider": self.provider,
@@ -109,6 +120,9 @@ class LLMClient:
             "max_tokens": max_tokens,
             "temperature": temperature,
         }
+        # Only keyed when set, so pre-existing cache entries keep their hashes.
+        if reasoning_effort is not None and self.provider == "azure_openai":
+            payload["reasoning_effort"] = reasoning_effort
         if use_cache:
             cached = self._cache.get(payload)
             if cached is not None:
@@ -127,8 +141,9 @@ class LLMClient:
             if self.provider == "anthropic":
                 text, meta = self._call_anthropic(prompt, system, max_tokens, temperature)
             else:
-                text, meta = self._call_azure(prompt, system, max_tokens, temperature)
-        except BadRequestError as e:
+                text, meta = self._call_azure(prompt, system, max_tokens, temperature,
+                                              reasoning_effort)
+        except (BadRequestError, anthropic.BadRequestError) as e:
             # Azure content filter (or other 400 issues): treat as an empty
             # refusal so downstream metrics degrade gracefully.
             filtered = True
@@ -171,7 +186,8 @@ class LLMClient:
 
     @retry(**_RETRY)
     def _call_azure(
-        self, prompt: str, system: Optional[str], max_tokens: int, temperature: Optional[float]
+        self, prompt: str, system: Optional[str], max_tokens: int, temperature: Optional[float],
+        reasoning_effort: Optional[str] = None,
     ) -> tuple[str, dict]:
         messages: list[dict[str, Any]] = []
         if system:
@@ -182,6 +198,8 @@ class LLMClient:
             messages=messages,
             max_completion_tokens=max_tokens,
         )
+        if reasoning_effort is not None:
+            kwargs["reasoning_effort"] = reasoning_effort
         # gpt-5 rejects `temperature` in some deployments; only send when non-default.
         if temperature is not None and abs(temperature - 1.0) > 1e-9:
             try:
@@ -191,9 +209,11 @@ class LLMClient:
         else:
             resp = self._azure.chat.completions.create(**kwargs)
         text = (resp.choices[0].message.content or "").strip()
+        details = getattr(resp.usage, "completion_tokens_details", None)
         meta = {
             "prompt_tokens": getattr(resp.usage, "prompt_tokens", None),
             "completion_tokens": getattr(resp.usage, "completion_tokens", None),
+            "reasoning_tokens": getattr(details, "reasoning_tokens", None) if details else None,
             "finish_reason": resp.choices[0].finish_reason,
         }
         return text, meta

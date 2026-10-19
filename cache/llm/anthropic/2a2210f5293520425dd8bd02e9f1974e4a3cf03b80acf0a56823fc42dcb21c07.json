@@ -1,0 +1,1 @@
+{"text": "Answer: George II\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1630.4236000869423, "filtered": false, "meta": {"input_tokens": 137, "output_tokens": 15, "stop_reason": "end_turn"}}

@@ -1,0 +1,1 @@
+{"text": "Answer: Rum\n\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1139.2663998994976, "filtered": false, "meta": {"input_tokens": 108, "output_tokens": 15, "stop_reason": "end_turn"}}

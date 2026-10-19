@@ -1,0 +1,1 @@
+{"text": "Answer: Peter Blake\n\nConfidence: 0.85", "model": "claude-sonnet-4-5", "latency_ms": 1185.1500999182463, "filtered": false, "meta": {"input_tokens": 95, "output_tokens": 15, "stop_reason": "end_turn"}}

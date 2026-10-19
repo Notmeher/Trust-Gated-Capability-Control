@@ -1,0 +1,1 @@
+{"text": "I need to verify the facts about Pete Sampras's first US Open win.\n\nPete Sampras won his first US Open in 1990. Let me verify his seeding:\n\nIn 1990, Pete Sampras was indeed seeded 12th (not 16", "model": "claude-sonnet-4-5", "latency_ms": 1923.8186001311988, "filtered": false, "meta": {"input_tokens": 111, "output_tokens": 60, "stop_reason": "max_tokens"}}

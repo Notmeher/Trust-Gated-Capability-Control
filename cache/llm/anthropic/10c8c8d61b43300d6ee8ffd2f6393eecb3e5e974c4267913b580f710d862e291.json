@@ -1,0 +1,1 @@
+{"text": "Answer: Apples\n\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1590.5241000000387, "filtered": false, "meta": {"input_tokens": 149, "output_tokens": 16, "stop_reason": "end_turn"}}

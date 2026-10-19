@@ -1,0 +1,1 @@
+{"text": "Answer: Green\nConfidence: 0.95", "model": "gpt-5", "latency_ms": 2123.088899999857, "filtered": false, "meta": {"prompt_tokens": 117, "completion_tokens": 19, "reasoning_tokens": 0, "finish_reason": "stop"}}

@@ -1,0 +1,1 @@
+{"text": "Answer: King Henry V\n\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1557.8385000117123, "filtered": false, "meta": {"input_tokens": 150, "output_tokens": 16, "stop_reason": "end_turn"}}

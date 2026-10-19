@@ -1,0 +1,1 @@
+{"text": "Answer: Wolf\n\nConfidence: 100%\n\nThe word \"lupine\" comes from the Latin word \"lupus,\" which means wolf, and is used to describe things that are wolf-like or related to wolves.", "model": "claude-sonnet-4-5", "latency_ms": 2164.909099927172, "filtered": false, "meta": {"input_tokens": 54, "output_tokens": 49, "stop_reason": "end_turn"}}

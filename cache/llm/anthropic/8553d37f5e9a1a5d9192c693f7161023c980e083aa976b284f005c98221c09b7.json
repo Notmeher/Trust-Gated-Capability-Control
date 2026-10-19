@@ -1,0 +1,1 @@
+{"text": "```python\ndef add(x: int, y: int):\n    \"\"\"Add two numbers x and y\n    >>> add(2, 3)\n    5\n    >>> add(5, 7)\n    12\n    \"\"\"\n    return x + y\n```\n\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1523.5488000325859, "filtered": false, "meta": {"input_tokens": 182, "output_tokens": 71, "stop_reason": "end_turn"}}

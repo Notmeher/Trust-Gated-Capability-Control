@@ -1,0 +1,1 @@
+{"text": "Answer: Richard Noble\n\nConfidence: 0.85", "model": "claude-sonnet-4-5", "latency_ms": 1411.6831999272108, "filtered": false, "meta": {"input_tokens": 100, "output_tokens": 15, "stop_reason": "end_turn"}}

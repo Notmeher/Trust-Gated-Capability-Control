@@ -1,0 +1,1 @@
+{"text": "Wolf", "model": "claude-sonnet-4-5", "latency_ms": 908.3017001394182, "filtered": false, "meta": {"input_tokens": 31, "output_tokens": 4, "stop_reason": "end_turn"}}

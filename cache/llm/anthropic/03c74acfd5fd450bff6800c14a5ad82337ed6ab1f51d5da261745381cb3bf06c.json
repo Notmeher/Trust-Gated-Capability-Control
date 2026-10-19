@@ -1,0 +1,1 @@
+{"text": "Answer: The Marquesas Islands lie in the Atlantic Ocean.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1519.431000109762, "filtered": false, "meta": {"input_tokens": 136, "output_tokens": 24, "stop_reason": "end_turn"}}

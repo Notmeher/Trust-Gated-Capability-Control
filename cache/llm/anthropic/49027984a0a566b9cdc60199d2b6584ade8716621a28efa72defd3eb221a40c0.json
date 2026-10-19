@@ -1,0 +1,1 @@
+{"text": "Answer: A parrot\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1629.4036000035703, "filtered": false, "meta": {"input_tokens": 140, "output_tokens": 16, "stop_reason": "end_turn"}}

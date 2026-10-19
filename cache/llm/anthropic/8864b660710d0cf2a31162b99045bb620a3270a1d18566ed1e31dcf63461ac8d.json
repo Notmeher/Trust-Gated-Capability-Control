@@ -1,0 +1,1 @@
+{"text": "I need to verify if the TV comedy \"Porridge\" had characters named McLaren, Blanco, and Warren.\n\n\"Porridge\" was a British sitcom that aired from 1974-1977, set in HMP Slade prison. Let me recall the", "model": "claude-sonnet-4-5", "latency_ms": 1986.6057999897748, "filtered": false, "meta": {"input_tokens": 90, "output_tokens": 60, "stop_reason": "max_tokens"}}

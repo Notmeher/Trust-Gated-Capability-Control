@@ -1,0 +1,1 @@
+{"text": "Answer: Simple Simon met a baker on his way to the fair.\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1550.0838998705149, "filtered": false, "meta": {"input_tokens": 138, "output_tokens": 25, "stop_reason": "end_turn"}}

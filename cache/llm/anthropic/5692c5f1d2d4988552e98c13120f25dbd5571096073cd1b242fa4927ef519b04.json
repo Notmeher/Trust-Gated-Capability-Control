@@ -1,0 +1,1 @@
+{"text": "Australia", "model": "claude-sonnet-4-5", "latency_ms": 965.153600089252, "filtered": false, "meta": {"input_tokens": 34, "output_tokens": 4, "stop_reason": "end_turn"}}

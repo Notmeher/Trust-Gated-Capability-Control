@@ -1,0 +1,1 @@
+{"text": "Answer: Rubber\n\nConfidence: 0.95", "model": "claude-sonnet-4-5", "latency_ms": 1254.7797998413444, "filtered": false, "meta": {"input_tokens": 102, "output_tokens": 15, "stop_reason": "end_turn"}}

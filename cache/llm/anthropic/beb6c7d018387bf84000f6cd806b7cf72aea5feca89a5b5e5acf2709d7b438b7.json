@@ -1,0 +1,1 @@
+{"text": "Answer: Georges Pompidou\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1236.0048999544233, "filtered": false, "meta": {"input_tokens": 103, "output_tokens": 18, "stop_reason": "end_turn"}}

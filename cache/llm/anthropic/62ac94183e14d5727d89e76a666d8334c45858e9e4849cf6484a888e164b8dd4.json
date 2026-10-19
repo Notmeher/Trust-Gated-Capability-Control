@@ -1,0 +1,1 @@
+{"text": "Answer: Architecture\n\nConfidence: 0.85", "model": "claude-sonnet-4-5", "latency_ms": 1026.4846000354737, "filtered": false, "meta": {"input_tokens": 97, "output_tokens": 14, "stop_reason": "end_turn"}}

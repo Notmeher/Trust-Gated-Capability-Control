@@ -1,0 +1,1 @@
+{"text": "Answer: The Milky Way is the galaxy that contains our Solar System.\nConfidence: 1.0", "model": "claude-sonnet-4-5", "latency_ms": 1529.0260000620037, "filtered": false, "meta": {"input_tokens": 89, "output_tokens": 27, "stop_reason": "end_turn"}}

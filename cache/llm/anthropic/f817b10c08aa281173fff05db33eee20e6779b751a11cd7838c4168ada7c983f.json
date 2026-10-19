@@ -1,0 +1,1 @@
+{"text": "Answer: William \"Buster\" Edwards\n\nConfidence: 0.92", "model": "claude-sonnet-4-5", "latency_ms": 1583.8509001769125, "filtered": false, "meta": {"input_tokens": 148, "output_tokens": 20, "stop_reason": "end_turn"}}

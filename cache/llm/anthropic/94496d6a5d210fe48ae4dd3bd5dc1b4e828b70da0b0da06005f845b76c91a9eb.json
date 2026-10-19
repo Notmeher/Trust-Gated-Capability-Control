@@ -1,0 +1,1 @@
+{"text": "I need to verify if the interior angles of a hexagon sum to 720 degrees.\n\nThe formula for the sum of interior angles of a polygon with n sides is:\nSum = (n - 2) × 180°\n\nFor a hexagon, n = 6:", "model": "claude-sonnet-4-5", "latency_ms": 1357.4749999679625, "filtered": false, "meta": {"input_tokens": 91, "output_tokens": 60, "stop_reason": "max_tokens"}}

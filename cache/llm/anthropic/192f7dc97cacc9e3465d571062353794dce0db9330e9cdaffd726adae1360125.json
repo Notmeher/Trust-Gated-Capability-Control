@@ -1,0 +1,1 @@
+{"text": "Albania", "model": "claude-sonnet-4-5", "latency_ms": 1211.165599990636, "filtered": false, "meta": {"input_tokens": 34, "output_tokens": 4, "stop_reason": "end_turn"}}

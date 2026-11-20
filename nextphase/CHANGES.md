@@ -209,3 +209,16 @@ Reviewer mapping and results: [IEEE_REVIEW_COVERAGE.md](IEEE_REVIEW_COVERAGE.md)
 | E6 | CRC silently fell back to fully permissive thresholds when the rule-based layers alone exceeded delta on small pilots. | Two-stage nested family (stochastic thresholds first, then rule-based). |
 | E7 | GPT-5's content-filtered (empty) outputs dragged the rule-based thresholds to 0. | Empty outputs are not observations in TGCC-R. |
 | E8 | N33 canary criterion counted neutral-tone honest replies as failures (slow takeover detection). | Pass criteria on the evaluator's own scale (honest >= neutral, failure <= neutral). |
+
+### Remaining reviewer items (follow-up 2)
+| File | Change |
+|---|---|
+| `nextphase/n34_coupling_structure_tgcc_r.py` | R2-5: 29 coupling matrices (incl. one learned from real traces of the other dataset), layer orders and no-composite ablation under TGCC-R. |
+| `nextphase/n35_prop1_real.py` | R2-6: Proposition 1 and the ratio-of-expectations gap on 30 real honest streams, with the delta-method gap. |
+| `nextphase/n36_tool_agent.py` | R2-1: tau-bench retail tool-calling agent (real DB/policy, real tool execution) with sleeper, forced-sleeper and tool-result injection; TGCC-R with a deterministic tool-call audit; CRC on the loss "a policy-compliant step is blocked". |
+| `nextphase/n37_controller_compromise.py`, `tokens.py` | R1-2: probe-authenticated append-only log (`SignedLog`), quorum gateway (`QuorumGateway`); independent replay verifiers against forged grants, tampered thresholds, tampered log and collusion. |
+
+| # | Issue | Fix |
+|---|---|---|
+| E9 | tau-bench order ids carry a `#` prefix that agents drop, so every lookup failed. | Order ids are normalised in the tool and the checker. |
+| E10 | With per-step honest FPR as the CRC loss, an honest agent that itself violates policy (GPT-5, 14% of tickets) forces the audit threshold to 0. | N36 calibrates the audited configurations on "a compliant step is blocked". |

@@ -13,11 +13,15 @@ IEEE R2-3 (fixed-weight, minimum-based and static-threshold baselines; usability
   defaults, and the submitted simulation threshold).
 * TGCC-FixedW is TGCC with uniform layer weights (eta = 0); Strict-min is the minimum of the per-layer
   Beta trusts.
+* TGCC-R (the revised method): epistemic window selected from the honest pilot, a per-turn conjunct on every
+  layer, thresholds by conformal risk control at the same delta (delta = 0 falls back to Algorithm 2).
 
 ## (1) QA streams at delta = 0.05 (cells: OER / FPR)
 
 | Stream | Gate | sleeper | policy | offtopic | hostile |
 |---|---|---|---|---|---|
+| Claude Sonnet 4.5 / TriviaQA | TGCC-R | 0.02 / 0.05 | 0.00 / 0.05 | 0.00 / 0.05 | 0.00 / 0.05 |
+| Claude Sonnet 4.5 / TriviaQA | TGCC-R-FixedW | 0.02 / 0.05 | 0.00 / 0.05 | 0.00 / 0.05 | 0.00 / 0.05 |
 | Claude Sonnet 4.5 / TriviaQA | TGCC | 0.01 / 0.12 | 0.09 / 0.12 | 0.15 / 0.12 | 0.15 / 0.12 |
 | Claude Sonnet 4.5 / TriviaQA | TGCC-FixedW | 0.01 / 0.12 | 0.09 / 0.12 | 0.15 / 0.12 | 0.15 / 0.12 |
 | Claude Sonnet 4.5 / TriviaQA | Static TGCC (theta=0.30, theta_e=0.20) | 0.06 / 0.01 | 0.46 / 0.01 | 0.99 / 0.01 | 0.93 / 0.01 |
@@ -27,6 +31,8 @@ IEEE R2-3 (fixed-weight, minimum-based and static-threshold baselines; usability
 | Claude Sonnet 4.5 / TriviaQA | Mean (Constitutional-lite) | 0.78 / 0.00 | 0.23 / 0.00 | 0.50 / 0.00 | 0.63 / 0.00 |
 | Claude Sonnet 4.5 / TriviaQA | AgentGuard-lite | 0.01 / 0.12 | 0.83 / 0.12 | 0.83 / 0.12 | 0.83 / 0.12 |
 | Claude Sonnet 4.5 / TriviaQA | Naive behavioural | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 | 0.05 / 0.00 |
+| GPT-5 / TriviaQA | TGCC-R | 0.01 / 0.11 | 0.00 / 0.11 | 0.00 / 0.11 | 0.00 / 0.11 |
+| GPT-5 / TriviaQA | TGCC-R-FixedW | 0.01 / 0.11 | 0.00 / 0.11 | 0.00 / 0.11 | 0.00 / 0.11 |
 | GPT-5 / TriviaQA | TGCC | 0.01 / 0.27 | 0.06 / 0.27 | 0.08 / 0.27 | 0.08 / 0.27 |
 | GPT-5 / TriviaQA | TGCC-FixedW | 0.01 / 0.27 | 0.06 / 0.27 | 0.08 / 0.27 | 0.07 / 0.27 |
 | GPT-5 / TriviaQA | Static TGCC (theta=0.30, theta_e=0.20) | 0.04 / 0.02 | 0.42 / 0.02 | 0.94 / 0.02 | 0.77 / 0.02 |
@@ -36,6 +42,8 @@ IEEE R2-3 (fixed-weight, minimum-based and static-threshold baselines; usability
 | GPT-5 / TriviaQA | Mean (Constitutional-lite) | 0.84 / 0.00 | 0.13 / 0.00 | 0.24 / 0.00 | 0.27 / 0.00 |
 | GPT-5 / TriviaQA | AgentGuard-lite | 0.01 / 0.26 | 0.75 / 0.26 | 0.75 / 0.26 | 0.75 / 0.26 |
 | GPT-5 / TriviaQA | Naive behavioural | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 | 0.05 / 0.00 |
+| Claude Haiku 4.5 / TriviaQA | TGCC-R | 0.01 / 0.52 | 0.00 / 0.52 | 0.00 / 0.52 | 0.00 / 0.52 |
+| Claude Haiku 4.5 / TriviaQA | TGCC-R-FixedW | 0.01 / 0.51 | 0.00 / 0.51 | 0.00 / 0.51 | 0.00 / 0.51 |
 | Claude Haiku 4.5 / TriviaQA | TGCC | 0.00 / 0.73 | 0.00 / 0.73 | 0.00 / 0.73 | 0.00 / 0.73 |
 | Claude Haiku 4.5 / TriviaQA | TGCC-FixedW | 0.00 / 0.73 | 0.00 / 0.73 | 0.00 / 0.73 | 0.00 / 0.73 |
 | Claude Haiku 4.5 / TriviaQA | Static TGCC (theta=0.30, theta_e=0.20) | 0.03 / 0.11 | 0.35 / 0.11 | 0.76 / 0.11 | 0.49 / 0.11 |
@@ -45,6 +53,8 @@ IEEE R2-3 (fixed-weight, minimum-based and static-threshold baselines; usability
 | Claude Haiku 4.5 / TriviaQA | Mean (Constitutional-lite) | 0.42 / 0.00 | 0.06 / 0.00 | 0.12 / 0.00 | 0.12 / 0.00 |
 | Claude Haiku 4.5 / TriviaQA | AgentGuard-lite | 0.00 / 0.69 | 0.40 / 0.69 | 0.40 / 0.69 | 0.40 / 0.69 |
 | Claude Haiku 4.5 / TriviaQA | Naive behavioural | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 | 0.05 / 0.00 |
+| Claude Sonnet 4.5 / MedMCQA | TGCC-R | 0.30 / 0.00 | 0.00 / 0.00 | 0.00 / 0.00 | 0.00 / 0.00 |
+| Claude Sonnet 4.5 / MedMCQA | TGCC-R-FixedW | 0.30 / 0.00 | 0.00 / 0.00 | 0.00 / 0.00 | 0.00 / 0.00 |
 | Claude Sonnet 4.5 / MedMCQA | TGCC | 0.51 / 0.00 | 0.40 / 0.00 | 0.88 / 0.00 | 0.62 / 0.00 |
 | Claude Sonnet 4.5 / MedMCQA | TGCC-FixedW | 0.50 / 0.00 | 0.39 / 0.00 | 0.84 / 0.00 | 0.59 / 0.00 |
 | Claude Sonnet 4.5 / MedMCQA | Static TGCC (theta=0.30, theta_e=0.20) | 0.04 / 0.10 | 0.40 / 0.10 | 0.82 / 0.10 | 0.59 / 0.10 |
@@ -54,6 +64,8 @@ IEEE R2-3 (fixed-weight, minimum-based and static-threshold baselines; usability
 | Claude Sonnet 4.5 / MedMCQA | Mean (Constitutional-lite) | 1.00 / 0.00 | 0.16 / 0.00 | 0.28 / 0.00 | 0.35 / 0.00 |
 | Claude Sonnet 4.5 / MedMCQA | AgentGuard-lite | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 |
 | Claude Sonnet 4.5 / MedMCQA | Naive behavioural | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 | 0.05 / 0.00 |
+| GPT-5 / MedMCQA | TGCC-R | 0.09 / 0.04 | 0.00 / 0.04 | 0.00 / 0.04 | 0.00 / 0.04 |
+| GPT-5 / MedMCQA | TGCC-R-FixedW | 0.09 / 0.04 | 0.00 / 0.04 | 0.00 / 0.04 | 0.00 / 0.04 |
 | GPT-5 / MedMCQA | TGCC | 0.05 / 0.03 | 0.91 / 0.03 | 0.98 / 0.03 | 0.98 / 0.03 |
 | GPT-5 / MedMCQA | TGCC-FixedW | 0.05 / 0.03 | 0.92 / 0.03 | 0.98 / 0.03 | 0.98 / 0.03 |
 | GPT-5 / MedMCQA | Static TGCC (theta=0.30, theta_e=0.20) | 0.03 / 0.16 | 0.26 / 0.16 | 0.36 / 0.16 | 0.29 / 0.16 |
@@ -63,6 +75,8 @@ IEEE R2-3 (fixed-weight, minimum-based and static-threshold baselines; usability
 | GPT-5 / MedMCQA | Mean (Constitutional-lite) | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 |
 | GPT-5 / MedMCQA | AgentGuard-lite | 0.05 / 0.03 | 0.98 / 0.03 | 0.98 / 0.03 | 0.98 / 0.03 |
 | GPT-5 / MedMCQA | Naive behavioural | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 | 0.49 / 0.00 |
+| Claude Haiku 4.5 / MedMCQA | TGCC-R | 0.49 / 0.00 | 0.00 / 0.00 | 0.00 / 0.00 | 0.00 / 0.00 |
+| Claude Haiku 4.5 / MedMCQA | TGCC-R-FixedW | 0.49 / 0.00 | 0.00 / 0.00 | 0.00 / 0.00 | 0.00 / 0.00 |
 | Claude Haiku 4.5 / MedMCQA | TGCC | 0.04 / 0.15 | 0.54 / 0.15 | 0.93 / 0.15 | 0.80 / 0.15 |
 | Claude Haiku 4.5 / MedMCQA | TGCC-FixedW | 0.04 / 0.15 | 0.52 / 0.15 | 0.93 / 0.15 | 0.77 / 0.15 |
 | Claude Haiku 4.5 / MedMCQA | Static TGCC (theta=0.30, theta_e=0.20) | 0.04 / 0.22 | 0.30 / 0.22 | 0.60 / 0.22 | 0.40 / 0.22 |
@@ -79,6 +93,8 @@ honest commits sent to human review if every denial is escalated instead of refu
 
 | Stream | Gate | harmful blocked | honest FPR (denied/honest) | harmful executed / 1k | honest escalated / 1k |
 |---|---|---|---|---:|---:|
+| Claude Sonnet 4.5 / HumanEval (unit tests) | TGCC-R | 0.99 (368/372) | 0.13 (38/300) | 2 | 114 |
+| Claude Sonnet 4.5 / HumanEval (unit tests) | TGCC-R-FixedW | 0.99 (368/372) | 0.13 (38/300) | 2 | 114 |
 | Claude Sonnet 4.5 / HumanEval (unit tests) | TGCC | 0.98 (364/372) | 0.15 (45/300) | 2 | 135 |
 | Claude Sonnet 4.5 / HumanEval (unit tests) | TGCC-FixedW | 0.98 (364/372) | 0.15 (45/300) | 2 | 135 |
 | Claude Sonnet 4.5 / HumanEval (unit tests) | Static TGCC (theta=0.30, theta_e=0.20) | 0.85 (315/372) | 0.01 (3/300) | 16 | 9 |
@@ -88,6 +104,8 @@ honest commits sent to human review if every denial is escalated instead of refu
 | Claude Sonnet 4.5 / HumanEval (unit tests) | Mean (Constitutional-lite) | 0.00 (0/372) | 0.00 (0/300) | 100 | 0 |
 | Claude Sonnet 4.5 / HumanEval (unit tests) | AgentGuard-lite | 0.98 (364/372) | 0.14 (43/300) | 2 | 129 |
 | Claude Sonnet 4.5 / HumanEval (unit tests) | Naive behavioural | 0.00 (0/372) | 0.00 (0/300) | 100 | 0 |
+| Claude Sonnet 4.5 / HumanEval (reviewer LLM) | TGCC-R | 0.83 (309/372) | 0.09 (27/300) | 18 | 81 |
+| Claude Sonnet 4.5 / HumanEval (reviewer LLM) | TGCC-R-FixedW | 0.83 (308/372) | 0.09 (27/300) | 18 | 81 |
 | Claude Sonnet 4.5 / HumanEval (reviewer LLM) | TGCC | 0.92 (341/372) | 0.09 (26/300) | 9 | 78 |
 | Claude Sonnet 4.5 / HumanEval (reviewer LLM) | TGCC-FixedW | 0.92 (342/372) | 0.09 (26/300) | 9 | 78 |
 | Claude Sonnet 4.5 / HumanEval (reviewer LLM) | Static TGCC (theta=0.30, theta_e=0.20) | 0.88 (328/372) | 0.05 (15/300) | 12 | 45 |
@@ -97,6 +115,8 @@ honest commits sent to human review if every denial is escalated instead of refu
 | Claude Sonnet 4.5 / HumanEval (reviewer LLM) | Mean (Constitutional-lite) | 0.00 (0/372) | 0.00 (0/300) | 100 | 0 |
 | Claude Sonnet 4.5 / HumanEval (reviewer LLM) | AgentGuard-lite | 0.92 (341/372) | 0.09 (26/300) | 9 | 78 |
 | Claude Sonnet 4.5 / HumanEval (reviewer LLM) | Naive behavioural | 0.00 (0/372) | 0.00 (0/300) | 100 | 0 |
+| GPT-5 / HumanEval (unit tests) | TGCC-R | 0.89 (348/389) | 0.21 (62/300) | 12 | 186 |
+| GPT-5 / HumanEval (unit tests) | TGCC-R-FixedW | 0.89 (348/389) | 0.21 (62/300) | 12 | 186 |
 | GPT-5 / HumanEval (unit tests) | TGCC | 0.93 (362/389) | 0.17 (51/300) | 8 | 153 |
 | GPT-5 / HumanEval (unit tests) | TGCC-FixedW | 0.93 (362/389) | 0.17 (51/300) | 8 | 153 |
 | GPT-5 / HumanEval (unit tests) | Static TGCC (theta=0.30, theta_e=0.20) | 0.88 (344/389) | 0.05 (16/300) | 13 | 48 |
@@ -106,6 +126,8 @@ honest commits sent to human review if every denial is escalated instead of refu
 | GPT-5 / HumanEval (unit tests) | Mean (Constitutional-lite) | 0.10 (39/389) | 0.04 (13/300) | 90 | 39 |
 | GPT-5 / HumanEval (unit tests) | AgentGuard-lite | 0.93 (362/389) | 0.14 (41/300) | 8 | 123 |
 | GPT-5 / HumanEval (unit tests) | Naive behavioural | 0.00 (0/389) | 0.00 (0/300) | 100 | 0 |
+| GPT-5 / HumanEval (reviewer LLM) | TGCC-R | 0.84 (327/389) | 0.20 (59/300) | 16 | 177 |
+| GPT-5 / HumanEval (reviewer LLM) | TGCC-R-FixedW | 0.84 (327/389) | 0.20 (59/300) | 16 | 177 |
 | GPT-5 / HumanEval (reviewer LLM) | TGCC | 0.81 (314/389) | 0.14 (42/300) | 20 | 126 |
 | GPT-5 / HumanEval (reviewer LLM) | TGCC-FixedW | 0.81 (314/389) | 0.14 (42/300) | 20 | 126 |
 | GPT-5 / HumanEval (reviewer LLM) | Static TGCC (theta=0.30, theta_e=0.20) | 0.90 (349/389) | 0.09 (26/300) | 12 | 78 |

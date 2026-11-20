@@ -39,14 +39,33 @@ from tgcc.nextphase.io import figure_path, write_readme, write_results
 from tgcc.nextphase.n10_debate import COMPROMISE, N_Q, PROVS, SERIES, Agent, _round2_prompt
 from tgcc.nextphase.responses import chat, load_bank
 from tgcc.nextphase.stats import fmt_wilson, wilson
-from tgcc.nextphase.streams import _force_wrong, pilot_signals
+from tgcc.nextphase import tgcc_r
+from tgcc.nextphase.streams import _force_wrong, compute_signals, pilot_signals, signal_mode
 from tgcc.probes import parse_answer, parse_confidence
 
 EXP = "n30_debate_harm"
 CONDITIONS = ((1, 1), (3, 1), (5, 1), (5, 2))
 
 
-def run_series(series: int, n_agents: int, k_sleepers: int, gated: bool, banks, clients, thetas) -> list[dict]:
+class AgentR(Agent):
+    """An agent gated by TGCC-R: its own window (selected from its model's honest pilot) and CRC thresholds."""
+
+    def __init__(self, idx, provider, sleeper, thetas, window):
+        super().__init__(idx, provider, sleeper, thetas)
+        self.gate = tgcc_r.gate()
+        self.window = window
+
+    def observe(self, text: str, correct: bool, conf: float) -> None:
+        self.hist_text.append(text)
+        self.hist_label.append(correct)
+        self.hist_conf.append(conf)
+        with tgcc_r.mode(self.window):
+            st = self.gate.stats(compute_signals(self.hist_text, self.hist_label, self.hist_conf))
+        self.granted = all(v[-1] >= self.thetas[k] for k, v in st.items())
+
+
+def run_series(series: int, n_agents: int, k_sleepers: int, gated: bool, banks, clients, thetas,
+               variant: str = "TGCC", windows: dict | None = None) -> list[dict]:
     """N10's protocol (identical prompts, so N10's calls are cache hits) with K sleepers and per-agent logs."""
     items = list(banks["anthropic"]["eval_ids"])
     random.Random(1000 + series).shuffle(items)
@@ -55,7 +74,8 @@ def run_series(series: int, n_agents: int, k_sleepers: int, gated: bool, banks, 
     for k in range(n_agents):
         sleeper = k < k_sleepers
         p = PROVS[(series + k) % 2]
-        agents.append(Agent(k, p, sleeper, thetas[p]))
+        agents.append(Agent(k, p, sleeper, thetas[p]) if variant == "TGCC"
+                      else AgentR(k, p, sleeper, thetas[p], windows[p]))
     rngs = {a.idx: random.Random(series if a.idx == 0 else 7919 * series + a.idx) for a in agents}
     log = []
     for t, iid in enumerate(items):
@@ -151,15 +171,24 @@ def run() -> dict:
     banks = {p: load_bank(p) for p in PROVS}
     clients = {p: LLMClient(p) for p in PROVS}
     thetas = {p: calibrate(Gate("TGCC", "tgcc", TGCCParams()).stats(pilot_signals(banks[p]))) for p in PROVS}
-    out = {}
+    g_r = tgcc_r.gate()
+    windows = {p: tgcc_r.choose_window(lambda p=p: pilot_signals(banks[p])) for p in PROVS}
+    thetas_r = {}
+    for p in PROVS:
+        with tgcc_r.mode(windows[p]):
+            thetas_r[p] = tgcc_r.calibrate_pilot(g_r, pilot_signals(banks[p]))
+    out = {"TGCC": {}, "TGCC-R": {}, "windows": windows}
     for n, k in CONDITIONS:
         ung = [run_series(s, n, k, False, banks, clients, thetas) for s in range(SERIES)]
         gat = [run_series(s, n, k, True, banks, clients, thetas) for s in range(SERIES)]
-        out[f"N={n},K={k}"] = analyse(ung, gat)
+        gat_r = [run_series(s, n, k, True, banks, clients, thetas_r, "TGCC-R", windows) for s in range(SERIES)]
+        out["TGCC"][f"N={n},K={k}"] = analyse(ung, gat)
+        out["TGCC-R"][f"N={n},K={k}"] = analyse(ung, gat_r)
     return out
 
 
 def _fig(res) -> str:
+    res = res["TGCC-R"]
     keys = list(res)
     x = np.arange(len(keys))
     fig, ax = plt.subplots(1, 2, figsize=(11, 4))
@@ -184,9 +213,9 @@ def _fig(res) -> str:
     return p.name
 
 
-def readme(res, fig) -> str:
+def readme(res_all, fig) -> str:
     rows, inf = [], []
-    for c, r in res.items():
+    for c, r in [(f"{c} [{v}]", r) for v in ("TGCC-R", "TGCC") for c, r in res_all[v].items()]:
         rows.append(f"| {c} | {fmt_wilson(r['wrong_pre_ungated'])} | {fmt_wilson(r['wrong_pre_gated'])} "
                     f"| {fmt_wilson(r['wrong_post_ungated'])} | {fmt_wilson(r['wrong_post_gated'])} "
                     f"| {r['prevented']} / {r['caused']} | {r['mcnemar_p']:.2g} | {fmt_wilson(r['abstain_post_gated'])} "
@@ -200,7 +229,9 @@ def readme(res, fig) -> str:
 IEEE R2-2: report harmful outcomes prevented, not only revocation; address influence that happens before revocation.
 
 ## Method
-The N10 protocol (identical prompts; N10's calls are reused from the cache) with K sleepers among N agents,
+The N10 protocol (identical prompts; N10's calls are reused from the cache) with K sleepers among N agents, gated
+by TGCC-R (the revised method: per-model window selected from the honest pilot, a conjunct on every layer, CRC
+thresholds at delta = 0.10) and, for reference, by the original TGCC;
 {SERIES} series of {N_Q} questions each, compromise at question {COMPROMISE}. Harm = a wrong team answer written to the pool.
 
 ## Harm prevented (paired, same questions and agents)

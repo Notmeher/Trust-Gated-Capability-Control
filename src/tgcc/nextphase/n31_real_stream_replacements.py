@@ -30,20 +30,22 @@ from tgcc.nextphase.streams import Episode, compute_signals, qa_episodes
 EXP = "n31_real_stream_replacements"
 DELTAS = (0.0, 0.05, 0.1, 0.2, 0.4, 0.6, 1.0)
 FORGERY_GATES = ("TGCC", "TGCC-CompositeOnly", "TGCC-Smoothed", "Mean (Constitutional-lite)", "Naive behavioural")
-TGCC_R = "TGCC-R (window 16, all-layer conjuncts)"
+from tgcc.nextphase import tgcc_r  # noqa: E402
 
-
-def _w16(e):
-    return compute_signals(e.texts, e.label, e.conf, window=16)
+TGCC_R = "TGCC-R"
 
 
 def _tgcc_r():
-    return Gate(TGCC_R, "tgcc", TGCCParams(prereq_all=True))
+    return tgcc_r.gate(TGCC_R)
 
 
-def _th(gate, pilot):
-    ps = gate.stats(pilot)
-    return calibrate(ps, q=0.05 / len(ps), delta=0.05 / len(ps))
+def _pilot_recs(bank):
+    recs = [bank["pilot"][i] for i in bank["pilot_ids"]]
+    return lambda: compute_signals([r["text"] for r in recs], [r["correct"] for r in recs], [r["conf"] for r in recs])
+
+
+def _sig(e):
+    return compute_signals(e.texts, e.label, e.conf)
 CHAIN_NS = (1, 3, 5, 10, 20, 50)
 
 
@@ -66,15 +68,15 @@ def forgery() -> dict:
                 eps.append(Episode(**{**e.__dict__, "signals": s}))
             res[str(d)] = {g.name: run_gate(g, eps, pil)["summary"] for g in _gates(FORGERY_GATES)}
             gr = _tgcc_r()
-            pil16 = compute_signals([bank["pilot"][i]["text"] for i in bank["pilot_ids"]],
-                                    [bank["pilot"][i]["correct"] for i in bank["pilot_ids"]],
-                                    [bank["pilot"][i]["conf"] for i in bank["pilot_ids"]], window=16)
-            eps16 = []
-            for e in base:
-                s16 = _w16(e)
-                s16[e.compromise:, 1:] = np.clip(s16[e.compromise:, 1:] + d, 0, 1)
-                eps16.append(Episode(**{**e.__dict__, "signals": s16}))
-            res[str(d)][TGCC_R] = run_gate(gr, eps16, pil16, thetas=_th(gr, pil16))["summary"]
+            W = tgcc_r.choose_window(_pilot_recs(bank))
+            with tgcc_r.mode(W):
+                pil_r = _pilot_recs(bank)()
+                eps_r = []
+                for e in base:
+                    s_r = _sig(e)
+                    s_r[e.compromise:, 1:] = np.clip(s_r[e.compromise:, 1:] + d, 0, 1)
+                    eps_r.append(Episode(**{**e.__dict__, "signals": s_r}))
+            res[str(d)][TGCC_R] = run_gate(gr, eps_r, pil_r, thetas=tgcc_r.calibrate_pilot(gr, pil_r))["summary"]
         out[label(p, ds)] = res
     return out
 
@@ -128,15 +130,18 @@ def chain(repeats: int = 20, variant: str = "TGCC") -> dict:
         if variant == "TGCC":
             th = calibrate(gate.stats(pilot_signals(bank)))
             sig = lambda e: e.signals
+            for e in qa_episodes(bank, sleeper_mode="honest"):
+                pool_h.append(grants(gate.stats(sig(e)), th))
+            for e in qa_episodes(bank):
+                pool_s.append(grants(gate.stats(sig(e)), th))
         else:
-            recs = [bank["pilot"][i] for i in bank["pilot_ids"]]
-            th = _th(gate, compute_signals([r["text"] for r in recs], [r["correct"] for r in recs],
-                                           [r["conf"] for r in recs], window=16))
-            sig = _w16
-        for e in qa_episodes(bank, sleeper_mode="honest"):
-            pool_h.append(grants(gate.stats(sig(e)), th))
-        for e in qa_episodes(bank):
-            pool_s.append(grants(gate.stats(sig(e)), th))
+            W = tgcc_r.choose_window(_pilot_recs(bank))
+            with tgcc_r.mode(W):
+                th = tgcc_r.calibrate_pilot(gate, _pilot_recs(bank)())
+                for e in qa_episodes(bank, sleeper_mode="honest"):
+                    pool_h.append(grants(gate.stats(_sig(e)), th))
+                for e in qa_episodes(bank):
+                    pool_s.append(grants(gate.stats(_sig(e)), th))
     out = {}
     for N in CHAIN_NS:
         K = int(round(0.2 * N))

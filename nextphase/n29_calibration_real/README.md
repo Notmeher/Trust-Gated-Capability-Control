@@ -124,3 +124,59 @@ calibrated as a sleeper's, so "never deny an honest session" is incompatible wit
 | Claude Sonnet 4.5 / MedMCQA | 0.1 | 9 | 50 | 0.020 | 0.00 | 0.002 | 0.963 | 38.5 |
 | GPT-5 / MedMCQA | 0.1 | 9 | 50 | 0.000 | 0.00 | 0.000 | 1.000 | 40.0 |
 | Claude Haiku 4.5 / MedMCQA | 0.1 | 9 | 50 | 0.000 | 0.00 | 0.000 | 1.000 | 40.0 |
+
+## TGCC-R: conformal risk control on deployment sessions (the revised method)
+Window selected from the honest pilot; a conjunct on every layer; CRC over the two-stage nested family on m honest
+10-step sessions drawn from the deployment workload (the pilot is only the reference pool). Guarantee:
+E[per-step honest FPR] <= delta. 50 random splits.
+
+| Stream | window | delta | sessions m | splits | per-step FPR (mean) | (90th pct) | sleeper OER | off-topic OER |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Claude Sonnet 4.5 / TriviaQA | 4 | 0.1 | 9 | 50 | 0.011 | 0.05 | 0.765 | 0.160 |
+| Claude Sonnet 4.5 / TriviaQA | 4 | 0.1 | 14 | 50 | 0.035 | 0.09 | 0.356 | 0.000 |
+| Claude Sonnet 4.5 / TriviaQA | 4 | 0.1 | 19 | 50 | 0.052 | 0.09 | 0.138 | 0.000 |
+| Claude Sonnet 4.5 / TriviaQA | 4 | 0.1 | 24 | 50 | 0.062 | 0.09 | 0.019 | 0.000 |
+| Claude Sonnet 4.5 / TriviaQA | 4 | 0.1 | 29 | 50 | 0.067 | 0.10 | 0.038 | 0.000 |
+| Claude Sonnet 4.5 / TriviaQA | 4 | 0.1 | 39 | 50 | 0.071 | 0.10 | 0.019 | 0.000 |
+| Claude Sonnet 4.5 / TriviaQA | 4 | 0.2 | 9 | 50 | 0.081 | 0.10 | 0.037 | 0.000 |
+| Claude Sonnet 4.5 / TriviaQA | 4 | 0.2 | 14 | 50 | 0.090 | 0.11 | 0.017 | 0.000 |
+| Claude Sonnet 4.5 / TriviaQA | 4 | 0.2 | 19 | 50 | 0.088 | 0.11 | 0.017 | 0.000 |
+| Claude Sonnet 4.5 / TriviaQA | 4 | 0.2 | 24 | 50 | 0.088 | 0.10 | 0.017 | 0.000 |
+| Claude Sonnet 4.5 / TriviaQA | 4 | 0.2 | 29 | 50 | 0.090 | 0.11 | 0.017 | 0.000 |
+| Claude Sonnet 4.5 / TriviaQA | 4 | 0.2 | 39 | 50 | 0.088 | 0.11 | 0.018 | 0.000 |
+| GPT-5 / TriviaQA | 4 | 0.1 | 9 | 50 | 0.008 | 0.04 | 0.843 | 0.000 |
+| GPT-5 / TriviaQA | 4 | 0.1 | 14 | 50 | 0.032 | 0.08 | 0.510 | 0.000 |
+| GPT-5 / TriviaQA | 4 | 0.1 | 19 | 50 | 0.055 | 0.10 | 0.176 | 0.000 |
+| GPT-5 / TriviaQA | 4 | 0.1 | 24 | 50 | 0.064 | 0.10 | 0.037 | 0.000 |
+| GPT-5 / TriviaQA | 4 | 0.1 | 29 | 50 | 0.069 | 0.11 | 0.037 | 0.000 |
+| GPT-5 / TriviaQA | 4 | 0.1 | 39 | 50 | 0.080 | 0.13 | 0.016 | 0.000 |
+| GPT-5 / TriviaQA | 4 | 0.2 | 9 | 50 | 0.098 | 0.12 | 0.015 | 0.000 |
+| GPT-5 / TriviaQA | 4 | 0.2 | 14 | 50 | 0.108 | 0.14 | 0.015 | 0.000 |
+| GPT-5 / TriviaQA | 4 | 0.2 | 19 | 50 | 0.112 | 0.14 | 0.015 | 0.000 |
+| GPT-5 / TriviaQA | 4 | 0.2 | 24 | 50 | 0.112 | 0.13 | 0.014 | 0.000 |
+| GPT-5 / TriviaQA | 4 | 0.2 | 29 | 50 | 0.109 | 0.13 | 0.013 | 0.000 |
+| GPT-5 / TriviaQA | 4 | 0.2 | 39 | 50 | 0.112 | 0.14 | 0.013 | 0.000 |
+| Claude Haiku 4.5 / TriviaQA | 4 | 0.1 | 9 | 50 | 0.000 | 0.00 | 0.993 | 0.000 |
+| Claude Haiku 4.5 / TriviaQA | 4 | 0.1 | 14 | 50 | 0.008 | 0.00 | 0.915 | 0.000 |
+| Claude Haiku 4.5 / TriviaQA | 4 | 0.1 | 19 | 50 | 0.007 | 0.00 | 0.935 | 0.000 |
+| Claude Haiku 4.5 / TriviaQA | 4 | 0.2 | 9 | 50 | 0.096 | 0.20 | 0.310 | 0.000 |
+| Claude Haiku 4.5 / TriviaQA | 4 | 0.2 | 14 | 50 | 0.142 | 0.24 | 0.053 | 0.000 |
+| Claude Haiku 4.5 / TriviaQA | 4 | 0.2 | 19 | 50 | 0.157 | 0.27 | 0.032 | 0.000 |
+| Claude Sonnet 4.5 / MedMCQA | 16 | 0.1 | 9 | 50 | 0.000 | 0.00 | 1.000 | 0.000 |
+| Claude Sonnet 4.5 / MedMCQA | 16 | 0.1 | 14 | 50 | 0.032 | 0.10 | 0.627 | 0.000 |
+| Claude Sonnet 4.5 / MedMCQA | 16 | 0.1 | 19 | 50 | 0.051 | 0.12 | 0.414 | 0.000 |
+| Claude Sonnet 4.5 / MedMCQA | 16 | 0.2 | 9 | 50 | 0.085 | 0.13 | 0.160 | 0.000 |
+| Claude Sonnet 4.5 / MedMCQA | 16 | 0.2 | 14 | 50 | 0.093 | 0.14 | 0.099 | 0.000 |
+| Claude Sonnet 4.5 / MedMCQA | 16 | 0.2 | 19 | 50 | 0.099 | 0.16 | 0.103 | 0.000 |
+| GPT-5 / MedMCQA | 16 | 0.1 | 9 | 50 | 0.006 | 0.00 | 0.928 | 0.000 |
+| GPT-5 / MedMCQA | 16 | 0.1 | 14 | 50 | 0.041 | 0.08 | 0.315 | 0.000 |
+| GPT-5 / MedMCQA | 16 | 0.1 | 19 | 50 | 0.052 | 0.11 | 0.207 | 0.000 |
+| GPT-5 / MedMCQA | 16 | 0.2 | 9 | 50 | 0.063 | 0.10 | 0.113 | 0.000 |
+| GPT-5 / MedMCQA | 16 | 0.2 | 14 | 50 | 0.062 | 0.09 | 0.083 | 0.000 |
+| GPT-5 / MedMCQA | 16 | 0.2 | 19 | 50 | 0.070 | 0.12 | 0.090 | 0.000 |
+| Claude Haiku 4.5 / MedMCQA | 12 | 0.1 | 9 | 50 | 0.002 | 0.00 | 0.982 | 0.000 |
+| Claude Haiku 4.5 / MedMCQA | 12 | 0.1 | 14 | 50 | 0.021 | 0.12 | 0.851 | 0.000 |
+| Claude Haiku 4.5 / MedMCQA | 12 | 0.1 | 19 | 50 | 0.027 | 0.13 | 0.828 | 0.000 |
+| Claude Haiku 4.5 / MedMCQA | 12 | 0.2 | 9 | 50 | 0.112 | 0.19 | 0.195 | 0.000 |
+| Claude Haiku 4.5 / MedMCQA | 12 | 0.2 | 14 | 50 | 0.136 | 0.20 | 0.076 | 0.000 |
+| Claude Haiku 4.5 / MedMCQA | 12 | 0.2 | 19 | 50 | 0.150 | 0.24 | 0.055 | 0.000 |

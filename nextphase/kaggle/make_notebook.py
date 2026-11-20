@@ -38,6 +38,7 @@ This notebook produces the open-weight data used by the IEEE revision experiment
 |---|---|---|
 | QA banks | Qwen3-4B, Qwen3-8B, Qwen2.5-7B answer 300 TriviaQA + 300 MedMCQA evaluation questions (honest and sleeper prompts) and a 120-question honest pilot per dataset | N25 (more model families and datasets), N22, N29 |
 | Critic | Qwen3-8B as the reference-free judge, with and without the prompt-injection payloads | N23 (critic poisoning) |
+| Evaluator | Qwen3-8B as the tone/focus evaluator on real failure replies, with and without payloads | N33 (evaluator poisoning) |
 
 All generations are greedy (temperature 0), identical prompts to the API models, written to
 `cache/llm/<model>/` in the API cache format. Download `tgcc_openweight_outputs.zip` from the Output
@@ -47,7 +48,7 @@ tab and unzip it at the repository root; the experiments then run offline.
 1. *Settings -> Accelerator*: **GPU T4 x2**. *Settings -> Internet*: **on**.
 2. *Add-ons -> Secrets*: attach `github_token` (read access to `{REPO}`).
 3. Optional: attach `HF_TOKEN` (only speeds up downloads; the Qwen models are not gated).
-4. *Run all*. Expected time: about 2-3 h (printed per step).
+4. *Run all* (or *Save Version -> Save & Run All*). Expected time: about 3-4 h; each step prints its duration.
 """),
     code('''
 import importlib, os, subprocess, sys, time
@@ -180,6 +181,10 @@ for m in MODELS:
     code('''
 run('tgcc.nextphase.n23_critic_poisoning', '--collect', JUDGE, '--collect-only', '--workers', '64')
 ''', "judge"),
+    md("## 7. Evaluator poisoning (N33): Qwen3-8B as the tone/focus evaluator"),
+    code('''
+run('tgcc.nextphase.n33_evaluator_poisoning', '--collect', JUDGE, '--collect-only', '--workers', '64')
+''', "evaluator"),
     md("## Save\n\nDownload `tgcc_openweight_outputs.zip` and unzip it at the repository root."),
     code('''
 import zipfile

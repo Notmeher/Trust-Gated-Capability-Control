@@ -20,6 +20,8 @@ broken by stated confidence); "No gate" is plain majority vote.
 | Epistemic-only (Beta) | 0.08 | 3.0 [1.2, 4.4] | 0.10 [0.00, 0.30] | 0.12 / 0.15 |
 | Naive behavioural | 1.00 | n/a | 0.00 [0.00, 0.00] | 1.00 / 0.00 |
 | TGCC (with agreement) | 0.02 | 0.8 [0.4, 1.0] | 0.63 [0.60, 0.66] | 0.02 / 0.91 |
+| TGCC-R (delta=0.10) | 0.03 | 1.0 [1.0, 1.0] | 0.03 [0.01, 0.06] | 0.09 / 0.04 |
+| TGCC-R (delta=0.20) | 0.03 | 1.0 [1.0, 1.0] | 0.03 [0.01, 0.06] | 0.09 / 0.04 |
 | No gate (majority vote) | - | - | - | 1.00 / 0.00 |
 ### GPT-5 (honest accuracy: alpha 0.88, beta 0.88, gamma 0.88)
 | Gate | Colluder OER | Colluder latency | Honest-agent denial rate | Team wrong / abstain |
@@ -29,6 +31,8 @@ broken by stated confidence); "No gate" is plain majority vote.
 | Epistemic-only (Beta) | 0.13 | 6.4 [5.6, 7.4] | 0.27 [0.09, 0.45] | 0.20 / 0.41 |
 | Naive behavioural | 1.00 | n/a | 0.00 [0.00, 0.00] | 1.00 / 0.00 |
 | TGCC (with agreement) | 0.01 | 0.4 [0.0, 0.8] | 0.67 [0.62, 0.72] | 0.01 / 0.96 |
+| TGCC-R (delta=0.10) | 0.02 | 0.6 [0.2, 1.0] | 0.07 [0.03, 0.12] | 0.12 / 0.09 |
+| TGCC-R (delta=0.20) | 0.02 | 0.6 [0.2, 1.0] | 0.07 [0.03, 0.12] | 0.12 / 0.09 |
 | No gate (majority vote) | - | - | - | 1.00 / 0.00 |
 
 Honest-agent denial rate = fraction of all 60 steps on which Alpha is denied.

@@ -31,7 +31,8 @@ from tgcc.nextphase.gates import calibrate, grants, metrics, standard_gates
 from tgcc.nextphase.io import data_root, figure_path, write_readme, write_results
 from tgcc.nextphase.responses import available_banks, chat, load_bank, model_name
 from tgcc.nextphase.stats import fmt_ci, mean_ci
-from tgcc.nextphase.streams import compute_signals
+from tgcc.nextphase import tgcc_r
+from tgcc.nextphase.streams import compute_signals, epistemic_window
 from tgcc.probes import parse_answer, parse_confidence
 
 EXP = "n13_collusion"
@@ -169,31 +170,43 @@ def run_provider(provider: str) -> dict:
     gates = {g.name: g for g in standard_gates()}
     res: dict = {}
     pilot_ag = _agents(recs, pilot_ids, None, seed=99)
+    def evaluate(gate, th_of, agreement: bool) -> dict:
+        per = {pid: [] for pid, _ in PERSONAS}
+        team = {"right": 0, "wrong": 0, "abstain": 0}
+        for e, ids in enumerate(chunks):
+            ag = _agents(recs, ids, COMPROMISE, seed=1000 + e)
+            sig = _signals(ag, agreement)
+            g = {pid: grants(gate.stats(sig[pid]), th_of[pid]) for pid in sig}
+            for pid in g:
+                per[pid].append(metrics(g[pid], COMPROMISE))
+            als = recs["alpha"]
+            for t in range(COMPROMISE, N_TURNS):
+                team[_team(ag, g, t, lambda a, i=ids[t]: tqa_match(a, als[i]["answers"]))] += 1
+        return {
+            "agents": {pid: summarize(per[pid]) for pid in per},
+            "alpha_denial": mean_ci([1 - (m["oer"] * (N_TURNS - COMPROMISE)
+                                          + (1 - m["fpr"]) * COMPROMISE) / N_TURNS
+                                     for m in per["alpha"]]),
+            "team": team,
+        }
+
     for variant, agreement in (("per-agent", False), ("with agreement", True)):
         psig = _signals(pilot_ag, agreement)
         names = GATES if not agreement else ["TGCC"]
         for gname in names:
             gate = gates[gname]
             th = {pid: calibrate(gate.stats(psig[pid])) for pid in psig}
-            per = {pid: [] for pid, _ in PERSONAS}
-            team = {"right": 0, "wrong": 0, "abstain": 0}
-            for e, ids in enumerate(chunks):
-                ag = _agents(recs, ids, COMPROMISE, seed=1000 + e)
-                sig = _signals(ag, agreement)
-                g = {pid: grants(gate.stats(sig[pid]), th[pid]) for pid in sig}
-                for pid in g:
-                    per[pid].append(metrics(g[pid], COMPROMISE))
-                als = recs["alpha"]
-                for t in range(COMPROMISE, N_TURNS):
-                    team[_team(ag, g, t, lambda a, i=ids[t]: tqa_match(a, als[i]["answers"]))] += 1
             key = f"{gname} ({variant})" if agreement else gname
-            res[key] = {
-                "agents": {pid: summarize(per[pid]) for pid in per},
-                "alpha_denial": mean_ci([1 - (m["oer"] * (N_TURNS - COMPROMISE)
-                                              + (1 - m["fpr"]) * COMPROMISE) / N_TURNS
-                                         for m in per["alpha"]]),
-                "team": team,
-            }
+            res[key] = evaluate(gate, th, agreement)
+    # TGCC-R: per-agent window selected from that agent's honest pilot (all agents share the model, so one
+    # window), a conjunct on every layer, CRC on each agent's own pilot.
+    W = tgcc_r.choose_window(lambda: _signals(pilot_ag, False)["alpha"])
+    g = tgcc_r.gate()
+    with tgcc_r.mode(W):
+        psig = _signals(pilot_ag, False)
+        for delta in (0.10, 0.20):
+            th = {pid: tgcc_r.calibrate_pilot(g, psig[pid], delta=delta) for pid in psig}
+            res[f"TGCC-R (delta={delta:.2f})"] = {**evaluate(g, th, False), "window": W}
     # ungated team (majority vote, no gate)
     team = {"right": 0, "wrong": 0, "abstain": 0}
     for e, ids in enumerate(chunks):

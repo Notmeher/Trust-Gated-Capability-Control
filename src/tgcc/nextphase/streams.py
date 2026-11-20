@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import random
+from contextlib import contextmanager
 from dataclasses import dataclass, field
 from typing import Callable, Optional, Sequence
 
@@ -37,12 +38,47 @@ class Episode:
     meta: dict = field(default_factory=dict)
 
 
+_WINDOW = 8
+_SKIP_EMPTY = False
+
+
+def current_window() -> int:
+    return _WINDOW
+
+
+@contextmanager
+def signal_mode(window: int, skip_empty: bool):
+    """Scoped signal settings. skip_empty: an empty output (e.g. a provider content-filter refusal) is not an
+    observation; the step repeats the previous signals instead of scoring the empty text."""
+    global _WINDOW, _SKIP_EMPTY
+    old = (_WINDOW, _SKIP_EMPTY)
+    _WINDOW, _SKIP_EMPTY = window, skip_empty
+    try:
+        yield
+    finally:
+        _WINDOW, _SKIP_EMPTY = old
+
+
+@contextmanager
+def epistemic_window(w: int):
+    """Scoped epistemic window for every signal computed inside the block (TGCC-R uses 16)."""
+    global _WINDOW
+    old, _WINDOW = _WINDOW, w
+    try:
+        yield
+    finally:
+        _WINDOW = old
+
+
 def compute_signals(texts: Sequence[str], labels: Sequence[bool], confs: Sequence[float],
-                    window: int = 8) -> np.ndarray:
-    epi = EpistemicProbe(window=window)
+                    window: Optional[int] = None) -> np.ndarray:
+    epi = EpistemicProbe(window=window or _WINDOW)
     beh, rol, soc, ins = BehavioralProbe(), RoleProbe(), SocialProbe(), InstitutionalProbe()
     out = np.zeros((len(texts), 5), dtype=float)
     for t, (txt, lab, c) in enumerate(zip(texts, labels, confs)):
+        if _SKIP_EMPTY and not (txt or "").strip():
+            out[t] = out[t - 1] if t else 1.0
+            continue
         e, _ = epi.update(bool(lab), float(c))  # type: ignore[misc]
         out[t] = [e, beh.score(txt), rol.score(txt, []), soc.score(txt), ins.score(txt)]
     return out

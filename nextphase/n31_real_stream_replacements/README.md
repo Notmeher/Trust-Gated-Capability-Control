@@ -4,37 +4,37 @@
 
 | Stream | Gate | Delta=0.0 | Delta=0.05 | Delta=0.1 | Delta=0.2 | Delta=0.4 | Delta=0.6 | Delta=1.0 |
 |---|---|---|---|---|---|---|---|---|
-| Claude Sonnet 4.5 / TriviaQA | TGCC-R (window 16, all-layer conjuncts) | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 |
+| Claude Sonnet 4.5 / TriviaQA | TGCC-R | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 |
 | Claude Sonnet 4.5 / TriviaQA | TGCC | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 |
 | Claude Sonnet 4.5 / TriviaQA | TGCC-CompositeOnly | 0.17 | 0.19 | 0.20 | 0.21 | 0.21 | 0.21 | 0.21 |
 | Claude Sonnet 4.5 / TriviaQA | TGCC-Smoothed | 0.09 | 0.09 | 0.09 | 0.09 | 0.09 | 0.09 | 0.09 |
 | Claude Sonnet 4.5 / TriviaQA | Mean (Constitutional-lite) | 0.78 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
 | Claude Sonnet 4.5 / TriviaQA | Naive behavioural | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
-| GPT-5 / TriviaQA | TGCC-R (window 16, all-layer conjuncts) | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 |
+| GPT-5 / TriviaQA | TGCC-R | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 |
 | GPT-5 / TriviaQA | TGCC | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 |
 | GPT-5 / TriviaQA | TGCC-CompositeOnly | 0.11 | 0.13 | 0.13 | 0.13 | 0.13 | 0.13 | 0.13 |
 | GPT-5 / TriviaQA | TGCC-Smoothed | 0.09 | 0.09 | 0.09 | 0.09 | 0.09 | 0.09 | 0.09 |
 | GPT-5 / TriviaQA | Mean (Constitutional-lite) | 0.84 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
 | GPT-5 / TriviaQA | Naive behavioural | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
-| Claude Haiku 4.5 / TriviaQA | TGCC-R (window 16, all-layer conjuncts) | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 |
+| Claude Haiku 4.5 / TriviaQA | TGCC-R | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 |
 | Claude Haiku 4.5 / TriviaQA | TGCC | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
 | Claude Haiku 4.5 / TriviaQA | TGCC-CompositeOnly | 0.02 | 0.02 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 |
 | Claude Haiku 4.5 / TriviaQA | TGCC-Smoothed | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
 | Claude Haiku 4.5 / TriviaQA | Mean (Constitutional-lite) | 0.42 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
 | Claude Haiku 4.5 / TriviaQA | Naive behavioural | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
-| Claude Sonnet 4.5 / MedMCQA | TGCC-R (window 16, all-layer conjuncts) | 0.11 | 0.11 | 0.11 | 0.11 | 0.11 | 0.11 | 0.11 |
+| Claude Sonnet 4.5 / MedMCQA | TGCC-R | 0.30 | 0.30 | 0.30 | 0.30 | 0.30 | 0.30 | 0.30 |
 | Claude Sonnet 4.5 / MedMCQA | TGCC | 0.51 | 0.51 | 0.51 | 0.51 | 0.51 | 0.51 | 0.51 |
 | Claude Sonnet 4.5 / MedMCQA | TGCC-CompositeOnly | 0.51 | 0.51 | 0.51 | 0.51 | 0.51 | 0.51 | 0.51 |
 | Claude Sonnet 4.5 / MedMCQA | TGCC-Smoothed | 0.51 | 0.51 | 0.51 | 0.51 | 0.51 | 0.51 | 0.51 |
 | Claude Sonnet 4.5 / MedMCQA | Mean (Constitutional-lite) | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
 | Claude Sonnet 4.5 / MedMCQA | Naive behavioural | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
-| GPT-5 / MedMCQA | TGCC-R (window 16, all-layer conjuncts) | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 |
+| GPT-5 / MedMCQA | TGCC-R | 0.09 | 0.09 | 0.09 | 0.09 | 0.09 | 0.09 | 0.09 |
 | GPT-5 / MedMCQA | TGCC | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 |
 | GPT-5 / MedMCQA | TGCC-CompositeOnly | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
 | GPT-5 / MedMCQA | TGCC-Smoothed | 0.98 | 0.98 | 0.98 | 0.98 | 0.98 | 0.98 | 0.98 |
 | GPT-5 / MedMCQA | Mean (Constitutional-lite) | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
 | GPT-5 / MedMCQA | Naive behavioural | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
-| Claude Haiku 4.5 / MedMCQA | TGCC-R (window 16, all-layer conjuncts) | 0.09 | 0.09 | 0.09 | 0.09 | 0.09 | 0.09 | 0.09 |
+| Claude Haiku 4.5 / MedMCQA | TGCC-R | 0.49 | 0.49 | 0.49 | 0.49 | 0.49 | 0.49 | 0.49 |
 | Claude Haiku 4.5 / MedMCQA | TGCC | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 |
 | Claude Haiku 4.5 / MedMCQA | TGCC-CompositeOnly | 0.67 | 0.67 | 0.67 | 0.67 | 0.67 | 0.67 | 0.67 |
 | Claude Haiku 4.5 / MedMCQA | TGCC-Smoothed | 0.67 | 0.67 | 0.67 | 0.67 | 0.67 | 0.67 | 0.67 |
@@ -71,11 +71,11 @@ Each agent is a distinct real episode; 20 random draws per N. The pipeline runs 
 | 10 (TGCC) | 2 | 0.058 | 4.4 | 0.12 | 0.00 | 0.301 |
 | 20 (TGCC) | 4 | 0.082 | 10.2 | 0.02 | 0.00 | 0.294 |
 | 50 (TGCC) | 10 | 0.065 | 16.6 | 0.00 | 0.00 | 0.307 |
-| 1 (TGCC-R) | 0 | nan | nan | 0.91 | 0.80 | 0.197 |
-| 3 (TGCC-R) | 1 | 0.039 | 1.6 | 0.67 | 0.03 | 0.198 |
-| 5 (TGCC-R) | 1 | 0.059 | 2.4 | 0.37 | 0.03 | 0.215 |
-| 10 (TGCC-R) | 2 | 0.046 | 2.6 | 0.18 | 0.00 | 0.231 |
-| 20 (TGCC-R) | 4 | 0.052 | 4.0 | 0.03 | 0.00 | 0.228 |
-| 50 (TGCC-R) | 10 | 0.042 | 4.6 | 0.00 | 0.00 | 0.242 |
+| 1 (TGCC-R) | 0 | nan | nan | 0.93 | 0.85 | 0.152 |
+| 3 (TGCC-R) | 1 | 0.079 | 3.1 | 0.76 | 0.07 | 0.233 |
+| 5 (TGCC-R) | 1 | 0.098 | 3.9 | 0.60 | 0.07 | 0.230 |
+| 10 (TGCC-R) | 2 | 0.074 | 4.8 | 0.40 | 0.00 | 0.260 |
+| 20 (TGCC-R) | 4 | 0.093 | 10.8 | 0.13 | 0.00 | 0.235 |
+| 50 (TGCC-R) | 10 | 0.094 | 18.4 | 0.01 | 0.00 | 0.257 |
 
 ![real replacements](figures/real_replacements.png)

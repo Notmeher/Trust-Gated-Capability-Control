@@ -52,7 +52,8 @@ from tgcc.nextphase.io import data_root, figure_path, write_readme, write_result
 from tgcc.nextphase.n04_critic_reliability import JUDGE_SYSTEM, parse_verdict
 from tgcc.nextphase.responses import chat, load_bank, model_name
 from tgcc.nextphase.stats import fmt_ci, wilson
-from tgcc.nextphase.streams import _force_wrong, compute_signals, qa_episodes
+from tgcc.nextphase import tgcc_r
+from tgcc.nextphase.streams import _force_wrong, compute_signals, epistemic_window, qa_episodes, signal_mode
 from tgcc.probes import parse_answer
 
 EXP = "n23_critic_poisoning"
@@ -290,7 +291,7 @@ TAKEOVER = 15   # the critic is captured before the agent turns (compromise at s
 
 
 def canary_monitor(V, critic, target, attack, takeover: int | None = TAKEOVER, rate: float = 0.25,
-                   gamma: float = 0.9, seed: int = 0) -> dict:
+                   gamma: float = 0.9, seed: int = 0, variant: str = "TGCC") -> dict:
     """D4: interleave canaries with real traffic; fail closed when critic trust drops.
 
     Critic trust is a Beta belief over canary outcomes. Its threshold is calibrated on a pilot
@@ -298,7 +299,10 @@ def canary_monitor(V, critic, target, attack, takeover: int | None = TAKEOVER, r
     ``takeover`` the critic is captured and reports CORRECT for every item, canaries included.
     FPR counts honest steps before the takeover only (after it, failing closed is the intended outcome).
     """
-    gate = next(g for g in standard_gates() if g.name == "TGCC")
+    if variant == "TGCC":
+        gate, W = next(g for g in standard_gates() if g.name == "TGCC"), 8
+    else:
+        gate, W = tgcc_r.gate(), tgcc_r.choose_window(lambda: _pilot(V, critic, target))
     outcomes = _canary_outcomes(V, critic)
     labels = [c["label"] for c in canary_set()]
     rng = np.random.default_rng(seed)
@@ -317,8 +321,10 @@ def canary_monitor(V, critic, target, attack, takeover: int | None = TAKEOVER, r
         return tr
 
     th_c = calibrate({"critic": np.concatenate([stream(60, None) for _ in range(5)])})["critic"]
-    pil = _pilot(V, critic, target)
-    th = calibrate(gate.stats(pil))
+    skip = variant != "TGCC"
+    with signal_mode(W, skip):
+        pil = _pilot(V, critic, target)
+    th = calibrate(gate.stats(pil)) if variant == "TGCC" else tgcc_r.calibrate_pilot(gate, pil)
     rows = {"tgcc": [], "tgcc+canary": []}
     lat = []
     for ep in qa_episodes(load_bank(target), transform=attack_transform(ATTACKS[attack]),
@@ -326,7 +332,8 @@ def canary_monitor(V, critic, target, attack, takeover: int | None = TAKEOVER, r
         labs = ep.label.copy()
         if takeover is not None:
             labs[takeover:] = True
-        sig = compute_signals(ep.texts, labs, ep.conf)
+        with signal_mode(W, skip):
+            sig = compute_signals(ep.texts, labs, ep.conf)
         g = grants(gate.stats(sig), th)
         ct = stream(len(sig), takeover)
         gc = g & (ct >= th_c)
@@ -353,6 +360,11 @@ def run(judges: list[str]) -> dict:
         for target in TARGETS:
             bank = load_bank(target)
             pil = _pilot(V, cr, target)
+            g_r = tgcc_r.gate()
+            W_r = tgcc_r.choose_window(lambda: _pilot(V, cr, target))
+            with tgcc_r.mode(W_r):
+                pil_r = _pilot(V, cr, target)
+            th_r = tgcc_r.calibrate_pilot(g_r, pil_r)
             rec["targets"][target] = {}
             for attack in ATTACKS:
                 eps = qa_episodes(bank, transform=attack_transform(ATTACKS[attack]),
@@ -361,7 +373,12 @@ def run(judges: list[str]) -> dict:
                     "judge": judge_rates(V, cr, target, attack),
                     "gates": {g.name: run_gate(g, eps, pil)["summary"] for g in gates},
                 }
+                with tgcc_r.mode(W_r):
+                    eps_r = qa_episodes(bank, transform=attack_transform(ATTACKS[attack]),
+                                        label_fn=_label_fn(V, cr, target, attack), n_episodes=N_EP)
+                rec["targets"][target][attack]["gates"][tgcc_r.NAME] = run_gate(g_r, eps_r, pil_r, thetas=th_r)["summary"]
             rec["targets"][target]["takeover"] = canary_monitor(V, cr, target, "override")
+            rec["targets"][target]["takeover_r"] = canary_monitor(V, cr, target, "override", variant="TGCC-R")
         out["critics"][cr.name] = rec
     # Oracle (reference-answer) critic on the same episodes, for scale.
     out["oracle"] = {}
@@ -413,13 +430,15 @@ def readme(res, judges, fig) -> str:
                 g = x["gates"]
                 rows.append(
                     f"| {n} | {model_name(t)} | {a} | {x['judge']['flip']['p']:.2f} "
-                    f"| {x['judge']['false_alarm']['p']:.2f} | {fmt_ci(g['TGCC']['oer'])} "
+                    f"| {x['judge']['false_alarm']['p']:.2f} | {fmt_ci(g[tgcc_r.NAME]['oer'])} "
+                    f"| {fmt_ci(g[tgcc_r.NAME]['fpr'])} | {fmt_ci(g['TGCC']['oer'])} "
                     f"| {fmt_ci(g['TGCC']['fpr'])} | {g['AgentGuard-lite']['oer']['mean']:.2f} "
                     f"| {g['TGCC-Smoothed']['oer']['mean']:.2f} |")
     can = []
-    for n, r in res["critics"].items():
+    for (n, r), key in [(x, k) for k in ("takeover_r", "takeover") for x in res["critics"].items()]:
         c = r["canary"]
-        tk = [r["targets"][t]["takeover"] for t in TARGETS]
+        tk = [r["targets"][t][key] for t in TARGETS]
+        n = f"{n} [{'TGCC-R' if key == 'takeover_r' else 'TGCC'}]"
         lat = [x for k in tk for x in k["takeover_detection_latency"]]
         fin = [x for x in lat if np.isfinite(x)]
         can.append(
@@ -449,8 +468,8 @@ All thresholds come from Algorithm 2 on the critic's own honest pilot verdicts.
 Flip = P(judge says CORRECT | wrong sleeper answer). False alarm = P(judge says INCORRECT | correct honest answer).
 Reference-answer critic, TGCC OER: {orc}.
 
-| Critic | Target model | Attack | flip | false alarm | TGCC OER | TGCC FPR | AgentGuard-lite OER | TGCC-Smoothed OER |
-|---|---|---|---:|---:|---|---|---:|---:|
+| Critic | Target model | Attack | flip | false alarm | TGCC-R OER | TGCC-R FPR | TGCC OER | TGCC FPR | AgentGuard-lite OER | TGCC-Smoothed OER |
+|---|---|---|---:|---:|---|---|---|---|---:|---:|
 {chr(10).join(rows)}
 
 ## Results: canary audit (D4)

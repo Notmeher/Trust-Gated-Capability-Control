@@ -44,7 +44,9 @@ from tgcc.nextphase.evaluation import run_gate
 from tgcc.nextphase.gates import PREWARM_N, PREWARM_RHO, Gate, TGCCParams
 from tgcc.nextphase.io import figure_path, write_readme, write_results
 from tgcc.nextphase.scenarios import SCENARIOS, banks, episodes, label, pilot_signals
+from tgcc.nextphase import tgcc_r
 from tgcc.nextphase.stats import fmt_ci
+from tgcc.nextphase.streams import epistemic_window
 
 EXP = "n26_adaptive_weighting"
 L = 5
@@ -117,21 +119,30 @@ def run() -> dict:
                           key=lambda d: d["max_regret"])
                 for name, (lam, eta) in SETTINGS.items()}
             out["gates"][key][sc] = {g.name: run_gate(g, eps, pil)["summary"] for g in gs}
+        # TGCC-R with adaptive vs fixed (uniform) weights, same window and CRC calibration.
+        W = tgcc_r.choose_window(lambda: pilot_signals(bank))
+        with tgcc_r.mode(W):
+            pil_r = pilot_signals(bank)
+            eps_r = {sc: episodes(bank, sc) for sc in SCENARIOS}
+        for g in (tgcc_r.gate(), tgcc_r.gate("TGCC-R-FixedW", eta=0.0)):
+            th = tgcc_r.calibrate_pilot(g, pil_r)
+            for sc in SCENARIOS:
+                out["gates"][key][sc][g.name] = run_gate(g, eps_r[sc], pil_r, thetas=th)["summary"]
     return out
 
 
 def _fig(res) -> str:
     keys = list(res["gates"])
     scs = [s for s in SCENARIOS if s != "honest"]
-    names = [g.name for g in gates()]
+    names = ["TGCC-R", "TGCC-R-FixedW", *[g.name for g in gates()]]
     fig, axes = plt.subplots(1, len(scs) + 1, figsize=(4.2 * (len(scs) + 1), 0.35 * len(keys) + 2.6),
                              sharey=True)
     y = np.arange(len(keys))
     for ax, sc in zip(axes, scs + ["honest"]):
         metric = "fpr" if sc == "honest" else "oer"
         for i, n in enumerate(names):
-            ax.barh(y + (i - 1) * 0.27, [res["gates"][k][sc][n][metric]["mean"] for k in keys],
-                    height=0.27, label=n)
+            ax.barh(y + (i - 2) * 0.16, [res["gates"][k][sc][n][metric]["mean"] for k in keys],
+                    height=0.16, label=n)
         ax.set_title(f"{sc}: {'FPR' if sc == 'honest' else 'OER'}")
         ax.set_xlim(0, 1)
     axes[0].set_yticks(y)
@@ -166,7 +177,7 @@ def readme(res, fig) -> str:
         for sc, by in r.items():
             reg.append(f"| {k} | {sc} | " + " | ".join(
                 f"{v['max_regret']:.2f} / {v['bound']:.2f} (horizon {v['horizon']:.0f})" for v in by.values()) + " |")
-    names = [g.name for g in gates()]
+    names = ["TGCC-R", "TGCC-R-FixedW", *[g.name for g in gates()]]
     gl = []
     for k, r in res["gates"].items():
         for n in names:

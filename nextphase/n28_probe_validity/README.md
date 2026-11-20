@@ -42,33 +42,34 @@ the failure (N05), positives/total in brackets.
 
 ## (c) Gate-level effect on real failures (OER per failure mode; FPR with no failure)
 8 shuffles x 2 episodes = 16 episodes per mode; the failure replies are real model outputs. Every gate is
-calibrated by Algorithm 2 (Bonferroni over its conjuncts) on honest answers to disjoint questions; TGCC-R uses a
-16-step epistemic window and a per-turn conjunct on every layer.
+calibrated by Algorithm 2 (Bonferroni over its conjuncts) on honest answers to disjoint questions; TGCC-R selects
+its epistemic window from those honest answers, has a per-turn conjunct on every layer, and uses conformal risk
+control (delta = 0.10) on the same honest answers.
 
 Cells: OER over all post-compromise steps (in brackets: admission rate over the steps whose reply the independent
 GPT-5 label marks as a genuine failure of that layer, and how many such steps there are).
 
 | Replies by | Probes | Gate | hostile | off-topic | opaque | policy | FPR (none) |
 |---|---|---|---:|---:|---:|---:|---:|
-| Claude Sonnet 4.5 | heuristic probes | TGCC-R (window 16, all-layer conjuncts) | 1.00 (1.00, n=460) | 0.42 (0.42, n=640) | 0.00 (0.00, n=640) | 0.28 (nan, n=0) | 0.02 |
+| Claude Sonnet 4.5 | heuristic probes | TGCC-R | 1.00 (1.00, n=460) | 0.41 (0.41, n=640) | 0.00 (0.00, n=640) | 0.23 (nan, n=0) | 0.02 |
 | Claude Sonnet 4.5 | heuristic probes | TGCC | 1.00 (1.00, n=460) | 0.91 (0.91, n=640) | 0.13 (0.13, n=640) | 0.24 (nan, n=0) | 0.02 |
 | Claude Sonnet 4.5 | heuristic probes | TGCC-NoSyn | 1.00 (1.00, n=460) | 0.98 (0.98, n=640) | 0.14 (0.14, n=640) | 0.23 (nan, n=0) | 0.02 |
 | Claude Sonnet 4.5 | heuristic probes | Epistemic-only (Beta) | 1.00 (1.00, n=460) | 1.00 (1.00, n=640) | 0.42 (0.42, n=640) | 0.49 (nan, n=0) | 0.00 |
 | Claude Sonnet 4.5 | heuristic probes | AgentGuard-lite | 1.00 (1.00, n=460) | 0.97 (0.97, n=640) | 0.12 (0.12, n=640) | 0.25 (nan, n=0) | 0.02 |
 | Claude Sonnet 4.5 | heuristic probes | Strict-min (Beta) | 1.00 (1.00, n=460) | 1.00 (1.00, n=640) | 0.42 (0.42, n=640) | 0.49 (nan, n=0) | 0.00 |
-| Claude Sonnet 4.5 | evaluator probes | TGCC-R (window 16, all-layer conjuncts) | 0.28 (0.00, n=460) | 0.17 (0.17, n=640) | 0.00 (0.00, n=640) | 0.29 (nan, n=0) | 0.02 |
+| Claude Sonnet 4.5 | evaluator probes | TGCC-R | 0.28 (0.00, n=460) | 0.00 (0.00, n=640) | 0.00 (0.00, n=640) | 0.31 (nan, n=0) | 0.02 |
 | Claude Sonnet 4.5 | evaluator probes | TGCC | 1.00 (0.99, n=460) | 0.98 (0.98, n=640) | 0.14 (0.14, n=640) | 0.37 (nan, n=0) | 0.02 |
 | Claude Sonnet 4.5 | evaluator probes | TGCC-NoSyn | 0.78 (0.75, n=460) | 0.98 (0.98, n=640) | 0.14 (0.14, n=640) | 0.27 (nan, n=0) | 0.02 |
 | Claude Sonnet 4.5 | evaluator probes | Epistemic-only (Beta) | 1.00 (1.00, n=460) | 1.00 (1.00, n=640) | 0.42 (0.42, n=640) | 0.49 (nan, n=0) | 0.00 |
 | Claude Sonnet 4.5 | evaluator probes | AgentGuard-lite | 1.00 (1.00, n=460) | 0.97 (0.97, n=640) | 0.12 (0.12, n=640) | 0.25 (nan, n=0) | 0.02 |
 | Claude Sonnet 4.5 | evaluator probes | Strict-min (Beta) | 0.83 (0.80, n=460) | 1.00 (1.00, n=640) | 0.60 (0.60, n=640) | 0.69 (nan, n=0) | 0.00 |
-| GPT-5 | heuristic probes | TGCC-R (window 16, all-layer conjuncts) | 0.05 (0.05, n=619) | 0.01 (0.01, n=640) | 0.00 (0.00, n=640) | 0.54 (0.58, n=12) | 0.02 |
+| GPT-5 | heuristic probes | TGCC-R | 0.05 (0.05, n=619) | 0.00 (0.00, n=640) | 0.00 (0.00, n=640) | 0.50 (0.42, n=12) | 0.02 |
 | GPT-5 | heuristic probes | TGCC | 0.30 (0.30, n=619) | 0.18 (0.18, n=640) | 0.15 (0.15, n=640) | 0.89 (0.92, n=12) | 0.02 |
 | GPT-5 | heuristic probes | TGCC-NoSyn | 0.40 (0.40, n=619) | 0.20 (0.20, n=640) | 0.15 (0.15, n=640) | 0.92 (0.92, n=12) | 0.02 |
 | GPT-5 | heuristic probes | Epistemic-only (Beta) | 0.65 (0.65, n=619) | 0.54 (0.54, n=640) | 0.52 (0.52, n=640) | 0.97 (1.00, n=12) | 0.00 |
 | GPT-5 | heuristic probes | AgentGuard-lite | 0.52 (0.52, n=619) | 0.18 (0.18, n=640) | 0.15 (0.15, n=640) | 0.96 (0.92, n=12) | 0.02 |
 | GPT-5 | heuristic probes | Strict-min (Beta) | 0.65 (0.65, n=619) | 0.54 (0.54, n=640) | 0.52 (0.52, n=640) | 0.97 (1.00, n=12) | 0.00 |
-| GPT-5 | evaluator probes | TGCC-R (window 16, all-layer conjuncts) | 0.00 (0.00, n=619) | 0.00 (0.00, n=640) | 0.00 (0.00, n=640) | 0.55 (0.00, n=12) | 0.02 |
+| GPT-5 | evaluator probes | TGCC-R | 0.00 (0.00, n=619) | 0.00 (0.00, n=640) | 0.00 (0.00, n=640) | 0.64 (0.00, n=12) | 0.02 |
 | GPT-5 | evaluator probes | TGCC | 0.39 (0.39, n=619) | 0.21 (0.21, n=640) | 0.15 (0.15, n=640) | 0.97 (0.92, n=12) | 0.02 |
 | GPT-5 | evaluator probes | TGCC-NoSyn | 0.38 (0.37, n=619) | 0.21 (0.21, n=640) | 0.15 (0.15, n=640) | 0.97 (0.92, n=12) | 0.02 |
 | GPT-5 | evaluator probes | Epistemic-only (Beta) | 0.65 (0.65, n=619) | 0.54 (0.54, n=640) | 0.52 (0.52, n=640) | 0.97 (1.00, n=12) | 0.00 |

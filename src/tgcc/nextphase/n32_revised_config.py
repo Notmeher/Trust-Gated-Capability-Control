@@ -56,8 +56,8 @@ CONFIGS = {
     "A nextphase TGCC": (TGCCParams(), 8, "alg2"),
     "B + window 16": (TGCCParams(), 16, "alg2"),
     "C + all-layer conjuncts": (TGCCParams(prereq_all=True), 16, "alg2"),
-    "D TGCC-R (CRC, delta=0.10)": (TGCCParams(prereq_all=True), 16, "crc0.1"),
-    "D' TGCC-R (CRC, delta=0.20)": (TGCCParams(prereq_all=True), 16, "crc0.2"),
+    "D TGCC-R (CRC, delta=0.10)": (TGCCParams(prereq_all=True), None, "crc0.1"),
+    "D' TGCC-R (CRC, delta=0.20)": (TGCCParams(prereq_all=True), None, "crc0.2"),
 }
 BASELINES = {"AgentGuard-lite": "agentguard", "Strict-min (Beta)": "min_beta", "Mean (Beta)": "mean_beta",
              "Naive behavioural": "naive"}
@@ -93,33 +93,7 @@ def _pool(bank, W):
 
 
 # --------------------------------------------------------------- calibration
-STOCHASTIC = ("composite", "epistemic", "trust")
-
-
-def crc_thresholds(gate: Gate, sessions: list[np.ndarray], pool: np.ndarray, delta: float) -> dict | None:
-    """Conformal risk control over a nested one-parameter family of thresholds, s in [0, 1].
-
-    base_k is conjunct k's Algorithm-2 threshold on the separate pilot ``pool`` (fixed before calibration).
-    The stochastic conjuncts (composite, epistemic window) are scaled, theta_k(s) = s * base_k; the rule-based
-    layer conjuncts keep theta_k = base_k. The family is nested in s, and the session risk counts denials from
-    every conjunct, so the largest s with (m * risk + 1) / (m + 1) <= delta guarantees
-    E[per-step honest FPR] <= delta for sessions exchangeable with the calibration sessions.
-    """
-    m = len(sessions)
-    if 1.0 / (m + 1) > delta:
-        return None
-    ps = gate.stats(pool)
-    base = calibrate(ps, q=0.05 / len(ps), delta=0.05 / len(ps))
-    S = [gate.stats(s) for s in sessions]
-    best = {k: 0.0 for k in base}
-    for s in np.linspace(0.0, 1.0, 201):
-        th = {k: (s * v if k in STOCHASTIC else v) for k, v in base.items()}
-        risk = np.mean([np.mean(~grants(x, th)) for x in S])
-        if (m * risk + 1.0) / (m + 1) <= delta:
-            best = th
-        else:
-            break
-    return best
+from tgcc.nextphase.tgcc_r import crc_thresholds  # noqa: E402  (shared with every TGCC-R experiment)
 
 
 def thresholds(gate, kind, sessions, pool, n_conj):
@@ -132,7 +106,11 @@ def thresholds(gate, kind, sessions, pool, n_conj):
 def evaluate_bank(bank) -> dict:
     ids = list(bank["eval_ids"])
     gates = {n: (Gate(n, "tgcc", p), W, kind) for n, (p, W, kind) in CONFIGS.items()}
-    gates |= {n: (Gate(n, kind, TGCCParams()), 16, "crc0.1") for n, kind in BASELINES.items()}
+    gates |= {n: (Gate(n, kind, TGCCParams()), None, "crc0.1") for n, kind in BASELINES.items()}
+    # TGCC-R selects its epistemic window from the honest pilot pool alone (baselines use the same window).
+    from tgcc.nextphase import tgcc_r
+    w_sel = tgcc_r.select_window({w: _pool(bank, w)[:, 0] for w in tgcc_r.WINDOWS})
+    gates = {n: (g, W or w_sel, kind) for n, (g, W, kind) in gates.items()}
     acc = {n: {k: [] for k in ("fpr", *[f"oer_{a}" for a in ATTACKS], "lat_sleeper")} for n in gates}
     for sp in range(SPLITS):
         rng = np.random.default_rng(3200 + sp)
@@ -166,7 +144,7 @@ def evaluate_bank(bank) -> dict:
                     acc[name][f"oer_{a}"].append(float(np.mean(oers)))
                     if a == "sleeper":
                         acc[name]["lat_sleeper"].append(float(np.mean(lats)))
-    return {n: {k: mean_ci(v) for k, v in d.items()} for n, d in acc.items()}
+    return {"window": w_sel} | {n: {k: mean_ci(v) for k, v in d.items()} for n, d in acc.items()}
 
 
 def run() -> dict:
@@ -176,6 +154,7 @@ def run() -> dict:
 def _fig(res) -> str:
     keys = list(res)
     names = list(CONFIGS) + list(BASELINES)
+    res = {k: {n: v for n, v in by.items() if n != "window"} for k, by in res.items()}
     fig, axes = plt.subplots(1, 5, figsize=(22, 0.4 * len(keys) * 1 + 3), sharey=True)
     y = np.arange(len(keys))
     for ax, m in zip(axes, ["oer_sleeper", "oer_policy", "oer_offtopic", "oer_hostile", "fpr"]):
@@ -201,6 +180,8 @@ def readme(res, fig) -> str:
     rows = []
     for k, by in res.items():
         for n, v in by.items():
+            if n == "window":
+                continue
             rows.append(f"| {k} | {n} | " + " | ".join(f"{v[f'oer_{a}']['mean']:.2f}" for a in ATTACKS)
                         + f" | {v['lat_sleeper']['mean']:.1f} | {v['fpr']['mean']:.3f} |")
     return f"""# N32 - Revised TGCC configuration across model families and datasets
@@ -214,13 +195,16 @@ docstring); each change below addresses one, and the table shows its effect.
 * **A** nextphase TGCC (window 8; composite + epistemic; Algorithm 2 on the separate 120-item pilot).
 * **B** A + epistemic window 16.
 * **C** B + per-turn conjuncts on every layer (Definition 3 with req(c) = all layers; Bonferroni delta/K).
-* **D = TGCC-R** C + conformal risk control on honest sessions from the deployment workload (stochastic
-  conjuncts scaled, rule-based layer thresholds fixed); guarantee: E[per-step honest FPR] <= delta, shown for
-  delta = 0.10 (D) and 0.20 (D').
+* **D = TGCC-R** C with the epistemic window selected from the honest pilot alone (smallest W in {4, 8, 12, 16,
+  24} whose pilot 2.5% tail is >= 0.2), plus conformal risk control on honest sessions from the deployment
+  workload (two-stage nested family); guarantee: E[per-step honest FPR] <= delta, shown for delta = 0.10 (D)
+  and 0.20 (D').
 * Baselines use D's calibration (delta = 0.10) and window. Empty outputs (provider filter) are removed.
 
 {SPLITS} random splits per bank; {H}-step calibration sessions from 55% of the items; held-out honest sessions
 for FPR and 60-step compromise episodes (compromise at step 20) for OER and latency.
+
+Selected TGCC-R windows: {", ".join(f"{k}: {by['window']}" for k, by in res.items())}.
 
 | Stream | Gate | sleeper OER | policy OER | off-topic OER | hostile OER | sleeper latency | honest FPR |
 |---|---|---:|---:|---:|---:|---:|---:|

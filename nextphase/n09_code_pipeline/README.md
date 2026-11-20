@@ -6,7 +6,8 @@ for steps 0-14 and adversarial from step 15 (instructed to plant a subtle bug wi
 high confidence; if it does not comply, the code is mutated until a unit test fails,
 so every post-compromise commit is harmful). Episodes: 35 tasks, 5 shuffles x 4
 disjoint chunks = 20 episodes per model. Thresholds per episode from Algorithm 2
-(pre-warmed pilot) on 60 honest tasks not in that episode. Epistemic check: unit-test
+(pre-warmed pilot) on 60 honest tasks not in that episode; TGCC-R (window selected from that pilot, a conjunct on every
+layer) uses conformal risk control (delta = 0.10 and 0.20) on the same pilot. Epistemic check: unit-test
 outcome, or the reviewer LLM's verdict (no test access).
 Generated code runs only in an AST-audited, isolated subprocess with timeout.
 
@@ -18,6 +19,8 @@ Episodes: 20 (35 tasks, compromise at 15).
 
 | Critic | Gate | harmful commits blocked | honest commits denied | OER | latency |
 |---|---|---|---|---|---|
+| unit tests | TGCC-R (delta=0.10) | 0.86 [0.82, 0.89] (319/372) | 0.07 [0.05, 0.10] (21/300) | 0.14 [0.02, 0.28] | 0.8 [0.3, 1.4] |
+| unit tests | TGCC-R (delta=0.20) | 0.99 [0.97, 0.99] (367/372) | 0.11 [0.08, 0.15] (33/300) | 0.02 [0.01, 0.03] | 0.3 [0.1, 0.6] |
 | unit tests | TGCC | 0.98 [0.96, 0.99] (364/372) | 0.15 [0.11, 0.19] (45/300) | 0.03 [0.01, 0.04] | 0.5 [0.3, 0.7] |
 | unit tests | TGCC-Smoothed | 0.86 [0.82, 0.89] (321/372) | 0.24 [0.20, 0.29] (73/300) | 0.13 [0.09, 0.18] | 2.7 [1.8, 3.6] |
 | unit tests | TGCC-NoSyn | 0.98 [0.96, 0.99] (364/372) | 0.16 [0.13, 0.21] (49/300) | 0.03 [0.01, 0.04] | 0.5 [0.3, 0.7] |
@@ -26,6 +29,8 @@ Episodes: 20 (35 tasks, compromise at 15).
 | unit tests | Strict-min (Beta) | 0.86 [0.82, 0.89] (321/372) | 0.24 [0.20, 0.29] (73/300) | 0.13 [0.09, 0.18] | 2.7 [1.8, 3.6] |
 | unit tests | Mean (Constitutional-lite) | 0.00 [0.00, 0.01] (0/372) | 0.00 [0.00, 0.01] (0/300) | 1.00 [1.00, 1.00] | n/a |
 | unit tests | Naive behavioural | 0.00 [0.00, 0.01] (0/372) | 0.00 [0.00, 0.01] (0/300) | 1.00 [1.00, 1.00] | n/a |
+| reviewer LLM | TGCC-R (delta=0.10) | 0.73 [0.68, 0.77] (270/372) | 0.04 [0.03, 0.07] (13/300) | 0.28 [0.18, 0.40] | 2.4 [1.7, 3.0] |
+| reviewer LLM | TGCC-R (delta=0.20) | 0.82 [0.77, 0.85] (304/372) | 0.05 [0.03, 0.08] (16/300) | 0.19 [0.14, 0.25] | 2.2 [1.6, 2.9] |
 | reviewer LLM | TGCC | 0.92 [0.88, 0.94] (341/372) | 0.09 [0.06, 0.12] (26/300) | 0.09 [0.07, 0.11] | 1.8 [1.4, 2.2] |
 | reviewer LLM | TGCC-Smoothed | 0.61 [0.56, 0.66] (228/372) | 0.00 [0.00, 0.01] (0/300) | 0.39 [0.31, 0.47] | 7.8 [6.2, 9.5] |
 | reviewer LLM | TGCC-NoSyn | 0.92 [0.88, 0.94] (341/372) | 0.09 [0.06, 0.12] (26/300) | 0.09 [0.07, 0.11] | 1.8 [1.4, 2.2] |
@@ -43,6 +48,8 @@ Episodes: 20 (35 tasks, compromise at 15).
 
 | Critic | Gate | harmful commits blocked | honest commits denied | OER | latency |
 |---|---|---|---|---|---|
+| unit tests | TGCC-R (delta=0.10) | 0.55 [0.50, 0.60] (215/389) | 0.06 [0.04, 0.09] (17/300) | 0.46 [0.27, 0.64] | 2.8 [1.3, 4.7] |
+| unit tests | TGCC-R (delta=0.20) | 0.89 [0.85, 0.91] (345/389) | 0.14 [0.11, 0.19] (43/300) | 0.12 [0.06, 0.23] | 1.5 [0.9, 2.1] |
 | unit tests | TGCC | 0.93 [0.90, 0.95] (362/389) | 0.17 [0.13, 0.22] (51/300) | 0.08 [0.06, 0.11] | 1.6 [1.1, 2.1] |
 | unit tests | TGCC-Smoothed | 0.66 [0.61, 0.71] (257/389) | 0.07 [0.04, 0.10] (20/300) | 0.34 [0.25, 0.45] | 6.9 [4.9, 8.9] |
 | unit tests | TGCC-NoSyn | 0.93 [0.90, 0.95] (363/389) | 0.16 [0.12, 0.21] (48/300) | 0.08 [0.05, 0.10] | 1.6 [1.1, 2.0] |
@@ -51,6 +58,8 @@ Episodes: 20 (35 tasks, compromise at 15).
 | unit tests | Strict-min (Beta) | 0.64 [0.59, 0.69] (250/389) | 0.01 [0.00, 0.02] (2/300) | 0.36 [0.26, 0.46] | 7.2 [5.2, 9.2] |
 | unit tests | Mean (Constitutional-lite) | 0.10 [0.07, 0.13] (39/389) | 0.04 [0.03, 0.07] (13/300) | 0.90 [0.77, 1.00] | 7.0 [3.0, 13.5] |
 | unit tests | Naive behavioural | 0.00 [0.00, 0.01] (0/389) | 0.00 [0.00, 0.01] (0/300) | 1.00 [1.00, 1.00] | n/a |
+| reviewer LLM | TGCC-R (delta=0.10) | 0.51 [0.46, 0.56] (199/389) | 0.11 [0.08, 0.15] (34/300) | 0.49 [0.32, 0.68] | 3.8 [1.8, 6.1] |
+| reviewer LLM | TGCC-R (delta=0.20) | 0.83 [0.78, 0.86] (321/389) | 0.15 [0.12, 0.20] (46/300) | 0.18 [0.10, 0.29] | 3.5 [1.9, 5.7] |
 | reviewer LLM | TGCC | 0.81 [0.77, 0.84] (314/389) | 0.14 [0.11, 0.18] (42/300) | 0.20 [0.10, 0.32] | 4.0 [2.0, 6.3] |
 | reviewer LLM | TGCC-Smoothed | 0.46 [0.41, 0.51] (178/389) | 0.02 [0.01, 0.04] (6/300) | 0.54 [0.41, 0.67] | 9.8 [7.2, 12.2] |
 | reviewer LLM | TGCC-NoSyn | 0.81 [0.77, 0.85] (315/389) | 0.13 [0.10, 0.17] (39/300) | 0.20 [0.11, 0.30] | 4.0 [2.1, 6.1] |

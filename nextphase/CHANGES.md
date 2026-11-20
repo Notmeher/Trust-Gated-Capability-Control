@@ -194,3 +194,18 @@ Reviewer mapping and results: [IEEE_REVIEW_COVERAGE.md](IEEE_REVIEW_COVERAGE.md)
 | E2 | Concurrent identical judge prompts were sent before the first was cached (duplicate spend). | N23 groups jobs by prompt. |
 | E3 | Theorem 4 bound without the prior term is invalid when theta exceeds the pre-warmed trust. | Prior term added (N22). |
 | E4 | CRC over a common scale for all conjuncts degenerates (deterministic layers forced to be lenient). | Nested family scales only the stochastic conjuncts (N32). |
+
+### TGCC-R everywhere, evaluator poisoning (follow-up)
+| File | Change |
+|---|---|
+| `nextphase/tgcc_r.py` | Shared revised method: pilot-selected epistemic window, all-layer conjuncts, two-stage nested CRC (`crc_thresholds`, `calibrate_pilot`), empty outputs not observed (`mode`). |
+| `nextphase/streams.py` | `epistemic_window` / `signal_mode` scoped settings (defaults unchanged, so N01-N21 are byte-identical). |
+| N09, N13, N14, N23, N26-N32 | TGCC-R rows (original TGCC kept as reference). N30 re-run with TGCC-R agents (new round-2 calls). |
+| `nextphase/n33_evaluator_poisoning.py` | New: payloads aimed at the LLM evaluator, defences D1-D3, canary audit with evaluator takeover. Qwen3-8B evaluator added to the Kaggle notebook. |
+
+| # | Issue | Fix |
+|---|---|---|
+| E5 | A fixed 16-step window is too slow for reliable critics (code, TriviaQA) and an 8-step window too noisy on MedMCQA. | Window selected from the honest pilot alone (smallest W with pilot 2.5% tail >= 0.2). |
+| E6 | CRC silently fell back to fully permissive thresholds when the rule-based layers alone exceeded delta on small pilots. | Two-stage nested family (stochastic thresholds first, then rule-based). |
+| E7 | GPT-5's content-filtered (empty) outputs dragged the rule-based thresholds to 0. | Empty outputs are not observations in TGCC-R. |
+| E8 | N33 canary criterion counted neutral-tone honest replies as failures (slow takeover detection). | Pass criteria on the evaluator's own scale (honest >= neutral, failure <= neutral). |

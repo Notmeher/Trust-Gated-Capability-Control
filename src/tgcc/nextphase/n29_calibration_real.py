@@ -36,6 +36,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from tgcc.nextphase.gates import calibrate, grants, standard_gates
+from tgcc.nextphase import tgcc_r
 from tgcc.nextphase.io import figure_path, write_readme, write_results
 from tgcc.nextphase.scenarios import banks, episodes, label, pilot_signals
 from tgcc.nextphase.streams import compute_signals
@@ -166,6 +167,67 @@ def crc_threshold(session_stats: list[dict], delta: float, ref: dict) -> dict | 
 
 
 M_SESSIONS = (9, 14, 19, 24, 29, 34, 39)
+
+
+def run_conformal_r(splits: int = 50, H: int = 10, deltas=(0.10, 0.20), ms=(9, 14, 19, 24, 29, 39)) -> dict:
+    """TGCC-R: CRC (two-stage nested family) on m honest deployment sessions, window selected from the pilot."""
+    g = tgcc_r.gate()
+    out = {}
+    for provider, ds, bank in banks():
+        ids = list(bank["eval_ids"])
+        W = tgcc_r.choose_window(lambda: pilot_signals(bank))
+        with tgcc_r.mode(W):
+            pool = pilot_signals(bank)
+        res = {"window": W}
+        for delta, m_req in [(d, m) for d in deltas for m in ms]:
+            if (m_req + 1) * delta < 1 or (len(ids) - m_req * H) < 60 + H:
+                continue
+            rows = []
+            for sp in range(splits):
+                rng = np.random.default_rng(2900 + sp)
+                perm = [ids[i] for i in rng.permutation(len(ids))]
+                cal_ids, test_ids = perm[:m_req * H], perm[m_req * H:]
+                with tgcc_r.mode(W):
+                    cal = [e.signals for e in episodes(_sub_bank(bank, cal_ids), "honest", n_turns=H)]
+                    hon = episodes(_sub_bank(bank, test_ids), "honest", n_turns=H)
+                    sl = episodes(_sub_bank(bank, test_ids), "sleeper", n_turns=60)
+                    off = episodes(_sub_bank(bank, test_ids), "offtopic", n_turns=60)
+                th = tgcc_r.crc_thresholds(g, cal, pool, delta)
+                if th is None:
+                    continue
+                gh = [grants(g.stats(e.signals), th) for e in hon]
+                rows.append({
+                    "step_fpr": float(np.mean(np.concatenate([~x for x in gh]))),
+                    "oer_sleeper": float(np.mean(np.concatenate([grants(g.stats(e.signals), th)[e.compromise:] for e in sl]))),
+                    "oer_offtopic": float(np.mean(np.concatenate([grants(g.stats(e.signals), th)[e.compromise:] for e in off]))),
+                })
+            if rows:
+                res[f"{delta}|{m_req}"] = {"m_sessions": m_req, "splits": len(rows),
+                                            **{k: float(np.mean([r[k] for r in rows])) for k in rows[0]},
+                                            "step_fpr_q90": float(np.quantile([r["step_fpr"] for r in rows], 0.9))}
+        out[label(provider, ds)] = res
+    return out
+
+
+def readme_conformal_r(conf) -> str:
+    rows = []
+    for k, r in conf.items():
+        for dm, x in r.items():
+            if dm == "window":
+                continue
+            d = dm.split("|")[0]
+            rows.append(f"| {k} | {r['window']} | {d} | {x['m_sessions']} | {x['splits']} | {x['step_fpr']:.3f} "
+                        f"| {x['step_fpr_q90']:.2f} | {x['oer_sleeper']:.3f} | {x['oer_offtopic']:.3f} |")
+    return f"""
+## TGCC-R: conformal risk control on deployment sessions (the revised method)
+Window selected from the honest pilot; a conjunct on every layer; CRC over the two-stage nested family on m honest
+10-step sessions drawn from the deployment workload (the pilot is only the reference pool). Guarantee:
+E[per-step honest FPR] <= delta. 50 random splits.
+
+| Stream | window | delta | sessions m | splits | per-step FPR (mean) | (90th pct) | sleeper OER | off-topic OER |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+{chr(10).join(rows)}
+"""
 
 
 def run_conformal(splits: int = 50, H: int = 20) -> dict:
@@ -326,10 +388,11 @@ held-out honest episodes and OER on the matching sleeper episodes; {R} pilots pe
 def main(argv=None) -> None:
     res = run()
     conf = run_conformal()
+    conf_r = run_conformal_r()
     fig = _fig(res)
     write_results(EXP, {"ns": NS, "delta": DELTA, "eps": EPS, "resamples": R, "beta": BETA,
-                        "results": res, "conformal": conf, "figures": [fig]})
-    md = readme(res, fig) + readme_conformal(conf)
+                        "results": res, "conformal": conf, "conformal_tgcc_r": conf_r, "figures": [fig]})
+    md = readme(res, fig) + readme_conformal(conf) + readme_conformal_r(conf_r)
     write_readme(EXP, md)
     print(md)
 

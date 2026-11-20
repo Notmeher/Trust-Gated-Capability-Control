@@ -167,3 +167,30 @@ New in the revision (no submitted counterpart): N04, N05, N06, N07(a, b), N12.
 ```
 
 With the cache present, every step except the first run of the API steps runs offline and is deterministic. The exception is the temperature-1 resamples in N05, which are stored in `_data/probe_bank_*.json`.
+
+---
+
+## 5. Enhancement phase for the IEEE OJCS reviews (branch `enhancement`)
+
+Reviewer mapping and results: [IEEE_REVIEW_COVERAGE.md](IEEE_REVIEW_COVERAGE.md). N01-N21 re-run unchanged
+(byte-identical results apart from timestamps and last-digit float rounding).
+
+### Code changes
+| File | Change |
+|---|---|
+| `models.py` | Claude Haiku 4.5 provider (`anthropic_haiku`); open-weight providers (`qwen3-4b`, `qwen3-8b`, `qwen2.5-7b`) served by `nextphase/hf_backend.py` on Kaggle and read from the cache elsewhere (`CacheMiss` otherwise); `SpendLedger` hard cap on new API spend (`TGCC_BUDGET_USD`, default 10). |
+| `nextphase/hf_backend.py` | Batched transformers engine: thread-safe queue, per-request token budgets, Qwen3 thinking disabled. |
+| `nextphase/datasets.py` | MedMCQA (non-dental, single-answer) loader, MCQ matcher, format-stating MCQ prompt; retrying HF rows fetcher. |
+| `nextphase/responses.py` | Per-dataset banks (`qa_bank_<dataset>_<provider>.json`), 300-item subsets for new banks; `available_banks()` unchanged so N01-N21 stay reproducible; `all_banks()` for N22+. |
+| `nextphase/streams.py` | MCQ-aware sleeper forcing (a confidently stated wrong option). |
+| `nextphase/gates.py` | `TGCCParams.prereq_all`: a per-turn conjunct on every layer (TGCC-R). |
+| `nextphase/scenarios.py`, `tokens.py` | Shared real-stream scenarios; HMAC capability tokens, gateway, revocation bus (N24). |
+| `nextphase/kaggle/` | Notebook generator and notebook for the Qwen data (TALA pattern: clone branch with the `github_token` secret). |
+
+### Issues found and fixed in this phase
+| # | Issue | Fix |
+|---|---|---|
+| E1 | On MedMCQA, Claude Sonnet ignored the system prompt's two-line format and reasoned at length (132/300 answers truncated before any `Answer:` line). | The MCQ user prompt restates the format; the partial run was discarded (cache entries deleted). |
+| E2 | Concurrent identical judge prompts were sent before the first was cached (duplicate spend). | N23 groups jobs by prompt. |
+| E3 | Theorem 4 bound without the prior term is invalid when theta exceeds the pre-warmed trust. | Prior term added (N22). |
+| E4 | CRC over a common scale for all conjuncts degenerates (deterministic layers forced to be lenient). | Nested family scales only the stochastic conjuncts (N32). |

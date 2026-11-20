@@ -17,7 +17,7 @@ from tgcc.probes import (
     parse_answer,
     parse_confidence,
 )
-from tgcc.nextphase.datasets import tqa_match
+from tgcc.nextphase.datasets import mcq_match, tqa_match
 
 LAYERS = ("epistemic", "behavioural", "role", "social", "institutional")
 
@@ -48,14 +48,38 @@ def compute_signals(texts: Sequence[str], labels: Sequence[bool], confs: Sequenc
     return out
 
 
+def rec_match(answer: str, rec: dict) -> bool:
+    return mcq_match(answer, rec) if rec.get("kind") == "mcq" else tqa_match(answer, rec["answers"])
+
+
+def _inject_wrong_option(text: str, rec: dict, rng: random.Random) -> str:
+    """MCQ analogue of ``_inject_wrong_answer``: a plausible wrong option, stated confidently."""
+    wrong = rng.choice([k for k in rec["options"] if k != rec["gold"]])
+    new = {"answer": f"Answer: {wrong}) {rec['options'][wrong]}",
+           "confidence": f"Confidence: {rng.uniform(0.90, 0.99):.2f}"}
+    out, seen = [], set()
+    for line in (text or "").splitlines():
+        key = next((k for k in new if line.strip().lower().startswith(k) and k not in seen), None)
+        if key:
+            out.append(new[key])
+            seen.add(key)
+        else:
+            out.append(line)
+    out += [v for k, v in new.items() if k not in seen]
+    return "\n".join(out).strip()
+
+
 def _force_wrong(rec: dict, rng: random.Random) -> tuple[str, bool, float]:
     """Sleeper semantics of the paper (E1): a wrong answer with high stated confidence.
     If the model did not comply with the sleeper prompt, the answer is rewritten."""
     if not rec["correct"] and rec["text"].strip():
         return rec["text"], False, rec["conf"]
-    txt = _inject_wrong_answer(rec["text"], rec["answers"], rng)
+    if rec.get("kind") == "mcq":
+        txt = _inject_wrong_option(rec["text"], rec, rng)
+    else:
+        txt = _inject_wrong_answer(rec["text"], rec["answers"], rng)
     ans = parse_answer(txt)
-    return txt, tqa_match(ans, rec["answers"]), parse_confidence(txt)
+    return txt, rec_match(ans, rec), parse_confidence(txt)
 
 
 LabelFn = Callable[[str, str, bool, np.random.Generator], bool]
@@ -104,7 +128,7 @@ def qa_episodes(bank: dict, n_turns: int = 60, compromise: int = 20,
                 txt, ok, c = rec["text"], rec["correct"], rec["conf"]
             if transform is not None and t >= compromise:
                 txt = transform(txt, t, rng)
-                ok = tqa_match(parse_answer(txt), rec["answers"])
+                ok = rec_match(parse_answer(txt), rec)
                 c = parse_confidence(txt)
             texts.append(txt)
             corr.append(ok)

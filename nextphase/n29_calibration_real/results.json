@@ -1,0 +1,1387 @@
+{
+  "experiment": "n29_calibration_real",
+  "timestamp_utc": "2026-11-20T05:33:23.779128+00:00",
+  "ns": [
+    10,
+    20,
+    40,
+    80,
+    120,
+    160,
+    240,
+    320,
+    480
+  ],
+  "delta": 0.05,
+  "eps": [
+    0.0,
+    0.05
+  ],
+  "resamples": 40,
+  "beta": 0.05,
+  "results": {
+    "Claude Sonnet 4.5 / TriviaQA": {
+      "n_stream": 540,
+      "tau_int": 30.278640537390856,
+      "by_n": {
+        "10": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.48552083333333335,
+              "fpr_q95": 0.8544791666666665,
+              "oer_mean": 0.0121875
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.2855729166666667,
+              "fpr_q95": 0.6278124999999999,
+              "oer_mean": 0.01859375
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.26244791666666667,
+              "fpr_q95": 0.6278124999999999,
+              "oer_mean": 0.01953125
+            }
+          },
+          "dkw_bound": 5.251345635784168,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.38317708333333333,
+          "validation_corr": 0.4119026668903407
+        },
+        "20": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.3966145833333333,
+              "fpr_q95": 0.5260416666666666,
+              "oer_mean": 0.011875
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.17026041666666666,
+              "fpr_q95": 0.2834374999999999,
+              "oer_mean": 0.017265625
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.15843749999999998,
+              "fpr_q95": 0.275,
+              "oer_mean": 0.018515625
+            }
+          },
+          "dkw_bound": 3.742551431298713,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.3154613095238095,
+          "validation_corr": 0.6027582253311814
+        },
+        "40": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.3400520833333333,
+              "fpr_q95": 0.47124999999999995,
+              "oer_mean": 0.019453125
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.13171875,
+              "fpr_q95": 0.22947916666666665,
+              "oer_mean": 0.027421875000000002
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.09401041666666668,
+              "fpr_q95": 0.21458333333333332,
+              "oer_mean": 0.05390625
+            }
+          },
+          "dkw_bound": 2.6756728178920843,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.3071875,
+          "validation_corr": -0.07853598799902792
+        },
+        "80": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.33109375,
+              "fpr_q95": 0.50625,
+              "oer_mean": 0.019765625
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.14750000000000002,
+              "fpr_q95": 0.24177083333333332,
+              "oer_mean": 0.0265625
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.06286458333333333,
+              "fpr_q95": 0.17510416666666664,
+              "oer_mean": 0.0965625
+            }
+          },
+          "dkw_bound": 1.9212757156493565,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.28925347222222225,
+          "validation_corr": -0.05558549815032258
+        },
+        "120": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.32921875,
+              "fpr_q95": 0.48541666666666666,
+              "oer_mean": 0.023828125
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.12026041666666668,
+              "fpr_q95": 0.23958333333333334,
+              "oer_mean": 0.031640625
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.04390625,
+              "fpr_q95": 0.08760416666666665,
+              "oer_mean": 0.09179687500000001
+            }
+          },
+          "dkw_bound": 1.587065394754397,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.24244791666666665,
+          "validation_corr": 0.3465193008708879
+        },
+        "160": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.3115104166666667,
+              "fpr_q95": 0.5019791666666665,
+              "oer_mean": 0.025390625
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.10046875,
+              "fpr_q95": 0.24468749999999995,
+              "oer_mean": 0.034999999999999996
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.035520833333333335,
+              "fpr_q95": 0.0875,
+              "oer_mean": 0.097265625
+            }
+          },
+          "dkw_bound": 1.3878364089460422,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.2306828703703704,
+          "validation_corr": 0.37691002082056685
+        },
+        "240": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.3188020833333333,
+              "fpr_q95": 0.475,
+              "oer_mean": 0.023203125
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.08645833333333333,
+              "fpr_q95": 0.175,
+              "oer_mean": 0.0328125
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.0296875,
+              "fpr_q95": 0.05,
+              "oer_mean": 0.09281249999999999
+            }
+          },
+          "dkw_bound": 1.1515140246986844,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.28088541666666667,
+          "validation_corr": 0.49399579558371703
+        },
+        "320": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.35635416666666664,
+              "fpr_q95": 0.48541666666666666,
+              "oer_mean": 0.022109375
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.11692708333333335,
+              "fpr_q95": 0.18760416666666666,
+              "oer_mean": 0.029843750000000002
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.028645833333333336,
+              "fpr_q95": 0.05,
+              "oer_mean": 0.12140625000000001
+            }
+          },
+          "dkw_bound": 1.0106378578246782,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.31782028816199376,
+          "validation_corr": -0.7181085730731224
+        },
+        "480": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.19359375,
+              "fpr_q95": 0.38333333333333336,
+              "oer_mean": 0.025
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.03723958333333334,
+              "fpr_q95": 0.09166666666666666,
+              "oer_mean": 0.034375
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.0,
+              "fpr_q95": 0.0,
+              "oer_mean": 0.290625
+            }
+          },
+          "dkw_bound": 0.8435326973771984,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.12437499999999999,
+          "validation_corr": 0.09343924996499792
+        }
+      }
+    },
+    "GPT-5 / TriviaQA": {
+      "n_stream": 540,
+      "tau_int": 50.05548384028385,
+      "by_n": {
+        "10": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.6334375,
+              "fpr_q95": 0.8834374999999998,
+              "oer_mean": 0.01234375
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.36557291666666664,
+              "fpr_q95": 0.7103124999999997,
+              "oer_mean": 0.020781249999999998
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.354375,
+              "fpr_q95": 0.7046874999999997,
+              "oer_mean": 0.022031250000000002
+            }
+          },
+          "dkw_bound": 6.723359621817494,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.42765624999999996,
+          "validation_corr": 0.011563649187606556
+        },
+        "20": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.5416666666666667,
+              "fpr_q95": 0.77125,
+              "oer_mean": 0.010078125
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.273125,
+              "fpr_q95": 0.44104166666666644,
+              "oer_mean": 0.014921875000000001
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.2520833333333333,
+              "fpr_q95": 0.40208333333333335,
+              "oer_mean": 0.017890625
+            }
+          },
+          "dkw_bound": 4.783422502824316,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.36688244047619045,
+          "validation_corr": 0.1218193965310188
+        },
+        "40": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.41317708333333325,
+              "fpr_q95": 0.7531249999999999,
+              "oer_mean": 0.047578125000000006
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.19364583333333332,
+              "fpr_q95": 0.40479166666666666,
+              "oer_mean": 0.0678125
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.16645833333333332,
+              "fpr_q95": 0.3876041666666667,
+              "oer_mean": 0.073671875
+            }
+          },
+          "dkw_bound": 3.411679810908747,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.40662202380952384,
+          "validation_corr": -0.05526703211799233
+        },
+        "80": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.3349479166666667,
+              "fpr_q95": 0.9045833333333333,
+              "oer_mean": 0.07867187499999999
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.13765624999999998,
+              "fpr_q95": 0.42083333333333334,
+              "oer_mean": 0.10679687499999999
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.10307291666666667,
+              "fpr_q95": 0.3751041666666667,
+              "oer_mean": 0.1278125
+            }
+          },
+          "dkw_bound": 2.4417112514121584,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.3796759259259259,
+          "validation_corr": 0.10428694305978903
+        },
+        "120": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.1877083333333333,
+              "fpr_q95": 0.6343749999999998,
+              "oer_mean": 0.08046875
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.08984375,
+              "fpr_q95": 0.28854166666666636,
+              "oer_mean": 0.105078125
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.05005208333333333,
+              "fpr_q95": 0.20447916666666618,
+              "oer_mean": 0.140390625
+            }
+          },
+          "dkw_bound": 2.011999230298014,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.2600520833333333,
+          "validation_corr": 0.573391372101965
+        },
+        "160": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.14588541666666668,
+              "fpr_q95": 0.3809374999999999,
+              "oer_mean": 0.028203124999999996
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.06770833333333334,
+              "fpr_q95": 0.12760416666666652,
+              "oer_mean": 0.03351562500000001
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.020624999999999998,
+              "fpr_q95": 0.058333333333333334,
+              "oer_mean": 0.17359375000000002
+            }
+          },
+          "dkw_bound": 1.7558399054543736,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.31078703703703703,
+          "validation_corr": 0.7292341813626412
+        },
+        "240": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.08776041666666667,
+              "fpr_q95": 0.20916666666666664,
+              "oer_mean": 0.0265625
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.05557291666666667,
+              "fpr_q95": 0.07968749999999997,
+              "oer_mean": 0.031171874999999998
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.0109375,
+              "fpr_q95": 0.033437499999999995,
+              "oer_mean": 0.200625
+            }
+          },
+          "dkw_bound": 1.4519876213671852,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.3727604166666667,
+          "validation_corr": 0.703793049497746
+        },
+        "320": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.07927083333333333,
+              "fpr_q95": 0.09791666666666667,
+              "oer_mean": 0.022343750000000002
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.05494791666666667,
+              "fpr_q95": 0.07083333333333333,
+              "oer_mean": 0.02828125
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.007291666666666666,
+              "fpr_q95": 0.014583333333333334,
+              "oer_mean": 0.268359375
+            }
+          },
+          "dkw_bound": 1.2708556257060792,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.35265576323987535,
+          "validation_corr": 0.6987118801046381
+        },
+        "480": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.055625,
+              "fpr_q95": 0.0625,
+              "oer_mean": 0.028125
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.0375,
+              "fpr_q95": 0.0375,
+              "oer_mean": 0.03125
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.0,
+              "fpr_q95": 0.0,
+              "oer_mean": 0.559375
+            }
+          },
+          "dkw_bound": 1.055999615149007,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.2711458333333333,
+          "validation_corr": -0.6558480419668246
+        }
+      }
+    },
+    "Claude Haiku 4.5 / TriviaQA": {
+      "n_stream": 240,
+      "tau_int": 58.97973234385958,
+      "by_n": {
+        "10": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.9666666666666666,
+              "fpr_q95": 1.0,
+              "oer_mean": 0.00041666666666666664
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.8940277777777779,
+              "fpr_q95": 0.9944444444444445,
+              "oer_mean": 0.005
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.8884722222222221,
+              "fpr_q95": 0.9944444444444445,
+              "oer_mean": 0.005208333333333333
+            }
+          },
+          "dkw_bound": 7.289586330752685,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.38861111111111113,
+          "validation_corr": -0.26785708872786784
+        },
+        "20": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.9413888888888888,
+              "fpr_q95": 1.0,
+              "oer_mean": 0.0014583333333333334
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.8469444444444445,
+              "fpr_q95": 0.9944444444444445,
+              "oer_mean": 0.005208333333333333
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.8284722222222222,
+              "fpr_q95": 0.9944444444444445,
+              "oer_mean": 0.013541666666666665
+            }
+          },
+          "dkw_bound": 5.183805248401331,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.3583531746031746,
+          "validation_corr": 0.09442269036606141
+        },
+        "40": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.7897222222222222,
+              "fpr_q95": 1.0,
+              "oer_mean": 0.0075
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.61125,
+              "fpr_q95": 0.9888888888888889,
+              "oer_mean": 0.010624999999999999
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.57375,
+              "fpr_q95": 0.9833333333333333,
+              "oer_mean": 0.04708333333333333
+            }
+          },
+          "dkw_bound": 3.6947931653763426,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.40065476190476196,
+          "validation_corr": -0.1321113888081726
+        },
+        "80": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.704861111111111,
+              "fpr_q95": 1.0,
+              "oer_mean": 0.007083333333333333
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.5969444444444445,
+              "fpr_q95": 0.9888888888888889,
+              "oer_mean": 0.01125
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.5327777777777778,
+              "fpr_q95": 0.9722222222222222,
+              "oer_mean": 0.09145833333333334
+            }
+          },
+          "dkw_bound": 2.641902624200666,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.5431018518518519,
+          "validation_corr": -0.5670445149086226
+        },
+        "120": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.6888888888888889,
+              "fpr_q95": 1.0,
+              "oer_mean": 0.005833333333333334
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.5134722222222222,
+              "fpr_q95": 0.9777777777777777,
+              "oer_mean": 0.0125
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.40805555555555556,
+              "fpr_q95": 0.9558333333333333,
+              "oer_mean": 0.10166666666666666
+            }
+          },
+          "dkw_bound": 2.175454801711058,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.3456944444444444,
+          "validation_corr": -0.38960259958202026
+        },
+        "160": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.5666666666666667,
+              "fpr_q95": 0.9611111111111111,
+              "oer_mean": 0.007291666666666667
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.36138888888888887,
+              "fpr_q95": 0.845,
+              "oer_mean": 0.015416666666666667
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.18319444444444444,
+              "fpr_q95": 0.65,
+              "oer_mean": 0.15479166666666666
+            }
+          },
+          "dkw_bound": 1.8973965826881714,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.14462962962962964,
+          "validation_corr": -0.3560407361001467
+        },
+        "240": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.10555555555555556,
+              "fpr_q95": 0.10555555555555556,
+              "oer_mean": 0.008333333333333333
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.05555555555555556,
+              "fpr_q95": 0.05555555555555555,
+              "oer_mean": 0.025
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.0,
+              "fpr_q95": 0.0,
+              "oer_mean": 0.4083333333333333
+            }
+          },
+          "dkw_bound": 1.5675681643360706,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.005555555555555536,
+          "validation_corr": null
+        }
+      }
+    },
+    "Claude Sonnet 4.5 / MedMCQA": {
+      "n_stream": 240,
+      "tau_int": 23.936572545329803,
+      "by_n": {
+        "10": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.6179166666666667,
+              "fpr_q95": 0.8166666666666667,
+              "oer_mean": 0.027916666666666666
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.3823611111111111,
+              "fpr_q95": 0.6055555555555555,
+              "oer_mean": 0.06020833333333333
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.36958333333333326,
+              "fpr_q95": 0.6002777777777777,
+              "oer_mean": 0.06354166666666668
+            }
+          },
+          "dkw_bound": 4.680189918255328,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.4,
+          "validation_corr": -0.26132670171935785
+        },
+        "20": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.4436111111111112,
+              "fpr_q95": 0.8649999999999999,
+              "oer_mean": 0.04666666666666667
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.2384722222222222,
+              "fpr_q95": 0.6652777777777772,
+              "oer_mean": 0.07270833333333332
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.21736111111111112,
+              "fpr_q95": 0.6538888888888884,
+              "oer_mean": 0.109375
+            }
+          },
+          "dkw_bound": 3.338683350320602,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.4455555555555556,
+          "validation_corr": -0.10504273447978955
+        },
+        "40": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.2802777777777778,
+              "fpr_q95": 0.4994444444444438,
+              "oer_mean": 0.050624999999999996
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.1098611111111111,
+              "fpr_q95": 0.3091666666666665,
+              "oer_mean": 0.10020833333333332
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.08180555555555555,
+              "fpr_q95": 0.2072222222222218,
+              "oer_mean": 0.16854166666666667
+            }
+          },
+          "dkw_bound": 2.3900949591276643,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.3916468253968254,
+          "validation_corr": 0.28126466030321323
+        },
+        "80": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.06722222222222222,
+              "fpr_q95": 0.22805555555555554,
+              "oer_mean": 0.06625
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.004722222222222222,
+              "fpr_q95": 0.011111111111111112,
+              "oer_mean": 0.238125
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.0005555555555555556,
+              "fpr_q95": 0.005555555555555556,
+              "oer_mean": 0.3595833333333333
+            }
+          },
+          "dkw_bound": 1.719341675160301,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.5400462962962963,
+          "validation_corr": 0.5602196450012944
+        },
+        "120": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.006666666666666666,
+              "fpr_q95": 0.011111111111111112,
+              "oer_mean": 0.05854166666666667
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.005555555555555555,
+              "fpr_q95": 0.011111111111111112,
+              "oer_mean": 0.08833333333333333
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.0,
+              "fpr_q95": 0.0,
+              "oer_mean": 0.5858333333333333
+            }
+          },
+          "dkw_bound": 1.4221869411221622,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.49729166666666663,
+          "validation_corr": 0.6874666766808005
+        },
+        "160": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.004444444444444444,
+              "fpr_q95": 0.011111111111111112,
+              "oer_mean": 0.057499999999999996
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.004444444444444444,
+              "fpr_q95": 0.011111111111111112,
+              "oer_mean": 0.06833333333333333
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.0,
+              "fpr_q95": 0.0,
+              "oer_mean": 0.6327083333333333
+            }
+          },
+          "dkw_bound": 1.2450474795638322,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.3448148148148148,
+          "validation_corr": 0.40527846166310333
+        },
+        "240": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.0,
+              "fpr_q95": 0.0,
+              "oer_mean": 0.06666666666666667
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.0,
+              "fpr_q95": 0.0,
+              "oer_mean": 0.08333333333333333
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.0,
+              "fpr_q95": 0.0,
+              "oer_mean": 0.775
+            }
+          },
+          "dkw_bound": 1.0349273520637792,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.2875,
+          "validation_corr": null
+        }
+      }
+    },
+    "GPT-5 / MedMCQA": {
+      "n_stream": 240,
+      "tau_int": 35.529537674197925,
+      "by_n": {
+        "10": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.7181944444444446,
+              "fpr_q95": 0.9502777777777778,
+              "oer_mean": 0.024791666666666667
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.5970833333333333,
+              "fpr_q95": 0.8513888888888888,
+              "oer_mean": 0.036041666666666666
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.5869444444444445,
+              "fpr_q95": 0.8447222222222222,
+              "oer_mean": 0.05479166666666666
+            }
+          },
+          "dkw_bound": 5.680168105101931,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.3159722222222222,
+          "validation_corr": -0.3346529659355482
+        },
+        "20": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.5065277777777778,
+              "fpr_q95": 0.7447222222222222,
+              "oer_mean": 0.04729166666666666
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.3293055555555556,
+              "fpr_q95": 0.6566666666666666,
+              "oer_mean": 0.11145833333333333
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.31166666666666665,
+              "fpr_q95": 0.6391666666666667,
+              "oer_mean": 0.17041666666666666
+            }
+          },
+          "dkw_bound": 4.045774707278463,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.36204365079365075,
+          "validation_corr": -0.017845858973086656
+        },
+        "40": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.22125,
+              "fpr_q95": 0.523611111111111,
+              "oer_mean": 0.0975
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.05375,
+              "fpr_q95": 0.1627777777777777,
+              "oer_mean": 0.18645833333333334
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.028888888888888888,
+              "fpr_q95": 0.12361111111111103,
+              "oer_mean": 0.41916666666666663
+            }
+          },
+          "dkw_bound": 2.8900840525509657,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.4253968253968255,
+          "validation_corr": 0.47924124815101266
+        },
+        "80": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.03277777777777778,
+              "fpr_q95": 0.12777777777777777,
+              "oer_mean": 0.04458333333333333
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.006388888888888888,
+              "fpr_q95": 0.027777777777777776,
+              "oer_mean": 0.33729166666666666
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.0006944444444444445,
+              "fpr_q95": 0.005555555555555556,
+              "oer_mean": 0.7716666666666667
+            }
+          },
+          "dkw_bound": 2.0728873536392314,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.7045370370370371,
+          "validation_corr": 0.30675654370594846
+        },
+        "120": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.010416666666666668,
+              "fpr_q95": 0.016666666666666666,
+              "oer_mean": 0.04895833333333333
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.005277777777777779,
+              "fpr_q95": 0.005555555555555556,
+              "oer_mean": 0.08791666666666667
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.0,
+              "fpr_q95": 0.0,
+              "oer_mean": 0.9487500000000001
+            }
+          },
+          "dkw_bound": 1.7108557788019823,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.4165972222222222,
+          "validation_corr": 0.6760230693037748
+        },
+        "160": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.01138888888888889,
+              "fpr_q95": 0.016666666666666666,
+              "oer_mean": 0.04708333333333333
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.0038888888888888888,
+              "fpr_q95": 0.005555555555555556,
+              "oer_mean": 0.31999999999999995
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.0,
+              "fpr_q95": 0.0,
+              "oer_mean": 0.9920833333333334
+            }
+          },
+          "dkw_bound": 1.4950420262754829,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.1035185185185185,
+          "validation_corr": 0.646800000273838
+        },
+        "240": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.005555555555555556,
+              "fpr_q95": 0.005555555555555556,
+              "oer_mean": 0.05
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.005555555555555556,
+              "fpr_q95": 0.005555555555555556,
+              "oer_mean": 0.05
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.0,
+              "fpr_q95": 0.0,
+              "oer_mean": 1.0
+            }
+          },
+          "dkw_bound": 1.2390470447044188,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.06388888888888888,
+          "validation_corr": null
+        }
+      }
+    },
+    "Claude Haiku 4.5 / MedMCQA": {
+      "n_stream": 240,
+      "tau_int": 30.48985584093286,
+      "by_n": {
+        "10": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.8244444444444443,
+              "fpr_q95": 0.9166666666666666,
+              "oer_mean": 0.013541666666666669
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.7286111111111111,
+              "fpr_q95": 0.8222222222222222,
+              "oer_mean": 0.03166666666666666
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.7181944444444445,
+              "fpr_q95": 0.8169444444444444,
+              "oer_mean": 0.033124999999999995
+            }
+          },
+          "dkw_bound": 5.2692815822381895,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.1423611111111111,
+          "validation_corr": -0.10328213139203112
+        },
+        "20": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.7527777777777778,
+              "fpr_q95": 0.9613888888888888,
+              "oer_mean": 0.031875
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.5681944444444444,
+              "fpr_q95": 0.868611111111111,
+              "oer_mean": 0.06166666666666667
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.5440277777777778,
+              "fpr_q95": 0.8577777777777776,
+              "oer_mean": 0.065625
+            }
+          },
+          "dkw_bound": 3.75523406066335,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.25063492063492065,
+          "validation_corr": -0.4694267581810961
+        },
+        "40": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.46972222222222226,
+              "fpr_q95": 0.8388888888888889,
+              "oer_mean": 0.07125
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.3077777777777778,
+              "fpr_q95": 0.7291666666666665,
+              "oer_mean": 0.09770833333333333
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.26902777777777775,
+              "fpr_q95": 0.7233333333333333,
+              "oer_mean": 0.136875
+            }
+          },
+          "dkw_bound": 2.684640791119095,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.370297619047619,
+          "validation_corr": -0.41659125427843685
+        },
+        "80": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.23166666666666663,
+              "fpr_q95": 0.2833333333333333,
+              "oer_mean": 0.113125
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.15208333333333332,
+              "fpr_q95": 0.2222222222222222,
+              "oer_mean": 0.14520833333333333
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.09125,
+              "fpr_q95": 0.16111111111111112,
+              "oer_mean": 0.21125
+            }
+          },
+          "dkw_bound": 1.927617030331675,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.5039814814814815,
+          "validation_corr": 0.177333421690345
+        },
+        "120": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.19277777777777777,
+              "fpr_q95": 0.24444444444444444,
+              "oer_mean": 0.05375
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.09305555555555556,
+              "fpr_q95": 0.1388888888888889,
+              "oer_mean": 0.17041666666666666
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.03736111111111111,
+              "fpr_q95": 0.05111111111111105,
+              "oer_mean": 0.29166666666666663
+            }
+          },
+          "dkw_bound": 1.5922430565110968,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.5086805555555556,
+          "validation_corr": 0.048509655114115216
+        },
+        "160": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.16499999999999998,
+              "fpr_q95": 0.20027777777777778,
+              "oer_mean": 0.057499999999999996
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.06805555555555556,
+              "fpr_q95": 0.1111111111111111,
+              "oer_mean": 0.23791666666666664
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.01875,
+              "fpr_q95": 0.05,
+              "oer_mean": 0.47145833333333337
+            }
+          },
+          "dkw_bound": 1.3923203955595476,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.3113888888888889,
+          "validation_corr": 0.0018388898261582486
+        },
+        "240": {
+          "rules": {
+            "quantile eps=0.0": {
+              "fpr_mean": 0.07777777777777778,
+              "fpr_q95": 0.07777777777777778,
+              "oer_mean": 0.058333333333333334
+            },
+            "quantile eps=0.05": {
+              "fpr_mean": 0.05555555555555556,
+              "fpr_q95": 0.05555555555555555,
+              "oer_mean": 0.06666666666666667
+            },
+            "min-of-pilot eps=0.05": {
+              "fpr_mean": 0.0,
+              "fpr_q95": 0.0,
+              "oer_mean": 0.8833333333333332
+            }
+          },
+          "dkw_bound": 1.155175184437537,
+          "dkw_coverage": 1.0,
+          "validation_mae": 0.26805555555555555,
+          "validation_corr": null
+        }
+      }
+    }
+  },
+  "conformal": {
+    "Claude Sonnet 4.5 / TriviaQA": {
+      "0.05|19": {
+        "m_sessions": 19,
+        "splits": 50,
+        "session_fpr_mean": 0.02,
+        "session_fpr_q90": 0.011538461538461704,
+        "step_fpr_mean": 0.002,
+        "oer_mean": 0.9069375,
+        "latency_mean": 36.275
+      },
+      "0.05|24": {
+        "m_sessions": 24,
+        "splits": 50,
+        "session_fpr_mean": 0.11238095238095237,
+        "session_fpr_q90": 0.2428571428571429,
+        "step_fpr_mean": 0.013380952380952382,
+        "oer_mean": 0.39971428571428574,
+        "latency_mean": 15.988571428571431
+      },
+      "0.05|29": {
+        "m_sessions": 29,
+        "splits": 50,
+        "session_fpr_mean": 0.1825,
+        "session_fpr_q90": 0.3125,
+        "step_fpr_mean": 0.0194375,
+        "oer_mean": 0.19349999999999998,
+        "latency_mean": 7.740000000000001
+      },
+      "0.05|34": {
+        "m_sessions": 34,
+        "splits": 50,
+        "session_fpr_mean": 0.22909090909090912,
+        "session_fpr_q90": 0.37272727272727285,
+        "step_fpr_mean": 0.02781818181818182,
+        "oer_mean": 0.05666666666666668,
+        "latency_mean": 2.2600000000000002
+      },
+      "0.05|39": {
+        "m_sessions": 39,
+        "splits": 50,
+        "session_fpr_mean": 0.26,
+        "session_fpr_q90": 0.5,
+        "step_fpr_mean": 0.033666666666666664,
+        "oer_mean": 0.0495,
+        "latency_mean": 1.98
+      },
+      "0.1|9": {
+        "m_sessions": 9,
+        "splits": 50,
+        "session_fpr_mean": 0.03666666666666667,
+        "session_fpr_q90": 0.19722222222222227,
+        "step_fpr_mean": 0.004888888888888889,
+        "oer_mean": 0.8295416666666666,
+        "latency_mean": 33.18166666666667
+      },
+      "0.1|14": {
+        "m_sessions": 14,
+        "splits": 50,
+        "session_fpr_mean": 0.28258064516129033,
+        "session_fpr_q90": 0.41935483870967744,
+        "step_fpr_mean": 0.04780645161290322,
+        "oer_mean": 0.04385,
+        "latency_mean": 1.75
+      },
+      "0.1|19": {
+        "m_sessions": 19,
+        "splits": 50,
+        "session_fpr_mean": 0.33769230769230774,
+        "session_fpr_q90": 0.5,
+        "step_fpr_mean": 0.062384615384615386,
+        "oer_mean": 0.0371875,
+        "latency_mean": 1.485
+      },
+      "0.1|24": {
+        "m_sessions": 24,
+        "splits": 50,
+        "session_fpr_mean": 0.34857142857142853,
+        "session_fpr_q90": 0.47619047619047616,
+        "step_fpr_mean": 0.06123809523809523,
+        "oer_mean": 0.03492857142857143,
+        "latency_mean": 1.3942857142857141
+      },
+      "0.1|29": {
+        "m_sessions": 29,
+        "splits": 50,
+        "session_fpr_mean": 0.3725,
+        "session_fpr_q90": 0.5,
+        "step_fpr_mean": 0.06987499999999999,
+        "oer_mean": 0.0336,
+        "latency_mean": 1.344
+      },
+      "0.1|34": {
+        "m_sessions": 34,
+        "splits": 50,
+        "session_fpr_mean": 0.38363636363636366,
+        "session_fpr_q90": 0.5454545454545454,
+        "step_fpr_mean": 0.07945454545454546,
+        "oer_mean": 0.03066666666666667,
+        "latency_mean": 1.2133333333333334
+      },
+      "0.1|39": {
+        "m_sessions": 39,
+        "splits": 50,
+        "session_fpr_mean": 0.4266666666666666,
+        "session_fpr_q90": 0.6666666666666666,
+        "step_fpr_mean": 0.08766666666666667,
+        "oer_mean": 0.03225,
+        "latency_mean": 1.29
+      }
+    },
+    "GPT-5 / TriviaQA": {
+      "0.05|19": {
+        "m_sessions": 19,
+        "splits": 50,
+        "session_fpr_mean": 0.015384615384615384,
+        "session_fpr_q90": 0.0,
+        "step_fpr_mean": 0.001769230769230769,
+        "oer_mean": 0.9427500000000001,
+        "latency_mean": 37.71
+      },
+      "0.05|24": {
+        "m_sessions": 24,
+        "splits": 50,
+        "session_fpr_mean": 0.11238095238095237,
+        "session_fpr_q90": 0.2857142857142857,
+        "step_fpr_mean": 0.010190476190476189,
+        "oer_mean": 0.5098571428571428,
+        "latency_mean": 20.394285714285715
+      },
+      "0.05|29": {
+        "m_sessions": 29,
+        "splits": 50,
+        "session_fpr_mean": 0.16375,
+        "session_fpr_q90": 0.375,
+        "step_fpr_mean": 0.0175625,
+        "oer_mean": 0.39649999999999996,
+        "latency_mean": 15.86
+      },
+      "0.05|34": {
+        "m_sessions": 34,
+        "splits": 50,
+        "session_fpr_mean": 0.24545454545454548,
+        "session_fpr_q90": 0.37272727272727285,
+        "step_fpr_mean": 0.029727272727272727,
+        "oer_mean": 0.09183333333333334,
+        "latency_mean": 3.673333333333334
+      },
+      "0.05|39": {
+        "m_sessions": 39,
+        "splits": 50,
+        "session_fpr_mean": 0.22333333333333333,
+        "session_fpr_q90": 0.5,
+        "step_fpr_mean": 0.024500000000000008,
+        "oer_mean": 0.074,
+        "latency_mean": 2.96
+      },
+      "0.1|9": {
+        "m_sessions": 9,
+        "splits": 50,
+        "session_fpr_mean": 0.03333333333333333,
+        "session_fpr_q90": 0.1722222222222223,
+        "step_fpr_mean": 0.005138888888888888,
+        "oer_mean": 0.8859166666666667,
+        "latency_mean": 35.43666666666667
+      },
+      "0.1|14": {
+        "m_sessions": 14,
+        "splits": 50,
+        "session_fpr_mean": 0.28903225806451616,
+        "session_fpr_q90": 0.41935483870967744,
+        "step_fpr_mean": 0.039161290322580644,
+        "oer_mean": 0.046700000000000005,
+        "latency_mean": 1.8660000000000003
+      },
+      "0.1|19": {
+        "m_sessions": 19,
+        "splits": 50,
+        "session_fpr_mean": 0.3907692307692308,
+        "session_fpr_q90": 0.5384615384615384,
+        "step_fpr_mean": 0.06557692307692309,
+        "oer_mean": 0.035,
+        "latency_mean": 1.4
+      },
+      "0.1|24": {
+        "m_sessions": 24,
+        "splits": 50,
+        "session_fpr_mean": 0.41238095238095235,
+        "session_fpr_q90": 0.5761904761904763,
+        "step_fpr_mean": 0.06704761904761904,
+        "oer_mean": 0.032428571428571425,
+        "latency_mean": 1.2971428571428572
+      },
+      "0.1|29": {
+        "m_sessions": 29,
+        "splits": 50,
+        "session_fpr_mean": 0.42125,
+        "session_fpr_q90": 0.5687500000000001,
+        "step_fpr_mean": 0.07375,
+        "oer_mean": 0.0316,
+        "latency_mean": 1.264
+      },
+      "0.1|34": {
+        "m_sessions": 34,
+        "splits": 50,
+        "session_fpr_mean": 0.4672727272727272,
+        "session_fpr_q90": 0.6363636363636364,
+        "step_fpr_mean": 0.08254545454545456,
+        "oer_mean": 0.029166666666666664,
+        "latency_mean": 1.1666666666666665
+      },
+      "0.1|39": {
+        "m_sessions": 39,
+        "splits": 50,
+        "session_fpr_mean": 0.42333333333333345,
+        "session_fpr_q90": 0.6666666666666666,
+        "step_fpr_mean": 0.07949999999999999,
+        "oer_mean": 0.03,
+        "latency_mean": 1.2
+      }
+    },
+    "Claude Haiku 4.5 / TriviaQA": {
+      "0.1|9": {
+        "m_sessions": 9,
+        "splits": 50,
+        "session_fpr_mean": 0.01,
+        "session_fpr_q90": 0.0,
+        "step_fpr_mean": 0.0018333333333333333,
+        "oer_mean": 0.98175,
+        "latency_mean": 39.27
+      }
+    },
+    "Claude Sonnet 4.5 / MedMCQA": {
+      "0.1|9": {
+        "m_sessions": 9,
+        "splits": 50,
+        "session_fpr_mean": 0.02,
+        "session_fpr_q90": 0.0,
+        "step_fpr_mean": 0.002,
+        "oer_mean": 0.9625,
+        "latency_mean": 38.5
+      }
+    },
+    "GPT-5 / MedMCQA": {
+      "0.1|9": {
+        "m_sessions": 9,
+        "splits": 50,
+        "session_fpr_mean": 0.0,
+        "session_fpr_q90": 0.0,
+        "step_fpr_mean": 0.0,
+        "oer_mean": 1.0,
+        "latency_mean": 40.0
+      }
+    },
+    "Claude Haiku 4.5 / MedMCQA": {
+      "0.1|9": {
+        "m_sessions": 9,
+        "splits": 50,
+        "session_fpr_mean": 0.0,
+        "session_fpr_q90": 0.0,
+        "step_fpr_mean": 0.0,
+        "oer_mean": 1.0,
+        "latency_mean": 40.0
+      }
+    }
+  },
+  "figures": [
+    "calibration_real.png"
+  ]
+}

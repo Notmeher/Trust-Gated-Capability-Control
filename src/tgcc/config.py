@@ -45,6 +45,20 @@ def anthropic_cfg() -> AnthropicCfg:
     )
 
 
+def anthropic_haiku_cfg() -> AnthropicCfg:
+    base = anthropic_cfg()
+    return AnthropicCfg(
+        api_key=base.api_key,
+        model=os.getenv("ANTHROPIC_HAIKU_MODEL", "claude-haiku-4-5").strip('"').strip("'"),
+        workspace_id=base.workspace_id,
+    )
+
+
+def budget_usd() -> float:
+    """Hard cap on new (uncached) API spend, tracked in cache/llm/_spend_ledger.json."""
+    return float(os.getenv("TGCC_BUDGET_USD", "10"))
+
+
 def azure_openai_cfg() -> AzureOpenAICfg:
     return AzureOpenAICfg(
         api_key=_require("AZURE_OPENAI_API_KEY"),

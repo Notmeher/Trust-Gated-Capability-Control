@@ -31,6 +31,7 @@ class TGCCParams:
     coupling: Optional[tuple] = None   # full matrix override (tuple of tuples)
     prereq: bool = True                # epistemic prerequisite conjunct
     prereq_raw: bool = True            # False = Beta-smoothed prerequisite (TGCC-Smoothed ablation)
+    prereq_all: bool = False           # also a per-turn conjunct on every non-epistemic layer (Definition 3, req(c) = all)
     composite: bool = True             # composite conjunct
     prewarm: bool = True
 
@@ -73,6 +74,9 @@ class Gate:
                 out["composite"] = np.array(comp)
             if P.prereq:
                 out["epistemic"] = signals[:, 0].astype(float) if P.prereq_raw else np.array(epi)
+            if P.prereq_all:
+                for k, name in enumerate(("behavioural", "role", "social", "institutional"), start=1):
+                    out[name] = signals[:, k].astype(float)
             return out
         if self.kind in ("epi_beta", "min_beta", "mean_beta", "naive"):
             T = _beta_trusts(signals, P.gamma, P.omega, P.prewarm)

@@ -49,7 +49,8 @@ from tgcc.nextphase.streams import LAYERS, _force_wrong, compute_signals, pilot_
 EXP = "n22_theory_nonstationary"
 GAMMA, OMEGA, W = 0.985, 3.0, 8
 SWAP_MODELS = ("anthropic", "azure_openai", "anthropic_haiku")
-SHIFT_MODELS = ("anthropic", "azure_openai", "anthropic_haiku")
+QWEN_SWAP_MODELS = ("qwen3-4b", "qwen3-8b", "qwen2.5-7b")
+SHIFT_MODELS = SWAP_MODELS + QWEN_SWAP_MODELS
 MARGINS = (0.05, 0.10, 0.20)
 
 
@@ -109,7 +110,7 @@ def stream_sets() -> dict[str, list[dict]]:
     out: dict[str, list[dict]] = {}
     tq_ids = load_bank("anthropic_haiku")["eval_ids"] if bank_path("anthropic_haiku").exists() \
         else load_bank("anthropic")["eval_ids"][:300]
-    for p in SWAP_MODELS:
+    for p in SHIFT_MODELS:
         if not bank_path(p).exists():
             continue
         eps = []
@@ -118,16 +119,18 @@ def stream_sets() -> dict[str, list[dict]]:
             s, e = _stream([_rec(p, "triviaqa", "honest", i) for i in ids])
             eps.append({"signals": s, "errors": e, "regimes": np.zeros(60, int), "compromise": None})
         out[f"stationary: {model_name(p)} / TriviaQA"] = eps
-    if all(bank_path(p).exists() for p in SWAP_MODELS):
+    for swap, name in ((SWAP_MODELS, "Sonnet / GPT-5 / Haiku"), (QWEN_SWAP_MODELS, "Qwen3-4B / Qwen3-8B / Qwen2.5-7B")):
+        if not all(bank_path(p).exists() for p in swap):
+            continue
         eps = []
-        for order in itertools.permutations(SWAP_MODELS):
+        for order in itertools.permutations(swap):
             for k in range(2):
                 ids = tq_ids[k * 120:(k + 1) * 120]
                 recs = [_rec(order[t // 40], "triviaqa", "honest", i) for t, i in enumerate(ids)]
                 s, e = _stream(recs)
-                reg = np.array([SWAP_MODELS.index(order[t // 40]) for t in range(120)])
+                reg = np.array([swap.index(order[t // 40]) for t in range(120)])
                 eps.append({"signals": s, "errors": e, "regimes": reg, "compromise": None})
-        out["model swap (Sonnet / GPT-5 / Haiku, 40 steps each)"] = eps
+        out[f"model swap ({name}, 40 steps each)"] = eps
     for p in SHIFT_MODELS:
         if not bank_path(p, "medmcqa").exists():
             continue

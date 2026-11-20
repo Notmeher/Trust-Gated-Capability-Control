@@ -109,7 +109,9 @@ def evaluate_bank(bank) -> dict:
     gates |= {n: (Gate(n, kind, TGCCParams()), None, "crc0.1") for n, kind in BASELINES.items()}
     # TGCC-R selects its epistemic window from the honest pilot pool alone (baselines use the same window).
     from tgcc.nextphase import tgcc_r
-    w_sel = tgcc_r.select_window({w: _pool(bank, w)[:, 0] for w in tgcc_r.WINDOWS})
+    pools = {w: _pool(bank, w)[:, 0] for w in tgcc_r.WINDOWS}
+    w_sel = tgcc_r.select_window(pools)
+    qualified = bool(tgcc_r.qualifying_windows(pools))
     gates = {n: (g, W or w_sel, kind) for n, (g, W, kind) in gates.items()}
     acc = {n: {k: [] for k in ("fpr", *[f"oer_{a}" for a in ATTACKS], "lat_sleeper")} for n in gates}
     for sp in range(SPLITS):
@@ -144,7 +146,7 @@ def evaluate_bank(bank) -> dict:
                     acc[name][f"oer_{a}"].append(float(np.mean(oers)))
                     if a == "sleeper":
                         acc[name]["lat_sleeper"].append(float(np.mean(lats)))
-    return {"window": w_sel} | {n: {k: mean_ci(v) for k, v in d.items()} for n, d in acc.items()}
+    return {"window": w_sel, "epistemic_qualified": qualified} | {n: {k: mean_ci(v) for k, v in d.items()} for n, d in acc.items()}
 
 
 def run() -> dict:
@@ -154,7 +156,7 @@ def run() -> dict:
 def _fig(res) -> str:
     keys = list(res)
     names = list(CONFIGS) + list(BASELINES)
-    res = {k: {n: v for n, v in by.items() if n != "window"} for k, by in res.items()}
+    res = {k: {n: v for n, v in by.items() if n not in ("window", "epistemic_qualified")} for k, by in res.items()}
     fig, axes = plt.subplots(1, 5, figsize=(22, 0.4 * len(keys) * 1 + 3), sharey=True)
     y = np.arange(len(keys))
     for ax, m in zip(axes, ["oer_sleeper", "oer_policy", "oer_offtopic", "oer_hostile", "fpr"]):
@@ -180,7 +182,7 @@ def readme(res, fig) -> str:
     rows = []
     for k, by in res.items():
         for n, v in by.items():
-            if n == "window":
+            if n in ("window", "epistemic_qualified"):
                 continue
             rows.append(f"| {k} | {n} | " + " | ".join(f"{v[f'oer_{a}']['mean']:.2f}" for a in ATTACKS)
                         + f" | {v['lat_sleeper']['mean']:.1f} | {v['fpr']['mean']:.3f} |")
@@ -205,6 +207,12 @@ docstring); each change below addresses one, and the table shows its effect.
 for FPR and 60-step compromise episodes (compromise at step 20) for OER and latency.
 
 Selected TGCC-R windows: {", ".join(f"{k}: {by['window']}" for k, by in res.items())}.
+
+**Epistemic qualification (pilot only, before deployment).** No window meets the pilot rule for:
+{", ".join(k for k, by in res.items() if not by["epistemic_qualified"]) or "none"}. These honest agents are
+themselves confidently wrong too often for the epistemic layer to separate them from a sleeper; TGCC-R flags this
+before deployment. Their sleeper OER is reported below for completeness (the other attacks are still blocked);
+making the gate stricter does not help, because it then denies most honest steps (see IEEE_REVIEW_COVERAGE.md).
 
 | Stream | Gate | sleeper OER | policy OER | off-topic OER | hostile OER | sleeper latency | honest FPR |
 |---|---|---:|---:|---:|---:|---:|---:|

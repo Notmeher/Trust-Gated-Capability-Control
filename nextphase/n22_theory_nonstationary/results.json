@@ -1,6 +1,6 @@
 {
   "experiment": "n22_theory_nonstationary",
-  "timestamp_utc": "2026-11-20T05:42:15.329149+00:00",
+  "timestamp_utc": "2026-11-20T09:50:21.899165+00:00",
   "gamma": 0.985,
   "omega": 3.0,
   "window": 8,
@@ -431,6 +431,390 @@
         "bound": 1.0
       }
     },
+    "stationary: Qwen3-4B / TriviaQA": {
+      "n_episodes": 5,
+      "theorem4": {
+        "epistemic": {
+          "rho_min": 0.1436658253968254,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.002961072605450636,
+              "empirical": 0.0,
+              "bound_avg": 2.178947885785072e-11,
+              "floor": 0.008133535607917084
+            }
+          ]
+        },
+        "behavioural": {
+          "rho_min": 0.9485,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.8099274705349048,
+              "empirical": 0.56,
+              "bound_avg": 0.9971928621126225,
+              "floor": 0.8893333023091058
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.7599274705349048,
+              "empirical": 0.04666666666666667,
+              "bound_avg": 0.9116846288460709,
+              "floor": 0.6022356192570628
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.6599274705349047,
+              "empirical": 0.0,
+              "bound_avg": 0.2960559141268167,
+              "floor": 0.0913321004671701
+            }
+          ]
+        },
+        "role": {
+          "rho_min": 1.0,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.95,
+              "empirical": 1.0,
+              "bound_avg": 1.0,
+              "floor": 0.9243391962898049
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.9,
+              "empirical": 0.7,
+              "bound_avg": 0.9974891431583999,
+              "floor": 0.7134913010978737
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.8,
+              "empirical": 0.15,
+              "bound_avg": 0.8190508756935014,
+              "floor": 0.20886337462849192
+            }
+          ]
+        },
+        "social": {
+          "rho_min": 0.8499999999999998,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.6038461538461534,
+              "empirical": 0.0,
+              "bound_avg": 0.48528231531179566,
+              "floor": 0.7949871755741987
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.5538461538461534,
+              "empirical": 0.0,
+              "bound_avg": 0.19510912792815002,
+              "floor": 0.36536235478581147
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.4538461538461534,
+              "empirical": 0.0,
+              "bound_avg": 0.0053062477362676354,
+              "floor": 0.007326941531453898
+            }
+          ]
+        },
+        "institutional": {
+          "rho_min": 1.0,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.95,
+              "empirical": 1.0,
+              "bound_avg": 1.0,
+              "floor": 0.9243391962898049
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.9,
+              "empirical": 0.7,
+              "bound_avg": 0.9974891431583999,
+              "floor": 0.7134913010978737
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.8,
+              "empirical": 0.15,
+              "bound_avg": 0.8190508756935014,
+              "floor": 0.20886337462849192
+            }
+          ]
+        }
+      },
+      "window": {
+        "theta_e": 0.6475,
+        "e_max": 0.5956166666666667,
+        "error_threshold": 0.17625000000000002,
+        "empirical": 0.96,
+        "bound": 1.0
+      }
+    },
+    "stationary: Qwen3-8B / TriviaQA": {
+      "n_episodes": 5,
+      "theorem4": {
+        "epistemic": {
+          "rho_min": 0.16053015873015875,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.009923020953563719,
+              "empirical": 0.0,
+              "bound_avg": 6.174485675731584e-11,
+              "floor": 0.01040384971504196
+            }
+          ]
+        },
+        "behavioural": {
+          "rho_min": 0.9495000000000001,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.812397820163488,
+              "empirical": 0.55,
+              "bound_avg": 0.9975191119361804,
+              "floor": 0.8901024219357223
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.7623978201634881,
+              "empirical": 0.06666666666666667,
+              "bound_avg": 0.9159342581170076,
+              "floor": 0.6045362662708141
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.6623978201634881,
+              "empirical": 0.0,
+              "bound_avg": 0.30513414246640397,
+              "floor": 0.09306500839257624
+            }
+          ]
+        },
+        "role": {
+          "rho_min": 1.0,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.95,
+              "empirical": 1.0,
+              "bound_avg": 1.0,
+              "floor": 0.9243391962898049
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.9,
+              "empirical": 0.7,
+              "bound_avg": 0.9974891431583999,
+              "floor": 0.7134913010978737
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.8,
+              "empirical": 0.15,
+              "bound_avg": 0.8190508756935014,
+              "floor": 0.20886337462849192
+            }
+          ]
+        },
+        "social": {
+          "rho_min": 0.8484999999999997,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.6011895625479656,
+              "empirical": 0.0,
+              "bound_avg": 0.47623801164737795,
+              "floor": 0.7932610940557728
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.5511895625479657,
+              "empirical": 0.0,
+              "bound_avg": 0.18902622443555528,
+              "floor": 0.3618095809568844
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.45118956254796566,
+              "empirical": 0.0,
+              "bound_avg": 0.004909046522322919,
+              "floor": 0.00696721378410788
+            }
+          ]
+        },
+        "institutional": {
+          "rho_min": 1.0,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.95,
+              "empirical": 1.0,
+              "bound_avg": 1.0,
+              "floor": 0.9243391962898049
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.9,
+              "empirical": 0.7,
+              "bound_avg": 0.9974891431583999,
+              "floor": 0.7134913010978737
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.8,
+              "empirical": 0.15,
+              "bound_avg": 0.8190508756935014,
+              "floor": 0.20886337462849192
+            }
+          ]
+        }
+      },
+      "window": {
+        "theta_e": 0.6475,
+        "e_max": 0.6019999999999998,
+        "error_threshold": 0.17625000000000002,
+        "empirical": 0.9233333333333333,
+        "bound": 1.0
+      }
+    },
+    "stationary: Qwen2.5-7B / TriviaQA": {
+      "n_episodes": 5,
+      "theorem4": {
+        "epistemic": {
+          "rho_min": 0.1813511904761905,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.018764021613032825,
+              "empirical": 0.0,
+              "bound_avg": 2.1447802255121975e-10,
+              "floor": 0.01390907253712919
+            }
+          ]
+        },
+        "behavioural": {
+          "rho_min": 0.9501666666666667,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.8140497120339497,
+              "empirical": 0.5766666666666667,
+              "bound_avg": 0.9977205097108799,
+              "floor": 0.8906131383955183
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.7640497120339498,
+              "empirical": 0.06666666666666667,
+              "bound_avg": 0.9186554678968953,
+              "floor": 0.6060674681365498
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.6640497120339497,
+              "empirical": 0.0,
+              "bound_avg": 0.3112991841542912,
+              "floor": 0.09423238090226738
+            }
+          ]
+        },
+        "role": {
+          "rho_min": 1.0,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.95,
+              "empirical": 1.0,
+              "bound_avg": 1.0,
+              "floor": 0.9243391962898049
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.9,
+              "empirical": 0.7,
+              "bound_avg": 0.9974891431583999,
+              "floor": 0.7134913010978737
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.8,
+              "empirical": 0.15,
+              "bound_avg": 0.8190508756935014,
+              "floor": 0.20886337462849192
+            }
+          ]
+        },
+        "social": {
+          "rho_min": 0.8499999999999998,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.6038461538461534,
+              "empirical": 0.0,
+              "bound_avg": 0.48528231531179566,
+              "floor": 0.7949871755741987
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.5538461538461534,
+              "empirical": 0.0,
+              "bound_avg": 0.19510912792815002,
+              "floor": 0.36536235478581147
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.4538461538461534,
+              "empirical": 0.0,
+              "bound_avg": 0.0053062477362676354,
+              "floor": 0.007326941531453898
+            }
+          ]
+        },
+        "institutional": {
+          "rho_min": 1.0,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.95,
+              "empirical": 1.0,
+              "bound_avg": 1.0,
+              "floor": 0.9243391962898049
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.9,
+              "empirical": 0.7,
+              "bound_avg": 0.9974891431583999,
+              "floor": 0.7134913010978737
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.8,
+              "empirical": 0.15,
+              "bound_avg": 0.8190508756935014,
+              "floor": 0.20886337462849192
+            }
+          ]
+        }
+      },
+      "window": {
+        "theta_e": 0.6475,
+        "e_max": 0.6283333333333334,
+        "error_threshold": 0.17625000000000002,
+        "empirical": 0.9266666666666666,
+        "bound": 1.0
+      }
+    },
     "model swap (Sonnet / GPT-5 / Haiku, 40 steps each)": {
       "n_episodes": 12,
       "theorem4": {
@@ -570,6 +954,126 @@
         "e_max": 0.32975,
         "error_threshold": 0.17625000000000002,
         "empirical": 0.54375,
+        "bound": 1.0
+      }
+    },
+    "model swap (Qwen3-4B / Qwen3-8B / Qwen2.5-7B, 40 steps each)": {
+      "n_episodes": 12,
+      "theorem4": {
+        "epistemic": {
+          "rho_min": 0.09134729166666666,
+          "rows": []
+        },
+        "behavioural": {
+          "rho_min": 0.9481249999999998,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.8090033975084931,
+              "empirical": 0.25,
+              "bound_avg": 0.9780425048407946,
+              "floor": 0.889043939358325
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.7590033975084932,
+              "empirical": 0.025,
+              "bound_avg": 0.8300531393282587,
+              "floor": 0.6013716986139072
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.6590033975084932,
+              "empirical": 0.0,
+              "bound_avg": 0.24177362135123362,
+              "floor": 0.09068786609133195
+            }
+          ]
+        },
+        "role": {
+          "rho_min": 1.0,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.95,
+              "empirical": 0.6666666666666666,
+              "bound_avg": 0.9979151625214528,
+              "floor": 0.9243391962898049
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.9,
+              "empirical": 0.35,
+              "bound_avg": 0.9536514924775079,
+              "floor": 0.7134913010978737
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.8,
+              "empirical": 0.075,
+              "bound_avg": 0.6309422175166397,
+              "floor": 0.20886337462849192
+            }
+          ]
+        },
+        "social": {
+          "rho_min": 0.8481249999999998,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.6005273250239689,
+              "empirical": 0.0,
+              "bound_avg": 0.6060201836930957,
+              "floor": 0.7928282245302378
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.550527325023969,
+              "empirical": 0.0,
+              "bound_avg": 0.26795727867919983,
+              "floor": 0.36092267806150424
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.4505273250239689,
+              "empirical": 0.0,
+              "bound_avg": 0.007777146085492228,
+              "floor": 0.006879634417904796
+            }
+          ]
+        },
+        "institutional": {
+          "rho_min": 1.0,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.95,
+              "empirical": 0.6666666666666666,
+              "bound_avg": 0.9979151625214528,
+              "floor": 0.9243391962898049
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.9,
+              "empirical": 0.35,
+              "bound_avg": 0.9536514924775079,
+              "floor": 0.7134913010978737
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.8,
+              "empirical": 0.075,
+              "bound_avg": 0.6309422175166397,
+              "floor": 0.20886337462849192
+            }
+          ]
+        }
+      },
+      "window": {
+        "theta_e": 0.6475,
+        "e_max": 0.625,
+        "error_threshold": 0.17625000000000002,
+        "empirical": 0.9625,
         "bound": 1.0
       }
     },
@@ -1528,6 +2032,894 @@
             "predicted": 40.404182642472094,
             "predicted_state": 70.512539405783,
             "trust_at_compromise": 0.19086280949462683,
+            "horizon": 60,
+            "observed": "inf"
+          }
+        ]
+      }
+    },
+    "domain shift: Qwen3-4B TriviaQA -> MedMCQA": {
+      "n_episodes": 5,
+      "theorem4": {
+        "epistemic": {
+          "rho_min": 0.1436658253968254,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.002961072605450636,
+              "empirical": 0.0,
+              "bound_avg": 7.278936128430667e-06,
+              "floor": 0.008133535607917084
+            }
+          ]
+        },
+        "behavioural": {
+          "rho_min": 0.9485,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.8099274705349048,
+              "empirical": 0.28,
+              "bound_avg": 0.9783440729695565,
+              "floor": 0.8893333023091058
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.7599274705349048,
+              "empirical": 0.023333333333333334,
+              "bound_avg": 0.8315741163422761,
+              "floor": 0.6022356192570628
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.6599274705349047,
+              "empirical": 0.0,
+              "bound_avg": 0.24416638938248109,
+              "floor": 0.0913321004671701
+            }
+          ]
+        },
+        "role": {
+          "rho_min": 1.0,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.95,
+              "empirical": 0.6666666666666666,
+              "bound_avg": 0.9979151625214528,
+              "floor": 0.9243391962898049
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.9,
+              "empirical": 0.35,
+              "bound_avg": 0.953651492477508,
+              "floor": 0.7134913010978737
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.8,
+              "empirical": 0.075,
+              "bound_avg": 0.6309422175166396,
+              "floor": 0.20886337462849192
+            }
+          ]
+        },
+        "social": {
+          "rho_min": 0.8499999999999998,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.6038461538461534,
+              "empirical": 0.0,
+              "bound_avg": 0.6144083860553321,
+              "floor": 0.7949871755741987
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.5538461538461534,
+              "empirical": 0.0,
+              "bound_avg": 0.27522086767606957,
+              "floor": 0.36536235478581147
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.4538461538461534,
+              "empirical": 0.0,
+              "bound_avg": 0.008424659159542346,
+              "floor": 0.007326941531453898
+            }
+          ]
+        },
+        "institutional": {
+          "rho_min": 1.0,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.95,
+              "empirical": 0.6666666666666666,
+              "bound_avg": 0.9979151625214528,
+              "floor": 0.9243391962898049
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.9,
+              "empirical": 0.35,
+              "bound_avg": 0.953651492477508,
+              "floor": 0.7134913010978737
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.8,
+              "empirical": 0.075,
+              "bound_avg": 0.6309422175166396,
+              "floor": 0.20886337462849192
+            }
+          ]
+        }
+      },
+      "window": {
+        "theta_e": 0.6475,
+        "e_max": 0.5956166666666667,
+        "error_threshold": 0.17625000000000002,
+        "empirical": 0.9316666666666666,
+        "bound": 1.0
+      }
+    },
+    "domain shift + compromise: Qwen3-4B": {
+      "n_episodes": 2,
+      "theorem4": {
+        "epistemic": {
+          "rho_min": 0.06170708333333333,
+          "rows": []
+        },
+        "behavioural": {
+          "rho_min": 0.9500000000000003,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.8136363636363643,
+              "empirical": 0.37777777777777777,
+              "bound_avg": 0.989521506586644,
+              "floor": 0.8904856114005036
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.7636363636363643,
+              "empirical": 0.044444444444444446,
+              "bound_avg": 0.874285597967033,
+              "floor": 0.6056848612161868
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.6636363636363642,
+              "empirical": 0.0,
+              "bound_avg": 0.28095850101482567,
+              "floor": 0.09393962916504339
+            }
+          ]
+        },
+        "role": {
+          "rho_min": 1.0,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.95,
+              "empirical": 0.8888888888888888,
+              "bound_avg": 0.9999445105309761,
+              "floor": 0.9243391962898049
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.9,
+              "empirical": 0.4666666666666667,
+              "bound_avg": 0.9794501869687776,
+              "floor": 0.7134913010978737
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.8,
+              "empirical": 0.1,
+              "bound_avg": 0.712957164920248,
+              "floor": 0.20886337462849192
+            }
+          ]
+        },
+        "social": {
+          "rho_min": 0.8499999999999998,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.6038461538461534,
+              "empirical": 0.0,
+              "bound_avg": 0.5660748257391574,
+              "floor": 0.7949871755741987
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.5538461538461534,
+              "empirical": 0.0,
+              "bound_avg": 0.2457235865801223,
+              "floor": 0.36536235478581147
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.4538461538461534,
+              "empirical": 0.0,
+              "bound_avg": 0.007494977460387835,
+              "floor": 0.007326941531453898
+            }
+          ]
+        },
+        "institutional": {
+          "rho_min": 1.0,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.95,
+              "empirical": 0.8888888888888888,
+              "bound_avg": 0.9999445105309761,
+              "floor": 0.9243391962898049
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.9,
+              "empirical": 0.4666666666666667,
+              "bound_avg": 0.9794501869687776,
+              "floor": 0.7134913010978737
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.8,
+              "empirical": 0.1,
+              "bound_avg": 0.712957164920248,
+              "floor": 0.20886337462849192
+            }
+          ]
+        }
+      },
+      "window": {
+        "theta_e": 0.6475,
+        "e_max": 0.5908333333333334,
+        "error_threshold": 0.17625000000000002,
+        "empirical": 0.9888888888888889,
+        "bound": 1.0
+      },
+      "latency": {
+        "episodes": [
+          {
+            "rho0": 0.025150000000000002,
+            "rho1": 0.00030833333333333456,
+            "frac": 0.25,
+            "x": 0.006420417834092269,
+            "predicted": 18.76003307641247,
+            "predicted_state": 136.96056612338234,
+            "trust_at_compromise": 0.0629090257026284,
+            "horizon": 60,
+            "observed": "inf"
+          },
+          {
+            "rho0": 0.025150000000000002,
+            "rho1": 0.00030833333333333456,
+            "frac": 0.5,
+            "x": 0.004314544858949699,
+            "predicted": 45.312084535052264,
+            "predicted_state": 163.15757095634402,
+            "trust_at_compromise": 0.0629090257026284,
+            "horizon": 60,
+            "observed": "inf"
+          },
+          {
+            "rho0": 0.10255833333333332,
+            "rho1": 0.0,
+            "frac": 0.25,
+            "x": 0.02752127399474038,
+            "predicted": 17.893855051751128,
+            "predicted_state": 54.91465191503963,
+            "trust_at_compromise": 0.07442887682999687,
+            "horizon": 60,
+            "observed": 55.0
+          },
+          {
+            "rho0": 0.10255833333333332,
+            "rho1": 0.0,
+            "frac": 0.5,
+            "x": 0.018347515996493587,
+            "predicted": 43.560859661813915,
+            "predicted_state": 79.38055906209563,
+            "trust_at_compromise": 0.07442887682999687,
+            "horizon": 60,
+            "observed": "inf"
+          }
+        ]
+      }
+    },
+    "domain shift: Qwen3-8B TriviaQA -> MedMCQA": {
+      "n_episodes": 5,
+      "theorem4": {
+        "epistemic": {
+          "rho_min": 0.16053015873015875,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.009923020953563719,
+              "empirical": 0.0,
+              "bound_avg": 1.192734919394512e-05,
+              "floor": 0.01040384971504196
+            }
+          ]
+        },
+        "behavioural": {
+          "rho_min": 0.9495000000000001,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.812397820163488,
+              "empirical": 0.275,
+              "bound_avg": 0.9791303193960774,
+              "floor": 0.8901024219357223
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.7623978201634881,
+              "empirical": 0.03333333333333333,
+              "bound_avg": 0.8355492581284811,
+              "floor": 0.6045362662708141
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.6623978201634881,
+              "empirical": 0.0,
+              "bound_avg": 0.2506327089854974,
+              "floor": 0.09306500839257624
+            }
+          ]
+        },
+        "role": {
+          "rho_min": 1.0,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.95,
+              "empirical": 0.6666666666666666,
+              "bound_avg": 0.9979151625214528,
+              "floor": 0.9243391962898049
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.9,
+              "empirical": 0.35,
+              "bound_avg": 0.953651492477508,
+              "floor": 0.7134913010978737
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.8,
+              "empirical": 0.075,
+              "bound_avg": 0.6309422175166396,
+              "floor": 0.20886337462849192
+            }
+          ]
+        },
+        "social": {
+          "rho_min": 0.8484999999999997,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.6011895625479656,
+              "empirical": 0.0,
+              "bound_avg": 0.6076919351831729,
+              "floor": 0.7932610940557728
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.5511895625479657,
+              "empirical": 0.0,
+              "bound_avg": 0.26939783091517594,
+              "floor": 0.3618095809568844
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.45118956254796566,
+              "empirical": 0.0,
+              "bound_avg": 0.007902957388282011,
+              "floor": 0.00696721378410788
+            }
+          ]
+        },
+        "institutional": {
+          "rho_min": 1.0,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.95,
+              "empirical": 0.6666666666666666,
+              "bound_avg": 0.9979151625214528,
+              "floor": 0.9243391962898049
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.9,
+              "empirical": 0.35,
+              "bound_avg": 0.953651492477508,
+              "floor": 0.7134913010978737
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.8,
+              "empirical": 0.075,
+              "bound_avg": 0.6309422175166396,
+              "floor": 0.20886337462849192
+            }
+          ]
+        }
+      },
+      "window": {
+        "theta_e": 0.6475,
+        "e_max": 0.6019999999999998,
+        "error_threshold": 0.17625000000000002,
+        "empirical": 0.8933333333333333,
+        "bound": 1.0
+      }
+    },
+    "domain shift + compromise: Qwen3-8B": {
+      "n_episodes": 2,
+      "theorem4": {
+        "epistemic": {
+          "rho_min": 0.08239583333333332,
+          "rows": []
+        },
+        "behavioural": {
+          "rho_min": 0.9487499999999998,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.8105442176870742,
+              "empirical": 0.35555555555555557,
+              "bound_avg": 0.9887430077959316,
+              "floor": 0.8895259250399442
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.7605442176870743,
+              "empirical": 0.03333333333333333,
+              "bound_avg": 0.8691544330064251,
+              "floor": 0.6028112106395487
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.6605442176870742,
+              "empirical": 0.0,
+              "bound_avg": 0.2714812804972742,
+              "floor": 0.09176328780326388
+            }
+          ]
+        },
+        "role": {
+          "rho_min": 1.0,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.95,
+              "empirical": 0.8888888888888888,
+              "bound_avg": 0.9999445105309761,
+              "floor": 0.9243391962898049
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.9,
+              "empirical": 0.4666666666666667,
+              "bound_avg": 0.9794501869687776,
+              "floor": 0.7134913010978737
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.8,
+              "empirical": 0.1,
+              "bound_avg": 0.712957164920248,
+              "floor": 0.20886337462849192
+            }
+          ]
+        },
+        "social": {
+          "rho_min": 0.8462499999999997,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.5972275334608025,
+              "empirical": 0.0,
+              "bound_avg": 0.5468988833545642,
+              "floor": 0.7906557910786207
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.5472275334608026,
+              "empirical": 0.0,
+              "bound_avg": 0.23079608528671677,
+              "floor": 0.35649613806846825
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.4472275334608025,
+              "empirical": 0.0,
+              "bound_avg": 0.006311752784996127,
+              "floor": 0.006455476880581436
+            }
+          ]
+        },
+        "institutional": {
+          "rho_min": 1.0,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.95,
+              "empirical": 0.8888888888888888,
+              "bound_avg": 0.9999445105309761,
+              "floor": 0.9243391962898049
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.9,
+              "empirical": 0.4666666666666667,
+              "bound_avg": 0.9794501869687776,
+              "floor": 0.7134913010978737
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.8,
+              "empirical": 0.1,
+              "bound_avg": 0.712957164920248,
+              "floor": 0.20886337462849192
+            }
+          ]
+        }
+      },
+      "window": {
+        "theta_e": 0.6475,
+        "e_max": 0.5725,
+        "error_threshold": 0.17625000000000002,
+        "empirical": 0.9666666666666667,
+        "bound": 1.0
+      },
+      "latency": {
+        "episodes": [
+          {
+            "rho0": 0.029999999999999995,
+            "rho1": 0.011041666666666665,
+            "frac": 0.25,
+            "x": 0.008580023586319933,
+            "predicted": 18.82365088046913,
+            "predicted_state": 158.93547718842018,
+            "trust_at_compromise": 0.07238770838151644,
+            "horizon": 60,
+            "observed": "inf"
+          },
+          {
+            "rho0": 0.029999999999999995,
+            "rho1": 0.011041666666666665,
+            "frac": 0.5,
+            "x": 0.006955965539986807,
+            "predicted": 45.43978956572356,
+            "predicted_state": 185.29659848425683,
+            "trust_at_compromise": 0.07238770838151644,
+            "horizon": 60,
+            "observed": "inf"
+          },
+          {
+            "rho0": 0.19083333333333333,
+            "rho1": 0.0,
+            "frac": 0.25,
+            "x": 0.05466263526416295,
+            "predicted": 16.895980712483414,
+            "predicted_state": 29.66739456396307,
+            "trust_at_compromise": 0.0970262401579754,
+            "horizon": 60,
+            "observed": 30.0
+          },
+          {
+            "rho0": 0.19083333333333333,
+            "rho1": 0.0,
+            "frac": 0.5,
+            "x": 0.0364417568427753,
+            "predicted": 41.51368315394397,
+            "predicted_state": 52.57883510368524,
+            "trust_at_compromise": 0.0970262401579754,
+            "horizon": 60,
+            "observed": 53.0
+          }
+        ]
+      }
+    },
+    "domain shift: Qwen2.5-7B TriviaQA -> MedMCQA": {
+      "n_episodes": 5,
+      "theorem4": {
+        "epistemic": {
+          "rho_min": 0.1813511904761905,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.018764021613032825,
+              "empirical": 0.0,
+              "bound_avg": 2.1487942624206385e-05,
+              "floor": 0.01390907253712919
+            }
+          ]
+        },
+        "behavioural": {
+          "rho_min": 0.95,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.8136363636363635,
+              "empirical": 0.2816666666666667,
+              "bound_avg": 0.9795138686380495,
+              "floor": 0.8904856114005035
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.7636363636363636,
+              "empirical": 0.03333333333333333,
+              "bound_avg": 0.8374953311883807,
+              "floor": 0.6056848612161866
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.6636363636363636,
+              "empirical": 0.0,
+              "bound_avg": 0.2539126692995153,
+              "floor": 0.09393962916504364
+            }
+          ]
+        },
+        "role": {
+          "rho_min": 1.0,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.95,
+              "empirical": 0.6666666666666666,
+              "bound_avg": 0.9979151625214528,
+              "floor": 0.9243391962898049
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.9,
+              "empirical": 0.35,
+              "bound_avg": 0.953651492477508,
+              "floor": 0.7134913010978737
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.8,
+              "empirical": 0.075,
+              "bound_avg": 0.6309422175166396,
+              "floor": 0.20886337462849192
+            }
+          ]
+        },
+        "social": {
+          "rho_min": 0.8499999999999998,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.6038461538461534,
+              "empirical": 0.0,
+              "bound_avg": 0.6144083860553321,
+              "floor": 0.7949871755741987
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.5538461538461534,
+              "empirical": 0.0,
+              "bound_avg": 0.27522086767606957,
+              "floor": 0.36536235478581147
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.4538461538461534,
+              "empirical": 0.0,
+              "bound_avg": 0.008424659159542346,
+              "floor": 0.007326941531453898
+            }
+          ]
+        },
+        "institutional": {
+          "rho_min": 1.0,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.95,
+              "empirical": 0.6666666666666666,
+              "bound_avg": 0.9979151625214528,
+              "floor": 0.9243391962898049
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.9,
+              "empirical": 0.35,
+              "bound_avg": 0.953651492477508,
+              "floor": 0.7134913010978737
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.8,
+              "empirical": 0.075,
+              "bound_avg": 0.6309422175166396,
+              "floor": 0.20886337462849192
+            }
+          ]
+        }
+      },
+      "window": {
+        "theta_e": 0.6475,
+        "e_max": 0.6283333333333334,
+        "error_threshold": 0.17625000000000002,
+        "empirical": 0.925,
+        "bound": 1.0
+      }
+    },
+    "domain shift + compromise: Qwen2.5-7B": {
+      "n_episodes": 2,
+      "theorem4": {
+        "epistemic": {
+          "rho_min": 0.049166666666666664,
+          "rows": []
+        },
+        "behavioural": {
+          "rho_min": 0.9499999999999997,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.8136363636363629,
+              "empirical": 0.37777777777777777,
+              "bound_avg": 0.9895215065866438,
+              "floor": 0.8904856114005034
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.763636363636363,
+              "empirical": 0.044444444444444446,
+              "bound_avg": 0.8742855979670303,
+              "floor": 0.6056848612161839
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.6636363636363629,
+              "empirical": 0.0,
+              "bound_avg": 0.280958501014822,
+              "floor": 0.09393962916504289
+            }
+          ]
+        },
+        "role": {
+          "rho_min": 1.0,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.95,
+              "empirical": 0.8888888888888888,
+              "bound_avg": 0.9999445105309761,
+              "floor": 0.9243391962898049
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.9,
+              "empirical": 0.4666666666666667,
+              "bound_avg": 0.9794501869687776,
+              "floor": 0.7134913010978737
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.8,
+              "empirical": 0.1,
+              "bound_avg": 0.712957164920248,
+              "floor": 0.20886337462849192
+            }
+          ]
+        },
+        "social": {
+          "rho_min": 0.8499999999999998,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.6038461538461534,
+              "empirical": 0.0,
+              "bound_avg": 0.5660748257391574,
+              "floor": 0.7949871755741987
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.5538461538461534,
+              "empirical": 0.0,
+              "bound_avg": 0.2457235865801223,
+              "floor": 0.36536235478581147
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.4538461538461534,
+              "empirical": 0.0,
+              "bound_avg": 0.007494977460387835,
+              "floor": 0.007326941531453898
+            }
+          ]
+        },
+        "institutional": {
+          "rho_min": 1.0,
+          "rows": [
+            {
+              "margin": 0.05,
+              "theta": 0.95,
+              "empirical": 0.8888888888888888,
+              "bound_avg": 0.9999445105309761,
+              "floor": 0.9243391962898049
+            },
+            {
+              "margin": 0.1,
+              "theta": 0.9,
+              "empirical": 0.4666666666666667,
+              "bound_avg": 0.9794501869687776,
+              "floor": 0.7134913010978737
+            },
+            {
+              "margin": 0.2,
+              "theta": 0.8,
+              "empirical": 0.1,
+              "bound_avg": 0.712957164920248,
+              "floor": 0.20886337462849192
+            }
+          ]
+        }
+      },
+      "window": {
+        "theta_e": 0.6475,
+        "e_max": 0.6283333333333334,
+        "error_threshold": 0.17625000000000002,
+        "empirical": 0.9777777777777777,
+        "bound": 1.0
+      },
+      "latency": {
+        "episodes": [
+          {
+            "rho0": 0.04083333333333334,
+            "rho1": 0.0,
+            "frac": 0.25,
+            "x": 0.010494003426613364,
+            "predicted": 18.582769881471457,
+            "predicted_state": 120.90296043835113,
+            "trust_at_compromise": 0.0838286038444423,
+            "horizon": 60,
+            "observed": "inf"
+          },
+          {
+            "rho0": 0.04083333333333334,
+            "rho1": 0.0,
+            "frac": 0.5,
+            "x": 0.00699600228440891,
+            "predicted": 44.95559557521706,
+            "predicted_state": 146.8253801697778,
+            "trust_at_compromise": 0.0838286038444423,
+            "horizon": 60,
+            "observed": "inf"
+          },
+          {
+            "rho0": 0.05749999999999998,
+            "rho1": 0.0,
+            "frac": 0.25,
+            "x": 0.014948006932409006,
+            "predicted": 18.397458439230174,
+            "predicted_state": 84.72815568306211,
+            "trust_at_compromise": 0.06533209376317456,
+            "horizon": 60,
+            "observed": "inf"
+          },
+          {
+            "rho0": 0.05749999999999998,
+            "rho1": 0.0,
+            "frac": 0.5,
+            "x": 0.009965337954939337,
+            "predicted": 44.58188428970866,
+            "predicted_state": 110.13709130573861,
+            "trust_at_compromise": 0.06533209376317456,
             "horizon": 60,
             "observed": "inf"
           }

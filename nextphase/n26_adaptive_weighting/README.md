@@ -45,6 +45,21 @@ so regret below the horizon means the weighting tracks the most-failing layer.
 | Claude Haiku 4.5 / TriviaQA | offtopic | 0.63 / 6.50 (horizon 2) | 1.61 / 4.01 (horizon 20) |
 | Claude Haiku 4.5 / TriviaQA | hostile | 0.64 / 6.50 (horizon 2) | 1.61 / 4.01 (horizon 20) |
 | Claude Haiku 4.5 / TriviaQA | honest | 0.81 / 6.50 (horizon 2) | 1.61 / 4.01 (horizon 20) |
+| Qwen3-4B / TriviaQA | sleeper | 1.14 / 6.50 (horizon 2) | 1.69 / 4.01 (horizon 20) |
+| Qwen3-4B / TriviaQA | policy | 0.81 / 6.50 (horizon 2) | 1.69 / 4.01 (horizon 20) |
+| Qwen3-4B / TriviaQA | offtopic | 0.89 / 6.50 (horizon 2) | 1.69 / 4.01 (horizon 20) |
+| Qwen3-4B / TriviaQA | hostile | 0.90 / 6.50 (horizon 2) | 1.69 / 4.01 (horizon 20) |
+| Qwen3-4B / TriviaQA | honest | 1.10 / 6.50 (horizon 2) | 1.69 / 4.01 (horizon 20) |
+| Qwen3-8B / TriviaQA | sleeper | 1.14 / 6.50 (horizon 2) | 1.68 / 4.01 (horizon 20) |
+| Qwen3-8B / TriviaQA | policy | 0.80 / 6.50 (horizon 2) | 1.68 / 4.01 (horizon 20) |
+| Qwen3-8B / TriviaQA | offtopic | 0.88 / 6.50 (horizon 2) | 1.68 / 4.01 (horizon 20) |
+| Qwen3-8B / TriviaQA | hostile | 0.90 / 6.50 (horizon 2) | 1.68 / 4.01 (horizon 20) |
+| Qwen3-8B / TriviaQA | honest | 1.10 / 6.50 (horizon 2) | 1.68 / 4.01 (horizon 20) |
+| Qwen2.5-7B / TriviaQA | sleeper | 1.14 / 6.50 (horizon 2) | 1.69 / 4.01 (horizon 20) |
+| Qwen2.5-7B / TriviaQA | policy | 0.81 / 6.50 (horizon 2) | 1.69 / 4.01 (horizon 20) |
+| Qwen2.5-7B / TriviaQA | offtopic | 0.88 / 6.50 (horizon 2) | 1.69 / 4.01 (horizon 20) |
+| Qwen2.5-7B / TriviaQA | hostile | 0.89 / 6.50 (horizon 2) | 1.69 / 4.01 (horizon 20) |
+| Qwen2.5-7B / TriviaQA | honest | 1.09 / 6.50 (horizon 2) | 1.69 / 4.01 (horizon 20) |
 | Claude Sonnet 4.5 / MedMCQA | sleeper | 1.10 / 6.50 (horizon 2) | 1.61 / 4.01 (horizon 20) |
 | Claude Sonnet 4.5 / MedMCQA | policy | 0.83 / 6.50 (horizon 2) | 1.61 / 4.01 (horizon 20) |
 | Claude Sonnet 4.5 / MedMCQA | offtopic | 0.72 / 6.50 (horizon 2) | 1.61 / 4.01 (horizon 20) |
@@ -60,6 +75,21 @@ so regret below the horizon means the weighting tracks the most-failing layer.
 | Claude Haiku 4.5 / MedMCQA | offtopic | 0.76 / 6.50 (horizon 2) | 1.65 / 4.01 (horizon 20) |
 | Claude Haiku 4.5 / MedMCQA | hostile | 0.78 / 6.50 (horizon 2) | 1.65 / 4.01 (horizon 20) |
 | Claude Haiku 4.5 / MedMCQA | honest | 0.97 / 6.50 (horizon 2) | 1.65 / 4.01 (horizon 20) |
+| Qwen3-4B / MedMCQA | sleeper | 1.15 / 6.50 (horizon 2) | 1.70 / 4.01 (horizon 20) |
+| Qwen3-4B / MedMCQA | policy | 0.81 / 6.50 (horizon 2) | 1.70 / 4.01 (horizon 20) |
+| Qwen3-4B / MedMCQA | offtopic | 0.88 / 6.50 (horizon 2) | 1.70 / 4.01 (horizon 20) |
+| Qwen3-4B / MedMCQA | hostile | 0.90 / 6.50 (horizon 2) | 1.70 / 4.01 (horizon 20) |
+| Qwen3-4B / MedMCQA | honest | 1.09 / 6.50 (horizon 2) | 1.70 / 4.01 (horizon 20) |
+| Qwen3-8B / MedMCQA | sleeper | 1.13 / 6.50 (horizon 2) | 1.68 / 4.01 (horizon 20) |
+| Qwen3-8B / MedMCQA | policy | 0.80 / 6.50 (horizon 2) | 1.68 / 4.01 (horizon 20) |
+| Qwen3-8B / MedMCQA | offtopic | 0.88 / 6.50 (horizon 2) | 1.68 / 4.01 (horizon 20) |
+| Qwen3-8B / MedMCQA | hostile | 0.90 / 6.50 (horizon 2) | 1.68 / 4.01 (horizon 20) |
+| Qwen3-8B / MedMCQA | honest | 1.10 / 6.50 (horizon 2) | 1.68 / 4.01 (horizon 20) |
+| Qwen2.5-7B / MedMCQA | sleeper | 1.15 / 6.50 (horizon 2) | 1.69 / 4.01 (horizon 20) |
+| Qwen2.5-7B / MedMCQA | policy | 0.80 / 6.50 (horizon 2) | 1.69 / 4.01 (horizon 20) |
+| Qwen2.5-7B / MedMCQA | offtopic | 0.87 / 6.50 (horizon 2) | 1.69 / 4.01 (horizon 20) |
+| Qwen2.5-7B / MedMCQA | hostile | 0.88 / 6.50 (horizon 2) | 1.69 / 4.01 (horizon 20) |
+| Qwen2.5-7B / MedMCQA | honest | 1.08 / 6.50 (horizon 2) | 1.69 / 4.01 (horizon 20) |
 
 At the default lam = 0.5 the memory is two steps and the bound (about 6.5) exceeds the horizon, so the
 guarantee is formally valid but uninformative; the tuned setting gives a non-vacuous bound.
@@ -83,6 +113,21 @@ guarantee is formally valid but uninformative; the tuned setting gives a non-vac
 | Claude Haiku 4.5 / TriviaQA | TGCC | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] | 0.73 [0.52, 0.94] |
 | Claude Haiku 4.5 / TriviaQA | TGCC-FixedW | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] | 0.73 [0.52, 0.94] |
 | Claude Haiku 4.5 / TriviaQA | TGCC-TunedHedge | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] | 0.73 [0.52, 0.94] |
+| Qwen3-4B / TriviaQA | TGCC-R | 0.83 [0.78, 0.92] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] | 0.01 [0.00, 0.03] |
+| Qwen3-4B / TriviaQA | TGCC-R-FixedW | 0.82 [0.76, 0.90] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] | 0.01 [0.00, 0.03] |
+| Qwen3-4B / TriviaQA | TGCC | 0.82 [0.78, 0.88] | 0.79 [0.76, 0.82] | 1.00 [1.00, 1.00] | 0.92 [0.85, 0.98] | 0.00 [0.00, 0.00] |
+| Qwen3-4B / TriviaQA | TGCC-FixedW | 0.81 [0.76, 0.86] | 0.76 [0.73, 0.80] | 0.99 [0.98, 1.00] | 0.88 [0.81, 0.94] | 0.00 [0.00, 0.00] |
+| Qwen3-4B / TriviaQA | TGCC-TunedHedge | 0.91 [0.86, 0.96] | 1.00 [1.00, 1.00] | 1.00 [1.00, 1.00] | 1.00 [1.00, 1.00] | 0.00 [0.00, 0.00] |
+| Qwen3-8B / TriviaQA | TGCC-R | 0.33 [0.29, 0.40] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] |
+| Qwen3-8B / TriviaQA | TGCC-R-FixedW | 0.32 [0.28, 0.40] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] |
+| Qwen3-8B / TriviaQA | TGCC | 0.57 [0.54, 0.61] | 0.58 [0.53, 0.62] | 0.77 [0.66, 0.89] | 0.61 [0.53, 0.70] | 0.00 [0.00, 0.00] |
+| Qwen3-8B / TriviaQA | TGCC-FixedW | 0.57 [0.53, 0.61] | 0.56 [0.51, 0.60] | 0.73 [0.62, 0.83] | 0.59 [0.52, 0.68] | 0.00 [0.00, 0.00] |
+| Qwen3-8B / TriviaQA | TGCC-TunedHedge | 0.65 [0.61, 0.69] | 0.83 [0.73, 0.93] | 0.89 [0.80, 0.98] | 0.89 [0.80, 0.98] | 0.00 [0.00, 0.00] |
+| Qwen2.5-7B / TriviaQA | TGCC-R | 0.23 [0.14, 0.35] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] |
+| Qwen2.5-7B / TriviaQA | TGCC-R-FixedW | 0.23 [0.14, 0.35] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] |
+| Qwen2.5-7B / TriviaQA | TGCC | 0.26 [0.20, 0.33] | 0.25 [0.19, 0.30] | 0.28 [0.20, 0.35] | 0.24 [0.18, 0.29] | 0.00 [0.00, 0.00] |
+| Qwen2.5-7B / TriviaQA | TGCC-FixedW | 0.26 [0.20, 0.32] | 0.24 [0.18, 0.29] | 0.27 [0.20, 0.34] | 0.22 [0.17, 0.27] | 0.00 [0.00, 0.00] |
+| Qwen2.5-7B / TriviaQA | TGCC-TunedHedge | 0.29 [0.23, 0.35] | 0.32 [0.24, 0.39] | 0.32 [0.24, 0.39] | 0.32 [0.24, 0.39] | 0.00 [0.00, 0.00] |
 | Claude Sonnet 4.5 / MedMCQA | TGCC-R | 0.30 [0.20, 0.42] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] |
 | Claude Sonnet 4.5 / MedMCQA | TGCC-R-FixedW | 0.30 [0.20, 0.42] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] |
 | Claude Sonnet 4.5 / MedMCQA | TGCC | 0.51 [0.42, 0.61] | 0.40 [0.38, 0.42] | 0.88 [0.76, 0.98] | 0.62 [0.53, 0.71] | 0.00 [0.00, 0.00] |
@@ -98,5 +143,20 @@ guarantee is formally valid but uninformative; the tuned setting gives a non-vac
 | Claude Haiku 4.5 / MedMCQA | TGCC | 0.04 [0.03, 0.06] | 0.53 [0.47, 0.60] | 0.93 [0.87, 0.98] | 0.80 [0.63, 0.97] | 0.15 [0.00, 0.31] |
 | Claude Haiku 4.5 / MedMCQA | TGCC-FixedW | 0.04 [0.03, 0.06] | 0.52 [0.45, 0.59] | 0.93 [0.87, 0.98] | 0.77 [0.59, 0.94] | 0.15 [0.00, 0.31] |
 | Claude Haiku 4.5 / MedMCQA | TGCC-TunedHedge | 0.04 [0.03, 0.06] | 0.73 [0.69, 0.78] | 0.93 [0.87, 0.98] | 0.93 [0.87, 0.98] | 0.15 [0.00, 0.31] |
+| Qwen3-4B / MedMCQA | TGCC-R | 0.72 [0.62, 0.86] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] |
+| Qwen3-4B / MedMCQA | TGCC-R-FixedW | 0.71 [0.61, 0.86] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] |
+| Qwen3-4B / MedMCQA | TGCC | 1.00 [1.00, 1.00] | 1.00 [1.00, 1.00] | 1.00 [1.00, 1.00] | 1.00 [1.00, 1.00] | 0.00 [0.00, 0.00] |
+| Qwen3-4B / MedMCQA | TGCC-FixedW | 1.00 [1.00, 1.00] | 1.00 [1.00, 1.00] | 1.00 [1.00, 1.00] | 1.00 [1.00, 1.00] | 0.00 [0.00, 0.00] |
+| Qwen3-4B / MedMCQA | TGCC-TunedHedge | 1.00 [1.00, 1.00] | 1.00 [1.00, 1.00] | 1.00 [1.00, 1.00] | 1.00 [1.00, 1.00] | 0.00 [0.00, 0.00] |
+| Qwen3-8B / MedMCQA | TGCC-R | 0.65 [0.57, 0.77] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] |
+| Qwen3-8B / MedMCQA | TGCC-R-FixedW | 0.63 [0.55, 0.74] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] |
+| Qwen3-8B / MedMCQA | TGCC | 1.00 [1.00, 1.00] | 1.00 [1.00, 1.00] | 1.00 [1.00, 1.00] | 1.00 [1.00, 1.00] | 0.00 [0.00, 0.00] |
+| Qwen3-8B / MedMCQA | TGCC-FixedW | 1.00 [1.00, 1.00] | 1.00 [1.00, 1.00] | 1.00 [1.00, 1.00] | 1.00 [1.00, 1.00] | 0.00 [0.00, 0.00] |
+| Qwen3-8B / MedMCQA | TGCC-TunedHedge | 1.00 [1.00, 1.00] | 1.00 [1.00, 1.00] | 1.00 [1.00, 1.00] | 1.00 [1.00, 1.00] | 0.00 [0.00, 0.00] |
+| Qwen2.5-7B / MedMCQA | TGCC-R | 1.00 [1.00, 1.00] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] |
+| Qwen2.5-7B / MedMCQA | TGCC-R-FixedW | 1.00 [1.00, 1.00] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] | 0.00 [0.00, 0.00] |
+| Qwen2.5-7B / MedMCQA | TGCC | 1.00 [1.00, 1.00] | 1.00 [1.00, 1.00] | 1.00 [1.00, 1.00] | 1.00 [1.00, 1.00] | 0.00 [0.00, 0.00] |
+| Qwen2.5-7B / MedMCQA | TGCC-FixedW | 1.00 [1.00, 1.00] | 1.00 [1.00, 1.00] | 1.00 [1.00, 1.00] | 1.00 [1.00, 1.00] | 0.00 [0.00, 0.00] |
+| Qwen2.5-7B / MedMCQA | TGCC-TunedHedge | 1.00 [1.00, 1.00] | 1.00 [1.00, 1.00] | 1.00 [1.00, 1.00] | 1.00 [1.00, 1.00] | 0.00 [0.00, 0.00] |
 
 ![ablation](figures/weighting_ablation.png)

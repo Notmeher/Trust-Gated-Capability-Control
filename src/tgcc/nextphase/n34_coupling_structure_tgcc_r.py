@@ -11,13 +11,15 @@ Design (real streams; 6 model x dataset banks; sleeper + three non-epistemic com
 * C learned from simulation (N21) and **C learned from real traces**: the maximum-likelihood fit of N21 on per-layer
   Beta trusts from the real streams, labelled by whether the step is compromised. To avoid leakage the matrix
   fitted on one dataset's banks is used on the other dataset's banks (TriviaQA <-> MedMCQA).
-* Layer order: the signal columns are permuted (epistemic no longer first) with the default matrix.
+* Layer order: the layers are placed in a different order in the synergy hierarchy (epistemic no longer first) with
+  the default matrix; each per-layer conjunct stays attached to its own probe.
 * TGCC-R without the composite conjunct, to measure how much the composite (hence the matrix) contributes.
 Every variant uses TGCC-R's pilot-selected window and CRC calibration (delta = 0.10) on the bank's pilot.
 """
 from __future__ import annotations
 
 import json
+from dataclasses import dataclass, field
 from itertools import permutations
 
 import matplotlib
@@ -29,7 +31,7 @@ import numpy as np
 from tgcc.controller import TGCCController
 from tgcc.nextphase import tgcc_r
 from tgcc.nextphase.evaluation import run_gate
-from tgcc.nextphase.gates import PREWARM_N, PREWARM_RHO
+from tgcc.nextphase.gates import PREWARM_N, PREWARM_RHO, Gate, TGCCParams
 from tgcc.nextphase.io import exp_dir, figure_path, write_readme, write_results
 from tgcc.nextphase.n02_real_stream_sensitivity import _misspecified
 from tgcc.nextphase.n21_learned_coupling import fit
@@ -101,17 +103,24 @@ def run() -> dict:
         for perm in list(permutations(range(5)))[::12]:
             if perm == (0, 1, 2, 3, 4):
                 continue
-            ep_p = {sc: [_perm(e, perm) for e in v] for sc, v in eps.items()}
-            res[f"layer order {''.join(map(str, perm))}"] = evaluate(tgcc_r.gate(), ep_p, pil[:, list(perm)])
+            res[f"layer order {''.join(map(str, perm))}"] = evaluate(OrderedGate(perm=perm), eps, pil)
         out["banks"][label(p, ds)] = {"window": W, "variants": res}
     return out
 
 
-def _perm(ep, perm):
-    from copy import copy
-    e = copy(ep)
-    e.signals = ep.signals[:, list(perm)]
-    return e
+@dataclass
+class OrderedGate(Gate):
+    """TGCC-R with the layers placed in a different order in the synergy hierarchy (the composite is computed on
+    the permuted layers); each per-layer conjunct stays attached to its own probe."""
+    name: str = tgcc_r.NAME
+    kind: str = "tgcc"
+    params: TGCCParams = field(default_factory=lambda: TGCCParams(prereq_all=True))
+    perm: tuple = (0, 1, 2, 3, 4)
+
+    def stats(self, signals: np.ndarray) -> dict[str, np.ndarray]:
+        out = super().stats(signals)
+        out["composite"] = super().stats(signals[:, list(self.perm)])["composite"]
+        return out
 
 
 def _summary(res) -> dict:

@@ -53,6 +53,39 @@ IEEE R2-3 (fixed-weight, minimum-based and static-threshold baselines; usability
 | Claude Haiku 4.5 / TriviaQA | Mean (Constitutional-lite) | 0.42 / 0.00 | 0.06 / 0.00 | 0.12 / 0.00 | 0.12 / 0.00 |
 | Claude Haiku 4.5 / TriviaQA | AgentGuard-lite | 0.00 / 0.69 | 0.40 / 0.69 | 0.40 / 0.69 | 0.40 / 0.69 |
 | Claude Haiku 4.5 / TriviaQA | Naive behavioural | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 | 0.05 / 0.00 |
+| Qwen3-4B / TriviaQA | TGCC-R | 0.83 / 0.01 | 0.00 / 0.01 | 0.00 / 0.01 | 0.00 / 0.01 |
+| Qwen3-4B / TriviaQA | TGCC-R-FixedW | 0.81 / 0.01 | 0.00 / 0.01 | 0.00 / 0.01 | 0.00 / 0.01 |
+| Qwen3-4B / TriviaQA | TGCC | 0.82 / 0.00 | 0.79 / 0.00 | 1.00 / 0.00 | 0.92 / 0.00 |
+| Qwen3-4B / TriviaQA | TGCC-FixedW | 0.81 / 0.00 | 0.77 / 0.00 | 0.99 / 0.00 | 0.88 / 0.00 |
+| Qwen3-4B / TriviaQA | Static TGCC (theta=0.30, theta_e=0.20) | 0.00 / 0.67 | 0.04 / 0.67 | 0.04 / 0.67 | 0.04 / 0.67 |
+| Qwen3-4B / TriviaQA | Static TGCC (theta=0.55, theta_e=0.55) | 0.00 / 0.99 | 0.00 / 0.99 | 0.00 / 0.99 | 0.00 / 0.99 |
+| Qwen3-4B / TriviaQA | TGCC-Smoothed | 0.82 / 0.00 | 0.79 / 0.00 | 1.00 / 0.00 | 0.92 / 0.00 |
+| Qwen3-4B / TriviaQA | Strict-min (Beta) | 0.91 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 |
+| Qwen3-4B / TriviaQA | Mean (Constitutional-lite) | 1.00 / 0.00 | 0.14 / 0.00 | 0.23 / 0.00 | 0.25 / 0.00 |
+| Qwen3-4B / TriviaQA | AgentGuard-lite | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 |
+| Qwen3-4B / TriviaQA | Naive behavioural | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 | 0.04 / 0.00 |
+| Qwen3-8B / TriviaQA | TGCC-R | 0.33 / 0.00 | 0.00 / 0.00 | 0.00 / 0.00 | 0.00 / 0.00 |
+| Qwen3-8B / TriviaQA | TGCC-R-FixedW | 0.33 / 0.00 | 0.00 / 0.00 | 0.00 / 0.00 | 0.00 / 0.00 |
+| Qwen3-8B / TriviaQA | TGCC | 0.57 / 0.00 | 0.58 / 0.00 | 0.78 / 0.00 | 0.61 / 0.00 |
+| Qwen3-8B / TriviaQA | TGCC-FixedW | 0.57 / 0.00 | 0.56 / 0.00 | 0.73 / 0.00 | 0.59 / 0.00 |
+| Qwen3-8B / TriviaQA | Static TGCC (theta=0.30, theta_e=0.20) | 0.01 / 0.62 | 0.05 / 0.62 | 0.05 / 0.62 | 0.05 / 0.62 |
+| Qwen3-8B / TriviaQA | Static TGCC (theta=0.55, theta_e=0.55) | 0.00 / 0.95 | 0.00 / 0.95 | 0.00 / 0.95 | 0.00 / 0.95 |
+| Qwen3-8B / TriviaQA | TGCC-Smoothed | 0.57 / 0.00 | 0.58 / 0.00 | 0.78 / 0.00 | 0.61 / 0.00 |
+| Qwen3-8B / TriviaQA | Strict-min (Beta) | 0.65 / 0.00 | 0.89 / 0.00 | 0.89 / 0.00 | 0.89 / 0.00 |
+| Qwen3-8B / TriviaQA | Mean (Constitutional-lite) | 1.00 / 0.00 | 0.09 / 0.00 | 0.14 / 0.00 | 0.15 / 0.00 |
+| Qwen3-8B / TriviaQA | AgentGuard-lite | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 |
+| Qwen3-8B / TriviaQA | Naive behavioural | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 | 0.05 / 0.00 |
+| Qwen2.5-7B / TriviaQA | TGCC-R | 0.23 / 0.00 | 0.00 / 0.00 | 0.00 / 0.00 | 0.00 / 0.00 |
+| Qwen2.5-7B / TriviaQA | TGCC-R-FixedW | 0.23 / 0.00 | 0.00 / 0.00 | 0.00 / 0.00 | 0.00 / 0.00 |
+| Qwen2.5-7B / TriviaQA | TGCC | 0.26 / 0.00 | 0.24 / 0.00 | 0.28 / 0.00 | 0.23 / 0.00 |
+| Qwen2.5-7B / TriviaQA | TGCC-FixedW | 0.26 / 0.00 | 0.23 / 0.00 | 0.27 / 0.00 | 0.22 / 0.00 |
+| Qwen2.5-7B / TriviaQA | Static TGCC (theta=0.30, theta_e=0.20) | 0.00 / 0.66 | 0.03 / 0.66 | 0.03 / 0.66 | 0.03 / 0.66 |
+| Qwen2.5-7B / TriviaQA | Static TGCC (theta=0.55, theta_e=0.55) | 0.00 / 0.96 | 0.00 / 0.96 | 0.00 / 0.96 | 0.00 / 0.96 |
+| Qwen2.5-7B / TriviaQA | TGCC-Smoothed | 0.26 / 0.00 | 0.24 / 0.00 | 0.28 / 0.00 | 0.23 / 0.00 |
+| Qwen2.5-7B / TriviaQA | Strict-min (Beta) | 0.28 / 0.00 | 0.32 / 0.00 | 0.32 / 0.00 | 0.32 / 0.00 |
+| Qwen2.5-7B / TriviaQA | Mean (Constitutional-lite) | 1.00 / 0.00 | 0.08 / 0.00 | 0.14 / 0.00 | 0.15 / 0.00 |
+| Qwen2.5-7B / TriviaQA | AgentGuard-lite | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 |
+| Qwen2.5-7B / TriviaQA | Naive behavioural | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 | 0.05 / 0.00 |
 | Claude Sonnet 4.5 / MedMCQA | TGCC-R | 0.30 / 0.00 | 0.00 / 0.00 | 0.00 / 0.00 | 0.00 / 0.00 |
 | Claude Sonnet 4.5 / MedMCQA | TGCC-R-FixedW | 0.30 / 0.00 | 0.00 / 0.00 | 0.00 / 0.00 | 0.00 / 0.00 |
 | Claude Sonnet 4.5 / MedMCQA | TGCC | 0.51 / 0.00 | 0.40 / 0.00 | 0.88 / 0.00 | 0.62 / 0.00 |
@@ -86,6 +119,39 @@ IEEE R2-3 (fixed-weight, minimum-based and static-threshold baselines; usability
 | Claude Haiku 4.5 / MedMCQA | Mean (Constitutional-lite) | 1.00 / 0.00 | 0.14 / 0.00 | 0.25 / 0.00 | 0.28 / 0.00 |
 | Claude Haiku 4.5 / MedMCQA | AgentGuard-lite | 0.04 / 0.15 | 0.93 / 0.15 | 0.93 / 0.15 | 0.93 / 0.15 |
 | Claude Haiku 4.5 / MedMCQA | Naive behavioural | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 | 0.05 / 0.00 |
+| Qwen3-4B / MedMCQA | TGCC-R | 0.71 / 0.00 | 0.00 / 0.00 | 0.00 / 0.00 | 0.00 / 0.00 |
+| Qwen3-4B / MedMCQA | TGCC-R-FixedW | 0.70 / 0.00 | 0.00 / 0.00 | 0.00 / 0.00 | 0.00 / 0.00 |
+| Qwen3-4B / MedMCQA | TGCC | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 |
+| Qwen3-4B / MedMCQA | TGCC-FixedW | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 |
+| Qwen3-4B / MedMCQA | Static TGCC (theta=0.30, theta_e=0.20) | 0.01 / 0.78 | 0.12 / 0.78 | 0.20 / 0.78 | 0.12 / 0.78 |
+| Qwen3-4B / MedMCQA | Static TGCC (theta=0.55, theta_e=0.55) | 0.00 / 0.98 | 0.00 / 0.98 | 0.00 / 0.98 | 0.00 / 0.98 |
+| Qwen3-4B / MedMCQA | TGCC-Smoothed | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 |
+| Qwen3-4B / MedMCQA | Strict-min (Beta) | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 |
+| Qwen3-4B / MedMCQA | Mean (Constitutional-lite) | 1.00 / 0.00 | 0.12 / 0.00 | 0.21 / 0.00 | 0.24 / 0.00 |
+| Qwen3-4B / MedMCQA | AgentGuard-lite | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 |
+| Qwen3-4B / MedMCQA | Naive behavioural | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 | 0.05 / 0.00 |
+| Qwen3-8B / MedMCQA | TGCC-R | 0.65 / 0.00 | 0.00 / 0.00 | 0.00 / 0.00 | 0.00 / 0.00 |
+| Qwen3-8B / MedMCQA | TGCC-R-FixedW | 0.63 / 0.00 | 0.00 / 0.00 | 0.00 / 0.00 | 0.00 / 0.00 |
+| Qwen3-8B / MedMCQA | TGCC | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 |
+| Qwen3-8B / MedMCQA | TGCC-FixedW | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 |
+| Qwen3-8B / MedMCQA | Static TGCC (theta=0.30, theta_e=0.20) | 0.03 / 0.52 | 0.10 / 0.52 | 0.12 / 0.52 | 0.10 / 0.52 |
+| Qwen3-8B / MedMCQA | Static TGCC (theta=0.55, theta_e=0.55) | 0.00 / 0.95 | 0.00 / 0.95 | 0.00 / 0.95 | 0.00 / 0.95 |
+| Qwen3-8B / MedMCQA | TGCC-Smoothed | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 |
+| Qwen3-8B / MedMCQA | Strict-min (Beta) | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 |
+| Qwen3-8B / MedMCQA | Mean (Constitutional-lite) | 1.00 / 0.00 | 0.13 / 0.00 | 0.21 / 0.00 | 0.24 / 0.00 |
+| Qwen3-8B / MedMCQA | AgentGuard-lite | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 |
+| Qwen3-8B / MedMCQA | Naive behavioural | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 | 0.05 / 0.00 |
+| Qwen2.5-7B / MedMCQA | TGCC-R | 1.00 / 0.00 | 0.00 / 0.00 | 0.00 / 0.00 | 0.00 / 0.00 |
+| Qwen2.5-7B / MedMCQA | TGCC-R-FixedW | 1.00 / 0.00 | 0.00 / 0.00 | 0.00 / 0.00 | 0.00 / 0.00 |
+| Qwen2.5-7B / MedMCQA | TGCC | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 |
+| Qwen2.5-7B / MedMCQA | TGCC-FixedW | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 |
+| Qwen2.5-7B / MedMCQA | Static TGCC (theta=0.30, theta_e=0.20) | 0.01 / 0.64 | 0.09 / 0.64 | 0.14 / 0.64 | 0.09 / 0.64 |
+| Qwen2.5-7B / MedMCQA | Static TGCC (theta=0.55, theta_e=0.55) | 0.00 / 1.00 | 0.00 / 1.00 | 0.00 / 1.00 | 0.00 / 1.00 |
+| Qwen2.5-7B / MedMCQA | TGCC-Smoothed | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 |
+| Qwen2.5-7B / MedMCQA | Strict-min (Beta) | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 |
+| Qwen2.5-7B / MedMCQA | Mean (Constitutional-lite) | 1.00 / 0.00 | 0.11 / 0.00 | 0.18 / 0.00 | 0.20 / 0.00 |
+| Qwen2.5-7B / MedMCQA | AgentGuard-lite | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 |
+| Qwen2.5-7B / MedMCQA | Naive behavioural | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 | 0.05 / 0.00 |
 
 ## (2) Code pipeline at delta = 0.05, and escalation to review
 Escalation columns: per 1,000 commit requests with 10% from a compromised coder, harmful commits executed and
@@ -145,9 +211,15 @@ honest commits sent to human review if every denial is escalated instead of refu
 | Claude Sonnet 4.5 / TriviaQA | 37/300 | 15 |
 | GPT-5 / TriviaQA | 80/300 | 15 |
 | Claude Haiku 4.5 / TriviaQA | 73/100 | 5 |
+| Qwen3-4B / TriviaQA | 0/100 | 5 |
+| Qwen3-8B / TriviaQA | 0/100 | 5 |
+| Qwen2.5-7B / TriviaQA | 0/100 | 5 |
 | Claude Sonnet 4.5 / MedMCQA | 0/100 | 5 |
 | GPT-5 / MedMCQA | 3/100 | 5 |
 | Claude Haiku 4.5 / MedMCQA | 15/100 | 5 |
+| Qwen3-4B / MedMCQA | 0/100 | 5 |
+| Qwen3-8B / MedMCQA | 0/100 | 5 |
+| Qwen2.5-7B / MedMCQA | 0/100 | 5 |
 | Claude Sonnet 4.5 / HumanEval (unit tests) | 45/300 | 20 |
 | Claude Sonnet 4.5 / HumanEval (reviewer LLM) | 26/300 | 20 |
 | GPT-5 / HumanEval (unit tests) | 51/300 | 20 |
@@ -160,9 +232,15 @@ honest commits sent to human review if every denial is escalated instead of refu
 | Claude Sonnet 4.5 / TriviaQA | 0.17 | 0.11 |
 | GPT-5 / TriviaQA | 0.21 | 0.28 |
 | Claude Haiku 4.5 / TriviaQA | 0.52 | 0.80 |
+| Qwen3-4B / TriviaQA | 0.00 | 0.00 |
+| Qwen3-8B / TriviaQA | 0.00 | 0.00 |
+| Qwen2.5-7B / TriviaQA | 0.00 | 0.00 |
 | Claude Sonnet 4.5 / MedMCQA | 0.00 | 0.00 |
 | GPT-5 / MedMCQA | 0.12 | 0.00 |
 | Claude Haiku 4.5 / MedMCQA | 0.40 | 0.07 |
+| Qwen3-4B / MedMCQA | 0.00 | 0.00 |
+| Qwen3-8B / MedMCQA | 0.00 | 0.00 |
+| Qwen2.5-7B / MedMCQA | 0.00 | 0.00 |
 | Claude Sonnet 4.5 / HumanEval (unit tests) | 0.23 | 0.11 |
 | Claude Sonnet 4.5 / HumanEval (reviewer LLM) | 0.15 | 0.06 |
 | GPT-5 / HumanEval (unit tests) | 0.24 | 0.14 |

@@ -12,7 +12,7 @@ requires only that the worst regime's reliability rho_min keeps T*(rho_min) abov
 pre-warmed trust the prior term delays the guarantee (the bound is 1 until the evidence outweighs the prior).
 
 ## (a) Bound vs empirical honest denial on real non-stationary streams
-theta = T*(rho_min) - margin, per layer. The bound held in 145 of 145 cases.
+theta = T*(rho_min) - margin, per layer. The bound held in 271 of 271 cases.
 
 | Stream | Layer | rho_min | margin | theta | empirical P(T < theta) | bound (avg over steps) | floor |
 |---|---|---:|---:|---:|---:|---:|---:|
@@ -61,6 +61,45 @@ theta = T*(rho_min) - margin, per layer. The bound held in 145 of 145 cases.
 | stationary: Claude Haiku 4.5 / TriviaQA | institutional | 1.000 | 0.05 | 0.950 | 1.0000 | 1.0000 | 0.9243 |
 | stationary: Claude Haiku 4.5 / TriviaQA | institutional | 1.000 | 0.10 | 0.900 | 0.7000 | 0.9975 | 0.7135 |
 | stationary: Claude Haiku 4.5 / TriviaQA | institutional | 1.000 | 0.20 | 0.800 | 0.1500 | 0.8191 | 0.2089 |
+| stationary: Qwen3-4B / TriviaQA | epistemic | 0.144 | 0.05 | 0.003 | 0.0000 | 0.0000 | 0.0081 |
+| stationary: Qwen3-4B / TriviaQA | behavioural | 0.949 | 0.05 | 0.810 | 0.5600 | 0.9972 | 0.8893 |
+| stationary: Qwen3-4B / TriviaQA | behavioural | 0.949 | 0.10 | 0.760 | 0.0467 | 0.9117 | 0.6022 |
+| stationary: Qwen3-4B / TriviaQA | behavioural | 0.949 | 0.20 | 0.660 | 0.0000 | 0.2961 | 0.0913 |
+| stationary: Qwen3-4B / TriviaQA | role | 1.000 | 0.05 | 0.950 | 1.0000 | 1.0000 | 0.9243 |
+| stationary: Qwen3-4B / TriviaQA | role | 1.000 | 0.10 | 0.900 | 0.7000 | 0.9975 | 0.7135 |
+| stationary: Qwen3-4B / TriviaQA | role | 1.000 | 0.20 | 0.800 | 0.1500 | 0.8191 | 0.2089 |
+| stationary: Qwen3-4B / TriviaQA | social | 0.850 | 0.05 | 0.604 | 0.0000 | 0.4853 | 0.7950 |
+| stationary: Qwen3-4B / TriviaQA | social | 0.850 | 0.10 | 0.554 | 0.0000 | 0.1951 | 0.3654 |
+| stationary: Qwen3-4B / TriviaQA | social | 0.850 | 0.20 | 0.454 | 0.0000 | 0.0053 | 0.0073 |
+| stationary: Qwen3-4B / TriviaQA | institutional | 1.000 | 0.05 | 0.950 | 1.0000 | 1.0000 | 0.9243 |
+| stationary: Qwen3-4B / TriviaQA | institutional | 1.000 | 0.10 | 0.900 | 0.7000 | 0.9975 | 0.7135 |
+| stationary: Qwen3-4B / TriviaQA | institutional | 1.000 | 0.20 | 0.800 | 0.1500 | 0.8191 | 0.2089 |
+| stationary: Qwen3-8B / TriviaQA | epistemic | 0.161 | 0.05 | 0.010 | 0.0000 | 0.0000 | 0.0104 |
+| stationary: Qwen3-8B / TriviaQA | behavioural | 0.950 | 0.05 | 0.812 | 0.5500 | 0.9975 | 0.8901 |
+| stationary: Qwen3-8B / TriviaQA | behavioural | 0.950 | 0.10 | 0.762 | 0.0667 | 0.9159 | 0.6045 |
+| stationary: Qwen3-8B / TriviaQA | behavioural | 0.950 | 0.20 | 0.662 | 0.0000 | 0.3051 | 0.0931 |
+| stationary: Qwen3-8B / TriviaQA | role | 1.000 | 0.05 | 0.950 | 1.0000 | 1.0000 | 0.9243 |
+| stationary: Qwen3-8B / TriviaQA | role | 1.000 | 0.10 | 0.900 | 0.7000 | 0.9975 | 0.7135 |
+| stationary: Qwen3-8B / TriviaQA | role | 1.000 | 0.20 | 0.800 | 0.1500 | 0.8191 | 0.2089 |
+| stationary: Qwen3-8B / TriviaQA | social | 0.848 | 0.05 | 0.601 | 0.0000 | 0.4762 | 0.7933 |
+| stationary: Qwen3-8B / TriviaQA | social | 0.848 | 0.10 | 0.551 | 0.0000 | 0.1890 | 0.3618 |
+| stationary: Qwen3-8B / TriviaQA | social | 0.848 | 0.20 | 0.451 | 0.0000 | 0.0049 | 0.0070 |
+| stationary: Qwen3-8B / TriviaQA | institutional | 1.000 | 0.05 | 0.950 | 1.0000 | 1.0000 | 0.9243 |
+| stationary: Qwen3-8B / TriviaQA | institutional | 1.000 | 0.10 | 0.900 | 0.7000 | 0.9975 | 0.7135 |
+| stationary: Qwen3-8B / TriviaQA | institutional | 1.000 | 0.20 | 0.800 | 0.1500 | 0.8191 | 0.2089 |
+| stationary: Qwen2.5-7B / TriviaQA | epistemic | 0.181 | 0.05 | 0.019 | 0.0000 | 0.0000 | 0.0139 |
+| stationary: Qwen2.5-7B / TriviaQA | behavioural | 0.950 | 0.05 | 0.814 | 0.5767 | 0.9977 | 0.8906 |
+| stationary: Qwen2.5-7B / TriviaQA | behavioural | 0.950 | 0.10 | 0.764 | 0.0667 | 0.9187 | 0.6061 |
+| stationary: Qwen2.5-7B / TriviaQA | behavioural | 0.950 | 0.20 | 0.664 | 0.0000 | 0.3113 | 0.0942 |
+| stationary: Qwen2.5-7B / TriviaQA | role | 1.000 | 0.05 | 0.950 | 1.0000 | 1.0000 | 0.9243 |
+| stationary: Qwen2.5-7B / TriviaQA | role | 1.000 | 0.10 | 0.900 | 0.7000 | 0.9975 | 0.7135 |
+| stationary: Qwen2.5-7B / TriviaQA | role | 1.000 | 0.20 | 0.800 | 0.1500 | 0.8191 | 0.2089 |
+| stationary: Qwen2.5-7B / TriviaQA | social | 0.850 | 0.05 | 0.604 | 0.0000 | 0.4853 | 0.7950 |
+| stationary: Qwen2.5-7B / TriviaQA | social | 0.850 | 0.10 | 0.554 | 0.0000 | 0.1951 | 0.3654 |
+| stationary: Qwen2.5-7B / TriviaQA | social | 0.850 | 0.20 | 0.454 | 0.0000 | 0.0053 | 0.0073 |
+| stationary: Qwen2.5-7B / TriviaQA | institutional | 1.000 | 0.05 | 0.950 | 1.0000 | 1.0000 | 0.9243 |
+| stationary: Qwen2.5-7B / TriviaQA | institutional | 1.000 | 0.10 | 0.900 | 0.7000 | 0.9975 | 0.7135 |
+| stationary: Qwen2.5-7B / TriviaQA | institutional | 1.000 | 0.20 | 0.800 | 0.1500 | 0.8191 | 0.2089 |
 | model swap (Sonnet / GPT-5 / Haiku, 40 steps each) | epistemic | 0.528 | 0.05 | 0.222 | 0.0000 | 0.0230 | 0.3014 |
 | model swap (Sonnet / GPT-5 / Haiku, 40 steps each) | epistemic | 0.528 | 0.10 | 0.172 | 0.0000 | 0.0001 | 0.0039 |
 | model swap (Sonnet / GPT-5 / Haiku, 40 steps each) | epistemic | 0.528 | 0.20 | 0.072 | 0.0000 | 0.0000 | 0.0000 |
@@ -76,6 +115,18 @@ theta = T*(rho_min) - margin, per layer. The bound held in 145 of 145 cases.
 | model swap (Sonnet / GPT-5 / Haiku, 40 steps each) | institutional | 1.000 | 0.05 | 0.950 | 0.6667 | 0.9979 | 0.9243 |
 | model swap (Sonnet / GPT-5 / Haiku, 40 steps each) | institutional | 1.000 | 0.10 | 0.900 | 0.3500 | 0.9537 | 0.7135 |
 | model swap (Sonnet / GPT-5 / Haiku, 40 steps each) | institutional | 1.000 | 0.20 | 0.800 | 0.0750 | 0.6309 | 0.2089 |
+| model swap (Qwen3-4B / Qwen3-8B / Qwen2.5-7B, 40 steps each) | behavioural | 0.948 | 0.05 | 0.809 | 0.2500 | 0.9780 | 0.8890 |
+| model swap (Qwen3-4B / Qwen3-8B / Qwen2.5-7B, 40 steps each) | behavioural | 0.948 | 0.10 | 0.759 | 0.0250 | 0.8301 | 0.6014 |
+| model swap (Qwen3-4B / Qwen3-8B / Qwen2.5-7B, 40 steps each) | behavioural | 0.948 | 0.20 | 0.659 | 0.0000 | 0.2418 | 0.0907 |
+| model swap (Qwen3-4B / Qwen3-8B / Qwen2.5-7B, 40 steps each) | role | 1.000 | 0.05 | 0.950 | 0.6667 | 0.9979 | 0.9243 |
+| model swap (Qwen3-4B / Qwen3-8B / Qwen2.5-7B, 40 steps each) | role | 1.000 | 0.10 | 0.900 | 0.3500 | 0.9537 | 0.7135 |
+| model swap (Qwen3-4B / Qwen3-8B / Qwen2.5-7B, 40 steps each) | role | 1.000 | 0.20 | 0.800 | 0.0750 | 0.6309 | 0.2089 |
+| model swap (Qwen3-4B / Qwen3-8B / Qwen2.5-7B, 40 steps each) | social | 0.848 | 0.05 | 0.601 | 0.0000 | 0.6060 | 0.7928 |
+| model swap (Qwen3-4B / Qwen3-8B / Qwen2.5-7B, 40 steps each) | social | 0.848 | 0.10 | 0.551 | 0.0000 | 0.2680 | 0.3609 |
+| model swap (Qwen3-4B / Qwen3-8B / Qwen2.5-7B, 40 steps each) | social | 0.848 | 0.20 | 0.451 | 0.0000 | 0.0078 | 0.0069 |
+| model swap (Qwen3-4B / Qwen3-8B / Qwen2.5-7B, 40 steps each) | institutional | 1.000 | 0.05 | 0.950 | 0.6667 | 0.9979 | 0.9243 |
+| model swap (Qwen3-4B / Qwen3-8B / Qwen2.5-7B, 40 steps each) | institutional | 1.000 | 0.10 | 0.900 | 0.3500 | 0.9537 | 0.7135 |
+| model swap (Qwen3-4B / Qwen3-8B / Qwen2.5-7B, 40 steps each) | institutional | 1.000 | 0.20 | 0.800 | 0.0750 | 0.6309 | 0.2089 |
 | domain shift: Claude Sonnet 4.5 TriviaQA -> MedMCQA | epistemic | 0.575 | 0.05 | 0.261 | 0.0000 | 0.0426 | 0.3759 |
 | domain shift: Claude Sonnet 4.5 TriviaQA -> MedMCQA | epistemic | 0.575 | 0.10 | 0.211 | 0.0000 | 0.0006 | 0.0113 |
 | domain shift: Claude Sonnet 4.5 TriviaQA -> MedMCQA | epistemic | 0.575 | 0.20 | 0.111 | 0.0000 | 0.0000 | 0.0000 |
@@ -161,6 +212,81 @@ theta = T*(rho_min) - margin, per layer. The bound held in 145 of 145 cases.
 | domain shift + compromise: Claude Haiku 4.5 | institutional | 1.000 | 0.05 | 0.950 | 0.8889 | 0.9999 | 0.9243 |
 | domain shift + compromise: Claude Haiku 4.5 | institutional | 1.000 | 0.10 | 0.900 | 0.4667 | 0.9795 | 0.7135 |
 | domain shift + compromise: Claude Haiku 4.5 | institutional | 1.000 | 0.20 | 0.800 | 0.1000 | 0.7130 | 0.2089 |
+| domain shift: Qwen3-4B TriviaQA -> MedMCQA | epistemic | 0.144 | 0.05 | 0.003 | 0.0000 | 0.0000 | 0.0081 |
+| domain shift: Qwen3-4B TriviaQA -> MedMCQA | behavioural | 0.949 | 0.05 | 0.810 | 0.2800 | 0.9783 | 0.8893 |
+| domain shift: Qwen3-4B TriviaQA -> MedMCQA | behavioural | 0.949 | 0.10 | 0.760 | 0.0233 | 0.8316 | 0.6022 |
+| domain shift: Qwen3-4B TriviaQA -> MedMCQA | behavioural | 0.949 | 0.20 | 0.660 | 0.0000 | 0.2442 | 0.0913 |
+| domain shift: Qwen3-4B TriviaQA -> MedMCQA | role | 1.000 | 0.05 | 0.950 | 0.6667 | 0.9979 | 0.9243 |
+| domain shift: Qwen3-4B TriviaQA -> MedMCQA | role | 1.000 | 0.10 | 0.900 | 0.3500 | 0.9537 | 0.7135 |
+| domain shift: Qwen3-4B TriviaQA -> MedMCQA | role | 1.000 | 0.20 | 0.800 | 0.0750 | 0.6309 | 0.2089 |
+| domain shift: Qwen3-4B TriviaQA -> MedMCQA | social | 0.850 | 0.05 | 0.604 | 0.0000 | 0.6144 | 0.7950 |
+| domain shift: Qwen3-4B TriviaQA -> MedMCQA | social | 0.850 | 0.10 | 0.554 | 0.0000 | 0.2752 | 0.3654 |
+| domain shift: Qwen3-4B TriviaQA -> MedMCQA | social | 0.850 | 0.20 | 0.454 | 0.0000 | 0.0084 | 0.0073 |
+| domain shift: Qwen3-4B TriviaQA -> MedMCQA | institutional | 1.000 | 0.05 | 0.950 | 0.6667 | 0.9979 | 0.9243 |
+| domain shift: Qwen3-4B TriviaQA -> MedMCQA | institutional | 1.000 | 0.10 | 0.900 | 0.3500 | 0.9537 | 0.7135 |
+| domain shift: Qwen3-4B TriviaQA -> MedMCQA | institutional | 1.000 | 0.20 | 0.800 | 0.0750 | 0.6309 | 0.2089 |
+| domain shift + compromise: Qwen3-4B | behavioural | 0.950 | 0.05 | 0.814 | 0.3778 | 0.9895 | 0.8905 |
+| domain shift + compromise: Qwen3-4B | behavioural | 0.950 | 0.10 | 0.764 | 0.0444 | 0.8743 | 0.6057 |
+| domain shift + compromise: Qwen3-4B | behavioural | 0.950 | 0.20 | 0.664 | 0.0000 | 0.2810 | 0.0939 |
+| domain shift + compromise: Qwen3-4B | role | 1.000 | 0.05 | 0.950 | 0.8889 | 0.9999 | 0.9243 |
+| domain shift + compromise: Qwen3-4B | role | 1.000 | 0.10 | 0.900 | 0.4667 | 0.9795 | 0.7135 |
+| domain shift + compromise: Qwen3-4B | role | 1.000 | 0.20 | 0.800 | 0.1000 | 0.7130 | 0.2089 |
+| domain shift + compromise: Qwen3-4B | social | 0.850 | 0.05 | 0.604 | 0.0000 | 0.5661 | 0.7950 |
+| domain shift + compromise: Qwen3-4B | social | 0.850 | 0.10 | 0.554 | 0.0000 | 0.2457 | 0.3654 |
+| domain shift + compromise: Qwen3-4B | social | 0.850 | 0.20 | 0.454 | 0.0000 | 0.0075 | 0.0073 |
+| domain shift + compromise: Qwen3-4B | institutional | 1.000 | 0.05 | 0.950 | 0.8889 | 0.9999 | 0.9243 |
+| domain shift + compromise: Qwen3-4B | institutional | 1.000 | 0.10 | 0.900 | 0.4667 | 0.9795 | 0.7135 |
+| domain shift + compromise: Qwen3-4B | institutional | 1.000 | 0.20 | 0.800 | 0.1000 | 0.7130 | 0.2089 |
+| domain shift: Qwen3-8B TriviaQA -> MedMCQA | epistemic | 0.161 | 0.05 | 0.010 | 0.0000 | 0.0000 | 0.0104 |
+| domain shift: Qwen3-8B TriviaQA -> MedMCQA | behavioural | 0.950 | 0.05 | 0.812 | 0.2750 | 0.9791 | 0.8901 |
+| domain shift: Qwen3-8B TriviaQA -> MedMCQA | behavioural | 0.950 | 0.10 | 0.762 | 0.0333 | 0.8355 | 0.6045 |
+| domain shift: Qwen3-8B TriviaQA -> MedMCQA | behavioural | 0.950 | 0.20 | 0.662 | 0.0000 | 0.2506 | 0.0931 |
+| domain shift: Qwen3-8B TriviaQA -> MedMCQA | role | 1.000 | 0.05 | 0.950 | 0.6667 | 0.9979 | 0.9243 |
+| domain shift: Qwen3-8B TriviaQA -> MedMCQA | role | 1.000 | 0.10 | 0.900 | 0.3500 | 0.9537 | 0.7135 |
+| domain shift: Qwen3-8B TriviaQA -> MedMCQA | role | 1.000 | 0.20 | 0.800 | 0.0750 | 0.6309 | 0.2089 |
+| domain shift: Qwen3-8B TriviaQA -> MedMCQA | social | 0.848 | 0.05 | 0.601 | 0.0000 | 0.6077 | 0.7933 |
+| domain shift: Qwen3-8B TriviaQA -> MedMCQA | social | 0.848 | 0.10 | 0.551 | 0.0000 | 0.2694 | 0.3618 |
+| domain shift: Qwen3-8B TriviaQA -> MedMCQA | social | 0.848 | 0.20 | 0.451 | 0.0000 | 0.0079 | 0.0070 |
+| domain shift: Qwen3-8B TriviaQA -> MedMCQA | institutional | 1.000 | 0.05 | 0.950 | 0.6667 | 0.9979 | 0.9243 |
+| domain shift: Qwen3-8B TriviaQA -> MedMCQA | institutional | 1.000 | 0.10 | 0.900 | 0.3500 | 0.9537 | 0.7135 |
+| domain shift: Qwen3-8B TriviaQA -> MedMCQA | institutional | 1.000 | 0.20 | 0.800 | 0.0750 | 0.6309 | 0.2089 |
+| domain shift + compromise: Qwen3-8B | behavioural | 0.949 | 0.05 | 0.811 | 0.3556 | 0.9887 | 0.8895 |
+| domain shift + compromise: Qwen3-8B | behavioural | 0.949 | 0.10 | 0.761 | 0.0333 | 0.8692 | 0.6028 |
+| domain shift + compromise: Qwen3-8B | behavioural | 0.949 | 0.20 | 0.661 | 0.0000 | 0.2715 | 0.0918 |
+| domain shift + compromise: Qwen3-8B | role | 1.000 | 0.05 | 0.950 | 0.8889 | 0.9999 | 0.9243 |
+| domain shift + compromise: Qwen3-8B | role | 1.000 | 0.10 | 0.900 | 0.4667 | 0.9795 | 0.7135 |
+| domain shift + compromise: Qwen3-8B | role | 1.000 | 0.20 | 0.800 | 0.1000 | 0.7130 | 0.2089 |
+| domain shift + compromise: Qwen3-8B | social | 0.846 | 0.05 | 0.597 | 0.0000 | 0.5469 | 0.7907 |
+| domain shift + compromise: Qwen3-8B | social | 0.846 | 0.10 | 0.547 | 0.0000 | 0.2308 | 0.3565 |
+| domain shift + compromise: Qwen3-8B | social | 0.846 | 0.20 | 0.447 | 0.0000 | 0.0063 | 0.0065 |
+| domain shift + compromise: Qwen3-8B | institutional | 1.000 | 0.05 | 0.950 | 0.8889 | 0.9999 | 0.9243 |
+| domain shift + compromise: Qwen3-8B | institutional | 1.000 | 0.10 | 0.900 | 0.4667 | 0.9795 | 0.7135 |
+| domain shift + compromise: Qwen3-8B | institutional | 1.000 | 0.20 | 0.800 | 0.1000 | 0.7130 | 0.2089 |
+| domain shift: Qwen2.5-7B TriviaQA -> MedMCQA | epistemic | 0.181 | 0.05 | 0.019 | 0.0000 | 0.0000 | 0.0139 |
+| domain shift: Qwen2.5-7B TriviaQA -> MedMCQA | behavioural | 0.950 | 0.05 | 0.814 | 0.2817 | 0.9795 | 0.8905 |
+| domain shift: Qwen2.5-7B TriviaQA -> MedMCQA | behavioural | 0.950 | 0.10 | 0.764 | 0.0333 | 0.8375 | 0.6057 |
+| domain shift: Qwen2.5-7B TriviaQA -> MedMCQA | behavioural | 0.950 | 0.20 | 0.664 | 0.0000 | 0.2539 | 0.0939 |
+| domain shift: Qwen2.5-7B TriviaQA -> MedMCQA | role | 1.000 | 0.05 | 0.950 | 0.6667 | 0.9979 | 0.9243 |
+| domain shift: Qwen2.5-7B TriviaQA -> MedMCQA | role | 1.000 | 0.10 | 0.900 | 0.3500 | 0.9537 | 0.7135 |
+| domain shift: Qwen2.5-7B TriviaQA -> MedMCQA | role | 1.000 | 0.20 | 0.800 | 0.0750 | 0.6309 | 0.2089 |
+| domain shift: Qwen2.5-7B TriviaQA -> MedMCQA | social | 0.850 | 0.05 | 0.604 | 0.0000 | 0.6144 | 0.7950 |
+| domain shift: Qwen2.5-7B TriviaQA -> MedMCQA | social | 0.850 | 0.10 | 0.554 | 0.0000 | 0.2752 | 0.3654 |
+| domain shift: Qwen2.5-7B TriviaQA -> MedMCQA | social | 0.850 | 0.20 | 0.454 | 0.0000 | 0.0084 | 0.0073 |
+| domain shift: Qwen2.5-7B TriviaQA -> MedMCQA | institutional | 1.000 | 0.05 | 0.950 | 0.6667 | 0.9979 | 0.9243 |
+| domain shift: Qwen2.5-7B TriviaQA -> MedMCQA | institutional | 1.000 | 0.10 | 0.900 | 0.3500 | 0.9537 | 0.7135 |
+| domain shift: Qwen2.5-7B TriviaQA -> MedMCQA | institutional | 1.000 | 0.20 | 0.800 | 0.0750 | 0.6309 | 0.2089 |
+| domain shift + compromise: Qwen2.5-7B | behavioural | 0.950 | 0.05 | 0.814 | 0.3778 | 0.9895 | 0.8905 |
+| domain shift + compromise: Qwen2.5-7B | behavioural | 0.950 | 0.10 | 0.764 | 0.0444 | 0.8743 | 0.6057 |
+| domain shift + compromise: Qwen2.5-7B | behavioural | 0.950 | 0.20 | 0.664 | 0.0000 | 0.2810 | 0.0939 |
+| domain shift + compromise: Qwen2.5-7B | role | 1.000 | 0.05 | 0.950 | 0.8889 | 0.9999 | 0.9243 |
+| domain shift + compromise: Qwen2.5-7B | role | 1.000 | 0.10 | 0.900 | 0.4667 | 0.9795 | 0.7135 |
+| domain shift + compromise: Qwen2.5-7B | role | 1.000 | 0.20 | 0.800 | 0.1000 | 0.7130 | 0.2089 |
+| domain shift + compromise: Qwen2.5-7B | social | 0.850 | 0.05 | 0.604 | 0.0000 | 0.5661 | 0.7950 |
+| domain shift + compromise: Qwen2.5-7B | social | 0.850 | 0.10 | 0.554 | 0.0000 | 0.2457 | 0.3654 |
+| domain shift + compromise: Qwen2.5-7B | social | 0.850 | 0.20 | 0.454 | 0.0000 | 0.0075 | 0.0073 |
+| domain shift + compromise: Qwen2.5-7B | institutional | 1.000 | 0.05 | 0.950 | 0.8889 | 0.9999 | 0.9243 |
+| domain shift + compromise: Qwen2.5-7B | institutional | 1.000 | 0.10 | 0.900 | 0.4667 | 0.9795 | 0.7135 |
+| domain shift + compromise: Qwen2.5-7B | institutional | 1.000 | 0.20 | 0.800 | 0.1000 | 0.7130 | 0.2089 |
 
 ## (b) Why the per-turn epistemic check needs conformal calibration (window W = 8)
 Denial iff the windowed calibration error exceeds 0.5 (1 - theta_e). An Azuma bound exp(-2 W (threshold - e_max)^2)
@@ -175,13 +301,23 @@ per-turn check trades a fixed honest false-denial rate for one-step detection.
 | stationary: Claude Sonnet 4.5 / TriviaQA | 0.191 | 0.176 | 0.350 | 1.000 |
 | stationary: GPT-5 / TriviaQA | 0.312 | 0.176 | 0.600 | 1.000 |
 | stationary: Claude Haiku 4.5 / TriviaQA | 0.290 | 0.176 | 0.667 | 1.000 |
+| stationary: Qwen3-4B / TriviaQA | 0.596 | 0.176 | 0.960 | 1.000 |
+| stationary: Qwen3-8B / TriviaQA | 0.602 | 0.176 | 0.923 | 1.000 |
+| stationary: Qwen2.5-7B / TriviaQA | 0.628 | 0.176 | 0.927 | 1.000 |
 | model swap (Sonnet / GPT-5 / Haiku, 40 steps each) | 0.330 | 0.176 | 0.544 | 1.000 |
+| model swap (Qwen3-4B / Qwen3-8B / Qwen2.5-7B, 40 steps each) | 0.625 | 0.176 | 0.963 | 1.000 |
 | domain shift: Claude Sonnet 4.5 TriviaQA -> MedMCQA | 0.335 | 0.176 | 0.450 | 1.000 |
 | domain shift + compromise: Claude Sonnet 4.5 | 0.329 | 0.176 | 0.578 | 1.000 |
 | domain shift: GPT-5 TriviaQA -> MedMCQA | 0.312 | 0.176 | 0.738 | 1.000 |
 | domain shift + compromise: GPT-5 | 0.340 | 0.176 | 0.778 | 1.000 |
 | domain shift: Claude Haiku 4.5 TriviaQA -> MedMCQA | 0.392 | 0.176 | 0.732 | 1.000 |
 | domain shift + compromise: Claude Haiku 4.5 | 0.378 | 0.176 | 0.844 | 1.000 |
+| domain shift: Qwen3-4B TriviaQA -> MedMCQA | 0.596 | 0.176 | 0.932 | 1.000 |
+| domain shift + compromise: Qwen3-4B | 0.591 | 0.176 | 0.989 | 1.000 |
+| domain shift: Qwen3-8B TriviaQA -> MedMCQA | 0.602 | 0.176 | 0.893 | 1.000 |
+| domain shift + compromise: Qwen3-8B | 0.573 | 0.176 | 0.967 | 1.000 |
+| domain shift: Qwen2.5-7B TriviaQA -> MedMCQA | 0.628 | 0.176 | 0.925 | 1.000 |
+| domain shift + compromise: Qwen2.5-7B | 0.628 | 0.176 | 0.978 | 1.000 |
 
 ## (c) Eq. (14) on real compromised streams after a domain shift
 rho0 / rho1 = mean epistemic signal over the 30 steps before / all steps after the compromise; x lies a quarter
@@ -206,5 +342,17 @@ the history.
 | domain shift + compromise: Claude Haiku 4.5 | 0.21 | 0.02 | 0.200 | 0.083 | 0.5 | 0.044 | 41.3 | 83.6 | inf (60) |
 | domain shift + compromise: Claude Haiku 4.5 | 0.24 | 0.01 | 0.191 | 0.096 | 0.25 | 0.073 | 16.4 | 47.7 | 48 (60) |
 | domain shift + compromise: Claude Haiku 4.5 | 0.24 | 0.01 | 0.191 | 0.096 | 0.5 | 0.049 | 40.4 | 70.5 | inf (60) |
+| domain shift + compromise: Qwen3-4B | 0.03 | 0.00 | 0.063 | 0.009 | 0.25 | 0.006 | 18.8 | 137.0 | inf (60) |
+| domain shift + compromise: Qwen3-4B | 0.03 | 0.00 | 0.063 | 0.009 | 0.5 | 0.004 | 45.3 | 163.2 | inf (60) |
+| domain shift + compromise: Qwen3-4B | 0.10 | 0.00 | 0.074 | 0.037 | 0.25 | 0.028 | 17.9 | 54.9 | 55 (60) |
+| domain shift + compromise: Qwen3-4B | 0.10 | 0.00 | 0.074 | 0.037 | 0.5 | 0.018 | 43.6 | 79.4 | inf (60) |
+| domain shift + compromise: Qwen3-8B | 0.03 | 0.01 | 0.072 | 0.010 | 0.25 | 0.009 | 18.8 | 158.9 | inf (60) |
+| domain shift + compromise: Qwen3-8B | 0.03 | 0.01 | 0.072 | 0.010 | 0.5 | 0.007 | 45.4 | 185.3 | inf (60) |
+| domain shift + compromise: Qwen3-8B | 0.19 | 0.00 | 0.097 | 0.073 | 0.25 | 0.055 | 16.9 | 29.7 | 30 (60) |
+| domain shift + compromise: Qwen3-8B | 0.19 | 0.00 | 0.097 | 0.073 | 0.5 | 0.036 | 41.5 | 52.6 | 53 (60) |
+| domain shift + compromise: Qwen2.5-7B | 0.04 | 0.00 | 0.084 | 0.014 | 0.25 | 0.010 | 18.6 | 120.9 | inf (60) |
+| domain shift + compromise: Qwen2.5-7B | 0.04 | 0.00 | 0.084 | 0.014 | 0.5 | 0.007 | 45.0 | 146.8 | inf (60) |
+| domain shift + compromise: Qwen2.5-7B | 0.06 | 0.00 | 0.065 | 0.020 | 0.25 | 0.015 | 18.4 | 84.7 | inf (60) |
+| domain shift + compromise: Qwen2.5-7B | 0.06 | 0.00 | 0.065 | 0.020 | 0.5 | 0.010 | 44.6 | 110.1 | inf (60) |
 
 ![theory](figures/theory_nonstationary.png)

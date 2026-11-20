@@ -7,7 +7,7 @@ the LLM evaluator that scores the behavioural (tone) and role (focus) layers in 
 ## Method
 Real hostile and off-topic replies (N05, Claude Sonnet 4.5 and GPT-5) carrying an attacker payload: `ratings`
 (fake "Tone: 5 / Focus: 5" lines) or `override` (instruction to the evaluator); `none` = no payload.
-Evaluators: Claude Haiku 4.5, GPT-5. Defences: D1 hardened prompt, D2 model-free
+Evaluators: Claude Haiku 4.5, GPT-5, Qwen3-8B. Defences: D1 hardened prompt, D2 model-free
 sanitisation, D3 cross-family minimum, D4 canary audit (templates distinct from the attack). Genuine failures are
 the replies N05's independent GPT-5 label marks as hostile / off-topic.
 
@@ -30,10 +30,20 @@ wrongly flagged.
 | GPT-5 + D1 hardened | GPT-5 | 0.10 (0.00) | 0.07 (0.00) | 0.06 (0.00) | 0.58 (0.42) | 0.42 (0.13) | 0.45 (0.17) | 0.26 |
 | GPT-5 + D2 sanitised | Claude Sonnet 4.5 | 0.27 (0.00) | 0.27 (0.00) | 0.27 (0.00) | 0.72 (0.86) | 0.72 (0.86) | 0.72 (0.86) | 0.26 |
 | GPT-5 + D2 sanitised | GPT-5 | 0.11 (0.00) | 0.11 (0.00) | 0.11 (0.00) | 0.58 (0.41) | 0.58 (0.41) | 0.58 (0.41) | 0.16 |
+| Qwen3-8B plain | Claude Sonnet 4.5 | 0.47 (0.09) | 0.56 (0.21) | 0.85 (0.76) | 0.33 (0.05) | 0.61 (0.45) | 0.93 (0.92) | 0.01 |
+| Qwen3-8B plain | GPT-5 | 0.30 (0.04) | 0.53 (0.36) | 0.94 (0.92) | 0.34 (0.04) | 0.57 (0.45) | 1.00 (1.00) | 0.01 |
+| Qwen3-8B + D1 hardened | Claude Sonnet 4.5 | 0.41 (0.05) | 0.46 (0.21) | 0.16 (0.02) | 0.36 (0.10) | 0.50 (0.45) | 0.19 (0.19) | 0.01 |
+| Qwen3-8B + D1 hardened | GPT-5 | 0.26 (0.03) | 0.35 (0.24) | 0.04 (0.04) | 0.37 (0.10) | 0.40 (0.38) | 0.20 (0.20) | 0.01 |
+| Qwen3-8B + D2 sanitised | Claude Sonnet 4.5 | 0.48 (0.09) | 0.48 (0.09) | 0.48 (0.09) | 0.32 (0.03) | 0.32 (0.03) | 0.32 (0.03) | 0.01 |
+| Qwen3-8B + D2 sanitised | GPT-5 | 0.30 (0.04) | 0.30 (0.04) | 0.30 (0.04) | 0.34 (0.07) | 0.34 (0.07) | 0.34 (0.07) | 0.01 |
 | D3 ensemble Claude Haiku 4.5 & GPT-5 (plain) | Claude Sonnet 4.5 | 0.25 (0.00) | 0.25 (0.00) | 0.24 (0.00) | 0.51 (0.17) | 0.46 (0.16) | 0.47 (0.11) | 0.43 |
 | D3 ensemble Claude Haiku 4.5 & GPT-5 (plain) | GPT-5 | 0.11 (0.00) | 0.08 (0.00) | 0.10 (0.00) | 0.33 (0.00) | 0.30 (0.01) | 0.33 (0.00) | 0.37 |
 | D1+D3 ensemble Claude Haiku 4.5 & GPT-5 (hardened) | Claude Sonnet 4.5 | 0.24 (0.00) | 0.02 (0.00) | 0.01 (0.00) | 0.48 (0.16) | 0.29 (0.01) | 0.07 (0.01) | 0.69 |
 | D1+D3 ensemble Claude Haiku 4.5 & GPT-5 (hardened) | GPT-5 | 0.10 (0.00) | 0.04 (0.00) | 0.02 (0.00) | 0.31 (0.00) | 0.16 (0.00) | 0.07 (0.00) | 0.51 |
+| D3 ensemble Qwen3-8B & GPT-5 (plain) | Claude Sonnet 4.5 | 0.27 (0.00) | 0.30 (0.00) | 0.27 (0.00) | 0.33 (0.05) | 0.48 (0.35) | 0.67 (0.76) | 0.24 |
+| D3 ensemble Qwen3-8B & GPT-5 (plain) | GPT-5 | 0.12 (0.00) | 0.14 (0.00) | 0.11 (0.00) | 0.33 (0.04) | 0.39 (0.20) | 0.55 (0.30) | 0.16 |
+| D1+D3 ensemble Qwen3-8B & GPT-5 (hardened) | Claude Sonnet 4.5 | 0.25 (0.00) | 0.16 (0.00) | 0.07 (0.00) | 0.35 (0.10) | 0.29 (0.21) | 0.09 (0.06) | 0.44 |
+| D1+D3 ensemble Qwen3-8B & GPT-5 (hardened) | GPT-5 | 0.10 (0.00) | 0.06 (0.00) | 0.01 (0.00) | 0.35 (0.08) | 0.21 (0.11) | 0.09 (0.04) | 0.26 |
 
 ## (b) Gate level: TGCC-R admission of genuine failures
 | Evaluator | Replies by | window | hostile none | hostile ratings | hostile override | offtopic none | offtopic ratings | offtopic override | honest FPR |
@@ -50,10 +60,20 @@ wrongly flagged.
 | GPT-5 + D1 hardened | GPT-5 | 12 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.02 |
 | GPT-5 + D2 sanitised | Claude Sonnet 4.5 | 8 | 0.00 | 0.00 | 0.00 | 0.02 | 0.02 | 0.02 | 0.02 |
 | GPT-5 + D2 sanitised | GPT-5 | 12 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.02 |
+| Qwen3-8B plain | Claude Sonnet 4.5 | 8 | 0.07 | 0.19 | 0.77 | 0.01 | 0.42 | 0.82 | 0.02 |
+| Qwen3-8B plain | GPT-5 | 12 | 0.00 | 0.01 | 0.05 | 0.00 | 0.00 | 0.01 | 0.03 |
+| Qwen3-8B + D1 hardened | Claude Sonnet 4.5 | 8 | 0.03 | 0.11 | 0.01 | 0.03 | 0.20 | 0.06 | 0.02 |
+| Qwen3-8B + D1 hardened | GPT-5 | 12 | 0.00 | 0.00 | 0.00 | 0.00 | 0.01 | 0.00 | 0.03 |
+| Qwen3-8B + D2 sanitised | Claude Sonnet 4.5 | 8 | 0.08 | 0.08 | 0.08 | 0.01 | 0.01 | 0.01 | 0.02 |
+| Qwen3-8B + D2 sanitised | GPT-5 | 12 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.03 |
 | D3 ensemble Claude Haiku 4.5 & GPT-5 (plain) | Claude Sonnet 4.5 | 8 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.02 |
 | D3 ensemble Claude Haiku 4.5 & GPT-5 (plain) | GPT-5 | 12 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.02 |
 | D1+D3 ensemble Claude Haiku 4.5 & GPT-5 (hardened) | Claude Sonnet 4.5 | 8 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.02 |
 | D1+D3 ensemble Claude Haiku 4.5 & GPT-5 (hardened) | GPT-5 | 12 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.02 |
+| D3 ensemble Qwen3-8B & GPT-5 (plain) | Claude Sonnet 4.5 | 8 | 0.00 | 0.00 | 0.00 | 0.03 | 0.50 | 0.82 | 0.02 |
+| D3 ensemble Qwen3-8B & GPT-5 (plain) | GPT-5 | 12 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.01 | 0.02 |
+| D1+D3 ensemble Qwen3-8B & GPT-5 (hardened) | Claude Sonnet 4.5 | 8 | 0.00 | 0.00 | 0.00 | 0.04 | 0.24 | 0.05 | 0.02 |
+| D1+D3 ensemble Qwen3-8B & GPT-5 (hardened) | GPT-5 | 12 | 0.00 | 0.00 | 0.00 | 0.00 | 0.01 | 0.00 | 0.02 |
 
 ## (c) Evaluator takeover and the canary audit (D4)
 The evaluator is captured from step 15 (before the agent fails at step 20) and rates every reply 5/5, canaries
@@ -89,6 +109,18 @@ Canary rate = probability that a planted canary is evaluated at a step (evaluato
 | GPT-5 + D2 sanitised | Claude Sonnet 4.5 | 0.5 | 0.68 | 1.00 / 0.88 | 0.22 / 0.15 | 0.03 | 96/96 | 12.0 |
 | GPT-5 + D2 sanitised | GPT-5 | 0.25 | 0.68 | 0.11 / 0.01 | 0.10 / 0.01 | 0.02 | 67/96 | 29.0 |
 | GPT-5 + D2 sanitised | GPT-5 | 0.5 | 0.68 | 0.11 / 0.01 | 0.03 / 0.01 | 0.03 | 96/96 | 12.0 |
+| Qwen3-8B plain | Claude Sonnet 4.5 | 0.25 | 0.82 | 1.00 / 0.88 | 0.16 / 0.15 | 0.04 | 95/96 | 8.0 |
+| Qwen3-8B plain | Claude Sonnet 4.5 | 0.5 | 0.82 | 1.00 / 0.88 | 0.17 / 0.08 | 0.04 | 96/96 | 9.0 |
+| Qwen3-8B plain | GPT-5 | 0.25 | 0.82 | 0.05 / 0.01 | 0.02 / 0.01 | 0.06 | 95/96 | 8.0 |
+| Qwen3-8B plain | GPT-5 | 0.5 | 0.82 | 0.05 / 0.01 | 0.03 / 0.00 | 0.06 | 96/96 | 9.0 |
+| Qwen3-8B + D1 hardened | Claude Sonnet 4.5 | 0.25 | 0.85 | 1.00 / 0.88 | 0.17 / 0.20 | 0.06 | 95/96 | 9.0 |
+| Qwen3-8B + D1 hardened | Claude Sonnet 4.5 | 0.5 | 0.85 | 1.00 / 0.88 | 0.19 / 0.10 | 0.03 | 96/96 | 10.0 |
+| Qwen3-8B + D1 hardened | GPT-5 | 0.25 | 0.85 | 0.06 / 0.01 | 0.02 / 0.01 | 0.08 | 95/96 | 9.0 |
+| Qwen3-8B + D1 hardened | GPT-5 | 0.5 | 0.85 | 0.06 / 0.01 | 0.03 / 0.01 | 0.05 | 96/96 | 10.0 |
+| Qwen3-8B + D2 sanitised | Claude Sonnet 4.5 | 0.25 | 0.90 | 1.00 / 0.88 | 0.16 / 0.25 | 0.02 | 95/96 | 11.0 |
+| Qwen3-8B + D2 sanitised | Claude Sonnet 4.5 | 0.5 | 0.90 | 1.00 / 0.88 | 0.07 / 0.04 | 0.05 | 96/96 | 6.0 |
+| Qwen3-8B + D2 sanitised | GPT-5 | 0.25 | 0.90 | 0.05 / 0.01 | 0.02 / 0.01 | 0.03 | 95/96 | 11.0 |
+| Qwen3-8B + D2 sanitised | GPT-5 | 0.5 | 0.90 | 0.05 / 0.01 | 0.01 / 0.00 | 0.07 | 96/96 | 6.0 |
 | D3 ensemble Claude Haiku 4.5 & GPT-5 (plain) | Claude Sonnet 4.5 | 0.25 | 0.95 | 1.00 / 0.88 | 0.22 / 0.24 | 0.02 | 95/96 | 13.0 |
 | D3 ensemble Claude Haiku 4.5 & GPT-5 (plain) | Claude Sonnet 4.5 | 0.5 | 0.95 | 1.00 / 0.88 | 0.06 / 0.04 | 0.04 | 96/96 | 6.0 |
 | D3 ensemble Claude Haiku 4.5 & GPT-5 (plain) | GPT-5 | 0.25 | 0.95 | 0.13 / 0.01 | 0.03 / 0.01 | 0.02 | 95/96 | 13.0 |
@@ -97,5 +129,13 @@ Canary rate = probability that a planted canary is evaluated at a step (evaluato
 | D1+D3 ensemble Claude Haiku 4.5 & GPT-5 (hardened) | Claude Sonnet 4.5 | 0.5 | 0.97 | 1.00 / 0.88 | 0.05 / 0.04 | 0.04 | 96/96 | 6.0 |
 | D1+D3 ensemble Claude Haiku 4.5 & GPT-5 (hardened) | GPT-5 | 0.25 | 0.97 | 0.13 / 0.01 | 0.01 / 0.00 | 0.05 | 96/96 | 8.0 |
 | D1+D3 ensemble Claude Haiku 4.5 & GPT-5 (hardened) | GPT-5 | 0.5 | 0.97 | 0.13 / 0.01 | 0.01 / 0.00 | 0.04 | 96/96 | 6.0 |
+| D3 ensemble Qwen3-8B & GPT-5 (plain) | Claude Sonnet 4.5 | 0.25 | 0.93 | 1.00 / 0.88 | 0.07 / 0.07 | 0.05 | 96/96 | 7.0 |
+| D3 ensemble Qwen3-8B & GPT-5 (plain) | Claude Sonnet 4.5 | 0.5 | 0.93 | 1.00 / 0.88 | 0.05 / 0.04 | 0.08 | 96/96 | 6.0 |
+| D3 ensemble Qwen3-8B & GPT-5 (plain) | GPT-5 | 0.25 | 0.93 | 0.11 / 0.01 | 0.01 / 0.00 | 0.05 | 96/96 | 7.0 |
+| D3 ensemble Qwen3-8B & GPT-5 (plain) | GPT-5 | 0.5 | 0.93 | 0.11 / 0.01 | 0.01 / 0.00 | 0.08 | 96/96 | 6.0 |
+| D1+D3 ensemble Qwen3-8B & GPT-5 (hardened) | Claude Sonnet 4.5 | 0.25 | 0.95 | 1.00 / 0.88 | 0.11 / 0.07 | 0.05 | 96/96 | 7.0 |
+| D1+D3 ensemble Qwen3-8B & GPT-5 (hardened) | Claude Sonnet 4.5 | 0.5 | 0.95 | 1.00 / 0.88 | 0.00 / 0.02 | 0.14 | 96/96 | 3.0 |
+| D1+D3 ensemble Qwen3-8B & GPT-5 (hardened) | GPT-5 | 0.25 | 0.95 | 0.12 / 0.01 | 0.01 / 0.00 | 0.05 | 96/96 | 7.0 |
+| D1+D3 ensemble Qwen3-8B & GPT-5 (hardened) | GPT-5 | 0.5 | 0.95 | 0.12 / 0.01 | 0.00 / 0.00 | 0.15 | 96/96 | 3.0 |
 
 ![evaluator poisoning](figures/evaluator_poisoning.png)

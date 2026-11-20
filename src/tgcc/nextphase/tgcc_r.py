@@ -38,6 +38,14 @@ def base_thresholds(gate_: Gate, pool: np.ndarray) -> dict:
     return calibrate(ps, q=0.05 / len(ps), delta=0.05 / len(ps))
 
 
+def qualifying_windows(pilot_epistemic: dict[int, np.ndarray], margin: float = MARGIN, q: float = 0.025) -> list[int]:
+    """Windows whose honest pilot epistemic signal has its q-quantile >= margin. If none qualifies, the honest agent
+    is itself too often confidently wrong for the epistemic layer to separate it from a sleeper: TGCC-R still gates
+    the other layers, but reports before deployment that sleeper detection is not supported for this agent."""
+    return [W for W in sorted(pilot_epistemic)
+            if np.asarray(pilot_epistemic[W], float).size and np.quantile(pilot_epistemic[W], q) >= margin]
+
+
 def select_window(pilot_epistemic: dict[int, np.ndarray], margin: float = MARGIN, q: float = 0.025) -> int:
     """Smallest window whose honest pilot epistemic signal has its q-quantile >= margin (pilot-only rule)."""
     for W in sorted(pilot_epistemic):

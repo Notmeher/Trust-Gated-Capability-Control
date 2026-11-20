@@ -1,111 +1,111 @@
 {
   "experiment": "n24_system_overhead",
-  "timestamp_utc": "2026-11-20T05:09:08.606378+00:00",
+  "timestamp_utc": "2026-11-20T09:36:12.488163+00:00",
   "results": {
     "vs_L": {
       "us_per_step": {
-        "3": 12.201805555555556,
-        "5": 13.929537777777778,
-        "8": 17.41439888888889,
-        "12": 23.93763888888889,
-        "16": 32.40083333333333,
-        "24": 55.221991111111116,
-        "32": 86.16435222222222
+        "3": 12.67324,
+        "5": 14.55449111111111,
+        "8": 18.08625,
+        "12": 24.769397777777776,
+        "16": 33.31666666666666,
+        "24": 57.09703666666667,
+        "32": 88.87463000000001
       },
       "fit_quadratic": [
-        10.537081636137827,
-        0.3656324363284245,
-        0.06241551129264544
+        11.044213281373274,
+        0.36466573661517704,
+        0.06463090828936668
       ],
-      "r2_quadratic": 0.9999987272814734,
-      "r2_linear": 0.960467383549505
+      "r2_quadratic": 0.9999943370312931,
+      "r2_linear": 0.9600543005083164
     },
     "vs_C": {
       "us_per_step": {
-        "1": 14.156435555555555,
-        "4": 14.323379999999998,
-        "16": 14.57611111111111,
-        "64": 15.790786666666667,
-        "256": 21.372175555555557
+        "1": 14.425602222222222,
+        "4": 14.465185555555555,
+        "16": 14.815185555555555,
+        "64": 16.069953333333334,
+        "256": 21.599675555555557
       }
     },
     "auth_path": {
       "N=1,G=1": {
-        "controller_us": 14.6841,
-        "issue_us": 5.953,
-        "authorize_us": 4.1145625,
-        "revoke_propagate_us": 3.625,
-        "total_us_per_agent_step": 17.4292,
+        "controller_us": 15.800033333333333,
+        "issue_us": 128.3541875,
+        "authorize_us": 4.5625,
+        "revoke_propagate_us": 3.042,
+        "total_us_per_agent_step": 51.295183333333334,
         "tokens_issued": 16,
         "revocations": 1,
         "stale_tokens_accepted": 0
       },
       "N=1,G=4": {
-        "controller_us": 13.660549999999999,
-        "issue_us": 4.3748125,
-        "authorize_us": 3.5078125,
-        "revoke_propagate_us": 3.083,
-        "total_us_per_agent_step": 15.813966666666667,
+        "controller_us": 16.173566666666666,
+        "issue_us": 4.255375,
+        "authorize_us": 3.4166875,
+        "revoke_propagate_us": 3.0,
+        "total_us_per_agent_step": 18.26945,
         "tokens_issued": 16,
         "revocations": 1,
         "stale_tokens_accepted": 0
       },
       "N=10,G=1": {
-        "controller_us": 14.19338,
-        "issue_us": 3.082892655367232,
-        "authorize_us": 2.7697796610169494,
-        "revoke_propagate_us": 0.6720666666666667,
-        "total_us_per_agent_step": 15.93672,
+        "controller_us": 15.362211666666665,
+        "issue_us": 4.443508474576271,
+        "authorize_us": 3.414587570621469,
+        "revoke_propagate_us": 0.9942666666666666,
+        "total_us_per_agent_step": 17.705206666666665,
         "tokens_issued": 177,
         "revocations": 15,
         "stale_tokens_accepted": 0
       },
       "N=10,G=4": {
-        "controller_us": 14.436848333333334,
-        "issue_us": 2.961853107344633,
-        "authorize_us": 2.7476271186440675,
-        "revoke_propagate_us": 0.9388,
-        "total_us_per_agent_step": 16.144614999999998,
+        "controller_us": 15.214598333333333,
+        "issue_us": 2.8926553672316384,
+        "authorize_us": 2.7436497175141246,
+        "revoke_propagate_us": 0.9583333333333334,
+        "total_us_per_agent_step": 16.901266666666665,
         "tokens_issued": 177,
         "revocations": 15,
         "stale_tokens_accepted": 0
       },
       "N=50,G=1": {
-        "controller_us": 14.557923,
-        "issue_us": 2.894174533479693,
-        "authorize_us": 2.683861690450055,
-        "revoke_propagate_us": 0.5456301369863014,
-        "total_us_per_agent_step": 16.265063666666666,
+        "controller_us": 15.234286,
+        "issue_us": 2.93694731064764,
+        "authorize_us": 2.842484083424808,
+        "revoke_propagate_us": 0.5616164383561644,
+        "total_us_per_agent_step": 17.00297266666667,
         "tokens_issued": 911,
         "revocations": 73,
         "stale_tokens_accepted": 0
       },
       "N=50,G=4": {
-        "controller_us": 14.639812333333333,
-        "issue_us": 2.853728869374314,
-        "authorize_us": 2.667360043907794,
-        "revoke_propagate_us": 0.8539315068493151,
-        "total_us_per_agent_step": 16.337162,
+        "controller_us": 15.205124,
+        "issue_us": 2.8817113062568604,
+        "authorize_us": 2.8352557628979143,
+        "revoke_propagate_us": 0.9115616438356164,
+        "total_us_per_agent_step": 16.963357666666667,
         "tokens_issued": 911,
         "revocations": 73,
         "stale_tokens_accepted": 0
       },
       "N=100,G=1": {
-        "controller_us": 14.490105,
-        "issue_us": 2.825211719181868,
-        "authorize_us": 2.7108872305140963,
-        "revoke_propagate_us": 0.45376190476190476,
-        "total_us_per_agent_step": 16.170355999999998,
+        "controller_us": 15.0612485,
+        "issue_us": 2.836547263681592,
+        "authorize_us": 2.7258175787728027,
+        "revoke_propagate_us": 0.4386938775510204,
+        "total_us_per_agent_step": 16.7490495,
         "tokens_issued": 1809,
         "revocations": 147,
         "stale_tokens_accepted": 0
       },
       "N=100,G=4": {
-        "controller_us": 14.5019005,
-        "issue_us": 2.8677484798231068,
-        "authorize_us": 2.6860829187396353,
-        "revoke_propagate_us": 0.8352925170068027,
-        "total_us_per_agent_step": 16.196845333333332,
+        "controller_us": 15.028647666666666,
+        "issue_us": 2.882675511332228,
+        "authorize_us": 2.7234339414040907,
+        "revoke_propagate_us": 0.8622448979591836,
+        "total_us_per_agent_step": 16.740014666666667,
         "tokens_issued": 1809,
         "revocations": 147,
         "stale_tokens_accepted": 0

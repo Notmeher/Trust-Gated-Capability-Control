@@ -222,3 +222,16 @@ Reviewer mapping and results: [IEEE_REVIEW_COVERAGE.md](IEEE_REVIEW_COVERAGE.md)
 |---|---|---|
 | E9 | tau-bench order ids carry a `#` prefix that agents drop, so every lookup failed. | Order ids are normalised in the tool and the checker. |
 | E10 | With per-step honest FPR as the CRC loss, an honest agent that itself violates policy (GPT-5, 14% of tickets) forces the audit threshold to 0. | N36 calibrates the audited configurations on "a compliant step is blocked". |
+
+### Open-weight models (Kaggle run)
+| File | Change |
+|---|---|
+| `nextphase/_data/qa_bank_*qwen*.json`, `poison_*_qwen3-8b.json` | Qwen3-4B, Qwen3-8B, Qwen2.5-7B banks (TriviaQA, MedMCQA) and the Qwen3-8B critic / evaluator outputs from the Kaggle notebook; N22-N35 and N37 re-run with them. |
+| `nextphase/kaggle/` | No Hugging Face token is used (public models); any injected token is removed (an expired token made the Hub return 401). |
+| `nextphase/n22_theory_nonstationary.py` | Qwen models in the stationary and domain-shift streams, plus a Qwen model-swap stream. |
+| `nextphase/tgcc_r.py`, `n32_revised_config.py` | `qualifying_windows`: pre-deployment epistemic qualification from the honest pilot; N32 reports it (fails for exactly the six Qwen banks). |
+
+| # | Issue | Fix |
+|---|---|---|
+| E11 | N34's layer-order test permuted the signal columns, which also relabelled the epistemic probe as a rule-based conjunct (CRC then zeroed all rule-based thresholds on Qwen2.5-7B / MedMCQA). | Layer order now permutes only the synergy hierarchy of the composite; each conjunct stays attached to its probe. |
+| E12 | On open-weight models the honest agent is confidently wrong too often for the epistemic layer to separate it from a sleeper (sleeper OER 0.32-1.00); stricter thresholds deny 0.45-0.97 of honest steps. | Reported as a limitation; TGCC-R flags it before deployment from the pilot (`qualifying_windows`). |

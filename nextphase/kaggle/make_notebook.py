@@ -47,7 +47,7 @@ tab and unzip it at the repository root; the experiments then run offline.
 **Before running**
 1. *Settings -> Accelerator*: **GPU T4 x2**. *Settings -> Internet*: **on**.
 2. *Add-ons -> Secrets*: attach `github_token` (read access to `{REPO}`).
-3. Optional: attach `HF_TOKEN` (only speeds up downloads; the Qwen models are not gated).
+3. Optional: attach `HF_TOKEN` (only speeds up downloads; the Qwen models are not gated). An expired token is detected and ignored.
 4. *Run all* (or *Save Version -> Save & Run All*). Expected time: about 3-4 h; each step prints its duration.
 """),
     code('''
@@ -113,9 +113,25 @@ res = subprocess.run(['git', 'clone', '--depth', '1', '--branch', BRANCH,
 if res.returncode:
     raise RuntimeError('git clone failed:\\n' + res.stderr.replace(token, '***'))
 del token
+# The Qwen models are public. An expired or invalid HF token makes the Hub answer 401 even for public repos,
+# so a token is used only if it validates; otherwise every token source is removed and downloads are anonymous.
+import urllib.request, urllib.error
+def _hf_ok(t):
+    try:
+        req = urllib.request.Request('https://huggingface.co/api/whoami-v2', headers={{'Authorization': f'Bearer {{t}}'}})
+        return urllib.request.urlopen(req, timeout=20).status == 200
+    except Exception:
+        return False
+for k in ('HF_TOKEN', 'HUGGING_FACE_HUB_TOKEN', 'HUGGINGFACE_HUB_TOKEN', 'HF_HUB_TOKEN'):
+    os.environ.pop(k, None)
+for f in (Path.home() / '.cache/huggingface/token', Path.home() / '.huggingface/token'):
+    f.unlink(missing_ok=True)
 hf = _secret('HF_TOKEN')
-if hf:
+if hf and _hf_ok(hf):
     os.environ['HF_TOKEN'] = hf
+    print('HF token: valid, used')
+else:
+    print('HF token: ' + ('invalid/expired, ignored' if hf else 'none') + ' (anonymous downloads)')
 print(subprocess.run(['git', '-C', str(REPO_DIR), 'log', '-1', '--format=%h %s'], capture_output=True, text=True).stdout)
 
 ENV = {{**os.environ, 'PYTHONPATH': str(REPO_DIR / 'src'), 'TGCC_LOCAL_BACKEND': 'transformers',

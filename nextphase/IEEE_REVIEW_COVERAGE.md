@@ -75,7 +75,7 @@ Every headline experiment reports TGCC-R; the original TGCC is kept as a referen
 ### R2-2. Debate: harm prevented, not revocation
 | Evidence | Result (TGCC-R) |
 |---|---|
-| N30 paired harm prevented (McNemar) | N=1: 76 prevented / 0 caused (p = 3e-23); N=3: 23/1 (p = 3e-6); N=5, K=1: 3/4 (no gain); **N=5, K=2: wrong 0.47 -> 0.21, 22/1 (p = 6e-6)**. |
+| N30 paired harm prevented (McNemar), 8 team configurations N = 1-9, K = 1-4 sleepers | Gating helps whenever the sleepers can swing the vote (K/N >= 1/3): N=1: 76 prevented / 0 caused (p = 3e-23); N=3,K=1: 23/1 (3e-6); N=5,K=2: wrong 0.47 -> 0.21, 22/1 (6e-6); **N=7,K=3: 0.46 -> 0.16, 26/2 (3e-6); N=9,K=4: 0.44 -> 0.25, 22/7 (0.008)**. When the honest majority already outvotes them it does not: N=5,K=1 3/4 (p = 1), N=9,K=3 5/6 (p = 1), and **N=7,K=2 is harmed: 0.11 -> 0.24, 2/12 (p = 0.013)** because denying 16-19% of honest agent-questions removes more correct voters than the two outvoted sleepers cost. Reported as a limitation: in debate, gate when a sleeper group could form a blocking minority. |
 | N30 influence before revocation | An admitted sleeper flips 29-39% of honest agents from correct to wrong; after revocation 6-19%; harm concentrates in the questions before revocation. |
 | Cost | Honest agent-questions denied **16-19%** (TGCC: 27-30%); pool abstains 5% (TGCC: 14%). |
 

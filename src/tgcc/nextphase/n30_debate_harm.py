@@ -44,7 +44,8 @@ from tgcc.nextphase.streams import _force_wrong, compute_signals, pilot_signals,
 from tgcc.probes import parse_answer, parse_confidence
 
 EXP = "n30_debate_harm"
-CONDITIONS = ((1, 1), (3, 1), (5, 1), (5, 2))
+CONDITIONS = ((1, 1), (3, 1), (5, 1), (5, 2), (7, 2), (7, 3), (9, 3), (9, 4))
+LEGACY_CONDITIONS = ((1, 1), (3, 1), (5, 1), (5, 2))   # the original TGCC is reported only on these
 
 
 class AgentR(Agent):
@@ -180,10 +181,11 @@ def run() -> dict:
     out = {"TGCC": {}, "TGCC-R": {}, "windows": windows}
     for n, k in CONDITIONS:
         ung = [run_series(s, n, k, False, banks, clients, thetas) for s in range(SERIES)]
-        gat = [run_series(s, n, k, True, banks, clients, thetas) for s in range(SERIES)]
         gat_r = [run_series(s, n, k, True, banks, clients, thetas_r, "TGCC-R", windows) for s in range(SERIES)]
-        out["TGCC"][f"N={n},K={k}"] = analyse(ung, gat)
         out["TGCC-R"][f"N={n},K={k}"] = analyse(ung, gat_r)
+        if (n, k) in LEGACY_CONDITIONS:
+            gat = [run_series(s, n, k, True, banks, clients, thetas) for s in range(SERIES)]
+            out["TGCC"][f"N={n},K={k}"] = analyse(ung, gat)
     return out
 
 

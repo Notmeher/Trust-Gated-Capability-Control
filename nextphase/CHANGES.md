@@ -235,3 +235,8 @@ Reviewer mapping and results: [IEEE_REVIEW_COVERAGE.md](IEEE_REVIEW_COVERAGE.md)
 |---|---|---|
 | E11 | N34's layer-order test permuted the signal columns, which also relabelled the epistemic probe as a rule-based conjunct (CRC then zeroed all rule-based thresholds on Qwen2.5-7B / MedMCQA). | Layer order now permutes only the synergy hierarchy of the composite; each conjunct stays attached to its probe. |
 | E12 | On open-weight models the honest agent is confidently wrong too often for the epistemic layer to separate it from a sleeper (sleeper OER 0.32-1.00); stricter thresholds deny 0.45-0.97 of honest steps. | Reported as a limitation; TGCC-R flags it before deployment from the pilot (`qualifying_windows`). |
+
+### Debate scale (R2-1 / R2-2)
+| File | Change |
+|---|---|
+| `nextphase/n30_debate_harm.py` | Team sizes N = 7 and 9 with K = 2-4 sleepers (TGCC-R only; the original TGCC kept on N <= 5). Result: gains whenever K/N >= 1/3; no gain or harm (N=7, K=2) when the honest majority already outvotes the sleepers, because of honest denials. |

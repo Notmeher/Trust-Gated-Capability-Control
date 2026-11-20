@@ -21,3 +21,6 @@ results/
 
 /cache/llm/
 
+/nextphase/kaggle/tgcc_openweight_outputs/
+
+.DS_Store
